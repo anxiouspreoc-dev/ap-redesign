@@ -211,7 +211,7 @@
       "settings": {
         "heading": "THE MID FOR EVERY MOOD.",
         "subheading": "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes.",
-        "default_collection": "",
+        "default_collection": "mid-sized-bags",
         "product_limit": 8,
         "container_type": "max",
         "column_behavior": "slideshow",
@@ -227,13 +227,13 @@
           "type": "_section-header",
           "static": true,
           "settings": {
-            "layout_header": "left",
-            "subheading": "Subheading",
-            "heading": "Heading",
+            "layout_header": "center",
+            "subheading": "EXPLORE THE COLLECTIONS",
+            "heading": "Different shapes. Same emotional support.",
             "page_title": false,
             "heading_size": "h2",
-            "text": "<p>This is an optional description. Use this text to provide context and guidance for the content below. For example, you could briefly describe features, inspiration or relevant promotions. Leave the text blank if you prefer to remove it.</p>",
-            "button_label": "Button label",
+            "text": "",
+            "button_label": "",
             "button_link": ""
           },
           "blocks": {}
@@ -248,7 +248,15 @@
         }
       },
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "the-barrel",
+          "the-bucket",
+          "mid-sized-bags",
+          "clutch-bags",
+          "the-micro",
+          "the-organizer",
+          "oversized-handbags"
+        ],
         "columns_desktop": "4",
         "columns_mobile": "2",
         "layout_desktop": "slideshow",
