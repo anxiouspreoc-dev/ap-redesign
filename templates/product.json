@@ -244,7 +244,21 @@
           "settings": {
             "horizontal_alignment": "inherit"
           },
-          "blocks": {}
+          "blocks": {
+            "button_jby8L8": {
+              "type": "_button",
+              "name": "t:button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "SHOP ALL",
+                "button_link": "shopify://collections/all-products"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_jby8L8"
+          ]
         }
       },
       "settings": {
@@ -261,7 +275,7 @@
         "columns_mobile": "2",
         "layout_desktop": "slideshow",
         "container_type": "max",
-        "horizontal_alignment": "left",
+        "horizontal_alignment": "center",
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
