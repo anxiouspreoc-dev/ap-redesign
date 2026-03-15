@@ -32,6 +32,14 @@
   .header--horizontal.header--logo-center .header__container {
     grid-template-columns: 1fr auto 1fr;
   }
+
+  /* Mobile logo width override (schema max is 200px, Figma spec is 250px) */
+  @media (max-width: 73.99em) {
+    .header__heading-logo,
+    .header__heading-logo-transparent {
+      inline-size: 250px;
+    }
+  }
 {%- endstyle -%}
 
 {%- capture menu -%}
@@ -342,16 +350,6 @@
           <span class="visually-hidden">{{ 'header.menu' | t }}</span>
         </button>
       </dialog-trigger>
-      {%- if section.settings.enable_search -%}
-        <dialog-trigger data-name="search">
-          <link-to-button>
-            <a tabindex="0" href="{{ routes.search_url }}" class="header__search header__icon-button button-unstyled header__mobile-search">
-              {%- render 'icon', icon: 'search', class: 'header__icon icon--m' -%}
-              <span class="visually-hidden">{{ 'search.search' | t }}</span>
-            </a>
-          </link-to-button>
-        </dialog-trigger>
-      {%- endif -%}
       {%- if section.settings.layout_desktop == 'horizontal' and section.settings.logo_position == 'center' -%}
         {{ menu }}
       {%- endif -%}
@@ -413,6 +411,16 @@
     {%- endif -%}
     <div class="header__right" data-secondary-menu>
       <div class="header__mobile-cart">
+        {%- if section.settings.enable_search -%}
+          <dialog-trigger data-name="search">
+            <link-to-button>
+              <a tabindex="0" href="{{ routes.search_url }}" class="header__search header__icon-button button-unstyled header__mobile-search">
+                {%- render 'icon', icon: 'search', class: 'header__icon icon--m' -%}
+                <span class="visually-hidden">{{ 'search.search' | t }}</span>
+              </a>
+            </link-to-button>
+          </dialog-trigger>
+        {%- endif -%}
         {{ cart_link }}
       </div>
 
