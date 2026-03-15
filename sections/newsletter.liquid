@@ -25,6 +25,11 @@
       flex-shrink: 0;
     }
   }
+
+  /* Anchor image to top so the subject's face is never cropped */
+  #shopify-section-{{ section.id }} .media-wrapper {
+    --object-position: top center;
+  }
 </style>
 {%- endif -%}
 
