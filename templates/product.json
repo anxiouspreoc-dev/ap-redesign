@@ -3,133 +3,149 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "pdp-badges": {
-          "type": "_pdp-badges",
+        "pdp-product-information": {
+          "type": "_pdp-product-information",
+          "static": true,
           "settings": {
-            "button_style": "primary"
-          }
-        },
-        "pdp-title": {
-          "type": "_pdp-title",
-          "settings": {
-            "heading_size": "h2",
-            "enable_share": false,
-            "share_color_scheme": ""
-          }
-        },
-        "pdp-rating": {
-          "type": "_pdp-rating",
-          "settings": {}
-        },
-        "pdp-preorder-message": {
-          "type": "_pdp-preorder-message",
-          "settings": {}
-        },
-        "pdp-price": {
-          "type": "_pdp-price",
-          "settings": {
-            "font_style": "caption"
-          }
-        },
-        "pdp-buy-buttons": {
-          "type": "_pdp-buy-buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_quantity_selector": true,
-            "show_gift_card_recipient": false
-          }
-        },
-        "pdp-icon-with-text-1": {
-          "type": "_pdp-icon-with-text",
-          "settings": {
-            "icon": "none",
-            "icon_size": "icon--m",
-            "max_width": 16,
-            "text": "<p>Feature one — update this text in the theme editor</p>",
-            "font_style": "caption",
-            "layout": "row",
             "horizontal_alignment": "left",
-            "vertical_alignment": "middle",
-            "padding": "0px",
-            "gap": "var(--space-2xs)",
-            "show_borders": false,
-            "color_scheme": ""
-          }
-        },
-        "pdp-icon-with-text-2": {
-          "type": "_pdp-icon-with-text",
-          "settings": {
-            "icon": "none",
-            "icon_size": "icon--m",
-            "max_width": 16,
-            "text": "<p>Feature two — update this text in the theme editor</p>",
-            "font_style": "caption",
-            "layout": "row",
-            "horizontal_alignment": "left",
-            "vertical_alignment": "middle",
-            "padding": "0px",
-            "gap": "var(--space-2xs)",
-            "show_borders": false,
-            "color_scheme": ""
-          }
-        },
-        "pdp-icon-with-text-3": {
-          "type": "_pdp-icon-with-text",
-          "settings": {
-            "icon": "none",
-            "icon_size": "icon--m",
-            "max_width": 16,
-            "text": "<p>Feature three — update this text in the theme editor</p>",
-            "font_style": "caption",
-            "layout": "row",
-            "horizontal_alignment": "left",
-            "vertical_alignment": "middle",
-            "padding": "0px",
-            "gap": "var(--space-2xs)",
-            "show_borders": false,
-            "color_scheme": ""
-          }
-        },
-        "pdp-collapsible-details": {
-          "type": "_pdp-collapsible",
-          "settings": {
-            "heading": "DETAILS",
-            "font_style": "caption",
-            "text": "<p>Add product details here.</p>",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "pdp-collapsible-delivery": {
-          "type": "_pdp-collapsible",
-          "settings": {
-            "heading": "DELIVERY INFO",
-            "font_style": "caption",
-            "text": "<p>Add delivery information here.</p>",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "pdp-pairs-with": {
-          "type": "_pdp-pairs-with",
-          "settings": {
-            "heading": "PAIRS WITH:"
-          }
+            "vertical_alignment": "top",
+            "container_width": "sm",
+            "padding_top": "var(--space-l)",
+            "padding_bottom": "var(--space-m)"
+          },
+          "blocks": {
+            "pdp-badges": {
+              "type": "_pdp-badges",
+              "settings": {
+                "button_style": "primary"
+              }
+            },
+            "pdp-title": {
+              "type": "_pdp-title",
+              "settings": {
+                "heading_size": "h2",
+                "enable_share": false,
+                "share_color_scheme": ""
+              }
+            },
+            "pdp-rating": {
+              "type": "_pdp-rating",
+              "settings": {}
+            },
+            "pdp-preorder-message": {
+              "type": "_pdp-preorder-message",
+              "settings": {}
+            },
+            "pdp-price": {
+              "type": "_pdp-price",
+              "settings": {
+                "font_style": "caption"
+              }
+            },
+            "pdp-buy-buttons": {
+              "type": "_pdp-buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": false,
+                "show_quantity_selector": true,
+                "show_gift_card_recipient": false
+              }
+            },
+            "pdp-icon-with-text-1": {
+              "type": "_pdp-icon-with-text",
+              "settings": {
+                "icon": "none",
+                "icon_size": "icon--m",
+                "max_width": 16,
+                "text": "<p>Feature one — update this text in the theme editor</p>",
+                "font_style": "caption",
+                "layout": "row",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "middle",
+                "padding": "0px",
+                "gap": "var(--space-2xs)",
+                "show_borders": false,
+                "color_scheme": ""
+              }
+            },
+            "pdp-icon-with-text-2": {
+              "type": "_pdp-icon-with-text",
+              "settings": {
+                "icon": "none",
+                "icon_size": "icon--m",
+                "max_width": 16,
+                "text": "<p>Feature two — update this text in the theme editor</p>",
+                "font_style": "caption",
+                "layout": "row",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "middle",
+                "padding": "0px",
+                "gap": "var(--space-2xs)",
+                "show_borders": false,
+                "color_scheme": ""
+              }
+            },
+            "pdp-icon-with-text-3": {
+              "type": "_pdp-icon-with-text",
+              "settings": {
+                "icon": "none",
+                "icon_size": "icon--m",
+                "max_width": 16,
+                "text": "<p>Feature three — update this text in the theme editor</p>",
+                "font_style": "caption",
+                "layout": "row",
+                "horizontal_alignment": "left",
+                "vertical_alignment": "middle",
+                "padding": "0px",
+                "gap": "var(--space-2xs)",
+                "show_borders": false,
+                "color_scheme": ""
+              }
+            },
+            "pdp-collapsible-details": {
+              "type": "_pdp-collapsible",
+              "settings": {
+                "heading": "DETAILS",
+                "font_style": "caption",
+                "text": "<p>Add product details here.</p>",
+                "page": "",
+                "open_by_default": false
+              }
+            },
+            "pdp-collapsible-delivery": {
+              "type": "_pdp-collapsible",
+              "settings": {
+                "heading": "DELIVERY INFO",
+                "font_style": "caption",
+                "text": "<p>Add delivery information here.</p>",
+                "page": "",
+                "open_by_default": false
+              }
+            },
+            "pdp-pairs-with": {
+              "type": "_pdp-pairs-with",
+              "settings": {
+                "heading": "PAIRS WITH:"
+              }
+            }
+          },
+          "block_order": [
+            "pdp-badges",
+            "pdp-title",
+            "pdp-rating",
+            "pdp-preorder-message",
+            "pdp-price",
+            "pdp-buy-buttons",
+            "pdp-icon-with-text-1",
+            "pdp-icon-with-text-2",
+            "pdp-icon-with-text-3",
+            "pdp-collapsible-details",
+            "pdp-collapsible-delivery",
+            "pdp-pairs-with"
+          ]
         }
       },
       "block_order": [
-        "pdp-badges",
-        "pdp-title",
-        "pdp-rating",
-        "pdp-preorder-message",
-        "pdp-price",
-        "pdp-buy-buttons",
-        "pdp-icon-with-text-1",
-        "pdp-icon-with-text-2",
-        "pdp-icon-with-text-3",
-        "pdp-collapsible-details",
-        "pdp-collapsible-delivery",
-        "pdp-pairs-with"
+        "pdp-product-information"
       ],
       "custom_css": [
         "button { text-transform: uppercase; }",
