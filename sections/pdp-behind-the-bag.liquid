@@ -18,7 +18,7 @@
 
 {%- comment -%} Hide section only if both heading and text are blank {%- endcomment -%}
 {%- if display_heading != blank or display_text != blank -%}
-  <section class="pdp-behind-the-bag" aria-label="Behind the Bag">
+  <section class="pdp-behind-the-bag" aria-label="Behind the Bag" style="padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }};">
     <div class="pdp-behind-the-bag__inner">
 
       {%- comment -%} Left: image {%- endcomment -%}
