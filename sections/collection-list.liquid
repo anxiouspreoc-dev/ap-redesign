@@ -87,6 +87,25 @@
   </div>
 </div>
 
+{% style %}
+.featured-collection .subheading {
+  color: #000000;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--font-xs-size);
+}
+@media screen and (min-width: 990px) {
+  .featured-collection .content-header__heading .heading {
+    white-space: nowrap;
+  }
+}
+.featured-collection .card-collection__heading {
+  color: #000000;
+}
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:collection-list",

@@ -252,7 +252,7 @@
           "type": "button-group",
           "static": true,
           "settings": {
-            "horizontal_alignment": "inherit"
+            "horizontal_alignment": "center"
           },
           "blocks": {
             "button_jby8L8": {
