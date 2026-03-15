@@ -8,7 +8,7 @@
   {%- endif -%}
   {%- assign custom_badges = product.metafields.theme.badges.value -%}
   {%- for badge in custom_badges -%}
-    <li class="list-separator__item" data-badge="{{ badge | downcase | replace: ' ', '-' }}">{{ badge }}</li>
+    <li class="list-separator__item" data-badge="{{ badge | handle }}">{{ badge }}</li>
   {%- endfor -%}
 {%- endcapture -%}
 {%- unless product_badges == empty -%}
