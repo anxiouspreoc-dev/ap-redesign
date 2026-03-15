@@ -44,7 +44,7 @@ Blocks within the product info panel, top to bottom:
 
 | Block | File | Change |
 |---|---|---|
-| Badges | `_pdp-badges.liquid` | existing — reads `theme.badges` metafield |
+| Badges | `_pdp-badges.liquid` | existing — reads `theme.badges` metafield, minor update |
 | Title | `_pdp-title.liquid` | existing |
 | Rating | `_pdp-rating.liquid` | existing — Judge.me overrides widget output |
 | Pre-order message | `_pdp-preorder-message.liquid` | **new** |
@@ -56,23 +56,26 @@ Blocks within the product info panel, top to bottom:
 | Pairs With | `_pdp-pairs-with.liquid` | **new** |
 
 ### Badge styling
-The existing `_pdp-badges.liquid` renders badges from `product.metafields.theme.badges.value` (a list). Badges are styled as pills via `list-separator--primary/secondary/text`. To match the Figma:
-- "BESTSELLER" badge → styled with a light/neutral pill (existing secondary style)
-- "PRE-ORDER" badge → styled with bright green background (`#00ff00`), black text
 
-The badge block's `button_style` setting controls all badges uniformly. To get per-badge colour variance, a small CSS override targeting the badge text content will be added to the section's `custom_css`:
-```css
-.product-info__badges .list-separator__item:has-text("PRE-ORDER") {
-  background-color: #00ff00;
-  color: #000000;
-  border-color: #00ff00;
-}
+The existing `_pdp-badges.liquid` renders badges in two groups:
+1. Auto-generated system badges: "Sold out" (when `product.available == false`) and "Sale" (when compare price > price)
+2. Custom badges from `product.metafields.theme.badges.value` (a list)
+
+Each badge `<li>` will be updated to output a `data-badge` attribute with the lowercased badge value, so individual badge types can be targeted with CSS:
+
+```liquid
+<li class="list-separator__item" data-badge="{{ badge | downcase | replace: ' ', '-' }}">{{ badge }}</li>
 ```
-Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-child` rule or render each badge type separately. The `_pdp-badges.liquid` file will be updated to output a `data-badge` attribute with the badge value so CSS can target it:
+
+The auto-generated "Sold out" and "Sale" badges will also receive `data-badge="sold-out"` and `data-badge="sale"` respectively. They do not need custom colour treatment per the Figma — only the custom metafield badges are styled distinctly.
+
+CSS targeting in `theme.css` (or section `custom_css`):
 ```css
-[data-badge="PRE-ORDER"] { background: #00ff00; color: #000; border-color: #00ff00; }
-[data-badge="BESTSELLER"] { background: #fff; color: #000; border-color: #ccc; }
+[data-badge="pre-order"] { background: #00ff00; color: #000; border-color: #00ff00; }
+[data-badge="bestseller"] { background: #fff; color: #000; border-color: #ccc; }
 ```
+
+The badge block's `button_style` setting remains set to `primary` as the base style for unstyled badges.
 
 ---
 
@@ -82,7 +85,7 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 
 **Reads from:** `product.metafields.custom.preorder_pdp_message` (single line text)
 
-**Visual:** Pill-shaped notice. Background `#fff7ec` (cream), black text, small border. Text is prefixed with a bold label, e.g.:
+**Visual:** Pill-shaped notice. Background `#fff7ec` (cream), black text, 1px black border. Text is prefixed with a bold label, e.g.:
 > **Pre-order:** First drop ships April 2026
 
 **Schema settings:** None required — purely metafield-driven.
@@ -104,25 +107,25 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 
 ## 3. New Block: `_pdp-pairs-with.liquid`
 
-**Purpose:** "PAIRS WITH" section inside the product info panel, below collapsibles. Shows a horizontally scrollable list of manually curated companion products.
+**Purpose:** "PAIRS WITH" section inside the product info panel, below collapsibles. Shows manually curated companion products.
 
-**Reads from:** `product.metafields.custom.pairs_with` (list of product references)
+**Reads from:** `product.metafields.custom.pairs_with` (list of product references). If blank, block renders nothing.
 
-**Visual (desktop):** Horizontal scrollable row of cards. Each card:
+**Visual (desktop):** Horizontal scrollable row of cards. Each card is a horizontal flex row (image left, content right):
 - Product image (square thumbnail, ~80×80px, rounded)
 - Product name (bold, black, `caption` font style)
 - Price (black, `caption`)
 - "SHOP NOW" link (`#ff0064`, uppercase, caption)
-- Round quick-add button (`#00ff00` background, black icon, right-aligned)
+- Round quick-add button (`#00ff00` background, black `+` icon, right-aligned to card edge)
 
-**Visual (mobile):** Stacked vertically (full-width cards), same card content.
+**Visual (mobile):** Stacked vertically (full-width cards). Each card keeps the same horizontal inner layout (image left, content right) — the card just becomes full-width rather than a fixed-width scroll item.
 
 **Heading:** "PAIRS WITH:" in uppercase, bold black, `caption` font style.
 
+**Quick-add button behaviour:** Clicking the green `+` button submits the product's first available variant directly to cart via an Ajax `POST /cart/add` request (same pattern used by the theme's existing quick-add). On success, the cart drawer opens. No modal — direct add. If the product has multiple variants, clicking the button links to the product PDP instead.
+
 **Schema settings:**
 - `heading` (text) — default "PAIRS WITH:", editable in theme editor
-
-**Logic:** If metafield is blank or has no products, block renders nothing.
 
 **Styling:**
 ```css
@@ -135,6 +138,7 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 }
 .pdp-pairs-with__card {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: var(--space-xs);
   min-width: 260px;
@@ -149,7 +153,16 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
     flex-direction: column;
     overflow-x: visible;
   }
-  .pdp-pairs-with__card { min-width: unset; width: 100%; }
+  .pdp-pairs-with__card {
+    min-width: unset;
+    width: 100%;
+  }
+}
+.pdp-pairs-with__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .pdp-pairs-with__shop-now {
   color: #ff0064;
@@ -163,11 +176,11 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
   border-radius: 50%;
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: auto;
 }
 ```
 
@@ -181,16 +194,22 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 | Field | Metafield | Falls back to |
 |---|---|---|
 | Image | `custom.behind_the_bag_image` | Section setting (image picker) |
-| Label | (fixed) | "BEHIND THE BAG" — not overridable |
+| Label | (fixed string) | "BEHIND THE BAG" — not overridable |
 | Heading | `custom.behind_the_bag_heading` | Section setting (text input) |
 | Body text | `custom.behind_the_bag_text` | Section setting (richtext) |
 
 **Visual:**
 - Left column: full-height image (person carrying the bag)
-- Right column: lavender background (`#ede5f4`), large AP heart graphic, outlined pink pill label "BEHIND THE BAG" (border `#ff0064`, text `#ff0064`), heading in `#ff0064` (h2 size), body text in black
+- Right column: lavender background (`#ede5f4`), AP heart graphic centred as background decoration, outlined pill label "BEHIND THE BAG" (1px border `#ff0064`, text `#ff0064`, white background), heading in `#ff0064` (h2 size), body text in black
 
-**Desktop layout:** 50/50 two-column grid
-**Mobile layout:** Image stacked on top, text panel below. AP heart graphic displayed in the right panel. Heart graphic is a static SVG/image asset included in the section.
+**Desktop layout:** 50/50 two-column CSS grid, full section height
+**Mobile layout:** Image stacked on top, text panel stacked below
+
+**AP heart graphic:** Does not yet exist in `assets/`. A file `assets/ap-heart.svg` must be created and uploaded as part of this implementation. It is the AP branded heart shape seen in the Figma. It renders as a large background decoration in the right panel (positioned absolutely, low opacity or full opacity depending on final review).
+
+**Behind the Bag text metafield type:** `custom.behind_the_bag_text` is defined as **Rich text** (stores HTML) so that its output is consistent with the section's `richtext` fallback setting. Both sources output HTML. The Liquid renders it with `{{ text_value }}` (no filter needed — Shopify outputs rich text metafields as HTML-safe content).
+
+**Hidden condition:** The section is hidden (renders nothing) only when **both** the heading and body text are blank (from metafield and section setting). A missing image alone does not hide the section — a placeholder or the default image will show. This prevents a broken layout if only the text content is missing.
 
 **Schema settings:**
 - `default_image` — image picker (fallback image)
@@ -198,13 +217,17 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 - `default_text` — richtext (fallback body)
 - `padding_top`, `padding_bottom` — spacing selects
 
-**Hidden if:** All three fields (image, heading, text) are blank from both metafield and default settings.
-
 ---
 
 ## 5. New Section: `sections/pdp-colorways.liquid`
 
 **Purpose:** "The Mid for Every Mood" featured collection below the Behind the Bag section. Shows a horizontal scrollable grid of products from a collection.
+
+**Product context guard:** The first line of the section's Liquid must be:
+```liquid
+{%- assign product = section.settings.product | default: product -%}
+```
+This ensures correct product context in the theme editor preview and in all theme configurations.
 
 **Data sources:**
 | Field | Source | Falls back to |
@@ -213,12 +236,21 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 | Heading | Section setting | "THE MID FOR EVERY MOOD." |
 | Subheading | Section setting | "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes." |
 
+**Metafield check logic:**
+```liquid
+{%- assign product = section.settings.product | default: product -%}
+{%- assign display_collection = product.metafields.custom.colorways_collection.value -%}
+{%- if display_collection == blank -%}
+  {%- assign display_collection = section.settings.default_collection -%}
+{%- endif -%}
+```
+
 **Visual:**
 - Section heading in `#ff0064` (hot pink), uppercase, h2
 - Subheading in black, body text
-- Horizontal scrollable product grid, matches existing `featured-collection` product card style
-- Quick-add buttons use green (`#00ff00`) scheme
-- Progress bar pagination indicator below the grid
+- Horizontal scrollable product grid — follows the same two-step pattern as `featured-collection.liquid`: render `slider-component-inner` for the grid wrapper, then pass `counter_style: 'progress'` to `slider-component` (see `featured-collection.liquid` lines 68 and 84–89). Note: `counter_style` is a parameter of `slider-component`, not `slider-component-inner`.
+- Product cards use existing `card-product` snippet
+- Quick-add buttons use the green scheme (`scheme-8b844f31`, primary button `#00ff00`)
 
 **Schema settings:**
 - `heading` — text
@@ -227,23 +259,14 @@ Since `:has-text` is not standard CSS, the simpler approach is to add an `nth-ch
 - `product_limit` — range (default 8)
 - `color_scheme` — color scheme picker
 
-**Metafield check logic:**
-```liquid
-{%- assign display_collection = product.metafields.custom.colorways_collection.value -%}
-{%- if display_collection == blank -%}
-  {%- assign display_collection = section.settings.default_collection -%}
-{%- endif -%}
-```
-
 ---
 
 ## 6. Existing Section: `collection-list`
 
-The "Different Shapes. Same Emotional Support." section uses the existing `collection-list.liquid` section. No changes needed — configure via theme editor with:
+The "Different Shapes. Same Emotional Support." section uses the existing `collection-list.liquid` section. No code changes needed — configure via theme editor:
 - Subheading: "EXPLORE THE COLLECTIONS"
 - Heading: "DIFFERENT SHAPES. SAME EMOTIONAL SUPPORT."
-- Heading color: hot pink via `scheme-d76d7b48` (text: `#ff0064`)
-- "SHOP ALL" button: dark purple via primary button color
+- Color scheme: `scheme-d76d7b48` (text `#ff0064`, primary button `#5d006e`)
 
 ---
 
@@ -257,7 +280,7 @@ Go to **Settings → Custom data → Products → Add definition** for each:
 | Pairs With | `custom.pairs_with` | Product list | Max 10 products recommended |
 | Behind the Bag image | `custom.behind_the_bag_image` | File (image only) | Overrides default section image |
 | Behind the Bag heading | `custom.behind_the_bag_heading` | Single line text | e.g. "Joanne on The Mid" |
-| Behind the Bag text | `custom.behind_the_bag_text` | Multi-line text | Quote/body copy |
+| Behind the Bag text | `custom.behind_the_bag_text` | **Rich text** | Quote/body copy — stores HTML, consistent with richtext section setting |
 | Colorways collection | `custom.colorways_collection` | Collection reference | Overrides default collection |
 
 ---
@@ -267,11 +290,12 @@ Go to **Settings → Custom data → Products → Add definition** for each:
 | File | Action |
 |---|---|
 | `templates/product.json` | Update section order and block configuration |
-| `blocks/_pdp-badges.liquid` | Minor update — add `data-badge` attribute for CSS targeting |
+| `blocks/_pdp-badges.liquid` | Add `data-badge` attribute to each `<li>` (including auto-generated badges) |
 | `blocks/_pdp-preorder-message.liquid` | **Create** |
 | `blocks/_pdp-pairs-with.liquid` | **Create** |
 | `sections/pdp-behind-the-bag.liquid` | **Create** |
 | `sections/pdp-colorways.liquid` | **Create** |
+| `assets/ap-heart.svg` | **Create** — AP branded heart graphic for Behind the Bag panel |
 
 ---
 
