@@ -132,6 +132,7 @@
         "pdp-pairs-with"
       ],
       "custom_css": [
+        "button { text-transform: uppercase; }",
         "[data-badge='pre-order'] { background: #00ff00; color: #000; border-color: #00ff00; }",
         "[data-badge='bestseller'] { background: #ffffff; color: #000000; border-color: #cccccc; }"
       ],
