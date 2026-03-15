@@ -1,8 +1,8 @@
 {%- assign product = section.settings.product | default: product -%}
 {%- assign pairs = product.metafields.custom.pairs_with.value -%}
 
-{%- if pairs != blank and pairs.size > 0 -%}
-  <div class="pdp-pairs-with" {{ block.shopify_attributes }}>
+<div class="pdp-pairs-with" {{ block.shopify_attributes }}>
+  {%- if pairs != blank and pairs.size > 0 -%}
     {%- if block.settings.heading != blank -%}
       <h2 class="pdp-pairs-with__heading caption">{{ block.settings.heading }}</h2>
     {%- endif -%}
@@ -29,21 +29,22 @@
             </p>
             {%- render 'price', product: paired_product, font_style: 'caption' -%}
             <a href="{{ paired_product.url }}" class="pdp-pairs-with__shop-now caption">
-              Shop now
+              SHOP NOW
             </a>
           </div>
 
+          {%- assign pairs_section_id = section.id | append: '-pairs-' | append: forloop.index -%}
           {%- render 'quick-add',
             product: paired_product,
-            section_id: section.id | append: '-pairs-' | append: forloop.index,
+            section_id: pairs_section_id,
             button_style: 'primary',
             classes: 'pdp-pairs-with__quick-add'
           -%}
         </li>
       {%- endfor -%}
     </ul>
-  </div>
-{%- endif -%}
+  {%- endif -%}
+</div>
 
 {% style %}
 .pdp-pairs-with__heading {
@@ -108,7 +109,7 @@
   background: #00ff00;
   border-color: #00ff00;
   color: #000000;
-  border-radius: 50%;
+  border-radius: 50% !important;
   width: 36px;
   height: 36px;
   padding: 0;
