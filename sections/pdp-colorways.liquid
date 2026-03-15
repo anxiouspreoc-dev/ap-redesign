@@ -20,9 +20,6 @@
 {%- if product_limit > columns_desktop and section.settings.column_behavior == 'slideshow' -%}
   {%- assign show_desktop_slider = true -%}
 {%- endif -%}
-{%- if product_limit == 0 and section.settings.column_behavior == 'slideshow' -%}
-  {%- assign show_desktop_slider = true -%}
-{%- endif -%}
 {%- if product_count == 0 or product_limit > columns_mobile -%}
   {%- assign show_mobile_slider = true -%}
 {%- endif -%}
