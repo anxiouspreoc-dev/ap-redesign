@@ -1,3 +1,33 @@
+{%- if section.settings.image -%}
+<style>
+  @media (min-width: 48em) {
+    #shopify-section-{{ section.id }} .media-banner__inner {
+      min-block-size: 480px;
+      block-size: auto;
+    }
+    #shopify-section-{{ section.id }} .media-banner__inner::after {
+      display: none;
+    }
+    #shopify-section-{{ section.id }} .media-wrapper {
+      position: relative;
+      inset: auto;
+      inline-size: 50%;
+      block-size: auto;
+      flex-shrink: 0;
+    }
+    #shopify-section-{{ section.id }} .media-banner__inner .media-banner__content {
+      inline-size: 50%;
+      position: static;
+      background-color: var(--color-background);
+      align-items: center;
+      padding-inline: var(--space-2xl);
+      padding-block: var(--space-2xl);
+      flex-shrink: 0;
+    }
+  }
+</style>
+{%- endif -%}
+
 {% # theme-check-disable UnusedAssign%}
 {%- liquid
   assign fetch_priority = 'auto'
