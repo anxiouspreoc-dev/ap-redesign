@@ -435,7 +435,8 @@
         }
       },
       "custom_css": [
-        ".heading.h2 {color: #ff0064;}"
+        ".heading.h2 {color: #ff0064;}",
+        ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:featured-collection",
       "settings": {
@@ -672,7 +673,8 @@
         "video_reels_video_pQQ3d8"
       ],
       "custom_css": [
-        ".heading.h2 {color: #ff0064;}"
+        ".heading.h2 {color: #ff0064;}",
+        ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:video-reels",
       "settings": {
