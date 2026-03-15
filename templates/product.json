@@ -1,1 +1,179 @@
-{"sections":{"main":{"type":"main-product","blocks":{"pdp-product-information":{"type":"_pdp-product-information","static":true,"settings":{"horizontal_alignment":"left","vertical_alignment":"top","container_width":"sm","padding_top":"var(--space-l)","padding_bottom":"var(--space-m)"},"blocks":{"pdp-badges":{"type":"_pdp-badges","settings":{"button_style":"primary"},"blocks":{}},"pdp-title":{"type":"_pdp-title","settings":{"heading_size":"h2","enable_share":false,"share_color_scheme":""},"blocks":{}},"pdp-subtitle":{"type":"_pdp-subtitle","settings":{"text":"{{ closest.product.metafields.descriptors.subtitle.value }}","font_style":"caption"},"blocks":{}},"pdp-price":{"type":"_pdp-price","settings":{"font_style":"caption"},"blocks":{}},"pdp-description":{"type":"_pdp-description","settings":{"text":"{{ closest.product.description }}","enable_truncation":true,"word_limit":24,"title":"{{ closest.product.title }}"},"blocks":{}},"pdp-variant-picker":{"type":"_pdp-variant-picker","settings":{"variant_picker_style":"border","swatch_style":"default","variant_images":"","option_1":"","option_1_page":"","option_1_label":"icon","option_2":"","option_2_page":"","option_2_label":"icon","option_3":"","option_3_page":"","option_3_label":"icon"},"blocks":{}},"pdp-buy-buttons":{"type":"_pdp-buy-buttons","settings":{"show_dynamic_checkout":false,"show_quantity_selector":true,"show_gift_card_recipient":true},"blocks":{}},"pdp-icon-with-text":{"type":"_pdp-icon-with-text","settings":{"icon":"none","icon_size":"icon--m","image":"shopify:\/\/shop_images\/check-circle.png","max_width":16,"text":"<p>Suitable for all skin types<\/p>","font_style":"caption","layout":"row","horizontal_alignment":"left","vertical_alignment":"middle","padding":"0px","gap":"var(--space-2xs)","show_borders":false,"color_scheme":""},"blocks":{}},"pdp-icon-with-text-2":{"type":"_pdp-icon-with-text","settings":{"icon":"heart","icon_size":"icon--m","max_width":16,"text":"<p>100% Vegan<\/p>","font_style":"caption","layout":"row","horizontal_alignment":"left","vertical_alignment":"middle","padding":"0px","gap":"var(--space-2xs)","show_borders":false,"color_scheme":""},"blocks":{}},"pdp-icon-with-text-3":{"type":"_pdp-icon-with-text","settings":{"icon":"globe","icon_size":"icon--m","max_width":16,"text":"<p>Sustainably Developed<\/p>","font_style":"caption","layout":"row","horizontal_alignment":"left","vertical_alignment":"middle","padding":"0px","gap":"var(--space-2xs)","show_borders":false,"color_scheme":""},"blocks":{}},"pdp_collapsible_xHeEna":{"type":"_pdp-collapsible","name":"t:collapsible","settings":{"heading":"DETAILS","font_style":"caption","text":"<p>Use this text to share information about your brand, collections or products with your customers.<\/p>","page":"","open_by_default":false},"blocks":{}},"pdp-collapsible":{"type":"_pdp-collapsible","settings":{"heading":"How to Use","font_style":"caption","text":"<p>Use this text to share information about your brand, collections or products with your customers.<\/p>","page":"","open_by_default":false},"blocks":{}},"pdp-collapsible-2":{"type":"_pdp-collapsible","settings":{"heading":"Ingredients","font_style":"caption","text":"<p>Use this text to share information about your brand, collections or products with your customers.<\/p>","page":"","open_by_default":false},"blocks":{}},"pdp-icon-with-text-4":{"type":"_pdp-icon-with-text","settings":{"icon":"none","icon_size":"icon--s","max_width":32,"text":"<p>Use this text to share information about your brand, collections or products with your customers.<\/p>","font_style":"body text-s","layout":"row","horizontal_alignment":"left","vertical_alignment":"middle","padding":"var(--space-2xs)","gap":"var(--space-2xs)","show_borders":false,"color_scheme":"scheme-5"},"blocks":{}}},"block_order":["pdp-badges","pdp-title","pdp-subtitle","pdp-price","pdp-description","pdp-variant-picker","pdp-buy-buttons","pdp-icon-with-text","pdp-icon-with-text-2","pdp-icon-with-text-3","pdp_collapsible_xHeEna","pdp-collapsible","pdp-collapsible-2","pdp-icon-with-text-4"]}},"custom_css":["button {text-transform: uppercase;}"],"settings":{"media_style":"thumbnails","mobile_max_width":"92%","enable_zoom":false,"enable_autoplay":true,"media_color_scheme":"","spacing":"var(--space-l)","button_style":"primary","image_aspect_ratio":"adapt","animation_style":"fade","counter_style":"hidden","enable_looping":true,"color_scheme":"scheme-b24726de-3ead-4723-beaa-1fb283066b3f","enable_satc_mobile":true,"enable_satc_desktop":true,"show_satc_image":true,"show_satc_variant":true,"show_satc_price":true,"show_satc_rating":false,"satc_color_scheme":"","show_top_border":true,"show_bottom_border":false,"show_block_borders":false,"enable_transparent_header":false}},"split-card":{"type":"split-card","blocks":{"block-rich-text":{"type":"_block-rich-text","settings":{"vertical_alignment":"middle","horizontal_alignment":"center","container_width":"md","color_scheme":"scheme-5","enable_color_scheme_transition":false,"color_scheme_transition":"","padding_top":"default","padding_bottom":"default"},"blocks":{"heading-group":{"type":"heading-group","settings":{"page_title":false},"blocks":{"subheading":{"type":"_subheading","settings":{"subheading":"Ingredient Spotlight"},"blocks":{}},"heading":{"type":"_heading","settings":{"heading":"Heading","heading_size":"h2"},"blocks":{}}},"block_order":["subheading","heading"]},"text":{"type":"text","settings":{"text":"<p>Use this text to share information about your brand, collections or products with your customers.<\/p>","font_style":"body"},"blocks":{}}},"block_order":["heading-group","text"]},"image-banner":{"type":"_image-banner","settings":{"height":"medium","mobile_height":"large","stack":"none","spacing":"0px","media_content_padding":"default","container_width":"md","horizontal_alignment":"center","vertical_alignment":"middle","enable_banner_click":false,"enable_overlay":false,"overlay":"linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)","color_scheme":"","enable_color_scheme_transition":false,"color_scheme_transition":""},"blocks":{}}},"block_order":["block-rich-text","image-banner"],"settings":{"container_type":"max","border_radius":"section","color_scheme":"","enable_color_scheme_transition":false,"color_scheme_transition":"","padding_top":"var(--space-m)","padding_bottom":"default","show_top_border":false,"show_bottom_border":false,"show_borders":false}},"related-products":{"type":"related-products","blocks":{"section-header":{"type":"_section-header","static":true,"settings":{"layout_header":"left","subheading":"","heading":"You May Also Like","page_title":false,"heading_size":"h2","text":"","button_label":"","button_link":""},"blocks":{}}},"settings":{"product_limit":4,"columns_desktop":"4","columns_mobile":"2","layout_desktop":"slideshow","container_type":"max","arrow_position":"overlay","counter_style":"progress","button_style":"primary","color_scheme":"scheme-61256f6c-228a-4d40-9ebd-0e0c16865979","padding_top":"0px","padding_bottom":"default","show_top_border":false,"show_bottom_border":false}},"recently-viewed-products":{"type":"recently-viewed-products","blocks":{"section-header":{"type":"_section-header","static":true,"settings":{"layout_header":"left","subheading":"","heading":"Recently viewed","page_title":false,"heading_size":"h2","text":"","button_label":"","button_link":""},"blocks":{}}},"name":"t:recently-viewed","settings":{"product_limit":4,"columns_desktop":"4","columns_mobile":"2","layout_desktop":"slideshow","container_type":"max","arrow_position":"overlay","counter_style":"progress","button_style":"primary","color_scheme":"scheme-1","padding_top":"default","padding_bottom":"default","show_top_border":true,"show_bottom_border":false}}},"order":["main","split-card","related-products","recently-viewed-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "pdp-badges": {
+          "type": "_pdp-badges",
+          "settings": {
+            "button_style": "primary"
+          }
+        },
+        "pdp-title": {
+          "type": "_pdp-title",
+          "settings": {
+            "heading_size": "h2",
+            "enable_share": false,
+            "share_color_scheme": ""
+          }
+        },
+        "pdp-rating": {
+          "type": "_pdp-rating",
+          "settings": {}
+        },
+        "pdp-preorder-message": {
+          "type": "_pdp-preorder-message",
+          "settings": {}
+        },
+        "pdp-price": {
+          "type": "_pdp-price",
+          "settings": {
+            "font_style": "caption"
+          }
+        },
+        "pdp-buy-buttons": {
+          "type": "_pdp-buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity_selector": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "pdp-icon-with-text-1": {
+          "type": "_pdp-icon-with-text",
+          "settings": {
+            "icon": "none",
+            "icon_size": "icon--m",
+            "max_width": 16,
+            "text": "<p>Feature one — update this text in the theme editor</p>",
+            "font_style": "caption",
+            "layout": "row",
+            "horizontal_alignment": "left",
+            "vertical_alignment": "middle",
+            "padding": "0px",
+            "gap": "var(--space-2xs)",
+            "show_borders": false,
+            "color_scheme": ""
+          }
+        },
+        "pdp-icon-with-text-2": {
+          "type": "_pdp-icon-with-text",
+          "settings": {
+            "icon": "none",
+            "icon_size": "icon--m",
+            "max_width": 16,
+            "text": "<p>Feature two — update this text in the theme editor</p>",
+            "font_style": "caption",
+            "layout": "row",
+            "horizontal_alignment": "left",
+            "vertical_alignment": "middle",
+            "padding": "0px",
+            "gap": "var(--space-2xs)",
+            "show_borders": false,
+            "color_scheme": ""
+          }
+        },
+        "pdp-icon-with-text-3": {
+          "type": "_pdp-icon-with-text",
+          "settings": {
+            "icon": "none",
+            "icon_size": "icon--m",
+            "max_width": 16,
+            "text": "<p>Feature three — update this text in the theme editor</p>",
+            "font_style": "caption",
+            "layout": "row",
+            "horizontal_alignment": "left",
+            "vertical_alignment": "middle",
+            "padding": "0px",
+            "gap": "var(--space-2xs)",
+            "show_borders": false,
+            "color_scheme": ""
+          }
+        },
+        "pdp-collapsible-details": {
+          "type": "_pdp-collapsible",
+          "settings": {
+            "heading": "DETAILS",
+            "font_style": "caption",
+            "text": "<p>Add product details here.</p>",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "pdp-collapsible-delivery": {
+          "type": "_pdp-collapsible",
+          "settings": {
+            "heading": "DELIVERY INFO",
+            "font_style": "caption",
+            "text": "<p>Add delivery information here.</p>",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "pdp-pairs-with": {
+          "type": "_pdp-pairs-with",
+          "settings": {
+            "heading": "PAIRS WITH:"
+          }
+        }
+      },
+      "block_order": [
+        "pdp-badges",
+        "pdp-title",
+        "pdp-rating",
+        "pdp-preorder-message",
+        "pdp-price",
+        "pdp-buy-buttons",
+        "pdp-icon-with-text-1",
+        "pdp-icon-with-text-2",
+        "pdp-icon-with-text-3",
+        "pdp-collapsible-details",
+        "pdp-collapsible-delivery",
+        "pdp-pairs-with"
+      ],
+      "custom_css": [
+        "[data-badge='pre-order'] { background: #00ff00; color: #000; border-color: #00ff00; }",
+        "[data-badge='bestseller'] { background: #ffffff; color: #000000; border-color: #cccccc; }"
+      ],
+      "settings": {
+        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f"
+      }
+    },
+    "pdp-behind-the-bag": {
+      "type": "pdp-behind-the-bag",
+      "settings": {
+        "default_heading": "",
+        "default_text": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px"
+      }
+    },
+    "pdp-colorways": {
+      "type": "pdp-colorways",
+      "settings": {
+        "heading": "THE MID FOR EVERY MOOD.",
+        "subheading": "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes.",
+        "product_limit": 8,
+        "container_type": "max",
+        "column_behavior": "slideshow",
+        "color_scheme": "scheme-1",
+        "padding_top": "var(--space-l)",
+        "padding_bottom": "var(--space-l)"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "settings": {
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
+        "padding_top": "var(--space-l)",
+        "padding_bottom": "var(--space-l)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-behind-the-bag",
+    "pdp-colorways",
+    "collection-list"
+  ]
+}
