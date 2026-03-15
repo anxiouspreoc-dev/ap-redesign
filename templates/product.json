@@ -76,7 +76,7 @@
             "pdp-icon-with-text-1": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "check",
+                "icon": "none",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature one — update this text in the theme editor</p>",
@@ -94,7 +94,7 @@
             "pdp-icon-with-text-2": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "check",
+                "icon": "none",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature two — update this text in the theme editor</p>",
@@ -112,7 +112,7 @@
             "pdp-icon-with-text-3": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "check",
+                "icon": "none",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature three — update this text in the theme editor</p>",
@@ -178,7 +178,9 @@
         "button {text-transform: uppercase;}",
         "[data-badge=\"pre-order\"] {background: #00ff00; color: #000; border-color: #00ff00;}",
         "[data-badge=\"bestseller\"] {background: #ffffff; color: #000000; border-color: #cccccc;}",
-        ".product-info__icon-with-text .icon { color: #ff0064; }"
+        ".product-info__icon-with-text { position: relative; }",
+        ".product-info__icon-with-text::before { content: ''; display: block; width: 20px; height: 20px; background-image: url('https://cdn.shopify.com/s/files/1/0786/2199/9401/files/check-circle.png?v=1773569321'); background-size: contain; background-repeat: no-repeat; background-position: center; flex-shrink: 0; }",
+        ".product-info .collapsible__content { font-size: var(--font-s-size); }"
       ],
       "settings": {
         "media_style": "thumbnails",
