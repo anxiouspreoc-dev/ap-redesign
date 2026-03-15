@@ -1,5 +1,5 @@
 {%- assign product = section.settings.product | default: product -%}
-{%- assign preorder_message = product.metafields.custom.preorder_pdp_message -%}
+{%- assign preorder_message = product.metafields.custom.preorder_pdp_message.value -%}
 
 {%- if preorder_message != blank -%}
   <div class="pdp-preorder-message" {{ block.shopify_attributes }}>
