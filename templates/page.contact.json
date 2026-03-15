@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "contact": {
+      "type": "contact-form",
+      "blocks": {
+        "name": {
+          "type": "text",
+          "settings": {
+            "field_label": "Name",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "email": {
+          "type": "email",
+          "settings": {
+            "field_label": "Email",
+            "columns": "2"
+          }
+        },
+        "telephone": {
+          "type": "telephone",
+          "settings": {
+            "field_label": "Phone number",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "message": {
+          "type": "textarea",
+          "settings": {
+            "field_label": "Message",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "telephone",
+        "message"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "Contact",
+        "page_title": true,
+        "heading_size": "h1",
+        "text": "<p>Our team is available Monday through Sunday to assist you with your enquiries. Email us here or text on 800-431-9000.</p>",
+        "button_style": "primary",
+        "button_width": "default",
+        "horizontal_alignment": "center",
+        "container_width": "xs",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": true,
+        "show_bottom_border": false
+      }
+    },
+    "split-card": {
+      "type": "split-card",
+      "blocks": {
+        "image-banner": {
+          "type": "_image-banner",
+          "settings": {
+            "height": "medium",
+            "mobile_height": "large",
+            "stack": "none",
+            "spacing": "0px",
+            "media_content_padding": "default",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "enable_banner_click": false,
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          }
+        },
+        "block-rich-text": {
+          "type": "_block-rich-text",
+          "settings": {
+            "vertical_alignment": "middle",
+            "horizontal_alignment": "center",
+            "container_width": "md",
+            "color_scheme": "scheme-5",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": "",
+            "padding_top": "default",
+            "padding_bottom": "default"
+          },
+          "blocks": {
+            "heading-group": {
+              "type": "heading-group",
+              "settings": {
+                "page_title": false
+              },
+              "blocks": {
+                "heading": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Need Help Now?",
+                    "heading_size": "h2"
+                  }
+                }
+              },
+              "block_order": [
+                "heading"
+              ]
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our <a href=\"#\" title=\"FAQ\">FAQ</a>. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
+                "font_style": "body"
+              }
+            },
+            "button-group": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "Go to FAQ"
+                  }
+                }
+              },
+              "block_order": [
+                "button"
+              ]
+            }
+          },
+          "block_order": [
+            "heading-group",
+            "text",
+            "button-group"
+          ]
+        }
+      },
+      "block_order": [
+        "image-banner",
+        "block-rich-text"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_borders": false
+      }
+    }
+  },
+  "order": [
+    "contact",
+    "split-card"
+  ]
+}

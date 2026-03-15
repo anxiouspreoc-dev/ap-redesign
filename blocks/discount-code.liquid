@@ -1,0 +1,56 @@
+<script src="{{ 'cart-discounts.js' | asset_url }}" defer="defer" type="module"></script>
+
+{% liquid
+  assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+  for item in cart.items
+    for allocation in item.line_level_discount_allocations
+      if allocation.discount_application.type == 'discount_code'
+        assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
+      endif
+    endfor
+  endfor
+
+  assign discount_codes = discount_codes | uniq
+%}
+
+<cart-discounts id="{{ block.id }}-discount" class="discount-code justify-inherit" data-section-id="{{ section.id }}" data-existing-discounts="{% for discount_code in discount_codes %}{{ discount_code }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+  <div
+    class="discount-code__code"
+  >
+    {{ block.settings.discount_code }}
+  </div>
+  <input type="hidden" name="cart-discount" value="{{ block.settings.discount_code }}">
+  <div class="discount-code__button-wrapper">
+    <button class="discount-code__button button button--primary" data-apply-discount tabindex="0">
+      <span class="discount-code__button-label">{{ 'general.apply' | t }}</span>
+      {% render 'loading-spinner', visible: true %}
+      {%- render 'icon', icon: 'check', class: 'icon--s button__check' -%}
+      <span class="discount-code__button-success"><span class="visually-hidden">{{ 'cart.discount_code_success' | t }}</span></span>
+    </button>
+    <div class="share-button__tooltip discount-code__tooltip" data-color-scheme="{{ section.settings.share_color_scheme }}">
+      {{ 'cart.discount_code_success' | t }}
+    </div>
+  </div>
+</cart-discounts>
+
+
+{% schema %}
+{
+  "name": "t:discount-code",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "discount_code",
+      "default": "t:20off",
+      "info": "t:this-feature-requires-a-discount-code-to-be-created-in",
+      "label": "t:discount-code"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:discount-code"
+    }
+  ]
+}
+{% endschema %}

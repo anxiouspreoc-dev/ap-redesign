@@ -1,0 +1,113 @@
+{% doc %}
+  Renders a product template
+
+  @param {object} section - A Shopify Section object
+  @param {object} product - A Shopify Product object
+  @param {object} variant - A Shopify Variant object
+  @param {object} block - A Shopify Block object
+  @param {string} product_form_id - A product form id (must be unique to the page) to associate the form inputs with the buy button
+
+  @example
+  {% render 'buy-buttons',
+    section: section,
+    product: product,
+    block: block,
+    product_form_id: 'section-header-product-form-slide-1'
+  %}
+{% enddoc %}
+
+{%- if product != blank -%}
+  {%- liquid
+    assign gift_card_recipient_feature_active = false
+    if block.settings.show_gift_card_recipient and product.gift_card?
+      assign gift_card_recipient_feature_active = true
+    endif
+
+    assign show_dynamic_checkout = false
+    if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false and settings.enable_cart_checkbox == false
+      assign show_dynamic_checkout = true
+    endif
+
+    assign buy_text = 'products.product.add_to_cart' | t
+    if product.metafields.theme.preorder == true
+      assign buy_text = 'products.product.preorder' | t
+    endif
+
+    assign disable_button = false
+    if variant.available == false
+      assign disable_button = true
+    endif
+  -%}
+
+  <div class="buy-buttons" {{ block.shopify_attributes }}>
+    <product-form
+      class="product-form"
+      data-section-id="{{ section.id }}"
+      data-hide-errors="true"
+      data-product-form-id="{{ product_form_id }}"
+      data-buy-text="{{ buy_text }}"
+    >
+
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        class: 'buy-buttons__form',
+        data-type: 'add-to-cart-form'
+      -%}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ variant.id }}"
+          {% unless variant.available == true %}
+            disabled
+          {% endunless %}
+        >
+
+        {%- if gift_card_recipient_feature_active -%}
+          {%- render 'gift-card-recipient-form', form: form -%}
+        {%- endif -%}
+
+        <div class="buy-buttons__buttons">
+          {% # theme-check-disable UnclosedHTMLElement %}
+          {%- if block.settings.show_quantity_selector -%}
+            <div class="buy-buttons__button-group button button--full {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}" style="">
+              <div class="buy-buttons__quantity" data-quantity>
+                {%- render 'quantity-input', variant: variant, product: product, product_form_id: product_form_id -%}
+              </div>
+          {%- endif -%}
+
+          <button
+            tabindex="0"
+            id="{{ product_form_id }}-submit"
+            type="submit"
+            name="add"
+            class="product-form__submit button button--full {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            aria-describedby="title-{{ section.id }}-{{ product.id }}"
+            {% if disable_button %}
+              aria-disabled="true"
+            {% endif %}
+          >
+            {%- if variant.available -%}
+              <span>{{ buy_text }}</span>
+            {%- elsif variant.available == false -%}
+              <span>{{ 'products.product.sold_out' | t }}</span>
+            {%- else -%}
+              <span>{{ 'products.product.select_option' | t: count: product.options.size }}</span>
+            {%- endif -%}
+
+            {%- render 'loading-spinner', class: 'opacity', visible: true -%}
+          </button>
+
+          {%- if block.settings.show_quantity_selector -%}
+            </div>
+          {%- endif -%}
+          {% # theme-check-enable UnclosedHTMLElement %}
+
+          {%- if show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
+        </div>
+      {%- endform -%}
+    </product-form>
+  </div>
+{%- endif -%}

@@ -1,0 +1,21 @@
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign variant = product.selected_or_first_available_variant
+-%}
+
+{%- assign product_form_id = 'product-form-' | append: section.id | append: product.id -%}
+<div {{ block.shopify_attributes }} data-quantity>
+  {%- render 'quantity-input', variant: variant, product: product, product_form_id: product_form_id, show_label: true -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:quantity-selector",
+  "tag": null,
+  "presets": [
+    {
+      "name": "t:quantity-selector"
+    }
+  ]
+}
+{% endschema %}

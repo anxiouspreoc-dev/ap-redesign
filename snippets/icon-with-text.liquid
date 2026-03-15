@@ -1,0 +1,39 @@
+{% doc %}
+  Renders an icon with text from an icon-with-text block or a _pdp-icon-with-text block.
+
+  @param {object} block - A Shopify Block object.
+
+  @example
+  {% render 'icon-with-text',
+    block: block
+  %}
+{% enddoc %}
+
+{%- if block.settings.text != blank -%}
+  <div
+    class="product-info__icon-with-text icon-with-text {% if block.settings.layout == 'row' %}alignment--{{ block.settings.vertical_alignment }} justify-{{ block.settings.horizontal_alignment }}{% else %}icon-with-text--column items-{{ block.settings.horizontal_alignment }}{% endif %} {{ block.settings.font_style }} {% if block.settings.show_borders %}border{% endif %} {{ block.settings.horizontal_alignment }}"
+    data-color-scheme="{{ block.settings.color_scheme }}"
+    style="--padding: {{ block.settings.padding }}; --gap: {{ block.settings.gap }};"
+    {{ block.shopify_attributes }}
+  >
+    {%- render 'icon', icon: block.settings.icon, class: block.settings.icon_size -%}
+    {%- if block.settings.image != blank -%}
+      {%- capture sizes -%}
+        {{ block.settings.max_width | times: 1.0 | divided_by: 16 }}rem
+      {%- endcapture -%}
+      {%- assign widths = '100, 200, 300, 400, 600, 800, 1200' -%}
+      <div class="icon-with-text__image-wrapper" style="--image-max-width: {{ sizes }}">
+        {{
+          block.settings.image
+          | image_url: width: 2200
+          | image_tag:
+            sizes: sizes,
+            widths: widths
+        }}
+      </div>
+    {%- endif -%}
+    <div>
+      {{- block.settings.text -}}
+    </div>
+  </div>
+{% endif %}

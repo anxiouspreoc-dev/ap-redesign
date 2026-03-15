@@ -1,0 +1,29 @@
+{% doc %}
+  Renders a quantity input associated with a product
+
+  @param {object} section - A Shopify Section object
+  @param {string} content - HTML content for the slider
+  @param {string} arrow_style - One of 'overlay' or 'below'
+  @param {string} counter_style - One of 'hidden', 'counter' or 'progress'
+  @param {string} [button_style] - One of 'primary', 'secondary' or 'text'
+  @param {string} [class] - Optional class name
+  @param {boolean} [show_desktop_slider] - Whether or not to show the slider on  show_desktop_slider
+
+  @example
+  {% render 'quantity-input',
+    variant: product.selected_variant,
+    product_form_id: 'unique-id',
+    show_label: true,
+  %}
+{% enddoc %}
+
+<slider-component
+  data-label="{{ section.id }}-Section-Heading"
+  class="{{ class }} slider-component"
+  {% unless show_desktop_slider == true %}data-destroy="(min-width: 64em)"{% endunless %}
+>
+  {{ content }}
+  <div class="slideshow__pagination slider-component__pagination slider-component__pagination--{{ arrow_style }}  slider-component__pagination--counter-{{ counter_style }}">
+    {%- render 'pagination-slideshow', button_style: button_style, arrow_style: arrow_style, counter_style: counter_style -%}
+  </div>
+</slider-component>

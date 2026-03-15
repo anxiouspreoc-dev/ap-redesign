@@ -1,0 +1,258 @@
+{%- liquid
+  assign media = block.settings.video
+  assign button_style = section.settings.button_style
+  assign autoplay = false
+  assign fetch_priority = 'auto'
+  assign loading = 'lazy'
+  assign muted = false
+  if section.settings.enable_autoplay
+    assign muted = true
+  endif
+
+  if section.index == 1 and section.location != 'footer'
+    assign fetch_priority = 'high'
+    assign loading = 'eager'
+  endif
+
+  assign video_ratio = media.aspect_ratio
+  if block.settings.video_ratio != 'default'
+    assign video_ratio = block.settings.video_ratio
+  endif
+
+  assign center_button = false
+  if media.alt == blank and section.settings.enable_mute_toggle == false
+    assign center_button = true
+  endif
+-%}
+
+{%- capture pause_button -%}
+  {% # theme-check-disable UnusedAssign %}
+  {%- assign pause_text = 'sections.video.pause_video' | t: description: media.alt | escape -%}
+  {%- assign play_text = 'sections.video.play_video' | t: description: media.alt | escape -%}
+  {%- assign mute_text = 'accessibility.mute' | t -%}
+  {%- assign unmute_text = 'accessibility.unmute' | t -%}
+  {%- assign class = 'deferred-media__button deferred-media__play-pause button button--' | append: button_style -%}
+  {% # theme-check-enable UnusedAssign %}
+  {%- render 'play-pause-button', pause_text: pause_text, play_text: play_text, class: class -%}
+  <button
+    class="deferred-media__button button button--square button--{{ button_style }} deferred-media__loader"
+    id="Deferred-Media-Poster-{{ media.id }}"
+    type="button"
+    aria-label="{{ alt }}"
+  >
+    {%- render 'icon', icon: 'play', class: 'deferred-media__icon icon-m' -%}
+  </button>
+{%- endcapture -%}
+
+<li
+  class="video-reels__item slider-component__item slider-component__item-padding expand-link"
+  id="Slide-{{ section.id }}-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="media-grid__item scroll-trigger animate--slide-up">
+      {%- assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200' -%}
+      {%- capture sizes -%}
+        {%- if section.settings.container_type == 'full' or section.settings.container_type == 'padded' -%}
+          (min-width: 64em) calc(100vw / {{ section.settings.columns_desktop }}), calc(100vw / {{ section.settings.columns_mobile }})
+        {%- else -%}
+          (min-width: 64em) min(calc(100vw / {{ section.settings.columns_desktop }}), calc(1400px / {{ section.settings.columns_desktop }})), min(calc(100vw / {{ section.settings.columns_mobile }}), calc(1400px / {{ section.settings.columns_mobile }}))
+        {%- endif -%}
+      {%- endcapture -%}
+
+      <div {% render 'color-scheme-attributes', scoped_settings: block.settings, class: 'card-border-radius' %} >
+        {%- if block.settings.creator_image != blank or block.settings.creator_name != blank -%}
+          <div class="video-reels__creator media-object expand-link">
+            {%- if block.settings.creator_image != blank -%}
+              <div class="media-object__image-wrapper" >
+                {{
+                  block.settings.creator_image
+                  | image_url: width: 72
+                  | image_tag: sizes: '1.5rem', widths: '24, 48, 72', fetchpriority: fetch_priority, alt: "", class: 'media-object__image border-radius-circle', loading: loading
+                }}
+              </div>
+            {%- endif -%}
+            <div class="media-object__content">
+              {%- if block.settings.creator_link -%}
+                <a class="expand-link__link" href="{{ block.settings.creator_link }}">
+              {%- endif -%}
+              <span class="body text-s">
+                {{ block.settings.creator_name }}
+              </span>
+              {%- if block.settings.creator_link -%}
+              </a>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- assign alt = 'sections.video.load_video' | t: description: media.alt | escape -%}
+        {%- assign description_class = 'button button--' | append: button_style -%}
+
+        <deferred-media
+          class="deferred-media deferred-media--fill"
+          style="--aspect-ratio: {{ video_ratio }};"
+          data-autoplay="{{ autoplay }}"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.video != blank -%}
+            {%- if media.preview_image != null -%}
+              {%- assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200' -%}
+              {{
+                media.preview_image
+                | image_url: width: 2200
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, alt: "", class: 'deferred-media__poster media-wrapper', loading: loading
+              }}
+            {%- endif -%}
+            <template>
+              {{ media | video_tag: image_size: '1100x',  controls: controls, muted: muted, loop: loop, playsinline: true, poster: media.preview_image, tabindex: "-1" }}
+            </template>
+          {%- else -%}
+            <div class="media-grid__media-wrapper image card__media-wrapper--placeholder deferred-media__poster" style="--image-ratio: {{ video_ratio }}; background-color: #e5e5e5; ">
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <template>
+              <video {% if muted %}muted{% endif %} controlslist="nodownload" playsinline style="inline-size: 100%; aspect-ratio: {{ video_ratio }}; object-fit: cover;">
+                <source src="https://cdn.shopify.com/videos/c/o/v/00870923cec84b31bfc838bd80c6799d.mp4">
+              </video>
+            </template>
+          {%- endif -%}
+
+          {%- if block.settings.enable_overlay %}
+            <div class="video-reels__overlay" style="--overlay: {{ block.settings.overlay }}"></div>
+          {%- endif -%}
+
+          {%- if center_button == true -%}
+            <div class="deferred-media__controls deferred-media__button-wrapper alignment--middle-center">
+              {{ pause_button }}
+            </div>
+          {%- endif -%}
+
+          <div class="deferred-media__controls deferred-media__button-wrapper alignment--bottom-right">
+            <div class="video-reels__footer">
+              <div class="video-reels__controls flex alignment--middle-right">
+                {% if center_button == false %}
+                  {{ pause_button }}
+                {% endif %}
+                {%- render 'video-description', class: description_class, media: media -%}
+                {%- if section.settings.enable_mute_toggle -%}
+                  <mute-button
+                    hidden
+                    data-mute="{{ mute_text }}"
+                    data-unmute="{{ unmute_text }}"
+                    data-muted="{% if section.settings.enable_autoplay %}true{% else %}false{% endif %}"
+                  >
+                    <button class="button button--{{ button_style }} button--square deferred-media__button ">
+                      <span data-label class="visually-hidden">{{ umute_text }}</span>
+                      {%- render 'icon', icon: 'speaker-muted', class: 'mute-button__muted icon--s' -%}
+                      {%- render 'icon', icon: 'speaker', class: 'mute-button__unmuted icon--s' -%}
+                    </button>
+                  </mute-button>
+                {%- endif -%}
+              </div>
+              {%- if section.settings.product_position == 'overlay' -%}
+                <div class="video-reels__product">
+                  <div class="video-reels__product-card">
+                    {%- content_for "block", type: "mini-product", id: "product" -%}
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </deferred-media>
+      </div>
+
+      {%- if section.settings.product_position == 'stack' -%}
+        <div class="video-reels__product">
+          <div class="video-reels__product-card">
+            {%- content_for "block", type: "mini-product", id: "product" -%}
+          </div>
+        </div>
+      {%- endif -%}
+  </div>
+</li>
+
+
+{% schema %}
+{
+  "name": "t:video",
+  "tag": null,
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:video"
+    },
+    {
+      "type": "header",
+      "content": "t:creator"
+    },
+    {
+      "type": "image_picker",
+      "id": "creator_image",
+      "label": "t:image"
+    },
+    {
+      "type": "text",
+      "label": "t:name",
+      "id": "creator_name"
+    },
+    {
+      "type": "url",
+      "label": "t:link",
+      "id": "creator_link"
+    },
+    {
+      "type": "header",
+      "content": "t:layout"
+    },
+    {
+      "type": "select",
+      "id": "video_ratio",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:adapt-to-video"
+        },
+        {
+          "value": "9 / 16",
+          "label": "t:portrait"
+        },
+        {
+          "value": "1",
+          "label": "t:square"
+        }
+      ],
+      "default": "9 / 16",
+      "label": "t:video-ratio"
+    },
+    {
+      "type": "header",
+      "content": "t:colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:color-scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "t:enable-overlay",
+      "default": false,
+      "info": "t:add-an-optional-overlay-to-improve-readability"
+    },
+    {
+      "type": "color_background",
+      "id": "overlay",
+      "label": "t:overlay-color",
+      "default": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:video"
+    }
+  ]
+}
+{% endschema %}

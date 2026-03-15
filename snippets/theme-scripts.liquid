@@ -1,0 +1,95 @@
+{% comment %}These are core scripts for the Primavera theme{% endcomment %}
+<script>
+  window.shopUrl = '{{ request.origin }}';
+  window.routes = {
+    cart_add_url: '{{ routes.cart_add_url }}',
+    cart_change_url: '{{ routes.cart_change_url }}',
+    cart_update_url: '{{ routes.cart_update_url }}',
+    cart_url: '{{ routes.cart_url }}',
+    predictive_search_url: '{{ routes.predictive_search_url }}',
+  };
+
+  window.cartStrings = {
+    error: `{{ 'cart.cart_error' | t }}`,
+    quantityError: `{{ 'cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+    discountError: `{{ 'cart.discount_code_error' | t }}`,
+    discountSuccess: `{{ 'cart.discount_code_success' | t }}`,
+    discountShippingError: `{{ 'cart.shipping_discount_error' | t }}`,
+  };
+
+  window.variantStrings = {
+    addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+    soldOut: `{{ 'products.product.sold_out' | t }}`,
+    unavailable: `{{ 'products.product.unavailable' | t }}`,
+    unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+  };
+
+  window.accessibilityStrings = {
+    generalError: `{{ 'general.error' | t }}`,
+    priceValidity: `{{ 'products.facets.price_validity' | t }}`,
+    itemAdded: `{{ 'cart.item_added' | t }}`,
+    itemQuantityUpdated: `{{ 'cart.item_quantity_updated' | t: item: '[item]', quantity: '[quantity]' }}`,
+    itemRemoved: `{{ 'cart.item_removed' | t: item: '[item]' }}`,
+    imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
+    shareSuccessMessage: `{{ 'share.success_message' | t }}`,
+    recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
+    recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
+    countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
+    countdownRemainingTime: `{{ 'accessibility.countdown_remaining_time' | t: time: '[time]', event: '[event]' }}`,
+    countdownTimerEnd: `{{ 'accessibility.countdown_timer_end' | t: event: '[event]' }}`,
+    sliderLabel: `{{ 'accessibility.slideshow' | t: description: ' ' }}`,
+    slideLabel: `{{ 'sections.slider.label' | t }}`
+  };
+</script>
+{%- if request.design_mode -%}
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'scrolling-content.js' | asset_url }}" defer="defer"></script>
+  {{ 'theme-editor.css' | asset_url | stylesheet_tag }}
+  <script>
+    window.shopInfo = {
+      name: '{{ shop.name }}',
+      email: '{{ shop.email }}',
+      domain: '{{ shop.permanent_domain }}',
+      city: '{{ shop.address.city }}, {{ shop.address.province }}',
+      country: '{{ shop.address.country }}',
+      id: '{{ shop.id }}',
+      products: {{ shop.products_count }},
+      locale: [{% for locale in shop.published_locales %}'{{ locale.iso_code }}'{% unless forloop.last %},{% endunless %}{% endfor %}],
+    };
+  </script>
+{%- endif -%}
+{%- if settings.predictive_search_enabled -%}
+  <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+{%- if settings.enable_video_descriptions -%}
+  <script src="{{ 'video-description.js' | asset_url }}" defer="defer"></script>
+  {% render 'video-description-modal' %}
+{%- endif -%}
+{% if settings.enable_instant_page %}
+  <script src="{{ 'instantpage-5.2.0.js' | asset_url }}" type="module" defer></script>
+{% endif %}
+{% unless settings.show_focus_outlines %}
+  <script src="{{ 'what-input.min.js' | asset_url }}" defer></script>
+{% endunless %}
+{% if settings.show_free_shipping_message %}
+  <script src="{{ 'free-shipping.js' | asset_url }}" defer></script>
+{% endif %}
+<script src="{{ 'recently-viewed-products-cache.js' | asset_url }}" type="module"></script>
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    document.documentElement.classList.add('js');
+  });
+</script>
+
+<template data-overflow-previous>
+  <button type="button" class="scroll-overflow__button scroll-overflow__button--prev" data-direction="previous">
+    <span class="visually-hidden">{{ 'pagination.previous' | t }}</span>
+    {%- render 'icon', icon: 'caret-left', class: 'pagination__icon icon--l' -%}
+  </button>
+</template>
+<template data-overflow-next>
+  <button type="button" class="scroll-overflow__button scroll-overflow__button--next" data-direction="next">
+    <span class="visually-hidden">{{ 'pagination.next' | t }}</span>
+    {%- render 'icon', icon: 'caret-right', class: 'pagination__icon icon--l' -%}
+  </button>
+</template>

@@ -1,0 +1,74 @@
+{% doc %}
+  Renders a star rating component with optional text
+
+  @param {object} [product] - Shopify Product object
+  @param {number} [rating] - A number if a product is not provided
+  @param {string} [rating_text] - An optional string to display next to the rating
+  @param {string} [rating_style] - Font style for the optional rating text
+  @param {string} [classes] - Optional CSS classes for the wrapper
+
+  @example
+  {% render 'product-rating',
+    product: product,
+    rating_text: '500+ happy customers',
+    rating_style: 'caption',
+    classes: 'sticky-atc__rating'
+  %}
+{% enddoc %}
+
+{% liquid
+  if rating != null
+    assign rating = rating | times: 1.0
+    assign rating_max = 5
+    assign rating_count = 0
+  elsif product != null and product.metafields.reviews.rating.value.rating != null
+    assign rating = product.metafields.reviews.rating.value.rating | times: 1.0
+    assign rating_max = product.metafields.reviews.rating.value.scale_max | default: 5
+    assign rating_count = product.metafields.reviews.rating_count
+  endif
+
+  assign rating_decimal = 0
+  assign decimal = rating | modulo: 1
+  if decimal >= 0.3 and decimal <= 0.7
+    assign rating_decimal = 0.5
+  elsif decimal > 0.7
+    assign rating_decimal = 1
+  endif
+  assign rating_rounded = rating | floor | times: 1.0 | plus: rating_decimal
+%}
+
+{%- if rating != null -%}
+  <div class="product-rating flex flex-wrap items-center icon-m {% if classes %} {{ classes }}{% endif %}" {{ block.shopify_attributes }}>
+    <div class="product-rating__value flex items-center">
+      <span class="visually-hidden">{{ 'accessibility.star_reviews_info' | t: rating: rating, rating_max: rating_max }}</span>
+      {%- for i in (1..5) -%}
+        {%- assign current = forloop.index -%}
+        {%- assign previous = current | minus: 1.0 -%}
+
+        {% if rating_rounded >= current -%}
+          {%- render 'icon', icon: 'star-full' -%}
+        {%- else -%}
+          {%- if rating_rounded < current and rating_rounded > previous -%}
+            {%- render 'icon', icon: 'star-half' -%}
+          {%- else -%}
+            {%- render 'icon', icon: 'star-empty' -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- if rating_count > 0 -%}
+      <div class="product-rating__count">
+        <span aria-hidden="true" class="text-xs leading-none">({{ rating_count }})</span>
+        <span class="visually-hidden">
+          {{- rating_count -}}
+          {{ 'accessibility.total_reviews' | t -}}
+        </span>
+      </div>
+    {%- endif -%}
+    {% if rating_text %}
+      <div class="{{ rating_style }} text-box-trim">
+        {{ rating_text }}
+      </div>
+    {% endif %}
+  </div>
+{%- endif -%}

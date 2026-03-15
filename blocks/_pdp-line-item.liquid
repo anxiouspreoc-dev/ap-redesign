@@ -1,0 +1,106 @@
+{%- assign product = section.settings.product | default: product -%}
+{%- assign product_form_id = 'product-form-' | append: section.id | append: product.id -%}
+
+<div {{ block.shopify_attributes }}>
+  {%- render 'line-item-property', block: block, product_form_id: product_form_id -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:line-item-property",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "t:type",
+      "options": [
+        {
+          "value": "text",
+          "label": "t:text"
+        },
+        {
+          "value": "checkbox",
+          "label": "t:checkbox"
+        },
+        {
+          "value": "select",
+          "label": "t:dropdown"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "field_label",
+      "label": "t:label",
+      "default": "t:label",
+      "info": "t:all-line-item-property-labels-on-a-given-section-must"
+    },
+    {
+      "type": "select",
+      "id": "text_type",
+      "label": "t:input-type",
+      "default": "text",
+      "options": [
+        {
+          "value": "text",
+          "label": "t:single-line-text"
+        },
+        {
+          "value": "textarea",
+          "label": "t:multi-line-text"
+        }
+      ],
+      "visible_if": "{{ block.settings.type == 'text' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_character_limit",
+      "label": "t:enable-character-limit",
+      "visible_if": "{{ block.settings.type == 'text' }}"
+    },
+    {
+      "type": "number",
+      "id": "character_limit",
+      "label": "t:character-limit",
+      "default": 40,
+      "info": "t:any-number-from-1-to-255",
+      "visible_if": "{{ block.settings.type == 'text' and block.settings.enable_character_limit == true }}"
+    },
+    {
+      "type": "text",
+      "id": "checkbox_checked",
+      "label": "t:checked-value",
+      "default": "t:yes",
+      "visible_if": "{{  block.settings.type == 'checkbox' }}"
+    },
+    {
+      "type": "text",
+      "id": "checkbox_unchecked",
+      "label": "t:unchecked-value",
+      "default": "t:no",
+      "info": "t:only-applies-if-checkbox-is-not-required",
+      "visible_if": "{{  block.settings.type == 'checkbox' and block.settings.required == false }}"
+    },
+    {
+      "type": "text",
+      "id": "options",
+      "label": "t:options",
+      "default": "t:option-1-option-2",
+      "info": "t:comma-separated-list-of-options-accepts-any-text-except-for",
+      "visible_if": "{{ block.settings.type == 'select' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "t:required",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:line-item-property"
+    }
+  ]
+}
+{% endschema %}

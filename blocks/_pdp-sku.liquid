@@ -1,0 +1,21 @@
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign variant = product.selected_or_first_available_variant
+-%}
+
+<p class="product-info__sku" {{ block.shopify_attributes }}>
+  <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
+  <span class="caption text-s secondary" data-sku>{{- variant.sku -}}</span>
+</p>
+
+{% schema %}
+{
+  "name": "t:sku",
+  "tag": null,
+  "presets": [
+    {
+      "name": "t:sku"
+    }
+  ]
+}
+{% endschema %}

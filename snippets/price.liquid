@@ -1,0 +1,92 @@
+{% # theme-check-disable UnusedAssign%}
+{% doc %}
+  Renders a price component, including a fallback for if not product or variant is passed
+
+  @param {object} [product] - Shopify Product object
+  @param {object} [variant] - Shopify Variant object, overrides the product if selected
+  @param {string} [horizontal_alignment] - One of 'left', 'center' or 'right'
+  @param {string} [font_style] - A utility class for a font
+  @param {string} [class] - Any other CSS classes
+
+  @example
+  {% render 'price',
+    product: product,
+    horizontal_alignment: 'left',
+    font_style: 'caption-xs',
+    class: 'sticky-atc__price'
+  %}
+{% enddoc %}
+
+{%- liquid
+  if variant
+    assign target = variant
+  else
+    assign target = product
+    assign variant = product.selected_or_first_available_variant
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 49500
+  assign available = target.available | default: false
+  assign money_price = price | money
+  assign price_min = product.price_min
+  assign price_max = product.price_max
+  assign money_price_min = price_min | money
+  assign money_price_max = price_max | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+    assign money_price_min = price_min | money_with_currency
+    assign money_price_max = price_max | money_with_currency
+  endif
+
+  if target == product and product.price_varies
+    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+
+  if font_style == nil
+    assign font_style = 'caption'
+  endif
+-%}
+{% # theme-check-enable UnusedAssign%}
+
+<div class="price {{ font_style }} flex
+    {% if horizontal_alignment %}alignment--middle-{{ horizontal_alignment }}{% else %}justify-inherit{% endif %}
+    {% if available == false %} price--sold-out{% endif %}
+    {% if compare_at_price > price %} price--on-sale{% endif %}
+    {% if class != blank %}{{ class }}{% endif %}
+  ">
+  <div class="price__values">
+    <div class="price__regular">
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      <span class="">
+        {%- if price == 0 and settings.card_show_price_free == true -%}
+          {{ 'products.product.price.free' | t }}
+        {%- else -%}
+          {{ money_price }}
+        {%- endif -%}
+      </span>
+    </div>
+    <div class="price__on-sale">
+      {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+        <span class="exception">{{ money_price }}</span>
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+        <span>
+          <s class="secondary">
+            {% if settings.currency_code_enabled %}
+              {{- compare_at_price | money_with_currency -}}
+            {% else %}
+              {{- compare_at_price | money -}}
+            {% endif %}
+          </s>
+        </span>
+      {%- endunless -%}
+    </div>
+  </div>
+  <small class="unit-price caption caption-xs {% if variant.unit_price_measurement == nil %} hidden{% endif %}">
+    <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+    <span class="secondary">
+      {{ variant.unit_price | money | unit_price_with_measurement: variant.unit_price_measurement }}
+    </span>
+  </small>
+</div>

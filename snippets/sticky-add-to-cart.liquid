@@ -1,0 +1,110 @@
+{% doc %}
+  Renders the sticky add to cart
+
+  @param {object} section - Shopify section object
+  @param {object} product - Shopify Product object
+  @param {string} product_form_id - The inherited product_form_id, used to sync the product form
+
+  @example
+  {% render 'sticky-add-to-cart',
+    product: product
+    product_form_id: product_form_id
+  %}
+{% enddoc %}
+
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign buy_text = 'products.product.add_to_cart' | t
+  if product.metafields.theme.preorder == true
+    assign buy_text = 'products.product.preorder' | t
+  endif
+
+  assign disable_button = false
+  if variant.available == false
+    assign disable_button = true
+  endif
+
+  assign media = product.featured_media
+  if variant.featured_media != null
+    assign media = variant.featured_media
+  endif
+-%}
+
+<script src="{{ 'sticky-add-to-cart.js' | asset_url }}" defer="defer" type="module"></script>
+
+<sticky-add-to-cart class="sticky-atc ui {% if section.settings.enable_satc_mobile %}sticky-atc--mobile{% endif %} {% if section.settings.enable_satc_desktop %}sticky-atc--desktop{% endif %}" data-sticky-atc data-color-scheme="{{ section.settings.satc_color_scheme }}" data-quick-add-remove data-section-id="{{ section.id }}">
+  <div class="sticky-atc__info">
+    {%- if section.settings.show_satc_image and media -%}
+      <div class="sticky-atc__image-wrapper">
+        <img
+          class="sticky-atc__image"
+          srcset="{{ media.preview_image | image_url: width: 100 }} 100w, {{ media.preview_image | image_url: width: 200 }} 200w"
+          sizes="6.25rem"
+          src="{{ media.preview_image | image_url: width: 1445 }}"
+          alt="{{ media.alt | escape }}"
+          loading="lazy"
+          width="{{ media.preview_image.width }}"
+          height="{{ media.preview_image.height }}"
+          style="--object-position: {{ media.presentation.focal_point }};"
+        >
+      </div>
+    {%- endif -%}
+    <div class="sticky-atc__content">
+      <h2 class="sticky-atc__title {{ settings.product_block_title_font_style }}">
+        {{ product.title }}
+      </h2>
+      {%- if section.settings.show_satc_variant and product.variants_count > 1 and variant -%}
+        <div class="sticky-atc__variant sticky-atc__mobile  {{ settings.product_block_price_font_style }}">
+          <a href="#{{ product_form_id }}-variant-picker">{{ variant.title }}</a>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.show_satc_price -%}
+        {%- render 'price'
+          product: product,
+          variant: variant,
+          font_style: 'caption-xs',
+          class: 'sticky-atc__price'
+        -%}
+      {%- endif -%}
+      {%- if section.settings.show_satc_rating -%}
+        {%- render 'product-rating', product: product, classes: 'sticky-atc__rating' -%}
+      {%- endif -%}
+    </div>
+  </div>
+
+  <detached-product-form
+    class="sticky-atc__product-form"
+    data-section-id="{{ section.id }}"
+    data-product-form-id="{{ product_form_id }}"
+  >
+
+    {%- if section.settings.show_satc_variant and product.variants_count > 1 and variant -%}
+      <div class="sticky-atc__variant sticky-atc__desktop {{ settings.product_block_price_font_style }}"">
+        <a href="#{{ product_form_id }}-variant-picker">{{ variant.title }}</a>
+      </div>
+    {%- endif -%}
+    <div class="buy-buttons__buttons">
+      <button
+        data-product-form-submit
+        tabindex="0"
+        type="submit"
+        name="add"
+        class="product-form__submit button button--primary sticky-atc__button"
+        aria-describedby="title-{{ section.id }}-{{ product.id }}"
+        {% if disable_button %}
+          aria-disabled="true"
+        {% endif %}
+      >
+        {%- if variant.available -%}
+          <span>{{ buy_text }}</span>
+        {%- elsif variant.available == false -%}
+          <span>{{ 'products.product.sold_out' | t }}</span>
+        {%- else -%}
+          <span>{{ 'products.product.select_option' | t: count: product.options.size }}</span>
+        {%- endif -%}
+
+        {%- render 'loading-spinner', class: 'opacity', visible: true -%}
+      </button>
+    </div>
+  </detached-product-form>
+</sticky-add-to-cart>

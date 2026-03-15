@@ -1,0 +1,51 @@
+{% doc %}
+  Renders a quantity input associated with a product
+
+  @param {object} variant - A Shopify Variant object
+  @param {object} product - A Shopify Product object
+  @param {string} product_form_id - The id of the form to associate
+  @param {boolean} [show_label] - Whether or not to show a visible label
+
+  @example
+  {% render 'quantity-input',
+    variant: product.selected_variant,
+    product_form_id: 'unique-id',
+    show_label: true,
+  %}
+{% enddoc %}
+
+{%- liquid
+  assign cart_qty = cart | item_count_for_variant: variant.id
+-%}
+
+<label
+  for="Quantity-{{ product_form_id }}"
+  class="quantity-input__legend caption {% unless show_label %} visually-hidden{% endunless %}"
+>
+  {{- 'products.product.quantity.label' | t -}}
+  <span class="visually-hidden">{{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}</span>
+</label>
+<quantity-input class="quantity-input quantity-input--border">
+  <button class="quantity-input__button" name="minus" type="button">
+    <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+    {%- render 'icon', icon: 'minus', class: 'icon--s' -%}
+  </button>
+  <input
+    class="quantity-input__input caption"
+    type="number"
+    name="quantity"
+    id="Quantity-{{ product_form_id }}"
+    min="{{ variant.quantity_rule.min }}"
+    {% if variant.quantity_rule.max != null %}
+      data-max="{{ variant.quantity_rule.max }}"
+      max="{{ variant.quantity_rule.max }}"
+    {% endif %}
+    step="{{ variant.quantity_rule.increment }}"
+    value="{% if variant %}{{ variant.quantity_rule.min }}{% else %}1{% endif %}"
+    {% if product_form_id %}form="{{ product_form_id }}"{% endif %}
+  >
+  <button class="quantity-input__button" name="plus" type="button">
+    <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+    {%- render 'icon', icon: 'plus', class: 'icon--s' -%}
+  </button>
+</quantity-input>

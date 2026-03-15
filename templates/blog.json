@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "heading_size": "h2",
+        "text": "",
+        "layout_header": "center",
+        "featured_post_heading_size": "h2",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "container_width": "md",
+        "featured_post_color_scheme": "scheme-5",
+        "product_limit": 10,
+        "columns_desktop": "3",
+        "columns_mobile": "2",
+        "container_type": "max",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": true,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,12 @@
+<collapsible-content {% if destroy %}data-destroy="{{ destroy }}"{% endif %}>
+  <details class="collapsible__item" {{ block.shopify_attributes }} {% if open %}open{%  endif %} {% if id != blank %}id="{{ id }}"{% endif %}>
+    <summary class="collapsible__toggle {{ heading_size }}">
+      <span class="collapsible__heading" {% if heading_id != blank %}id="{{ heading_id }}"{% endif %}>{{ heading }}</span>
+      {%- render 'icon', icon: 'plus', class: 'collapsible__icon collapsible__icon--plus icon--s' -%}
+      {%- render 'icon', icon: 'minus', class: 'collapsible__icon collapsible__icon--minus icon--s' -%}
+    </summary>
+    <div class="collapsible__content" data-content>
+      {{ text }}
+    </div>
+  </details>
+</collapsible-content>

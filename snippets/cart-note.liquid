@@ -1,0 +1,38 @@
+{% doc %}
+  Renders a cart note within a collapsible
+
+  @param {string} position - Accepts 'cart-drawer' or 'cart-page'
+  @param {string} form_id - String to generate ID for the form elements. Must be unique on the page.
+  @example
+  {% render 'cart-note',
+    position: 'cart-drawer',
+    form_id: form_id
+  %}
+{% enddoc %}
+
+<div class="cart__note">
+  <collapsible-content>
+    <details class="collapsible__item" {% if open %}open{%  endif %}>
+      <summary class="collapsible__toggle">
+        <span class="collapsible__heading caption" id="{{ position }}-note-label">{{ 'cart.note' | t }}</span>
+        {%- render 'icon', icon: 'plus', class: 'collapsible__icon collapsible__icon--plus icon--s' -%}
+        {%- render 'icon', icon: 'minus', class: 'collapsible__icon collapsible__icon--minus icon--s' -%}
+      </summary>
+      <div class="collapsible__content" data-content>
+        <cart-note>
+          <div class="field">
+            <textarea
+              rows="2"
+              id="{{ position }}-note"
+              form="{{ form_id }}"
+              name="note"
+              class="field__input"
+              aria-labelledby="{{ position }}-note-label"
+              placeholder=" "
+            >{{ cart.note }}</textarea>
+          </div>
+        </cart-note>
+      </div>
+    </details>
+  </collapsible-content>
+</div>

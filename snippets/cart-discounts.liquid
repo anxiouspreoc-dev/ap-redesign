@@ -1,0 +1,72 @@
+{% doc %}
+  Renders a cart discount form within a collapsible
+
+  @param {string} position - Accepts 'cart-drawer' or 'cart-page'
+  @param {string} form_id - String to generate ID for the form elements. Must be unique on the page.
+  @param {object} section - A Shopify section object.
+
+  @example
+  {% render 'cart-discount',
+    position: 'cart-drawer',
+    form_id: form_id,
+    section: section
+  %}
+{% enddoc %}
+
+{% liquid
+  assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+  for item in cart.items
+    for allocation in item.line_level_discount_allocations
+      if allocation.discount_application.type == 'discount_code'
+        assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
+      endif
+    endfor
+  endfor
+
+  assign discount_codes = discount_codes | uniq
+%}
+
+<div class="cart__note">
+  <collapsible-content>
+    <details class="collapsible__item cart-discount__collapsible">
+      <summary class="collapsible__toggle">
+        <span class="collapsible__heading caption" id="{{ position }}-discount-label">{{ 'cart.discounts' | t }}</span>
+        {%- render 'icon', icon: 'plus', class: 'collapsible__icon collapsible__icon--plus icon--s' -%}
+        {%- render 'icon', icon: 'minus', class: 'collapsible__icon collapsible__icon--minus icon--s' -%}
+      </summary>
+      <div class="collapsible__content" data-content>
+        <cart-discounts id="{{ position }}-discount-form" class="cart-discount" data-section-id="{{ section.id }}" data-existing-discounts="{% for discount_code in discount_codes %}{{ discount_code }}{% unless forloop.last %},{% endunless %}{% endfor %}" data-context="cart">
+          <div class="flex-field">
+            <div class="field">
+              <input
+                type="text"
+                id="{{ position }}-discount"
+                form="{{ form_id }}"
+                name="cart-discount"
+                class="field__input"
+                aria-labelledby="{{ position }}-discount-label"
+              >
+            </div>
+            <button class="button button--primary" data-apply-discount>
+              {{ 'general.apply' | t }}
+              {% render 'loading-spinner', visible: true %}
+            </button>
+          </div>
+          <ul class="cart-discount__codes list-separator">
+            {% for discount_code in discount_codes %}
+              <button class="list-separator__item list-separator--secondary expand-link caption-xs button--close cart-discount__code"
+                data-remove-discount="{{ discount_code }}"
+                type="button">
+                <span class="caption caption-xs">
+                  {{ discount_code }}
+                  <span class="visually-hidden">{{ 'cart.remove' | t }}</span>
+                </span>
+                {%- render 'icon', icon: 'close', class: 'icon--xxs' -%}
+              </button>
+            {% endfor %}
+          </ul>
+        </cart-discounts>
+      </div>
+    </details>
+  </collapsible-content>
+</div>

@@ -1,0 +1,84 @@
+{%- assign product = section.settings.product | default: product -%}
+{%- assign product_form_id = 'product-form-' | append: section.id | append: product.id -%}
+{%- assign metafield_namespace = block.settings.option_value_metafield | split: '.' | first -%}
+{%- assign metafield_key = block.settings.option_value_metafield | split: '.' | last -%}
+
+{% if block.settings.product_list.count > 0 %}
+  <div class="variant-picker">
+    <div class="variant-picker__input variant-picker__input--images justify-inherit">
+      {% if block.settings.option_name != blank%}
+        <div class="variant-picker__legend justify-inherit">
+          <h2 class="caption">
+            {{ block.settings.option_name }}:
+            <span data-selected-value>
+              {%- if product.metafields[metafield_namespace][metafield_key] -%}
+                {{ product.metafields[metafield_namespace][metafield_key] }}
+              {%- else -%}
+                {{ product.title }}
+              {%- endif -%}
+            </span>
+          </h2>
+        </div>
+      {% endif %}
+
+      {%- for linked_product in block.settings.product_list -%}
+        {% assign image = linked_product.featured_image %}
+        <a href="{{ linked_product.url }}" class="variant-picker__image-label caption {% unless linked_product.available %} disabled{% endunless %} {% if linked_product.handle == product.handle %}selected{% endif %}">
+          {% comment %}Empty alt tag intentional, screen reader announcements too noisy otherwise.{% endcomment %}
+          {{ image | image_url: width: 160 | image_tag:
+            class: 'variant-picker__image-label-image',
+            widths: widths,
+            height: image.height,
+            width: image.width,
+            alt: '',
+            sizes: sizes
+          }}
+          <span class="variant-picker__image-label-text">
+            {%- unless linked_product.available -%}<s>{%- endunless -%}
+            {%- if linked_product.metafields[metafield_namespace][metafield_key] -%}
+              {{ linked_product.metafields[metafield_namespace][metafield_key] }}
+            {%- else -%}
+              {{ linked_product.title }}
+            {%- endif -%}
+            {%- unless linked_product.available -%}</s>{%- endunless -%}
+          </span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:linked-products",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:link-different-products-together-as-if-they-were-variants-find"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "t:products",
+      "info": "t:either-a-fixed-list-of-products-or-connect-a-product"
+    },
+    {
+      "type": "text",
+      "id": "option_name",
+      "label": "t:option-name-optional"
+    },
+    {
+      "type": "text",
+      "id": "option_value_metafield",
+      "label": "t:option-value-metafield-optional",
+      "info": "t:specify-a-product-metafield-to-override-product-titles-eg-customcolor"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:linked-products"
+    }
+  ]
+}
+{% endschema %}

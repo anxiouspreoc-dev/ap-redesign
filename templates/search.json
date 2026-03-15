@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {},
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "Recently viewed",
+            "page_title": false,
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        }
+      }
+    }
+  },
+  "order": ["main", "recently-viewed"]
+}

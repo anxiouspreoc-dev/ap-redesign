@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "header": {
+      "type": "collection-header",
+      "settings": {
+        "background_type": "color_scheme",
+        "height": "adapt",
+        "heading_size": "h2",
+        "description": "admin",
+        "layout_header": "center",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_limit": 4,
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "container_type": "max",
+        "enable_infinite_scroll": true,
+        "link": "",
+        "filter_layout": "sidebar",
+        "enable_sticky": true,
+        "enable_max_height": false,
+        "active_filter_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

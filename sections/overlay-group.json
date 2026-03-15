@@ -1,0 +1,152 @@
+{
+  "name": "Overlay",
+  "type": "custom.overlay",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "blocks": {
+        "cart-upsell": {
+          "type": "_cart-upsell",
+          "settings": {
+            "style": "card",
+            "text": "<p>Make your gift unforgettable with our luxurious gift box.</p>",
+            "font_style_text": "body text-s",
+            "color_scheme": "scheme-5"
+          }
+        }
+      },
+      "block_order": [
+        "cart-upsell"
+      ],
+      "settings": {
+        "heading_size": "h3",
+        "product_image_width": 120,
+        "font_style_title": "heading h6",
+        "font_style_price": "caption",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-menu",
+      "blocks": {
+        "promo": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "label": "Makeup"
+          }
+        },
+        "promo-2": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "label": "Skincare"
+          }
+        },
+        "promo-3": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "default",
+            "label": "Moisturizer & Cream"
+          }
+        },
+        "promo-4": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "default",
+            "label": "Lips"
+          }
+        },
+        "promo-5": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "default",
+            "label": "Eyes"
+          }
+        },
+        "promo-6": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "default",
+            "label": "Cleanser"
+          }
+        },
+        "promo-7": {
+          "type": "promo",
+          "settings": {
+            "image_ratio": "default",
+            "label": "Glow from Within"
+          }
+        }
+      },
+      "block_order": [
+        "promo",
+        "promo-2",
+        "promo-3",
+        "promo-4",
+        "promo-5",
+        "promo-6",
+        "promo-7"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "enable_color_scheme_transition": true,
+        "color_scheme_transition": "scheme-61256f6c-228a-4d40-9ebd-0e0c16865979"
+      }
+    },
+    "search_modal": {
+      "type": "search-modal",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_alt_logo": false
+      }
+    },
+    "popup-newsletter": {
+      "type": "popup-newsletter",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "3 / 2",
+            "max_width": 1400,
+            "horizontal_alignment": "inherit",
+            "link": "",
+            "link_label": ""
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up for Primavera's newsletter and be the first to discover the latest collections, special offers, and behind-the-scenes glimpses.</p>",
+            "font_style": "body"
+          }
+        },
+        "newsletter": {
+          "type": "_newsletter",
+          "settings": {
+            "button_style": "primary",
+            "button_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "text",
+        "newsletter"
+      ],
+      "settings": {
+        "heading": "Subscribe to our Newsletter",
+        "font_style": "heading h5",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "color_scheme": "scheme-2"
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "sidebar",
+    "search_modal",
+    "popup-newsletter"
+  ]
+}
