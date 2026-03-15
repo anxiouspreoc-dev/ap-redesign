@@ -1,0 +1,32 @@
+{%- assign product = section.settings.product | default: product -%}
+{%- assign preorder_message = product.metafields.custom.preorder_pdp_message -%}
+
+{%- if preorder_message != blank -%}
+  <div class="pdp-preorder-message" {{ block.shopify_attributes }}>
+    <strong>Pre-order:</strong> {{ preorder_message }}
+  </div>
+{%- endif -%}
+
+{% style %}
+.pdp-preorder-message {
+  display: inline-block;
+  background: #fff7ec;
+  border: 1px solid #000000;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Pre-order Message",
+  "tag": null,
+  "presets": [
+    {
+      "name": "Pre-order Message"
+    }
+  ]
+}
+{% endschema %}
