@@ -1,0 +1,155 @@
+{%- assign product = section.settings.product | default: product -%}
+{%- assign pairs = product.metafields.custom.pairs_with.value -%}
+
+{%- if pairs != blank and pairs.size > 0 -%}
+  <div class="pdp-pairs-with" {{ block.shopify_attributes }}>
+    {%- if block.settings.heading != blank -%}
+      <h2 class="pdp-pairs-with__heading caption">{{ block.settings.heading }}</h2>
+    {%- endif -%}
+
+    <ul class="pdp-pairs-with__list list-unstyled" role="list">
+      {%- for paired_product in pairs -%}
+        <li class="pdp-pairs-with__card">
+          {%- if paired_product.featured_image != blank -%}
+            <a href="{{ paired_product.url }}" class="pdp-pairs-with__image-link" tabindex="-1" aria-hidden="true">
+              {{ paired_product.featured_image | image_url: width: 160 | image_tag:
+                class: 'pdp-pairs-with__image',
+                width: 80,
+                height: 80,
+                alt: paired_product.featured_image.alt | escape
+              }}
+            </a>
+          {%- endif -%}
+
+          <div class="pdp-pairs-with__content">
+            <p class="pdp-pairs-with__title caption">
+              <a href="{{ paired_product.url }}" class="pdp-pairs-with__title-link link-unstyled">
+                {{- paired_product.title -}}
+              </a>
+            </p>
+            {%- render 'price', product: paired_product, font_style: 'caption' -%}
+            <a href="{{ paired_product.url }}" class="pdp-pairs-with__shop-now caption">
+              Shop now
+            </a>
+          </div>
+
+          {%- render 'quick-add',
+            product: paired_product,
+            section_id: section.id | append: '-pairs-' | append: forloop.index,
+            button_style: 'primary',
+            classes: 'pdp-pairs-with__quick-add'
+          -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}
+
+{% style %}
+.pdp-pairs-with__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+.pdp-pairs-with__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+.pdp-pairs-with__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+  border: 1px solid #e5e5e5;
+  border-radius: var(--card-border-radius, 8px);
+  padding: var(--space-xs);
+  background: #ffffff;
+}
+.pdp-pairs-with__image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: calc(var(--card-border-radius, 8px) - 2px);
+  flex-shrink: 0;
+  display: block;
+}
+.pdp-pairs-with__image-link {
+  flex-shrink: 0;
+  display: block;
+}
+.pdp-pairs-with__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.pdp-pairs-with__title {
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pdp-pairs-with__title-link {
+  color: inherit;
+}
+.pdp-pairs-with__shop-now {
+  color: #ff0064;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pdp-pairs-with__shop-now:hover {
+  text-decoration: underline;
+}
+.pdp-pairs-with__quick-add.button {
+  background: #00ff00;
+  border-color: #00ff00;
+  color: #000000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.pdp-pairs-with__quick-add.button:hover {
+  background: #00dd00;
+  border-color: #00dd00;
+}
+@media screen and (min-width: 750px) {
+  .pdp-pairs-with__list {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pdp-pairs-with__card {
+    min-width: 260px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Pairs With",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "PAIRS WITH:"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pairs With"
+    }
+  ]
+}
+{% endschema %}
