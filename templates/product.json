@@ -49,10 +49,18 @@
               "settings": {},
               "blocks": {}
             },
+            "pdp-subtitle": {
+              "type": "_pdp-subtitle",
+              "settings": {
+                "text": "{{ closest.product.metafields.descriptors.subtitle.value }}",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
             "pdp-price": {
               "type": "_pdp-price",
               "settings": {
-                "font_style": "caption"
+                "font_style": "body"
               },
               "blocks": {}
             },
@@ -68,7 +76,7 @@
             "pdp-icon-with-text-1": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "none",
+                "icon": "check",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature one — update this text in the theme editor</p>",
@@ -86,7 +94,7 @@
             "pdp-icon-with-text-2": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "none",
+                "icon": "check",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature two — update this text in the theme editor</p>",
@@ -104,7 +112,7 @@
             "pdp-icon-with-text-3": {
               "type": "_pdp-icon-with-text",
               "settings": {
-                "icon": "none",
+                "icon": "check",
                 "icon_size": "icon--m",
                 "max_width": 16,
                 "text": "<p>Feature three — update this text in the theme editor</p>",
@@ -154,6 +162,7 @@
             "pdp-title",
             "pdp-rating",
             "pdp-preorder-message",
+            "pdp-subtitle",
             "pdp-price",
             "pdp-buy-buttons",
             "pdp-icon-with-text-1",
@@ -168,7 +177,8 @@
       "custom_css": [
         "button {text-transform: uppercase;}",
         "[data-badge=\"pre-order\"] {background: #00ff00; color: #000; border-color: #00ff00;}",
-        "[data-badge=\"bestseller\"] {background: #ffffff; color: #000000; border-color: #cccccc;}"
+        "[data-badge=\"bestseller\"] {background: #ffffff; color: #000000; border-color: #cccccc;}",
+        ".product-info__icon-with-text .icon { color: #ff0064; }"
       ],
       "settings": {
         "media_style": "thumbnails",
