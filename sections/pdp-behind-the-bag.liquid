@@ -36,10 +36,8 @@
       </div>
 
       {%- comment -%} Right: text panel {%- endcomment -%}
-      <div class="pdp-behind-the-bag__text-col">
-        <div class="pdp-behind-the-bag__heart-wrapper" aria-hidden="true">
-          <img src="{{ 'ap-heart.svg' | asset_url }}" class="pdp-behind-the-bag__heart" alt="" width="200" height="200" loading="lazy">
-        </div>
+      <div class="pdp-behind-the-bag__text-col" style="background-image: url('https://cdn.shopify.com/s/files/1/0902/6260/2042/files/New_arrivals_background.png?v=1773579367');">
+        <div>
 
         <div class="pdp-behind-the-bag__content">
           <span class="pdp-behind-the-bag__label caption">Behind the Bag</span>
@@ -91,24 +89,14 @@
 .pdp-behind-the-bag__text-col {
   position: relative;
   background-color: #ede5f4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-xl) var(--space-l);
   overflow: hidden;
-}
-.pdp-behind-the-bag__heart-wrapper {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-.pdp-behind-the-bag__heart {
-  width: 80%;
-  max-width: 360px;
-  opacity: 0.4;
 }
 .pdp-behind-the-bag__content {
   position: relative;
@@ -121,9 +109,9 @@
 }
 .pdp-behind-the-bag__label {
   display: inline-block;
-  border: 1px solid #ff0064;
-  color: #ff0064;
-  border-radius: 999px;
+  border: 1px solid #5d006e;
+  color: #5d006e;
+  border-radius: 4px;
   padding: 4px 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
