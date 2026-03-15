@@ -1,0 +1,208 @@
+{%- assign product = section.settings.product | default: product -%}
+
+{%- assign display_collection = product.metafields.custom.colorways_collection.value -%}
+{%- if display_collection == blank -%}
+  {%- assign display_collection = section.settings.default_collection -%}
+{%- endif -%}
+
+{%- assign product_limit = section.settings.product_limit -%}
+{%- assign columns_desktop = 4 -%}
+{%- assign columns_mobile = 2 -%}
+
+{%- if display_collection != blank -%}
+  {%- assign product_count = display_collection.products.size -%}
+{%- else -%}
+  {%- assign product_count = 0 -%}
+{%- endif -%}
+
+{%- assign show_desktop_slider = false -%}
+{%- assign show_mobile_slider = false -%}
+{%- if product_limit > columns_desktop and section.settings.column_behavior == 'slideshow' -%}
+  {%- assign show_desktop_slider = true -%}
+{%- endif -%}
+{%- if product_limit == 0 and section.settings.column_behavior == 'slideshow' -%}
+  {%- assign show_desktop_slider = true -%}
+{%- endif -%}
+{%- if product_count == 0 or product_limit > columns_mobile -%}
+  {%- assign show_mobile_slider = true -%}
+{%- endif -%}
+
+{% capture inner_content %}
+  <ul class="slider-component__grid list-unstyled">
+    {%- if display_collection != blank and product_count > 0 -%}
+      {%- for card_product in display_collection.products limit: product_limit -%}
+        <li class="slider-component__item" id="Slide-{{ section.id }}-{{ forloop.index }}">
+          <div class="scroll-trigger animate--slide-up">
+            {%- render 'card-product', product: card_product -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..columns_desktop) -%}
+        {%- assign placeholder_image = 'product-' | append: forloop.index -%}
+        <li class="slider-component__item" id="Slide-{{ section.id }}-{{ forloop.index }}">
+          <div class="scroll-trigger animate--slide-up">
+            {%- render 'card-product', product: null, placeholder_image: placeholder_image -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    {%- endif -%}
+  </ul>
+{% endcapture %}
+
+{% capture content %}
+  {% render 'slider-component-inner',
+    id: section.id,
+    container_type: section.settings.container_type,
+    column_behavior: section.settings.column_behavior,
+    columns_desktop: columns_desktop,
+    columns_mobile: columns_mobile,
+    content: inner_content
+  %}
+{% endcapture %}
+
+<div {% render 'color-scheme-attributes', scoped_settings: section.settings, borders: true %}>
+  <div class="pdp-colorways padding--section gap--section" style="{% render 'padding-override', settings: section.settings %}">
+
+    <div class="pdp-colorways__header container container--xl">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="pdp-colorways__heading h2">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="pdp-colorways__subheading body">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div>
+      {%- if show_desktop_slider or show_mobile_slider -%}
+        {% render 'slider-component',
+          content: content,
+          show_desktop_slider: show_desktop_slider,
+          button_style: 'primary',
+          arrow_style: 'overlay',
+          counter_style: 'progress'
+        %}
+      {%- else -%}
+        {{ content }}
+      {%- endif -%}
+    </div>
+
+  </div>
+</div>
+
+{% style %}
+.pdp-colorways__header {
+  margin-bottom: var(--space-m);
+}
+.pdp-colorways__heading {
+  color: #ff0064;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2xs);
+}
+.pdp-colorways__subheading {
+  margin: 0;
+  color: #000000;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "PDP Colorways",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "THE MID FOR EVERY MOOD."
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes."
+    },
+    {
+      "type": "collection",
+      "id": "default_collection",
+      "label": "Default collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "Container type",
+      "options": [
+        { "value": "max", "label": "Page width" },
+        { "value": "full", "label": "Full width" },
+        { "value": "padded", "label": "Full width padded" }
+      ],
+      "default": "max"
+    },
+    {
+      "type": "select",
+      "id": "column_behavior",
+      "label": "Column behavior",
+      "options": [
+        { "value": "slideshow", "label": "Slideshow" },
+        { "value": "grid", "label": "Grid" }
+      ],
+      "default": "slideshow"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding top",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "var(--space-m)", "label": "Medium" },
+        { "value": "var(--space-l)", "label": "Large" },
+        { "value": "var(--space-xl)", "label": "X-Large" }
+      ],
+      "default": "var(--space-l)"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "var(--space-m)", "label": "Medium" },
+        { "value": "var(--space-l)", "label": "Large" },
+        { "value": "var(--space-xl)", "label": "X-Large" }
+      ],
+      "default": "var(--space-l)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Colorways"
+    }
+  ]
+}
+{% endschema %}
