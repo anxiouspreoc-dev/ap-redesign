@@ -1,0 +1,202 @@
+{%- assign section_product = section.settings.product | default: product -%}
+
+{%- comment -%} Resolve image: metafield overrides section setting {%- endcomment -%}
+{%- assign meta_image = section_product.metafields.custom.behind_the_bag_image.value -%}
+{%- assign display_image = meta_image | default: section.settings.default_image -%}
+
+{%- comment -%} Resolve heading: metafield overrides section setting {%- endcomment -%}
+{%- assign meta_heading = section_product.metafields.custom.behind_the_bag_heading.value -%}
+{%- assign display_heading = meta_heading | default: section.settings.default_heading -%}
+
+{%- comment -%} Resolve body text: rich text metafield overrides richtext section setting {%- endcomment -%}
+{%- assign meta_text = section_product.metafields.custom.behind_the_bag_text -%}
+{%- if meta_text != blank -%}
+  {%- assign display_text = meta_text.value -%}
+{%- else -%}
+  {%- assign display_text = section.settings.default_text -%}
+{%- endif -%}
+
+{%- comment -%} Hide section only if both heading and text are blank {%- endcomment -%}
+{%- if display_heading != blank or display_text != blank -%}
+  <section class="pdp-behind-the-bag" aria-label="Behind the Bag">
+    <div class="pdp-behind-the-bag__inner">
+
+      {%- comment -%} Left: image {%- endcomment -%}
+      <div class="pdp-behind-the-bag__image-col">
+        {%- if display_image != blank -%}
+          {{ display_image | image_url: width: 800 | image_tag:
+            class: 'pdp-behind-the-bag__image',
+            widths: '400, 600, 800',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            alt: display_heading | escape
+          }}
+        {%- else -%}
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'pdp-behind-the-bag__image pdp-behind-the-bag__image--placeholder' }}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Right: text panel {%- endcomment -%}
+      <div class="pdp-behind-the-bag__text-col">
+        <div class="pdp-behind-the-bag__heart-wrapper" aria-hidden="true">
+          <img src="{{ 'ap-heart.svg' | asset_url }}" class="pdp-behind-the-bag__heart" alt="" width="200" height="200" loading="lazy">
+        </div>
+
+        <div class="pdp-behind-the-bag__content">
+          <span class="pdp-behind-the-bag__label caption">Behind the Bag</span>
+
+          {%- if display_heading != blank -%}
+            <h2 class="pdp-behind-the-bag__heading h2">{{ display_heading }}</h2>
+          {%- endif -%}
+
+          {%- if display_text != blank -%}
+            <div class="pdp-behind-the-bag__text body">{{ display_text }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </section>
+{%- endif -%}
+
+{% style %}
+.pdp-behind-the-bag {
+  overflow: hidden;
+}
+.pdp-behind-the-bag__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 990px) {
+  .pdp-behind-the-bag__inner {
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+}
+.pdp-behind-the-bag__image-col {
+  position: relative;
+  overflow: hidden;
+}
+.pdp-behind-the-bag__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pdp-behind-the-bag__image--placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  background: #f0f0f0;
+}
+.pdp-behind-the-bag__text-col {
+  position: relative;
+  background-color: #ede5f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-l);
+  overflow: hidden;
+}
+.pdp-behind-the-bag__heart-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.pdp-behind-the-bag__heart {
+  width: 80%;
+  max-width: 360px;
+  opacity: 0.4;
+}
+.pdp-behind-the-bag__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+.pdp-behind-the-bag__label {
+  display: inline-block;
+  border: 1px solid #ff0064;
+  color: #ff0064;
+  border-radius: 999px;
+  padding: 4px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: center;
+}
+.pdp-behind-the-bag__heading {
+  color: #ff0064;
+  margin: 0;
+  text-transform: uppercase;
+}
+.pdp-behind-the-bag__text {
+  color: #000000;
+  margin: 0;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Behind the Bag",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Default content (overridden by product metafields)"
+    },
+    {
+      "type": "image_picker",
+      "id": "default_image",
+      "label": "Default image"
+    },
+    {
+      "type": "text",
+      "id": "default_heading",
+      "label": "Default heading",
+      "placeholder": "e.g. Joanne on The Mid"
+    },
+    {
+      "type": "richtext",
+      "id": "default_text",
+      "label": "Default body text"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding top",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "var(--space-m)", "label": "Medium" },
+        { "value": "var(--space-l)", "label": "Large" },
+        { "value": "var(--space-xl)", "label": "X-Large" }
+      ],
+      "default": "0px"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "var(--space-m)", "label": "Medium" },
+        { "value": "var(--space-l)", "label": "Large" },
+        { "value": "var(--space-xl)", "label": "X-Large" }
+      ],
+      "default": "0px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Behind the Bag"
+    }
+  ]
+}
+{% endschema %}
