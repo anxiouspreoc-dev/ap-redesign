@@ -72,12 +72,17 @@
   text-transform: uppercase;
   color: #000000;
 }
-/* Variant pill buttons — match accordion title style */
+/* Variant pill buttons — larger, match price scale */
 .product-info .variant-picker__label--button span {
   font-family: var(--font-body-family);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   text-transform: uppercase;
+}
+.product-info .variant-picker__label--button {
+  min-width: 48px;
+  padding-block: 10px;
+  padding-inline: 14px;
 }
 {% endstyle %}
 
