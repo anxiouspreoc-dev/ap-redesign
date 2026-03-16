@@ -21,8 +21,8 @@
           {{ product.title | escape }}
         </a>
       </h2>
-      {%- if settings.card_show_product_subtitle and product.metafields.descriptors.subtitle != blank -%}
-        <h3 class="subtitle caption opacity">{{ product.metafields.descriptors.subtitle }}</h3>
+      {%- if settings.card_show_product_subtitle and product.metafields.custom.subtitle != blank -%}
+        <h3 class="subtitle caption opacity">{{ product.metafields.custom.subtitle }}</h3>
       {%- endif -%}
       {%- if settings.card_show_vendor -%}
         <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
