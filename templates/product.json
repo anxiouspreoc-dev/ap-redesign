@@ -131,8 +131,20 @@
               "type": "_pdp-collapsible",
               "settings": {
                 "heading": "DETAILS",
-                "font_style": "caption",
+                "font_style": "heading h6",
                 "text": "{{ closest.product.description }}",
+                "page": "",
+                "open_by_default": false
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_4gmynA": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Size Guide",
+                "font_style": "heading h6",
+                "text": "{{ closest.product.metafields.custom.size_guide | metafield_tag }}",
                 "page": "",
                 "open_by_default": false
               },
@@ -142,8 +154,8 @@
               "type": "_pdp-collapsible",
               "settings": {
                 "heading": "DELIVERY INFO",
-                "font_style": "caption",
-                "text": "<p>Items from the same order are shipped together in one parcel, as a single shipping fee is applied at checkout. This helps us keep delivery costs as low as possible. Orders will therefore be dispatched once all items are ready.</p><p>All deliveries are fulfilled via our trusted external courier partners, and we only ever charge the exact shipping cost passed on to us. Orders are shipped from Ireland.</p><p>Estimated delivery times <strong>upon dispatch</strong> (but may experience unexpected delays):<br/><br/>• Ireland: 2–3 working days<br/>• UK: up to 5 working days<br/>• International: delivery times may vary</p><p>Tracking is provided on all orders. Please note, if a parcel is returned due to missed delivery attempts or non-collection, the cost of redelivery will need to be covered by the customer.</p>",
+                "font_style": "heading h6",
+                "text": "{{ closest.product.metafields.custom.delivery | metafield_tag }}",
                 "page": "",
                 "open_by_default": false
               },
@@ -169,6 +181,7 @@
             "pdp-icon-with-text-2",
             "pdp-icon-with-text-3",
             "pdp-collapsible-details",
+            "pdp_collapsible_4gmynA",
             "pdp-collapsible-delivery",
             "pdp-pairs-with"
           ]
