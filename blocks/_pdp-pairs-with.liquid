@@ -1,5 +1,5 @@
 {%- assign product = section.settings.product | default: product -%}
-{%- assign pairs = product.metafields.custom.pairs_with.value -%}
+{%- assign pairs = product.metafields.custom.best_paired_with.value -%}
 
 <div class="pdp-pairs-with" {{ block.shopify_attributes }}>
   {%- if pairs != blank and pairs.size > 0 -%}
