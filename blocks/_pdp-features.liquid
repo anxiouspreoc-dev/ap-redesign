@@ -1,14 +1,24 @@
 {%- assign features = product.metafields.custom.product_features.value -%}
 
-{%- if features != blank and features.size > 0 -%}
-  <ul class="pdp-features list-unstyled">
+<ul class="pdp-features list-unstyled">
+  {%- if features != blank and features.size > 0 -%}
     {%- for feature in features -%}
-      <li class="pdp-features__item product-info__icon-with-text">
+      <li class="pdp-features__item">
         <span class="pdp-features__text">{{ feature }}</span>
       </li>
     {%- endfor -%}
-  </ul>
-{%- endif -%}
+  {%- else -%}
+    <li class="pdp-features__item pdp-features__item--placeholder">
+      <span class="pdp-features__text">Feature 1 — update via product metafields</span>
+    </li>
+    <li class="pdp-features__item pdp-features__item--placeholder">
+      <span class="pdp-features__text">Feature 2 — update via product metafields</span>
+    </li>
+    <li class="pdp-features__item pdp-features__item--placeholder">
+      <span class="pdp-features__text">Feature 3 — update via product metafields</span>
+    </li>
+  {%- endif -%}
+</ul>
 
 {% style %}
 .pdp-features {
@@ -17,6 +27,10 @@
   gap: var(--space-2xs);
   margin: 0;
   padding: 0;
+  margin-block-start: var(--space-s);
+}
+.pdp-features__item--placeholder .pdp-features__text {
+  opacity: 0.4;
 }
 .pdp-features__item {
   display: flex;
