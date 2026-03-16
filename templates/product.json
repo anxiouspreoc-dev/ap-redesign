@@ -52,7 +52,7 @@
             "pdp-subtitle": {
               "type": "_pdp-subtitle",
               "settings": {
-                "text": "{{ closest.product.metafields.descriptors.subtitle.value }}",
+                "text": "{{ closest.product.metafields.custom.subtitle.value }}",
                 "font_style": "body"
               },
               "blocks": {}
