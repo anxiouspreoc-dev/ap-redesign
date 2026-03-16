@@ -749,7 +749,7 @@
         "text_ekqPym": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. Unsubscribe whenever you’re feeling avoidant.</p>",
+            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. </p>",
             "font_style": "body"
           },
           "blocks": {}
