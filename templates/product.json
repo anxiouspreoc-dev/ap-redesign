@@ -172,12 +172,8 @@
               "type": "_pdp-linked-products",
               "name": "t:linked-products",
               "settings": {
-                "product_list": [
-                  "anxious-preoccupied-gift-card",
-                  "cozy-grey-tracksuit-bottoms-with-neon-green-ap-logo-on-front-pocket",
-                  "fearful-avoidant-black-lightweight-sweater-with-gold-lettering"
-                ],
-                "option_name": "",
+                "product_list": "{{ closest.product.metafields.custom.best_paired_with.value }}",
+                "option_name": "BEST PAIRED WITH",
                 "option_value_metafield": ""
               },
               "blocks": {}
