@@ -1,1 +1,116 @@
-{"name":"Header","type":"header","sections":{"announcement_bar":{"type":"announcement-bar","blocks":{"text":{"type":"text","settings":{"text":"<p>Free shipping on all orders over $100<\/p>","font_style":"caption"}},"text-2":{"type":"text","settings":{"text":"<p>Surprise gift on all orders over $200<\/p>","font_style":"caption"}}},"block_order":["text","text-2"],"settings":{"enable_autoplay":true,"autoplay_speed":4,"animation_style":"fade","enable_country_selector":true,"enable_language_selector":false,"show_borders":false,"color_scheme":"scheme-73656e8f-a33c-466c-9dc3-37c65769243b","padding_top":"var(--space-3xs)","padding_bottom":"var(--space-3xs)"}},"header":{"type":"header","blocks":{"megamenu":{"type":"megamenu","settings":{"menu":"","color_scheme":"scheme-5","color_scheme_style":"split","use_alt_logo":false,"image_ratio_1":"2 \/ 3","label_1":"Bestsellers","link_1":"","image_ratio_2":"2 \/ 3","label_2":"Makeup","link_2":"","image_ratio_3":"2 \/ 3","label_3":"Skincare","link_3":""}},"megamenu-2":{"type":"megamenu","settings":{"menu":"","color_scheme":"scheme-3","color_scheme_style":"split","use_alt_logo":false,"image_ratio_1":"default","label_1":"Lina Walker-Smith & Primavera: A Radiant Partnership","link_1":"","image_ratio_2":"default","label_2":"Glow from Within: Primavera’s New Collection Redefines Beauty","link_2":"","image_ratio_3":"default","label_3":"","link_3":""}}},"block_order":["megamenu","megamenu-2"],"settings":{"menu":"new-main-menu","layout_desktop":"horizontal","logo_position":"center","interaction_mode":"hover","sticky_type":"scroll","enable_search":true,"enable_icons":true,"enable_overlay":true,"enable_transparent_header":false,"enable_blur":false,"use_alt_logo":false,"transparent_header_color":"#ffffff","color_scheme":"scheme-1","padding_top":"var(--space-xs)","padding_bottom":"var(--space-xs)","show_borders":false}}},"order":["announcement_bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free shipping on all orders over $100</p>",
+            "font_style": "caption"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Surprise gift on all orders over $200</p>",
+            "font_style": "caption"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "text-2"
+      ],
+      "settings": {
+        "enable_autoplay": true,
+        "autoplay_speed": 4,
+        "animation_style": "fade",
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "show_borders": false,
+        "color_scheme": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b",
+        "padding_top": "var(--space-3xs)",
+        "padding_bottom": "var(--space-3xs)"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu": {
+          "type": "megamenu",
+          "settings": {
+            "menu": "",
+            "color_scheme": "scheme-5",
+            "color_scheme_style": "split",
+            "use_alt_logo": false,
+            "image_ratio_1": "2 / 3",
+            "label_1": "Bestsellers",
+            "link_1": "",
+            "image_ratio_2": "2 / 3",
+            "label_2": "Makeup",
+            "link_2": "",
+            "image_ratio_3": "2 / 3",
+            "label_3": "Skincare",
+            "link_3": ""
+          }
+        },
+        "megamenu-2": {
+          "type": "megamenu",
+          "settings": {
+            "menu": "",
+            "color_scheme": "scheme-3",
+            "color_scheme_style": "split",
+            "use_alt_logo": false,
+            "image_ratio_1": "default",
+            "label_1": "Lina Walker-Smith & Primavera: A Radiant Partnership",
+            "link_1": "",
+            "image_ratio_2": "default",
+            "label_2": "Glow from Within: Primavera’s New Collection Redefines Beauty",
+            "link_2": "",
+            "image_ratio_3": "default",
+            "label_3": "",
+            "link_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "megamenu",
+        "megamenu-2"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "layout_desktop": "horizontal",
+        "logo_position": "center",
+        "interaction_mode": "hover",
+        "sticky_type": "scroll",
+        "enable_search": true,
+        "enable_icons": true,
+        "enable_overlay": true,
+        "enable_transparent_header": false,
+        "enable_blur": false,
+        "use_alt_logo": false,
+        "transparent_header_color": "#ffffff",
+        "color_scheme": "scheme-1",
+        "padding_top": "var(--space-xs)",
+        "padding_bottom": "var(--space-xs)",
+        "show_borders": false
+      }
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header"
+  ]
+}
