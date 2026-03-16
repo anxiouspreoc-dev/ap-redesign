@@ -123,6 +123,9 @@
         "spacer_YkpNAi",
         "social_links_NhgF99"
       ],
+      "custom_css": [
+        "button.newsletter__button.button.button--primary {text-transform: uppercase;}"
+      ],
       "settings": {
         "horizontal_alignment": "left",
         "vertical_spacing": "var(--space-xl)",
