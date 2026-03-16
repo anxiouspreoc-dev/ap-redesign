@@ -1,6 +1,6 @@
 {%- assign product = section.settings.product | default: product -%}
 
-{%- assign display_collection = product.metafields.custom.colorways_collection.value -%}
+{%- assign display_collection = product.metafields.custom.colorways_collections.value -%}
 
 {%- if display_collection == blank -%}
   {%- assign display_collection = section.settings.default_collection -%}
