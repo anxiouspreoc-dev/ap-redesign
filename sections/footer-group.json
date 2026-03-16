@@ -129,7 +129,7 @@
         "horizontal_spacing": "var(--space-l)",
         "font_style": "caption",
         "link_hover_style": "underline",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
