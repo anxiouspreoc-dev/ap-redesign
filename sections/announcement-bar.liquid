@@ -111,6 +111,11 @@
 {% endif %}
 
 {% style %}
+/* Hide slideshow prev/next arrows — text auto-rotates, no need for manual nav */
+.announcement-bar .pagination__item--prev,
+.announcement-bar .pagination__item--next {
+  display: none !important;
+}
 /* True center: take localization out of flow so text spans full width */
 @media (min-width: 72em) {
   .announcement-bar--locales .announcement-bar__grid {
