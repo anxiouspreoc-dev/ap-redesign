@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "spacing_size": "medium",
@@ -22,9 +31,8 @@
     "input_padding": "medium",
     "swatch_style": "circle",
     "logo": "shopify://shop_images/Logo_svg.png",
-    "logo_alt": "shopify://shop_images/Vector.png",
-    "logo_width": 426,
-    "logo_width_mobile": 250,
+    "logo_alt": "shopify://shop_images/LOGONEONREDSTACKED.png",
+    "logo_width": 400,
     "font_heading": "bebas_neue_n4",
     "font_heading_size": "large",
     "font_heading_line_height": "leading-extra-tight",
