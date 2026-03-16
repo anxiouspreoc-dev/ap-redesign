@@ -1,7 +1,7 @@
 {%- assign product = section.settings.product | default: product -%}
 
 {%- assign display_collection = product.metafields.custom.colorways_collection.value -%}
-<h1>{{ display_collection }}</h1>
+<h1>ANDITO{{ display_collection }}</h1>
 {%- if display_collection == blank -%}
   {%- assign display_collection = section.settings.default_collection -%}
 {%- endif -%}
