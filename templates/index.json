@@ -16,7 +16,7 @@
           "type": "_image-banner",
           "settings": {
             "image": "shopify://shop_images/Hero_image_container.png",
-            "mobile_image": "shopify://shop_images/Hero_images_container.png",
+            "mobile_image": "shopify://shop_images/MOBILE_BANNER_360_x_660_px_1.png",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
