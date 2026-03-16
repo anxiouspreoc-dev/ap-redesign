@@ -46,11 +46,22 @@
               },
               "blocks": {}
             },
-            "pdp-variant-picker": {
+            "pdp_variant_picker_3Cq7Ly": {
               "type": "_pdp-variant-picker",
+              "name": "t:variant-picker",
               "settings": {
-                "variant_picker_style": "pills",
-                "swatch_style": "round"
+                "variant_picker_style": "buttons",
+                "swatch_style": "default",
+                "variant_images": "",
+                "option_1": "",
+                "option_1_page": "",
+                "option_1_label": "icon",
+                "option_2": "",
+                "option_2_page": "",
+                "option_2_label": "icon",
+                "option_3": "",
+                "option_3_page": "",
+                "option_3_label": "icon"
               },
               "blocks": {}
             },
@@ -130,7 +141,7 @@
             "pdp-badges",
             "pdp-title",
             "pdp-price",
-            "pdp-variant-picker",
+            "pdp_variant_picker_3Cq7Ly",
             "pdp-rating",
             "pdp-preorder-message",
             "pdp-subtitle",
