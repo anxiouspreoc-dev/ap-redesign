@@ -10,6 +10,9 @@
   {%- if tags_lower contains 'preorder' -%}
     <li class="list-separator__item" data-badge="pre-order">Pre-order</li>
   {%- endif -%}
+  {%- if tags_lower contains 'bestseller' or tags_lower contains 'best-seller' -%}
+    <li class="list-separator__item" data-badge="bestseller">Bestseller</li>
+  {%- endif -%}
   {%- assign custom_badges = product.metafields.theme.badges.value -%}
   {%- for badge in custom_badges -%}
     <li class="list-separator__item" data-badge="{{ badge | handle }}">{{ badge }}</li>
