@@ -160,10 +160,10 @@
           "block_order": [
             "pdp-badges",
             "pdp-title",
+            "pdp-price",
             "pdp-rating",
             "pdp-preorder-message",
             "pdp-subtitle",
-            "pdp-price",
             "pdp-buy-buttons",
             "pdp-icon-with-text-1",
             "pdp-icon-with-text-2",
