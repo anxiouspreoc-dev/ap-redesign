@@ -40,7 +40,7 @@
         "enable_country_selector": true,
         "enable_language_selector": false,
         "show_borders": false,
-        "color_scheme": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b",
+        "color_scheme": "scheme-6",
         "padding_top": "var(--space-3xs)",
         "padding_bottom": "var(--space-3xs)"
       }
