@@ -90,7 +90,7 @@
         "megamenu-2"
       ],
       "settings": {
-        "menu": "main-menu",
+        "menu": "main-menu-copy",
         "layout_desktop": "horizontal",
         "logo_position": "center",
         "interaction_mode": "hover",
