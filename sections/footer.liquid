@@ -212,6 +212,32 @@
   </div>
 </div>
 
+{% style %}
+/* Footer background */
+#shopify-section-footer .footer {
+  background-color: #F5EFF8;
+}
+/* AP logo max-width cap */
+#shopify-section-footer .footer__logo,
+#shopify-section-footer .footer__logo-wrapper {
+  inline-size: 136px !important;
+  max-inline-size: 136px !important;
+}
+/* Social icons spacing */
+#shopify-section-footer .footer__social-links {
+  gap: var(--space-xs);
+  margin-block-start: var(--space-s);
+}
+/* Nav link colour */
+#shopify-section-footer .footer__menu-item {
+  color: inherit;
+  opacity: 0.75;
+}
+#shopify-section-footer .footer__menu-item:hover {
+  opacity: 1;
+}
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:footer",
