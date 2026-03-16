@@ -228,15 +228,16 @@
   gap: var(--space-xs);
   margin-block-start: var(--space-s);
 }
-/* Newsletter subscribe button — match site primary purple */
-#shopify-section-footer .button--primary {
-  background-color: #5d006e !important;
-  border-color: #5d006e !important;
-  color: #ffffff !important;
+/* Newsletter subscribe button — match site primary purple via CSS vars */
+#shopify-section-footer {
+  --color-primary-button: 93, 0, 110;
+  --color-primary-button-border: 93, 0, 110;
+  --color-primary-button-label: 255, 255, 255;
+  --color-primary-button-hover: 74, 0, 88;
 }
-#shopify-section-footer .button--primary:hover {
-  background-color: #4a0058 !important;
-  border-color: #4a0058 !important;
+/* Button text uppercase */
+#shopify-section-footer .button {
+  text-transform: uppercase;
 }
 /* Nav link colour */
 #shopify-section-footer .footer__menu-item {
