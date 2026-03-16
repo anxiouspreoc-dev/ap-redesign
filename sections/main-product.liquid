@@ -63,6 +63,22 @@
   color: #000000 !important;
   border-color: #EEDFFF !important;
 }
+/* Variant picker legend (e.g. "SIZE: XS") — match accordion title style */
+.product-info .variant-picker__legend,
+.product-info .variant-picker__legend .button--text {
+  font-family: var(--font-body-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000000;
+}
+/* Variant pill buttons — match accordion title style */
+.product-info .variant-picker__label--button span {
+  font-family: var(--font-body-family);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 {% endstyle %}
 
 {% capture content %}
