@@ -84,6 +84,8 @@
     startScrollLeft = list.scrollLeft;
     list.style.cursor = 'grabbing';
     list.style.userSelect = 'none';
+    // Disable snap while dragging so it doesn't flicker/jump
+    list.style.scrollSnapType = 'none';
   });
 
   document.addEventListener('mouseup', function() {
@@ -91,14 +93,16 @@
     isDragging = false;
     list.style.cursor = '';
     list.style.userSelect = '';
+    // Re-enable snap after drag ends
+    list.style.scrollSnapType = '';
   });
 
   document.addEventListener('mousemove', function(e) {
     if (!isDragging) return;
+    e.preventDefault();
     var dx = e.pageX - startX;
     if (Math.abs(dx) > 4) hasDragged = true;
     list.scrollLeft = startScrollLeft - dx;
-    updateArrows();
   });
 
   // Prevent link/button clicks when user was dragging
