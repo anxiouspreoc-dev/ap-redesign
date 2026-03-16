@@ -49,7 +49,7 @@
           "settings": {
             "block_size": "small",
             "heading": "Shop Bags",
-            "menu": "footer",
+            "menu": "footer-shop-bags",
             "collapse": true
           }
         },
@@ -58,7 +58,7 @@
           "settings": {
             "block_size": "small",
             "heading": "Shop Apparel",
-            "menu": "footer",
+            "menu": "footer-shop-apparel",
             "collapse": true
           }
         },
@@ -66,8 +66,8 @@
           "type": "link_list",
           "settings": {
             "block_size": "small",
-            "heading": "Customer Care",
-            "menu": "footer",
+            "heading": "Helpful Links",
+            "menu": "footer-helpful-links",
             "collapse": true
           }
         },
