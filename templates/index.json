@@ -591,7 +591,7 @@
           "type": "_video-reels-video",
           "name": "t:video",
           "settings": {
-            "video": "shopify://files/videos/SnapInsta.to_AQNheNVorhHpUcK5TUCQIPU7vcC8sCSnO4E_-UG22zpH6w8Tus03dqOTGRePgoT0pBUnwWlKrt_HvnYW40JhOKNoM6AsWDFQ6e1oXOQ.mp4",
+            "video": "shopify://files/videos/SnapInsta.to_AQNJJJhXl8ASvyIvQZr9xMQKyx8xVWQFdge5p89DtwR84EEXV5xi-LDDOpMgH7PL8hKSSOloewcsUubLjXI33HT_7nPr5unjB2Kx4WA.mp4",
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
@@ -617,7 +617,7 @@
           "type": "_video-reels-video",
           "name": "t:video",
           "settings": {
-            "video": "shopify://files/videos/maria and janine silver lilac mid bags.mp4",
+            "video": "shopify://files/videos/SnapInsta.to_AQOiyfUdsPpaXFksp0T4IUP8IpWOGRnMrdvbe7NUC-D4AxTn57sCd990uu-5xGoKdUI0QPDnbtRxjq2TFkuKdvNNklCYfcJJrVf23To.mp4",
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
@@ -633,6 +633,32 @@
                 "product": "",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "video_reels_video_UtdXXL": {
+          "type": "_video-reels-video",
+          "name": "t:video",
+          "settings": {
+            "video": "shopify://files/videos/SnapInsta.to_AQPtN57gO9Hm0l9zrp_9JNsDv75RyxtMRgCYH_eKy7qbPYKL5PpTZSWouUp6fn1PwyMaQyt-bNXanaYW6YHG7Z_q7B0Baf5RscOSyFc.mp4",
+            "creator_name": "",
+            "creator_link": "",
+            "video_ratio": "9 / 16",
+            "color_scheme": "",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
+          },
+          "blocks": {
+            "product": {
+              "type": "mini-product",
+              "static": true,
+              "settings": {
+                "product": "",
+                "style": "card",
+                "color_scheme": ""
               },
               "blocks": {}
             }
@@ -670,7 +696,8 @@
         "video_reels_video_zHagRk",
         "video_reels_video_VwBNEK",
         "video_reels_video_Ntj8wj",
-        "video_reels_video_pQQ3d8"
+        "video_reels_video_pQQ3d8",
+        "video_reels_video_UtdXXL"
       ],
       "custom_css": [
         ".heading.h2 {color: #ff0064;}",
