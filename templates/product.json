@@ -163,19 +163,7 @@
             },
             "pdp-pairs-with": {
               "type": "_pdp-pairs-with",
-              "settings": {
-                "heading": "PAIRS WITH:"
-              },
-              "blocks": {}
-            },
-            "pdp_linked_products_3cJjXp": {
-              "type": "_pdp-linked-products",
-              "name": "t:linked-products",
-              "settings": {
-                "product_list": "{{ closest.product.metafields.custom.best_paired_with.value }}",
-                "option_name": "BEST PAIRED WITH",
-                "option_value_metafield": ""
-              },
+              "settings": {},
               "blocks": {}
             }
           },
@@ -193,8 +181,7 @@
             "pdp-collapsible-details",
             "pdp_collapsible_4gmynA",
             "pdp-collapsible-delivery",
-            "pdp-pairs-with",
-            "pdp_linked_products_3cJjXp"
+            "pdp-pairs-with"
           ]
         }
       },
