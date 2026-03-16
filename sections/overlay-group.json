@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "Overlay",
   "type": "custom.overlay",
@@ -9,10 +18,12 @@
           "type": "_cart-upsell",
           "settings": {
             "style": "card",
+            "product": "",
             "text": "<p>Make your gift unforgettable with our luxurious gift box.</p>",
             "font_style_text": "body text-s",
             "color_scheme": "scheme-5"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -20,6 +31,9 @@
       ],
       "settings": {
         "heading_size": "h3",
+        "layout_desktop": "vertical",
+        "show_dynamic_checkout": false,
+        "show_view_cart": true,
         "product_image_width": 120,
         "font_style_title": "heading h6",
         "font_style_price": "caption",
@@ -32,50 +46,64 @@
         "promo": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "2 / 3",
-            "label": "Makeup"
+            "label": "Makeup",
+            "link": ""
           }
         },
         "promo-2": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "2 / 3",
-            "label": "Skincare"
+            "label": "Skincare",
+            "link": ""
           }
         },
         "promo-3": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "default",
-            "label": "Moisturizer & Cream"
+            "label": "Moisturizer & Cream",
+            "link": ""
           }
         },
         "promo-4": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "default",
-            "label": "Lips"
+            "label": "Lips",
+            "link": ""
           }
         },
         "promo-5": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "default",
-            "label": "Eyes"
+            "label": "Eyes",
+            "link": ""
           }
         },
         "promo-6": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "default",
-            "label": "Cleanser"
+            "label": "Cleanser",
+            "link": ""
           }
         },
         "promo-7": {
           "type": "promo",
           "settings": {
+            "menu": "",
             "image_ratio": "default",
-            "label": "Glow from Within"
+            "label": "Glow from Within",
+            "link": ""
           }
         }
       },
@@ -89,14 +117,18 @@
         "promo-7"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "menu": "main-menu",
+        "enable_search": true,
+        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
         "enable_color_scheme_transition": true,
-        "color_scheme_transition": "scheme-61256f6c-228a-4d40-9ebd-0e0c16865979"
+        "color_scheme_transition": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b"
       }
     },
     "search_modal": {
       "type": "search-modal",
       "settings": {
+        "popular_search": "",
+        "collection_list": [],
         "color_scheme": "scheme-1",
         "use_alt_logo": false
       }
@@ -111,22 +143,26 @@
             "max_width": 1400,
             "horizontal_alignment": "inherit",
             "link": "",
-            "link_label": ""
-          }
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>Sign up for Primavera's newsletter and be the first to discover the latest collections, special offers, and behind-the-scenes glimpses.</p>",
             "font_style": "body"
-          }
+          },
+          "blocks": {}
         },
         "newsletter": {
           "type": "_newsletter",
           "settings": {
             "button_style": "primary",
             "button_width": "full"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -139,7 +175,11 @@
         "font_style": "heading h5",
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-2",
+        "once": true,
+        "homepage": false,
+        "account": false,
+        "delay": 5
       }
     }
   },
