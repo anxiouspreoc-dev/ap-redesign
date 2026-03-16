@@ -6,6 +6,9 @@
   {%- assign display_collection = section.settings.default_collection -%}
 {%- endif -%}
 
+{%- assign display_heading = product.metafields.custom.colorway_heading.value | default: section.settings.heading -%}
+{%- assign display_subheading = product.metafields.custom.colorway_description.value | default: section.settings.subheading -%}
+
 {%- assign product_limit = section.settings.product_limit -%}
 {%- assign columns_desktop = 4 -%}
 {%- assign columns_mobile = 2 -%}
@@ -63,11 +66,11 @@
   <div class="pdp-colorways padding--section gap--section" style="{% render 'padding-override', settings: section.settings %}">
 
     <div class="pdp-colorways__header container container--xl">
-      {%- if section.settings.heading != blank -%}
-        <h2 class="pdp-colorways__heading h2">{{ section.settings.heading }}</h2>
+      {%- if display_heading != blank -%}
+        <h2 class="pdp-colorways__heading h2">{{ display_heading }}</h2>
       {%- endif -%}
-      {%- if section.settings.subheading != blank -%}
-        <p class="pdp-colorways__subheading body">{{ section.settings.subheading }}</p>
+      {%- if display_subheading != blank -%}
+        <p class="pdp-colorways__subheading body">{{ display_subheading }}</p>
       {%- endif -%}
     </div>
 
