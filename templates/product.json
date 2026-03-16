@@ -167,6 +167,20 @@
                 "heading": "PAIRS WITH:"
               },
               "blocks": {}
+            },
+            "pdp_linked_products_3cJjXp": {
+              "type": "_pdp-linked-products",
+              "name": "t:linked-products",
+              "settings": {
+                "product_list": [
+                  "anxious-preoccupied-gift-card",
+                  "cozy-grey-tracksuit-bottoms-with-neon-green-ap-logo-on-front-pocket",
+                  "fearful-avoidant-black-lightweight-sweater-with-gold-lettering"
+                ],
+                "option_name": "",
+                "option_value_metafield": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -183,7 +197,8 @@
             "pdp-collapsible-details",
             "pdp_collapsible_4gmynA",
             "pdp-collapsible-delivery",
-            "pdp-pairs-with"
+            "pdp-pairs-with",
+            "pdp_linked_products_3cJjXp"
           ]
         }
       },
