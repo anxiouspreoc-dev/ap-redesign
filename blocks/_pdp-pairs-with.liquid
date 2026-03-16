@@ -3,43 +3,42 @@
 
 <div class="pdp-pairs-with" {{ block.shopify_attributes }}>
   {%- if pairs != blank and pairs.size > 0 -%}
-    {%- if block.settings.heading != blank -%}
-      <h2 class="pdp-pairs-with__heading caption">{{ block.settings.heading }}</h2>
-    {%- endif -%}
+    <h2 class="pdp-pairs-with__heading">PAIRS WITH:</h2>
 
     <ul class="pdp-pairs-with__list list-unstyled" role="list">
       {%- for paired_product in pairs -%}
         <li class="pdp-pairs-with__card">
           {%- if paired_product.featured_image != blank -%}
             <a href="{{ paired_product.url }}" class="pdp-pairs-with__image-link" tabindex="-1" aria-hidden="true">
-              {{ paired_product.featured_image | image_url: width: 160 | image_tag:
+              {{ paired_product.featured_image | image_url: width: 320 | image_tag:
                 class: 'pdp-pairs-with__image',
-                width: 80,
-                height: 80,
+                width: 130,
+                height: 130,
                 alt: paired_product.featured_image.alt | escape
               }}
             </a>
           {%- endif -%}
 
           <div class="pdp-pairs-with__content">
-            <p class="pdp-pairs-with__title caption">
+            <p class="pdp-pairs-with__title">
               <a href="{{ paired_product.url }}" class="pdp-pairs-with__title-link link-unstyled">
                 {{- paired_product.title -}}
               </a>
             </p>
             {%- render 'price', product: paired_product, font_style: 'caption' -%}
-            <a href="{{ paired_product.url }}" class="pdp-pairs-with__shop-now caption">
-              SHOP NOW
-            </a>
+            <div class="pdp-pairs-with__cta">
+              <a href="{{ paired_product.url }}" class="pdp-pairs-with__shop-now">
+                SHOP NOW
+              </a>
+              {%- assign pairs_section_id = section.id | append: '-pairs-' | append: forloop.index -%}
+              {%- render 'quick-add',
+                product: paired_product,
+                section_id: pairs_section_id,
+                button_style: 'primary',
+                classes: 'pdp-pairs-with__quick-add'
+              -%}
+            </div>
           </div>
-
-          {%- assign pairs_section_id = section.id | append: '-pairs-' | append: forloop.index -%}
-          {%- render 'quick-add',
-            product: paired_product,
-            section_id: pairs_section_id,
-            button_style: 'primary',
-            classes: 'pdp-pairs-with__quick-add'
-          -%}
         </li>
       {%- endfor -%}
     </ul>
@@ -47,90 +46,152 @@
 </div>
 
 {% style %}
+/* Heading — matches accordion/collapsible title style: Bold 16px uppercase */
 .pdp-pairs-with__heading {
+  font-family: var(--font-body-family);
   font-weight: 700;
+  font-size: 16px;
   text-transform: uppercase;
-  margin-bottom: var(--space-xs);
+  color: #000000;
+  margin: 0 0 var(--space-s) 0;
+  letter-spacing: 0;
 }
+
+/* Horizontal scroll list — always, including mobile */
 .pdp-pairs-with__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--space-s);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-xs);
+  /* Hide scrollbar visually but keep functionality */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.pdp-pairs-with__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card: image left, content right */
 .pdp-pairs-with__card {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: var(--space-xs);
+  align-items: stretch;
+  gap: 0;
+  min-width: 260px;
+  max-width: 300px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
   border: 1px solid #e5e5e5;
-  border-radius: var(--card-border-radius, 8px);
-  padding: var(--space-xs);
+  border-radius: 4px;
+  overflow: hidden;
   background: #ffffff;
 }
-.pdp-pairs-with__image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: calc(var(--card-border-radius, 8px) - 2px);
-  flex-shrink: 0;
-  display: block;
-}
+
+/* Product image — ~130px wide, full card height */
 .pdp-pairs-with__image-link {
   flex-shrink: 0;
   display: block;
+  width: 130px;
 }
+.pdp-pairs-with__image {
+  width: 130px;
+  height: 100%;
+  min-height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content area: title, price, CTA */
 .pdp-pairs-with__content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   min-width: 0;
+  padding: 12px 10px;
+  justify-content: center;
 }
+
 .pdp-pairs-with__title {
+  font-size: var(--font-xs-size, 0.75rem);
   font-weight: 700;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 .pdp-pairs-with__title-link {
   color: inherit;
+  text-decoration: none;
+}
+.pdp-pairs-with__title-link:hover {
+  text-decoration: underline;
+}
+
+/* Price */
+.pdp-pairs-with__content .price {
+  font-size: var(--font-xs-size, 0.75rem);
+  margin: 0;
+}
+
+/* CTA row: SHOP NOW link + quick-add button */
+.pdp-pairs-with__cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
 }
 .pdp-pairs-with__shop-now {
   color: #ff0064;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: var(--font-xs-size, 0.75rem);
   text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .pdp-pairs-with__shop-now:hover {
   text-decoration: underline;
 }
+
+/* Quick-add cart icon button */
 .pdp-pairs-with__card .pdp-pairs-with__quick-add.button {
   background: #00ff00;
   border-color: #00ff00;
   color: #000000;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   padding: 0;
   flex-shrink: 0;
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pdp-pairs-with__card .pdp-pairs-with__quick-add.button:hover {
   background: #00dd00;
   border-color: #00dd00;
 }
+.pdp-pairs-with__card .pdp-pairs-with__quick-add.button .icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Desktop: slightly larger cards */
 @media screen and (min-width: 750px) {
-  .pdp-pairs-with__list {
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
   .pdp-pairs-with__card {
-    min-width: 260px;
-    scroll-snap-align: start;
-    flex-shrink: 0;
+    min-width: 280px;
+    max-width: 320px;
+  }
+  .pdp-pairs-with__image-link {
+    width: 140px;
+  }
+  .pdp-pairs-with__image {
+    width: 140px;
+    min-height: 140px;
   }
 }
 {% endstyle %}
@@ -139,14 +200,7 @@
 {
   "name": "Pairs With",
   "tag": null,
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "PAIRS WITH:"
-    }
-  ],
+  "settings": [],
   "presets": [
     {
       "name": "Pairs With"
