@@ -57,21 +57,11 @@
   letter-spacing: 0;
 }
 
-/* Horizontal scroll list — always, including mobile */
+/* Mobile: vertical stack */
 .pdp-pairs-with__list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: var(--space-s);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: var(--space-xs);
-  /* Hide scrollbar visually but keep functionality */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.pdp-pairs-with__list::-webkit-scrollbar {
-  display: none;
 }
 
 /* Card: image left, content right */
@@ -80,14 +70,34 @@
   flex-direction: row;
   align-items: stretch;
   gap: 0;
-  min-width: 260px;
-  max-width: 300px;
-  scroll-snap-align: start;
-  flex-shrink: 0;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   overflow: hidden;
   background: #ffffff;
+  width: 100%;
+}
+
+/* Desktop: horizontal scroll */
+@media screen and (min-width: 750px) {
+  .pdp-pairs-with__list {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-xs);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .pdp-pairs-with__list::-webkit-scrollbar {
+    display: none;
+  }
+  .pdp-pairs-with__card {
+    min-width: 260px;
+    max-width: 300px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: auto;
+  }
 }
 
 /* Product image — ~130px wide, full card height */
@@ -180,20 +190,6 @@
   height: 14px;
 }
 
-/* Desktop: slightly larger cards */
-@media screen and (min-width: 750px) {
-  .pdp-pairs-with__card {
-    min-width: 280px;
-    max-width: 320px;
-  }
-  .pdp-pairs-with__image-link {
-    width: 140px;
-  }
-  .pdp-pairs-with__image {
-    width: 140px;
-    min-height: 140px;
-  }
-}
 {% endstyle %}
 
 {% schema %}
