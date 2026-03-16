@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header": {
@@ -8,6 +17,7 @@
         "heading_size": "h2",
         "description": "admin",
         "layout_header": "center",
+        "show_submenu": true,
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
@@ -20,15 +30,18 @@
     "main": {
       "type": "main-collection",
       "settings": {
-        "product_limit": 4,
+        "product_limit": 16,
         "columns_desktop": "4",
         "columns_mobile": "2",
         "container_type": "max",
         "enable_infinite_scroll": true,
         "link": "",
+        "enable_sorting": true,
+        "enable_filtering": true,
         "filter_layout": "sidebar",
         "enable_sticky": true,
         "enable_max_height": false,
+        "open_filters_by_default": true,
         "active_filter_style": "primary",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
