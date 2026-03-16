@@ -1,0 +1,52 @@
+{%- assign features = product.metafields.custom.product_features.value -%}
+
+{%- if features != blank and features.size > 0 -%}
+  <ul class="pdp-features list-unstyled">
+    {%- for feature in features -%}
+      <li class="pdp-features__item product-info__icon-with-text">
+        <span class="pdp-features__text">{{ feature }}</span>
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+{% style %}
+.pdp-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  margin: 0;
+  padding: 0;
+}
+.pdp-features__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-s-size);
+  position: relative;
+}
+.pdp-features__item::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0786/2199/9401/files/check-circle.png?v=1773569321');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Product Features",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Features"
+    }
+  ]
+}
+{% endschema %}

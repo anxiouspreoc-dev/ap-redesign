@@ -73,58 +73,9 @@
               },
               "blocks": {}
             },
-            "pdp-icon-with-text-1": {
-              "type": "_pdp-icon-with-text",
-              "settings": {
-                "icon": "none",
-                "icon_size": "icon--m",
-                "max_width": 16,
-                "text": "<p>Feature one — update this text in the theme editor</p>",
-                "font_style": "body text-s",
-                "layout": "row",
-                "horizontal_alignment": "left",
-                "vertical_alignment": "middle",
-                "padding": "0px",
-                "gap": "var(--space-2xs)",
-                "show_borders": false,
-                "color_scheme": ""
-              },
-              "blocks": {}
-            },
-            "pdp-icon-with-text-2": {
-              "type": "_pdp-icon-with-text",
-              "settings": {
-                "icon": "none",
-                "icon_size": "icon--m",
-                "max_width": 16,
-                "text": "<p>Feature two — update this text in the theme editor</p>",
-                "font_style": "body text-s",
-                "layout": "row",
-                "horizontal_alignment": "left",
-                "vertical_alignment": "middle",
-                "padding": "0px",
-                "gap": "var(--space-2xs)",
-                "show_borders": false,
-                "color_scheme": ""
-              },
-              "blocks": {}
-            },
-            "pdp-icon-with-text-3": {
-              "type": "_pdp-icon-with-text",
-              "settings": {
-                "icon": "none",
-                "icon_size": "icon--m",
-                "max_width": 16,
-                "text": "<p>Feature three — update this text in the theme editor</p>",
-                "font_style": "body text-s",
-                "layout": "row",
-                "horizontal_alignment": "left",
-                "vertical_alignment": "middle",
-                "padding": "0px",
-                "gap": "var(--space-2xs)",
-                "show_borders": false,
-                "color_scheme": ""
-              },
+            "pdp-features": {
+              "type": "_pdp-features",
+              "settings": {},
               "blocks": {}
             },
             "pdp-collapsible-details": {
@@ -175,9 +126,7 @@
             "pdp-preorder-message",
             "pdp-subtitle",
             "pdp-buy-buttons",
-            "pdp-icon-with-text-1",
-            "pdp-icon-with-text-2",
-            "pdp-icon-with-text-3",
+            "pdp-features",
             "pdp-collapsible-details",
             "pdp_collapsible_4gmynA",
             "pdp-collapsible-delivery",
