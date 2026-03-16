@@ -6,10 +6,6 @@
     <h2 class="pdp-pairs-with__heading">PAIRS WITH:</h2>
 
     <div class="pdp-pairs-with__scroll-wrapper">
-      <button class="pdp-pairs-with__arrow pdp-pairs-with__arrow--prev" type="button" aria-label="Scroll left">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-
       <ul class="pdp-pairs-with__list list-unstyled" role="list">
         {%- for paired_product in pairs -%}
           <li class="pdp-pairs-with__card">
@@ -48,9 +44,6 @@
         {%- endfor -%}
       </ul>
 
-      <button class="pdp-pairs-with__arrow pdp-pairs-with__arrow--next" type="button" aria-label="Scroll right">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
     </div>
 
     {%- if pairs.size > 2 -%}
@@ -67,8 +60,6 @@
   if (!root) return;
 
   var list = root.querySelector('.pdp-pairs-with__list');
-  var prevBtn = root.querySelector('.pdp-pairs-with__arrow--prev');
-  var nextBtn = root.querySelector('.pdp-pairs-with__arrow--next');
   var showMoreBtn = root.querySelector('.pdp-pairs-with__show-more');
 
   // --- Show more (mobile) ---
@@ -80,30 +71,7 @@
     });
   }
 
-  // --- Arrows + drag (desktop) ---
-  function updateArrows() {
-    if (!prevBtn || !nextBtn) return;
-    var atStart = list.scrollLeft <= 2;
-    var atEnd = list.scrollLeft >= list.scrollWidth - list.clientWidth - 2;
-    prevBtn.classList.toggle('is-hidden', atStart);
-    nextBtn.classList.toggle('is-hidden', atEnd);
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function() {
-      list.scrollBy({ left: 360, behavior: 'smooth' });
-    });
-  }
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function() {
-      list.scrollBy({ left: -360, behavior: 'smooth' });
-    });
-  }
-
-  list.addEventListener('scroll', updateArrows);
-  updateArrows();
-
-  // --- Drag to scroll ---
+  // --- Drag to scroll (desktop) ---
   var isDragging = false;
   var startX = 0;
   var startScrollLeft = 0;
@@ -166,42 +134,6 @@
   gap: 0;
 }
 
-/* Arrow buttons — hidden on mobile */
-.pdp-pairs-with__arrow {
-  display: none;
-}
-@media screen and (min-width: 750px) {
-  .pdp-pairs-with__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1.5px solid #000000;
-    background: #ffffff;
-    color: #000000;
-    cursor: pointer;
-    transition: background 0.15s, color 0.15s, opacity 0.15s;
-    padding: 0;
-    z-index: 1;
-  }
-  .pdp-pairs-with__arrow:hover {
-    background: #000000;
-    color: #ffffff;
-  }
-  .pdp-pairs-with__arrow.is-hidden {
-    opacity: 0.25;
-    pointer-events: none;
-  }
-  .pdp-pairs-with__arrow--prev {
-    margin-right: 8px;
-  }
-  .pdp-pairs-with__arrow--next {
-    margin-left: 8px;
-  }
-}
 
 /* Mobile: vertical stack, show only first 2 by default */
 .pdp-pairs-with__list {
