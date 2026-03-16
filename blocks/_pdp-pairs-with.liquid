@@ -65,10 +65,10 @@
 </script>
 
 {% style %}
-/* Remove excess top spacing */
+/* Override the theme's block gap (--space-m-l) with tighter spacing */
 .pdp-pairs-with {
+  --margin-block-start: var(--space-s);
   padding-block-start: 0;
-  margin-block-start: 0;
 }
 
 /* Heading — matches accordion title: Bold 16px uppercase */
@@ -179,20 +179,18 @@
 }
 
 /* Price — regular weight, normal size */
-.pdp-pairs-with__content .price {
-  font-size: 13px;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.4;
-}
-.pdp-pairs-with__content .price .price-item {
-  font-size: 13px;
-  font-weight: 400;
-}
+.pdp-pairs-with__content .price,
+.pdp-pairs-with__content .price *,
+.pdp-pairs-with__content .price-item,
+.pdp-pairs-with__content .price-item--regular,
+.pdp-pairs-with__content .price-item--sale,
 .pdp-pairs-with__content .price__regular,
 .pdp-pairs-with__content .price__sale {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
 }
 
 /* CTA row: SHOP NOW + quick-add */
@@ -245,6 +243,12 @@
 }
 
 /* Show more button — mobile only */
+@media screen and (min-width: 750px) {
+  .pdp-pairs-with__show-more {
+    display: none !important;
+  }
+}
+
 .pdp-pairs-with__show-more {
   display: block;
   width: 100%;
