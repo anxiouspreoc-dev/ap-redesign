@@ -6,6 +6,9 @@
   {%- elsif product.compare_at_price > product.price and product.available -%}
     <li class="exception list-separator__item" data-badge="sale">Sale</li>
   {%- endif -%}
+  {%- if product.tags contains 'Preorder' -%}
+    <li class="list-separator__item" data-badge="pre-order">Pre-order</li>
+  {%- endif -%}
   {%- assign custom_badges = product.metafields.theme.badges.value -%}
   {%- for badge in custom_badges -%}
     <li class="list-separator__item" data-badge="{{ badge | handle }}">{{ badge }}</li>
