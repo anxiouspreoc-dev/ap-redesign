@@ -110,6 +110,27 @@
   </div>
 {% endif %}
 
+{% style %}
+/* True center: take localization out of flow so text spans full width */
+@media (min-width: 72em) {
+  .announcement-bar--locales .announcement-bar__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .announcement-bar--locales .announcement-bar__announcements--single {
+    text-align: center !important;
+  }
+  .announcement-bar__localization-wrapper {
+    position: absolute !important;
+    inset-inline-end: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+  }
+}
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:announcement-bar",
