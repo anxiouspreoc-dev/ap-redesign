@@ -224,7 +224,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+        "color_scheme": "scheme-4",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -670,8 +670,8 @@
           "static": true,
           "settings": {
             "layout_header": "left",
-            "subheading": "For those who like reassurance. And compartments.",
-            "heading": "ANXIOUS PREOCCUPIED IRL",
+            "subheading": "For those who like reassurance and to compartmentalise things.",
+            "heading": "AP IN THE WILD",
             "page_title": false,
             "heading_size": "h2",
             "text": "",
@@ -787,7 +787,7 @@
         "vertical_alignment": "middle",
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+        "color_scheme": "scheme-4",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -859,7 +859,7 @@
             "text_jBemEL": {
               "type": "text",
               "settings": {
-                "text": "<p>Sustainable materials. No greenwashing spirals.</p>",
+                "text": "<p>Handcrafted. <br/>Vegan. Zero animal drama.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -949,7 +949,7 @@
         "button_style": "primary",
         "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
         "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme_transition": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
         "padding_top": "default",
         "padding_bottom": "default",
         "show_top_border": false,
@@ -975,7 +975,7 @@
           "settings": {
             "vertical_alignment": "middle",
             "horizontal_alignment": "center",
-            "color_scheme": "scheme-6",
+            "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
             "enable_color_scheme_transition": false,
             "color_scheme_transition": ""
           },
