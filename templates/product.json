@@ -39,6 +39,13 @@
               },
               "blocks": {}
             },
+            "pdp-price": {
+              "type": "_pdp-price",
+              "settings": {
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
             "pdp-rating": {
               "type": "_pdp-rating",
               "settings": {},
@@ -53,13 +60,6 @@
               "type": "_pdp-subtitle",
               "settings": {
                 "text": "{{ closest.product.metafields.custom.subtitle.value }}",
-                "font_style": "body"
-              },
-              "blocks": {}
-            },
-            "pdp-price": {
-              "type": "_pdp-price",
-              "settings": {
                 "font_style": "body"
               },
               "blocks": {}
@@ -132,7 +132,7 @@
               "settings": {
                 "heading": "DETAILS",
                 "font_style": "caption",
-                "text": "<p>Add product details here.</p>",
+                "text": "{{ closest.product.description }}",
                 "page": "",
                 "open_by_default": false
               },
@@ -176,7 +176,7 @@
       },
       "custom_css": [
         "button {text-transform: uppercase;}",
-        ".product-info__icon-with-text { position: relative; }"
+        ".product-info__icon-with-text {position: relative;}"
       ],
       "settings": {
         "media_style": "thumbnails",
