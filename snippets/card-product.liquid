@@ -154,8 +154,8 @@
         <p class="card-product-content__title {{ settings.card_title_font_style }}" aria-hidden="true">
           {{ product.title | escape }}
         </p>
-        {%- if settings.card_show_product_subtitle and product.metafields.descriptors.subtitle != blank -%}
-          <h4 class="card__interactive caption secondary">{{ product.metafields.descriptors.subtitle }}</h4>
+        {%- if settings.card_show_product_subtitle and product.metafields.custom.subtitle != blank -%}
+          <h4 class="card__interactive caption secondary">{{ product.metafields.custom.subtitle }}</h4>
         {%- endif -%}
         {%- if settings.card_show_vendor -%}
           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
