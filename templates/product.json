@@ -46,6 +46,14 @@
               },
               "blocks": {}
             },
+            "pdp-variant-picker": {
+              "type": "_pdp-variant-picker",
+              "settings": {
+                "variant_picker_style": "pills",
+                "swatch_style": "round"
+              },
+              "blocks": {}
+            },
             "pdp-rating": {
               "type": "_pdp-rating",
               "settings": {},
@@ -122,6 +130,7 @@
             "pdp-badges",
             "pdp-title",
             "pdp-price",
+            "pdp-variant-picker",
             "pdp-rating",
             "pdp-preorder-message",
             "pdp-subtitle",
