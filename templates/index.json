@@ -402,8 +402,8 @@
               "type": "_stacked-image",
               "settings": {
                 "image": "shopify://shop_images/About_image_37a91d8e-9b66-4b34-8edc-9b7768cf4a6f.png",
-                "image_ratio": "2 / 3",
-                "max_width": 80,
+                "image_ratio": "1",
+                "max_width": 50,
                 "link": "",
                 "link_label": ""
               },
