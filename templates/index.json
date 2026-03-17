@@ -410,7 +410,8 @@
         "button_group_Abij7V"
       ],
       "custom_css": [
-        "h2.rich-text__heading-group.heading-group.media-banner__pointer,.heading {max-width: 400px; word-break: normal;}"
+        "h2.rich-text__heading-group.heading-group.media-banner__pointer,.heading {max-width: 400px; word-break: normal;}",
+        "a.button.button--primary {background-color: #ff0164 ! IMPORTANT; border-color: #ff0164 ! IMPORTANT;}"
       ],
       "name": "t:stacked-images-with-text",
       "settings": {
