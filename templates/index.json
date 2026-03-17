@@ -422,12 +422,12 @@
         "button_group_Abij7V"
       ],
       "custom_css": [
-        "span.rich-text__heading.heading.h2 {max-width: 400px; word-break: normal; text-align: left;}",
-        ".rich-text__buttons.button-group.justify-inherit.media-banner__pointer {justify-content: left;}"
+        "span.rich-text__heading.heading.h2 {max-width: 400px; word-break: normal;}",
+        ".rich-text__buttons.button-group.justify-inherit.media-banner__pointer {}"
       ],
       "name": "t:stacked-images-with-text",
       "settings": {
-        "horizontal_alignment": "center",
+        "horizontal_alignment": "left",
         "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
