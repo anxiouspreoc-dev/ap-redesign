@@ -102,7 +102,7 @@
         "enable_blur": false,
         "use_alt_logo": false,
         "transparent_header_color": "#ffffff",
-        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
+        "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
         "padding_top": "var(--space-xs)",
         "padding_bottom": "var(--space-xs)",
         "show_borders": false
