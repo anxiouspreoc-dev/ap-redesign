@@ -421,6 +421,10 @@
         "text_iYf8VY",
         "button_group_Abij7V"
       ],
+      "custom_css": [
+        "span.rich-text__heading.heading.h2 {max-width: 400px; word-break: normal; text-align: left;}",
+        ".rich-text__buttons.button-group.justify-inherit.media-banner__pointer {justify-content: left;}"
+      ],
       "name": "t:stacked-images-with-text",
       "settings": {
         "horizontal_alignment": "center",
