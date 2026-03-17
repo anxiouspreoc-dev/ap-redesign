@@ -422,7 +422,7 @@
         "button_group_Abij7V"
       ],
       "custom_css": [
-        "span.rich-text__heading.heading.h2 {max-width: 400px; word-break: normal;}",
+        "h2.rich-text__heading-group.heading-group.media-banner__pointer {max-width: 400px; word-break: normal;}",
         ".rich-text__buttons.button-group.justify-inherit.media-banner__pointer {}"
       ],
       "name": "t:stacked-images-with-text",
