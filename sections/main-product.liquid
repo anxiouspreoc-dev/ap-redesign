@@ -63,14 +63,16 @@
   color: #000000 !important;
   border-color: #EEDFFF !important;
 }
-/* Variant picker legend (e.g. "SIZE: XS") — match accordion title style */
+/* Variant picker legend (e.g. "SIZE: XS") — same size as price */
 .product-info .variant-picker__legend,
+.product-info .variant-picker__legend *,
 .product-info .variant-picker__legend .button--text {
-  font-family: var(--font-body-family);
-  font-weight: 700;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #000000;
+  font-family: var(--font-body-family) !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  letter-spacing: 0 !important;
 }
 /* Variant pill buttons — larger, match price scale */
 .product-info .variant-picker__label--button span {
