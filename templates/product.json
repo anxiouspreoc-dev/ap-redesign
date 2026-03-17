@@ -197,6 +197,9 @@
     },
     "pdp-colorways": {
       "type": "pdp-colorways",
+      "custom_css": [
+        "button {background: #d70f62 !important; border-color: #d70f62 !important; color: white !important;}"
+      ],
       "settings": {
         "heading": "THE MID FOR EVERY MOOD.",
         "subheading": "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes.",
