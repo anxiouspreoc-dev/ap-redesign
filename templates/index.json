@@ -224,7 +224,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -411,7 +411,7 @@
       ],
       "custom_css": [
         "h2.rich-text__heading-group.heading-group.media-banner__pointer,.heading {max-width: 400px; word-break: normal;}",
-        "a.button.button--primary {background-color: #ff0164 ! IMPORTANT; border-color: #ff0164 ! IMPORTANT;}"
+        "a.button.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}"
       ],
       "name": "t:stacked-images-with-text",
       "settings": {
@@ -861,7 +861,7 @@
       ],
       "custom_css": [
         "span.rich-text__heading.heading.h2 {color: #ff0064;}",
-        "button.newsletter__button.button.button--primary {text-transform: uppercase;}"
+        "button.newsletter__button.button.button--primary {text-transform: uppercase; background-color: #ff0164 !important; border-color: #ff0164 !important;}"
       ],
       "name": "t:newsletter",
       "settings": {
