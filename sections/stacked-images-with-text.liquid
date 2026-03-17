@@ -7,6 +7,57 @@
   endif
 -%}
 
+{% style %}
+/* Body text: black (overrides pink from color scheme) */
+#shopify-section-{{ section.id }} .rte p,
+#shopify-section-{{ section.id }} .rte li,
+#shopify-section-{{ section.id }} .rte {
+  color: #000000;
+}
+/* Heading stays pink — inherited from color scheme */
+
+/* Button: #5D006E background, white text, uppercase */
+#shopify-section-{{ section.id }} {
+  --color-primary-button: 93, 0, 110;
+  --color-primary-button-border: 93, 0, 110;
+  --color-primary-button-label: 255, 255, 255;
+  --color-primary-button-hover: 74, 0, 88;
+}
+#shopify-section-{{ section.id }} .button {
+  text-transform: uppercase;
+}
+
+/* ---- Image stacking: compact overlapping card effect ---- */
+/* Remove full-viewport sticky scroll height */
+#shopify-section-{{ section.id }} .stacked-images-with-text__list-item {
+  position: relative !important;
+  inset-block-start: auto !important;
+  min-block-size: 0 !important;
+}
+
+/* Pull 2nd image up to create overlap */
+#shopify-section-{{ section.id }} .stacked-images-with-text__list-item + .stacked-images-with-text__list-item {
+  margin-block-start: -120px;
+  transform: translateX(40px);
+  z-index: 1;
+}
+
+/* First image sits on top */
+#shopify-section-{{ section.id }} .stacked-images-with-text__list-item:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+/* Desktop: reduce text-wrapper sticky height to natural content height */
+@media (min-width: 48em) and (orientation: landscape) {
+  #shopify-section-{{ section.id }} .stacked-images-with-text__text-wrapper {
+    min-block-size: 0 !important;
+    align-self: center;
+    padding-block: var(--space-2xl);
+  }
+}
+{% endstyle %}
+
 <div {% render 'color-scheme-attributes',  scoped_settings: section.settings, borders: true %}>
   <div class="container container--xl">
     <stacked-images-with-text class="stacked-images-with-text">
