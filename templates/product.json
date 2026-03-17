@@ -276,12 +276,27 @@
         "show_top_border": false,
         "show_bottom_border": false
       }
+    },
+    "custom_liquid_JYxC8j": {
+      "type": "custom-liquid",
+      "name": "t:custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #ff0164 !important;\n    border-color: #ff0164 !important;\n}\n</style>",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
     }
   },
   "order": [
     "main",
     "pdp-behind-the-bag",
     "pdp-colorways",
-    "collection-list"
+    "collection-list",
+    "custom_liquid_JYxC8j"
   ]
 }
