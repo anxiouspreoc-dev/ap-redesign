@@ -8,26 +8,59 @@
 -%}
 
 {% style %}
-/* Body text: black (overrides pink from color scheme) */
+/* ── Body text: black (p and li only — leaves headings alone) ── */
 #shopify-section-{{ section.id }} .rte p,
-#shopify-section-{{ section.id }} .rte li,
-#shopify-section-{{ section.id }} .rte {
-  color: #000000;
-}
-/* Heading stays pink — inherited from color scheme */
-
-/* Button: #5D006E background, white text, uppercase */
-#shopify-section-{{ section.id }} {
-  --color-primary-button: 93, 0, 110;
-  --color-primary-button-border: 93, 0, 110;
-  --color-primary-button-label: 255, 255, 255;
-  --color-primary-button-hover: 74, 0, 88;
-}
-#shopify-section-{{ section.id }} .button {
-  text-transform: uppercase;
+#shopify-section-{{ section.id }} .rte li {
+  color: #000000 !important;
 }
 
-/* ---- Image stacking: compact overlapping card effect ---- */
+/* ── Headings: pink ─────────────────────────────────────────── */
+#shopify-section-{{ section.id }} .rte h1,
+#shopify-section-{{ section.id }} .rte h2,
+#shopify-section-{{ section.id }} .rte h3,
+#shopify-section-{{ section.id }} .rte h4,
+#shopify-section-{{ section.id }} .heading,
+#shopify-section-{{ section.id }} .heading * {
+  color: #ff0064 !important;
+}
+
+/* ── Button: purple #5D006E ─────────────────────────────────── */
+#shopify-section-{{ section.id }} .button,
+#shopify-section-{{ section.id }} .button--primary {
+  background-color: #5d006e !important;
+  border-color: #5d006e !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+}
+#shopify-section-{{ section.id }} .button:hover,
+#shopify-section-{{ section.id }} .button--primary:hover {
+  background-color: #4a0058 !important;
+  border-color: #4a0058 !important;
+  color: #ffffff !important;
+}
+
+/* ── Left alignment ─────────────────────────────────────────── */
+#shopify-section-{{ section.id }} .stacked-images-with-text__text-wrapper {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+#shopify-section-{{ section.id }} .rte,
+#shopify-section-{{ section.id }} .rte.justify-center,
+#shopify-section-{{ section.id }} .rte[class*="justify"] {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+/* ── Heading line break: force "EMOTIONAL BAGGAGE," onto its own line ── */
+#shopify-section-{{ section.id }} .rte h1,
+#shopify-section-{{ section.id }} .rte h2,
+#shopify-section-{{ section.id }} .heading {
+  max-width: 13ch;
+  word-break: normal;
+}
+
+/* ── Image stacking: compact overlapping card effect ─────────── */
 /* Remove full-viewport sticky scroll height */
 #shopify-section-{{ section.id }} .stacked-images-with-text__list-item {
   position: relative !important;
@@ -37,9 +70,16 @@
 
 /* Pull 2nd image up to create overlap */
 #shopify-section-{{ section.id }} .stacked-images-with-text__list-item + .stacked-images-with-text__list-item {
-  margin-block-start: -120px;
-  transform: translateX(40px);
+  margin-block-start: -140px !important;
+  transform: translateX(50px) !important;
   z-index: 1;
+}
+
+/* Third image overlaps second */
+#shopify-section-{{ section.id }} .stacked-images-with-text__list-item:nth-child(3) {
+  margin-block-start: -100px !important;
+  transform: translateX(-20px) !important;
+  z-index: 0;
 }
 
 /* First image sits on top */
