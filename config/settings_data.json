@@ -274,6 +274,22 @@
           "secondary_button_border": "#000000",
           "on_secondary_button": "#000000"
         }
+      },
+      "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d": {
+        "settings": {
+          "text": "#1a1a1a",
+          "text_secondary": "#6f7473",
+          "background": "#ffffff",
+          "background_gradient": "",
+          "color_exception": "#b00000",
+          "color_border": "#6f7473",
+          "primary_button": "#d70f62",
+          "primary_button_border": "#d70f62",
+          "on_primary_button": "#ffffff",
+          "secondary_button": "#d70f62",
+          "secondary_button_border": "#d70f62",
+          "on_secondary_button": "#ffffff"
+        }
       }
     }
   },
