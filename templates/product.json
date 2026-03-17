@@ -156,7 +156,8 @@
       },
       "custom_css": [
         "button {text-transform: uppercase;}",
-        ".product-info__icon-with-text {position: relative;}"
+        ".product-info__icon-with-text {position: relative;}",
+        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}"
       ],
       "settings": {
         "media_style": "thumbnails",
