@@ -913,6 +913,7 @@
             },
             "text_LnjEtU": {
               "type": "text",
+              "disabled": true,
               "settings": {
                 "text": "<p>Because commitment should be rewarded.</p>",
                 "font_style": "body"
@@ -949,6 +950,7 @@
             },
             "text_jBemEL": {
               "type": "text",
+              "disabled": true,
               "settings": {
                 "text": "<p>Handcrafted. <br/>Vegan. Zero animal drama.</p>",
                 "font_style": "body"
@@ -985,6 +987,7 @@
             },
             "text_tzThwd": {
               "type": "text",
+              "disabled": true,
               "settings": {
                 "text": "<p>Email us, we promise we’re <br/>emotionally available.</p>",
                 "font_style": "body"
