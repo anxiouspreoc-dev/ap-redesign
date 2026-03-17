@@ -332,6 +332,105 @@
         "show_bottom_border": false
       }
     },
+    "stacked_images_with_text_TUaxG4": {
+      "type": "stacked-images-with-text",
+      "blocks": {
+        "heading_group_4MNYyk": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "heading_QXmNiY": {
+              "type": "_heading",
+              "settings": {
+                "heading": "EMOTIONAL BAGGAGE, BUT MAKE IT CHIC.",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_QXmNiY"
+          ]
+        },
+        "text_iYf8VY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Anxious Preoccupied is a brand for people who carry everything — emotionally and otherwise. Co-founded by best friends, comedian and writer Joanne McNally and entrepreneur Nikki Lannen, the brand was born from a shared truth: life is rarely calm, organised or predictable, but your bag can be. Because if you’re going to spiral, you may as well do it with style.</p>",
+            "font_style": "body"
+          },
+          "blocks": {}
+        },
+        "button_group_Abij7V": {
+          "type": "button-group",
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {
+            "button_BeFcpQ": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "SHOP NOW",
+                "button_link": "shopify://collections/all"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_BeFcpQ"
+          ]
+        },
+        "stacked-images": {
+          "type": "_stacked-images",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stacked_image_Kty6La": {
+              "type": "_stacked-image",
+              "settings": {
+                "image": "shopify://shop_images/About_image.png",
+                "image_ratio": "1",
+                "max_width": 90,
+                "link": "",
+                "link_label": ""
+              },
+              "blocks": {}
+            },
+            "stacked_image_LCNRLj": {
+              "type": "_stacked-image",
+              "settings": {
+                "image": "shopify://shop_images/About_image_37a91d8e-9b66-4b34-8edc-9b7768cf4a6f.png",
+                "image_ratio": "2 / 3",
+                "max_width": 80,
+                "link": "",
+                "link_label": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "stacked_image_Kty6La",
+            "stacked_image_LCNRLj"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_4MNYyk",
+        "text_iYf8VY",
+        "button_group_Abij7V"
+      ],
+      "name": "t:stacked-images-with-text",
+      "settings": {
+        "horizontal_alignment": "center",
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
     "image_hotspot_NWqkfK": {
       "type": "image-hotspot",
       "blocks": {
@@ -1116,6 +1215,7 @@
     "rich-text",
     "collection_list_LJnUAE",
     "logo_list_Ny7bgw",
+    "stacked_images_with_text_TUaxG4",
     "image_hotspot_NWqkfK",
     "featured_collection_gDpxp7",
     "video_reels_CJ3hjn",
