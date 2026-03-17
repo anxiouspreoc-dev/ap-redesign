@@ -541,7 +541,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
+        "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -1181,7 +1181,7 @@
         "media_grid_image_Y8XfWC"
       ],
       "custom_css": [
-        ".quick-add__submit {background: #00ff00; border-radius: 30px;}",
+        ".quick-add__submit {background: #D70F62; color: white; border-radius: 30px;}",
         "a.button.button--text {opacity: 1;}"
       ],
       "name": "t:media-grid",
