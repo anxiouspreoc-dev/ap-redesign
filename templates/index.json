@@ -1181,7 +1181,7 @@
         "media_grid_image_Y8XfWC"
       ],
       "custom_css": [
-        ".quick-add__submit {background: #F527A6; border-color: #F527A6; color: white; border-radius: 30px;}",
+        ".quick-add__submit {background: #FF0164; border-color: #FF0164; color: white; border-radius: 30px;}",
         "a.button.button--text {opacity: 1;}"
       ],
       "name": "t:media-grid",
