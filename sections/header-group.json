@@ -94,7 +94,7 @@
         "layout_desktop": "horizontal",
         "logo_position": "center",
         "interaction_mode": "hover",
-        "sticky_type": "scroll",
+        "sticky_type": "always",
         "enable_search": true,
         "enable_icons": true,
         "enable_overlay": true,
