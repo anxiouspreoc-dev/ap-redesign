@@ -198,7 +198,7 @@
     "pdp-colorways": {
       "type": "pdp-colorways",
       "custom_css": [
-        "button {background: #d70f62 !important; border-color: #d70f62 !important; color: white !important;}"
+        "button {background: #F527A6 !important; border-color: #F527A6 !important; color: white !important;}"
       ],
       "settings": {
         "heading": "THE MID FOR EVERY MOOD.",
