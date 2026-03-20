@@ -139,9 +139,10 @@
         "image": {
           "type": "image",
           "settings": {
-            "image_ratio": "3 / 2",
-            "max_width": 1400,
-            "horizontal_alignment": "inherit",
+            "image": "shopify://shop_images/LOGONEONREDSTACKED.avif",
+            "image_ratio": "default",
+            "max_width": 180,
+            "horizontal_alignment": "center",
             "link": "",
             "link_label": "",
             "product": ""
@@ -151,7 +152,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Sign up for Primavera's newsletter and be the first to discover the latest collections, special offers, and behind-the-scenes glimpses.</p>",
+            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system.</p>",
             "font_style": "body"
           },
           "blocks": {}
@@ -175,7 +176,7 @@
         "font_style": "heading h5",
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
         "once": true,
         "homepage": false,
         "account": false,
