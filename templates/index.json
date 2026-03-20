@@ -569,9 +569,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-silver-w-lime-green-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -585,7 +585,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -594,9 +594,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-silver-w-lime-green-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -619,7 +619,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-lilac-w-purple-with-strap",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -644,9 +644,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-gold-w-orange-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -669,9 +669,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-gold-w-orange-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -695,9 +695,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-lilac-w-purple-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -721,9 +721,9 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "",
+                "product": "the-oversized-silver-w-lime-green-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -1181,7 +1181,7 @@
         "media_grid_image_Y8XfWC"
       ],
       "custom_css": [
-        ".quick-add__submit {background: #FF0164; border-color: #FF0164; color: white; border-radius: 30px;}",
+        ".quick-add__submit {background: #ff0164; border-color: #ff0164; color: white; border-radius: 30px;}",
         "a.button.button--text {opacity: 1;}"
       ],
       "name": "t:media-grid",
