@@ -89,6 +89,9 @@
         "megamenu",
         "megamenu-2"
       ],
+      "custom_css": [
+        ".header__cart-count {display: none !important;}"
+      ],
       "settings": {
         "menu": "main-menu-copy",
         "layout_desktop": "horizontal",
