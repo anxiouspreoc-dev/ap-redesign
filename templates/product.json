@@ -50,7 +50,7 @@
               "type": "_pdp-variant-picker",
               "name": "t:variant-picker",
               "settings": {
-                "variant_picker_style": "buttons",
+                "variant_picker_style": "border",
                 "swatch_style": "default",
                 "variant_images": "",
                 "option_1": "",
@@ -283,7 +283,7 @@
     "custom_liquid_JYxC8j": {
       "type": "custom-liquid",
       "custom_css": [
-        "div{display: none; }"
+        "div {display: none;}"
       ],
       "name": "t:custom-liquid",
       "settings": {
