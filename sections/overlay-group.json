@@ -171,6 +171,7 @@
         "text",
         "newsletter"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Subscribe to our Newsletter",
         "font_style": "heading h5",
