@@ -29,6 +29,7 @@
         },
         "newsletter": {
           "type": "newsletter",
+          "disabled": true,
           "settings": {
             "block_size": "large",
             "heading": "Subscribe to our newsletter",
