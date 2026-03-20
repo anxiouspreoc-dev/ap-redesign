@@ -159,7 +159,7 @@
         "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "scheme-1",
-        "padding_top": "var(--space-s)",
+        "padding_top": "var(--space-m)",
         "padding_bottom": "var(--space-s)",
         "show_top_border": false,
         "show_bottom_border": false
