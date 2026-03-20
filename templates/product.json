@@ -198,7 +198,7 @@
     "pdp-colorways": {
       "type": "pdp-colorways",
       "custom_css": [
-        "button {background: #FF0164 !important; border-color: #FF0164 !important; color: white !important;}"
+        "button {background: #ff0164 !important; border-color: #ff0164 !important; color: white !important;}"
       ],
       "settings": {
         "heading": "THE MID FOR EVERY MOOD.",
@@ -282,6 +282,9 @@
     },
     "custom_liquid_JYxC8j": {
       "type": "custom-liquid",
+      "custom_css": [
+        "div{display: none; }"
+      ],
       "name": "t:custom-liquid",
       "settings": {
         "custom_liquid": "<style>\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #ff0164 !important;\n    border-color: #ff0164 !important;\n}\n</style>",
