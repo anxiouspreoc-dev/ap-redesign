@@ -17,7 +17,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Free shipping on all orders over $100</p>",
+            "text": "<p>Free shipping on all orders over €150</p>",
             "font_style": "caption"
           }
         },
