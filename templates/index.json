@@ -357,7 +357,7 @@
         "text_iYf8VY": {
           "type": "text",
           "settings": {
-            "text": "<p>Founded by Joanne McNally and Nikki Lannen, best friends for 16 years, Anxious Preoccupied is for women with full lives and zero interest in choosing between style and function. For the girl with ten tabs open, a missed voice note, and a calendar that’s giving chaos. Our accessories are designed to keep up.<br/>Life is chaotic. Your accessories shouldn’t be.</p><p></p>",
+            "text": "<p>Founded by Joanne McNally and Nikki Lannen, best friends for 16 years, Anxious Preoccupied is for women with full lives and zero interest in choosing between style and function. <br/>For those with ten tabs open, a missed voice note, and calendar chaos. Our accessories are designed to keep up.<br/>Life is chaotic. Your accessories shouldn’t be.</p><p></p>",
             "font_style": "body"
           },
           "blocks": {}
