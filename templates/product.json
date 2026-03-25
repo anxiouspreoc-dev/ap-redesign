@@ -172,7 +172,9 @@
         ".buy-buttons__button-group.button.button--full.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}",
         ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
         ".product-info__price .text-xs.secondary {display: none;}",
-        "klarna-placement .container {width: fit-content;}"
+        "klarna-placement .container {width: fit-content; border: none !important; box-shadow: none !important; padding: 0 !important; text-align: left !important; justify-content: flex-start !important;}",
+        "klarna-placement {display: block; text-align: left;}",
+        ".block-klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important; padding-top: 0 !important;}"
       ],
       "settings": {
         "media_style": "thumbnails",
