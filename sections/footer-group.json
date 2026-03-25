@@ -100,6 +100,29 @@
           "type": "spacer",
           "settings": {}
         },
+        "ap_custom_social_TURJTg": {
+          "type": "ap_custom_social",
+          "settings": {
+            "heading": "",
+            "block_size": "small",
+            "icon_size": 56,
+            "icon_1": "shopify://shop_images/WIDGETinsta_1.png",
+            "url_1": "",
+            "label_1": "",
+            "icon_2": "shopify://shop_images/WIDGETfacebook_1_1.png",
+            "url_2": "",
+            "label_2": "",
+            "icon_3": "shopify://shop_images/WIDGETtiktok_1.png",
+            "url_3": "",
+            "label_3": "",
+            "url_4": "",
+            "label_4": "",
+            "url_5": "",
+            "label_5": "",
+            "url_6": "",
+            "label_6": ""
+          }
+        },
         "social_links_NhgF99": {
           "type": "social_links",
           "settings": {
@@ -122,6 +145,7 @@
         "spacer_t6gRk8",
         "spacer_bXrmRH",
         "spacer_YkpNAi",
+        "ap_custom_social_TURJTg",
         "social_links_NhgF99"
       ],
       "custom_css": [
