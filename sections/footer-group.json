@@ -161,7 +161,8 @@
         "social_links_NhgF99"
       ],
       "custom_css": [
-        "button.newsletter__button.button.button--primary {text-transform: uppercase;}"
+        "button.newsletter__button.button.button--primary {text-transform: uppercase;}",
+        ".ap-social-links.ap-social-links--right {display: flex;}"
       ],
       "settings": {
         "horizontal_alignment": "left",
