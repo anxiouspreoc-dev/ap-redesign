@@ -57,6 +57,10 @@
           "type": "spacer",
           "settings": {}
         },
+        "spacer_yCnHpA": {
+          "type": "spacer",
+          "settings": {}
+        },
         "link_list": {
           "type": "link_list",
           "settings": {
@@ -83,10 +87,6 @@
             "menu": "footer-helpful-links",
             "collapse": true
           }
-        },
-        "spacer_yCnHpA": {
-          "type": "spacer",
-          "settings": {}
         },
         "spacer_t6gRk8": {
           "type": "spacer",
@@ -138,10 +138,10 @@
         "newsletter",
         "logo_FVpTwB",
         "spacer",
+        "spacer_yCnHpA",
         "link_list",
         "link_list-2",
         "link_list-3",
-        "spacer_yCnHpA",
         "spacer_t6gRk8",
         "spacer_bXrmRH",
         "spacer_YkpNAi",
