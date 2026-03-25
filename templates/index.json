@@ -326,8 +326,8 @@
         "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
-        "padding_top": "var(--space-l)",
-        "padding_bottom": "var(--space-l)",
+        "padding_top": "var(--space-s)",
+        "padding_bottom": "var(--space-s)",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -1042,10 +1042,10 @@
         "counter_style": "progress",
         "button_style": "primary",
         "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
-        "enable_color_scheme_transition": false,
+        "enable_color_scheme_transition": true,
         "color_scheme_transition": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
-        "padding_top": "default",
-        "padding_bottom": "default",
+        "padding_top": "var(--space-s)",
+        "padding_bottom": "var(--space-xs)",
         "show_top_border": false,
         "show_bottom_border": false
       }
