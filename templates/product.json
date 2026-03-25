@@ -50,7 +50,7 @@
               "type": "_pdp-variant-picker",
               "name": "t:variant-picker",
               "settings": {
-                "variant_picker_style": "border",
+                "variant_picker_style": "dropdown",
                 "swatch_style": "default",
                 "variant_images": "",
                 "option_1": "",
