@@ -323,9 +323,9 @@
         "spacing": "var(--space-3xl)",
         "horizontal_alignment": "center",
         "container_type": "max",
-        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
+        "color_scheme": "scheme-6",
         "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme_transition": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
         "padding_top": "var(--space-s)",
         "padding_bottom": "var(--space-s)",
         "show_top_border": false,
@@ -456,6 +456,7 @@
       ],
       "name": "t:shoppable-banner",
       "settings": {
+        "video": "shopify://files/videos/two models lilac and gold bags.mp4",
         "enable_autoplay": false,
         "play_button_display": "always",
         "button_style": "text",
@@ -666,7 +667,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -691,7 +692,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -716,7 +717,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -742,7 +743,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -768,7 +769,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -794,7 +795,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },

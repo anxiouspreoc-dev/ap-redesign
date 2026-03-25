@@ -190,7 +190,7 @@
         "settings": {
           "text": "#1a1a1a",
           "text_secondary": "#1a1a1a",
-          "background": "#c0fa11",
+          "background": "#ddf70e",
           "background_gradient": "",
           "color_exception": "#1a1a1a",
           "color_border": "#ffffff",
@@ -290,7 +290,7 @@
           "background_gradient": "",
           "color_exception": "#b00000",
           "color_border": "#6f7473",
-          "primary_button": "#ff01fd",
+          "primary_button": "#e2ff01",
           "primary_button_border": "#ff0164",
           "on_primary_button": "#ffffff",
           "secondary_button": "#d70f62",
