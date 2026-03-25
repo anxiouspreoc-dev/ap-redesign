@@ -364,6 +364,7 @@
         },
         "button_group_Abij7V": {
           "type": "button-group",
+          "disabled": true,
           "settings": {
             "horizontal_alignment": "inherit"
           },
