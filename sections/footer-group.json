@@ -170,6 +170,10 @@
             "enable_language_selector": false
           }
         },
+        "spacer_YjNbgz": {
+          "type": "spacer",
+          "settings": {}
+        },
         "copyright": {
           "type": "copyright",
           "settings": {
@@ -177,8 +181,17 @@
             "horizontal_alignment": "right"
           }
         },
+        "payment_types_indwmg": {
+          "type": "payment_types",
+          "disabled": true,
+          "settings": {
+            "block_size": "small",
+            "horizontal_alignment": "left"
+          }
+        },
         "policy_links": {
           "type": "policy_links",
+          "disabled": true,
           "settings": {
             "block_size": "small",
             "horizontal_alignment": "right"
@@ -187,7 +200,9 @@
       },
       "block_order": [
         "localization",
+        "spacer_YjNbgz",
         "copyright",
+        "payment_types_indwmg",
         "policy_links"
       ],
       "settings": {
