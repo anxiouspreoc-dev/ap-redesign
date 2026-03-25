@@ -263,7 +263,7 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading }}</h2>
                 {%- endif -%}
-                <div class="ap-social-links justify-{{ section.settings.horizontal_alignment }}">
+                <div class="ap-social-links ap-social-links--{{ block.settings.alignment }}">
                   {%- assign icon_size = block.settings.icon_size -%}
                   {%- if block.settings.icon_1 != blank -%}
                     <a href="{{ block.settings.url_1 }}" class="ap-social-link" {% if block.settings.label_1 != blank %}aria-label="{{ block.settings.label_1 }}"{% endif %}>
@@ -305,6 +305,12 @@
 </div>
 
 {% style %}
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Footer font */
+#shopify-section-footer,
+#shopify-section-footer * {
+  font-family: 'Instrument Sans', sans-serif;
+}
 /* Footer background */
 #shopify-section-footer .footer {
   background-color: #F5EFF8;
@@ -353,14 +359,20 @@
 /* Custom social icon links */
 #shopify-section-footer .ap-social-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: var(--space-s);
   align-items: center;
 }
+#shopify-section-footer .ap-social-links--left   { justify-content: flex-start; }
+#shopify-section-footer .ap-social-links--center { justify-content: center; }
+#shopify-section-footer .ap-social-links--right  { justify-content: flex-end; }
+#shopify-section-footer .ap-social-link {
+  display: flex;
+  flex-shrink: 0;
+}
 #shopify-section-footer .ap-social-link img {
   display: block;
-  width: var(--ap-icon-size, 56px);
-  height: var(--ap-icon-size, 56px);
   object-fit: contain;
 }
 {% endstyle %}
@@ -1424,6 +1436,17 @@
             { "value": "full-width", "label": "t:full-width" }
           ],
           "default": "small"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Alignment",
+          "options": [
+            { "value": "left",   "label": "t:left" },
+            { "value": "center", "label": "t:center" },
+            { "value": "right",  "label": "t:right" }
+          ],
+          "default": "right"
         },
         {
           "type": "range",
