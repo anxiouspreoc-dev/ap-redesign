@@ -125,6 +125,7 @@
         },
         "social_links_NhgF99": {
           "type": "social_links",
+          "disabled": true,
           "settings": {
             "block_size": "small",
             "heading": "",
