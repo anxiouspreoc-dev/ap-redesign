@@ -205,6 +205,98 @@
                   {%- endif -%}
                 </div>
               </div>
+            {%- when 'ap_menu_group' -%}
+              <div class="footer__item footer__item--ap-menu-group footer__item--full-width" {{ block.shopify_attributes }}>
+                <div class="ap-menu-group">
+                  {%- if block.settings.menu_1 != blank -%}
+                    <nav class="ap-menu-group__column">
+                      {%- if block.settings.heading_1 != blank -%}
+                        <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading_1 }}</h2>
+                      {%- endif -%}
+                      <ul class="list-unstyled">
+                        {%- for link in block.settings.menu_1.links -%}
+                          <li>
+                            <a href="{{ link.url }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+                              <span>{{ link.title }}</span>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </nav>
+                  {%- endif -%}
+                  {%- if block.settings.menu_2 != blank -%}
+                    <nav class="ap-menu-group__column">
+                      {%- if block.settings.heading_2 != blank -%}
+                        <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading_2 }}</h2>
+                      {%- endif -%}
+                      <ul class="list-unstyled">
+                        {%- for link in block.settings.menu_2.links -%}
+                          <li>
+                            <a href="{{ link.url }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+                              <span>{{ link.title }}</span>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </nav>
+                  {%- endif -%}
+                  {%- if block.settings.menu_3 != blank -%}
+                    <nav class="ap-menu-group__column">
+                      {%- if block.settings.heading_3 != blank -%}
+                        <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading_3 }}</h2>
+                      {%- endif -%}
+                      <ul class="list-unstyled">
+                        {%- for link in block.settings.menu_3.links -%}
+                          <li>
+                            <a href="{{ link.url }}" class="footer__menu-item link-hover-{{ section.settings.link_hover_style }}">
+                              <span>{{ link.title }}</span>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </nav>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- when 'ap_custom_social' -%}
+              <div class="footer__item footer__item--{{ block.settings.block_size }} footer__item--ap-social" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading }}</h2>
+                {%- endif -%}
+                <div class="ap-social-links justify-{{ section.settings.horizontal_alignment }}">
+                  {%- assign icon_size = block.settings.icon_size -%}
+                  {%- if block.settings.icon_1 != blank -%}
+                    <a href="{{ block.settings.url_1 }}" class="ap-social-link" {% if block.settings.label_1 != blank %}aria-label="{{ block.settings.label_1 }}"{% endif %}>
+                      {{ block.settings.icon_1 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_1 }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.icon_2 != blank -%}
+                    <a href="{{ block.settings.url_2 }}" class="ap-social-link" {% if block.settings.label_2 != blank %}aria-label="{{ block.settings.label_2 }}"{% endif %}>
+                      {{ block.settings.icon_2 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_2 }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.icon_3 != blank -%}
+                    <a href="{{ block.settings.url_3 }}" class="ap-social-link" {% if block.settings.label_3 != blank %}aria-label="{{ block.settings.label_3 }}"{% endif %}>
+                      {{ block.settings.icon_3 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_3 }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.icon_4 != blank -%}
+                    <a href="{{ block.settings.url_4 }}" class="ap-social-link" {% if block.settings.label_4 != blank %}aria-label="{{ block.settings.label_4 }}"{% endif %}>
+                      {{ block.settings.icon_4 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_4 }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.icon_5 != blank -%}
+                    <a href="{{ block.settings.url_5 }}" class="ap-social-link" {% if block.settings.label_5 != blank %}aria-label="{{ block.settings.label_5 }}"{% endif %}>
+                      {{ block.settings.icon_5 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_5 }}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.icon_6 != blank -%}
+                    <a href="{{ block.settings.url_6 }}" class="ap-social-link" {% if block.settings.label_6 != blank %}aria-label="{{ block.settings.label_6 }}"{% endif %}>
+                      {{ block.settings.icon_6 | image_url: width: 120 | image_tag: width: icon_size, height: icon_size, alt: block.settings.label_6 }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
           {%- endcase %}
         {%- endfor -%}
       </div>
@@ -246,6 +338,30 @@
 }
 #shopify-section-footer .footer__menu-item:hover {
   opacity: 1;
+}
+/* Menu group: 3-column grid */
+#shopify-section-footer .ap-menu-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l);
+}
+@media (max-width: 47.99em) {
+  #shopify-section-footer .ap-menu-group {
+    grid-template-columns: 1fr;
+  }
+}
+/* Custom social icon links */
+#shopify-section-footer .ap-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  align-items: center;
+}
+#shopify-section-footer .ap-social-link img {
+  display: block;
+  width: var(--ap-icon-size, 56px);
+  height: var(--ap-icon-size, 56px);
+  object-fit: contain;
 }
 {% endstyle %}
 
@@ -1235,6 +1351,205 @@
     {
       "type": "spacer",
       "name": "t:spacer"
+    },
+    {
+      "type": "ap_menu_group",
+      "name": "Menu Group (3 columns)",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Menu 1"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_1",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_1",
+          "label": "Menu",
+          "default": "footer"
+        },
+        {
+          "type": "header",
+          "content": "Menu 2"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_2",
+          "label": "Menu",
+          "default": "footer"
+        },
+        {
+          "type": "header",
+          "content": "Menu 3"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_3",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_3",
+          "label": "Menu",
+          "default": "footer"
+        }
+      ]
+    },
+    {
+      "type": "ap_custom_social",
+      "name": "Custom Social Icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "block_size",
+          "label": "Block size",
+          "options": [
+            { "value": "small", "label": "t:small" },
+            { "value": "large", "label": "t:large" },
+            { "value": "full-width", "label": "t:full-width" }
+          ],
+          "default": "small"
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "label": "Icon size",
+          "min": 24,
+          "max": 120,
+          "step": 4,
+          "default": 56,
+          "unit": "px"
+        },
+        {
+          "type": "header",
+          "content": "Social link 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_1",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_1",
+          "label": "Accessibility label"
+        },
+        {
+          "type": "header",
+          "content": "Social link 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_2",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_2",
+          "label": "Accessibility label"
+        },
+        {
+          "type": "header",
+          "content": "Social link 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_3",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_3",
+          "label": "Accessibility label"
+        },
+        {
+          "type": "header",
+          "content": "Social link 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_4",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_4",
+          "label": "Accessibility label"
+        },
+        {
+          "type": "header",
+          "content": "Social link 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_5",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_5",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_5",
+          "label": "Accessibility label"
+        },
+        {
+          "type": "header",
+          "content": "Social link 6"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_6",
+          "label": "Icon image"
+        },
+        {
+          "type": "url",
+          "id": "url_6",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label_6",
+          "label": "Accessibility label"
+        }
+      ]
     }
   ]
 }
