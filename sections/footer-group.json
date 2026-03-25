@@ -164,8 +164,7 @@
         "button.newsletter__button.button.button--primary {text-transform: uppercase;}",
         ".ap-social-links.ap-social-links--right {display: flex;}",
         ".footer__item span {font-family: var(--font-body-family);}",
-        "summary.collapsible__toggle.caption {font-weight: bold;}",
-        ".powered-by-shopify{display: none;}"
+        "summary.collapsible__toggle.caption {font-weight: bold;}"
       ],
       "settings": {
         "horizontal_alignment": "left",
@@ -244,6 +243,9 @@
         "copyright",
         "payment_types_indwmg",
         "policy_links"
+      ],
+      "custom_css": [
+        ".powered-by-shopify {display: none;}"
       ],
       "settings": {
         "show_borders": false,
