@@ -105,7 +105,6 @@
           "settings": {
             "heading": "",
             "block_size": "small",
-            "alignment": "right",
             "icon_size": 56,
             "icon_1": "shopify://shop_images/WIDGETinsta_1.png",
             "url_1": "#",
@@ -151,7 +150,8 @@
         "social_links_NhgF99"
       ],
       "custom_css": [
-        "button.newsletter__button.button.button--primary {text-transform: uppercase;}"
+        "button.newsletter__button.button.button--primary {text-transform: uppercase;}",
+        ".ap-social-links.ap-social-links--right{display: flex;}"
       ],
       "settings": {
         "horizontal_alignment": "left",
