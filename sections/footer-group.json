@@ -245,7 +245,8 @@
         "policy_links"
       ],
       "custom_css": [
-        ".powered-by-shopify {display: none;}"
+        ".powered-by-shopify {display: none;}",
+        ".bottom-bar__item span {font-family: var(--font-body-family);}"
       ],
       "settings": {
         "show_borders": false,
