@@ -263,7 +263,7 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="{{ section.settings.font_style }}">{{ block.settings.heading }}</h2>
                 {%- endif -%}
-                <div class="ap-social-links ap-social-links--{{ block.settings.alignment }}">
+                <div class="ap-social-links ap-social-links--{{ block.settings.alignment }}" style="--ap-icon-size: {{ block.settings.icon_size }}px">
                   {%- assign icon_size = block.settings.icon_size -%}
                   {%- if block.settings.icon_1 != blank -%}
                     <a href="{{ block.settings.url_1 }}" class="ap-social-link" {% if block.settings.label_1 != blank %}aria-label="{{ block.settings.label_1 }}"{% endif %}>
@@ -304,8 +304,11 @@
   </div>
 </div>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+
 {% style %}
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 /* Footer font */
 #shopify-section-footer,
 #shopify-section-footer * {
@@ -373,7 +376,10 @@
 }
 #shopify-section-footer .ap-social-link img {
   display: block;
+  width: var(--ap-icon-size, 56px);
+  height: var(--ap-icon-size, 56px);
   object-fit: contain;
+  flex-shrink: 0;
 }
 {% endstyle %}
 
