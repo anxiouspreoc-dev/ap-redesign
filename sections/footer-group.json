@@ -41,6 +41,18 @@
             "enable_follow_on_shop": false
           }
         },
+        "logo_FVpTwB": {
+          "type": "logo",
+          "settings": {
+            "block_size": "small",
+            "use_alt_logo": true,
+            "max_width": "column",
+            "link": "",
+            "link_label": "Homepage",
+            "text": "<p>Anxious Preoccupied is a brand for overpackers, overthinkers and chronically prepared</p>",
+            "font_style": "body text-xs"
+          }
+        },
         "spacer": {
           "type": "spacer",
           "settings": {}
@@ -72,18 +84,6 @@
             "collapse": true
           }
         },
-        "logo_FVpTwB": {
-          "type": "logo",
-          "settings": {
-            "block_size": "small",
-            "use_alt_logo": true,
-            "max_width": "column",
-            "link": "",
-            "link_label": "Homepage",
-            "text": "<p>Anxious Preoccupied is a brand for overpackers, overthinkers and chronically prepared</p>",
-            "font_style": "body text-xs"
-          }
-        },
         "spacer_yCnHpA": {
           "type": "spacer",
           "settings": {}
@@ -113,11 +113,11 @@
       "block_order": [
         "logo",
         "newsletter",
+        "logo_FVpTwB",
         "spacer",
         "link_list",
         "link_list-2",
         "link_list-3",
-        "logo_FVpTwB",
         "spacer_yCnHpA",
         "spacer_t6gRk8",
         "spacer_bXrmRH",
