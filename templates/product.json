@@ -56,6 +56,14 @@
                 "messagePrefix": ""
               }
             },
+            "pdp_custom_liquid_7hn6Ej": {
+              "type": "_pdp-custom-liquid",
+              "name": "t:custom-liquid",
+              "settings": {
+                "custom_liquid": "<style>\nklarna-placement .container {width: fit-content; border: none !important; box-shadow: none !important; padding: 0 !important; text-align: left !important; justify-content: flex-start !important;}\n\nklarna-placement {display: block; text-align: left;}\n\n.block-klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important; padding-top: 0 !important;}\n</style>"
+              },
+              "blocks": {}
+            },
             "pdp_variant_picker_3Cq7Ly": {
               "type": "_pdp-variant-picker",
               "name": "t:variant-picker",
@@ -152,6 +160,7 @@
             "pdp-title",
             "pdp-price",
             "klarna_on_site_messaging_app_block_h3ntJK",
+            "pdp_custom_liquid_7hn6Ej",
             "pdp_variant_picker_3Cq7Ly",
             "pdp-rating",
             "pdp-preorder-message",
@@ -171,9 +180,7 @@
         ".buy-buttons__button-group.button.button--full.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}",
         ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
         ".product-info__price .text-xs.secondary {display: none;}",
-        "klarna-placement .container {width: fit-content; border: none !important; box-shadow: none !important; padding: 0 !important; text-align: left !important; justify-content: flex-start !important;}",
-        "klarna-placement {display: block; text-align: left;}",
-        ".block-klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important; padding-top: 0 !important;}"
+        "klarna-placement .container {width: fit-content;}"
       ],
       "settings": {
         "media_style": "thumbnails",
