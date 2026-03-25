@@ -412,7 +412,8 @@
       ],
       "custom_css": [
         "h2.rich-text__heading-group.heading-group.media-banner__pointer,.heading {max-width: 400px; word-break: normal;}",
-        "a.button.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}"
+        "a.button.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}",
+        "@media (max-width: 767px) {.stacked-images-with-text__text-wrapper.left{order: 2; padding-top: 10px; padding-bottom: 30px; } .stacked-images-with-text__list-wrapper{order: 1; }}"
       ],
       "name": "t:stacked-images-with-text",
       "settings": {
