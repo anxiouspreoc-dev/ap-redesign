@@ -9,7 +9,7 @@
 
 <li class="logo-list__item" {{ block.shopify_attributes }} style="--width: {{ block.settings.image.width }}; --height: {{ block.settings.image.height }};" data-block-id="{{ block.id }}">
   {%- if block.settings.link -%}
-    <a href="{{ block.settings.link }}" class="logo-list__link">
+    <a href="{{ block.settings.link }}" class="logo-list__link" target="_blank">
   {%- endif -%}
   {%- if block.settings.image != blank -%}
     {%- assign widths = '100, 200, 300, 400, 600, 800, 1200' -%}
