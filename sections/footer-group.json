@@ -104,7 +104,7 @@
           "type": "ap_custom_social",
           "settings": {
             "heading": "",
-            "block_size": "full-width",
+            "block_size": "small",
             "alignment": "right",
             "icon_size": 56,
             "icon_1": "shopify://shop_images/WIDGETinsta_1.png",
