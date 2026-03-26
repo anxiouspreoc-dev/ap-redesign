@@ -12,6 +12,7 @@
 {%- if section.settings.custom_css != blank -%}
   <style>{{ section.settings.custom_css }}</style>
 {%- endif -%}
+<style>@media (max-width: 63.9375em) { #shopify-section-{{ section.id }} { display: none; } }</style>
 {%- liquid
   assign mobile_image = section.settings.mobile_image | default: image
 
