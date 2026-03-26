@@ -12,7 +12,7 @@
     "page-title": {
       "type": "section-header",
       "settings": {
-        "layout_header": "left",
+        "layout_header": "center",
         "subheading": "",
         "heading": "Collections",
         "page_title": true,
@@ -21,7 +21,7 @@
         "text": "",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -89,7 +89,7 @@
         "image_1_link": "#",
         "image_2": "shopify://shop_images/general-img-square.png",
         "image_2_link": "#",
-        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
+        "color_scheme": "scheme-5",
         "padding_top": "default",
         "padding_bottom": "default"
       }
@@ -153,24 +153,7 @@
         "image_1_link": "#",
         "image_2": "shopify://shop_images/general-img-square.png",
         "image_2_link": "#",
-        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
-        "padding_top": "default",
-        "padding_bottom": "default"
-      }
-    },
-    "collection_promo_banner_bn9q4G": {
-      "type": "collection-promo-banner",
-      "name": "Collection Promo Banner",
-      "settings": {
-        "heading": "Yes, you need another one.",
-        "text": "<p>Not sure why. You just do.</p>",
-        "button_label": "Load to bag",
-        "button_link": "",
-        "image_1": "shopify://shop_images/general-img-square.png",
-        "image_1_link": "#",
-        "image_2": "shopify://shop_images/general-img-square.png",
-        "image_2_link": "#",
-        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
+        "color_scheme": "scheme-5",
         "padding_top": "default",
         "padding_bottom": "default"
       }
@@ -220,6 +203,23 @@
         "padding_bottom": "default",
         "show_top_border": false,
         "show_bottom_border": false
+      }
+    },
+    "collection_promo_banner_bn9q4G": {
+      "type": "collection-promo-banner",
+      "name": "Collection Promo Banner",
+      "settings": {
+        "heading": "Yes, you need another one.",
+        "text": "<p>Not sure why. You just do.</p>",
+        "button_label": "Load to bag",
+        "button_link": "",
+        "image_1": "shopify://shop_images/general-img-square.png",
+        "image_1_link": "#",
+        "image_2": "shopify://shop_images/general-img-square.png",
+        "image_2_link": "#",
+        "color_scheme": "scheme-5",
+        "padding_top": "default",
+        "padding_bottom": "default"
       }
     }
   },
