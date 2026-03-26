@@ -1,16 +1,25 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "main": {
-      "type": "main-list-collections",
+    "page-title": {
+      "type": "section-header",
+      "settings": {
+        "layout_header": "left",
+        "subheading": "",
+        "heading": "Collections",
+        "page_title": true,
+        "heading_size": "h2",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "featured-collection-1": {
+      "type": "featured-collection",
       "blocks": {
         "section-header": {
           "type": "_section-header",
@@ -18,25 +27,408 @@
           "settings": {
             "layout_header": "left",
             "subheading": "",
-            "heading": "Collections",
-            "page_title": true,
+            "heading": "The Oversized Bags",
+            "page_title": false,
             "heading_size": "h2",
-            "text": "",
+            "text": "<p>For going out for 3 hours but packing for 3 days.</p>",
             "button_label": "",
             "button_link": ""
           },
           "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "left"
+          },
+          "blocks": {
+            "btn-1": {
+              "type": "_button",
+              "settings": {
+                "button_label": "View all",
+                "button_link": "",
+                "button_style": "secondary"
+              }
+            }
+          },
+          "blocks_order": ["btn-1"]
         }
       },
+      "blocks_order": ["section-header", "button-group"],
       "settings": {
-        "collections": [],
-        "columns_desktop": "3",
+        "layout_desktop": "grid",
+        "columns_desktop": "4",
         "columns_mobile": "2",
-        "horizontal_alignment": "center",
+        "product_limit": 4,
         "container_type": "max",
-        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "banner-grid-1": {
+      "type": "banner-grid",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "button_label": ""
+          },
+          "blocks": {}
+        },
+        "banner-item-text": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 2,
+            "row_desktop": 2,
+            "column_mobile": "2",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-text": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "middle",
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {
+                "heading-group-1": {
+                  "type": "heading-group",
+                  "blocks": {
+                    "heading-1": {
+                      "type": "_heading",
+                      "settings": {
+                        "heading": "Yes, you need another one.",
+                        "heading_size": "h3"
+                      }
+                    },
+                    "subheading-1": {
+                      "type": "_subheading",
+                      "settings": {
+                        "text": "Not sure why. You just do."
+                      }
+                    }
+                  },
+                  "blocks_order": ["heading-1", "subheading-1"]
+                },
+                "button-group-1": {
+                  "type": "button-group",
+                  "settings": {
+                    "horizontal_alignment": "left"
+                  },
+                  "blocks": {
+                    "btn-promo-1": {
+                      "type": "_button",
+                      "settings": {
+                        "button_label": "Load to bag",
+                        "button_link": "",
+                        "button_style": "primary"
+                      }
+                    }
+                  },
+                  "blocks_order": ["btn-promo-1"]
+                }
+              },
+              "blocks_order": ["heading-group-1", "button-group-1"]
+            }
+          },
+          "blocks_order": ["grid-banner-text"]
+        },
+        "banner-item-img-1": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 1,
+            "row_desktop": 1,
+            "column_mobile": "1",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-img-1": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {},
+              "blocks_order": []
+            }
+          },
+          "blocks_order": ["grid-banner-img-1"]
+        },
+        "banner-item-img-2": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 1,
+            "row_desktop": 1,
+            "column_mobile": "1",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-img-2": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {},
+              "blocks_order": []
+            }
+          },
+          "blocks_order": ["grid-banner-img-2"]
+        }
+      },
+      "blocks_order": ["banner-item-text", "banner-item-img-1", "banner-item-img-2"],
+      "settings": {
+        "container_type": "max",
+        "height": "medium",
+        "mobile_height": "small",
+        "grid_gap_vertical": "var(--space-xs)",
+        "grid_gap_horizontal": "var(--space-xs)",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "The Mid Bags",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>Just the right size for pretending you're organised. Sort of.</p>",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "left"
+          },
+          "blocks": {
+            "btn-2": {
+              "type": "_button",
+              "settings": {
+                "button_label": "View all",
+                "button_link": "",
+                "button_style": "secondary"
+              }
+            }
+          },
+          "blocks_order": ["btn-2"]
+        }
+      },
+      "blocks_order": ["section-header", "button-group"],
+      "settings": {
+        "layout_desktop": "grid",
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "product_limit": 4,
+        "container_type": "max",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "banner-grid-2": {
+      "type": "banner-grid",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "button_label": ""
+          },
+          "blocks": {}
+        },
+        "banner-item-text-2": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 2,
+            "row_desktop": 2,
+            "column_mobile": "2",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-text-2": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "middle",
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {
+                "heading-group-2": {
+                  "type": "heading-group",
+                  "blocks": {
+                    "heading-2": {
+                      "type": "_heading",
+                      "settings": {
+                        "heading": "Look, you've made it this far.",
+                        "heading_size": "h3"
+                      }
+                    },
+                    "subheading-2": {
+                      "type": "_subheading",
+                      "settings": {
+                        "text": "Treat yourself."
+                      }
+                    }
+                  },
+                  "blocks_order": ["heading-2", "subheading-2"]
+                },
+                "button-group-2": {
+                  "type": "button-group",
+                  "settings": {
+                    "horizontal_alignment": "left"
+                  },
+                  "blocks": {
+                    "btn-promo-2": {
+                      "type": "_button",
+                      "settings": {
+                        "button_label": "Load more",
+                        "button_link": "",
+                        "button_style": "primary"
+                      }
+                    }
+                  },
+                  "blocks_order": ["btn-promo-2"]
+                }
+              },
+              "blocks_order": ["heading-group-2", "button-group-2"]
+            }
+          },
+          "blocks_order": ["grid-banner-text-2"]
+        },
+        "banner-item-img-3": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 1,
+            "row_desktop": 1,
+            "column_mobile": "1",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-img-3": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {},
+              "blocks_order": []
+            }
+          },
+          "blocks_order": ["grid-banner-img-3"]
+        },
+        "banner-item-img-4": {
+          "type": "_banner-grid-item",
+          "settings": {
+            "column_desktop": 1,
+            "row_desktop": 1,
+            "column_mobile": "1",
+            "row_mobile": "1"
+          },
+          "blocks": {
+            "grid-banner-img-4": {
+              "type": "_grid-image-banner",
+              "settings": {
+                "horizontal_alignment": "left",
+                "vertical_alignment": "bottom",
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {},
+              "blocks_order": []
+            }
+          },
+          "blocks_order": ["grid-banner-img-4"]
+        }
+      },
+      "blocks_order": ["banner-item-text-2", "banner-item-img-3", "banner-item-img-4"],
+      "settings": {
+        "container_type": "max",
+        "height": "medium",
+        "mobile_height": "small",
+        "grid_gap_vertical": "var(--space-xs)",
+        "grid_gap_horizontal": "var(--space-xs)",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "featured-collection-3": {
+      "type": "featured-collection",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "The Clutch Bags",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>For nights out. No, you can't bring a book \"just in case\".</p>",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "left"
+          },
+          "blocks": {
+            "btn-3": {
+              "type": "_button",
+              "settings": {
+                "button_label": "View all",
+                "button_link": "",
+                "button_style": "secondary"
+              }
+            }
+          },
+          "blocks_order": ["btn-3"]
+        }
+      },
+      "blocks_order": ["section-header", "button-group"],
+      "settings": {
+        "layout_desktop": "grid",
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "product_limit": 4,
+        "container_type": "max",
+        "color_scheme": "scheme-1",
         "padding_top": "default",
         "padding_bottom": "default",
         "show_top_border": false,
@@ -45,6 +437,11 @@
     }
   },
   "order": [
-    "main"
+    "page-title",
+    "featured-collection-1",
+    "banner-grid-1",
+    "featured-collection-2",
+    "banner-grid-2",
+    "featured-collection-3"
   ]
 }
