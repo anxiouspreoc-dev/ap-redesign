@@ -9,8 +9,11 @@
 
   assign image = section.settings.image
 -%}
-{%- if section.settings.custom_css != blank -%}
-  <style>{{ section.settings.custom_css }}</style>
+{%- if section.settings.hide_on_desktop -%}
+  <style>@media (min-width: 64em) { #shopify-section-{{ section.id }} { display: none; } }</style>
+{%- endif -%}
+{%- if section.settings.hide_on_mobile -%}
+  <style>@media (max-width: 63.9375em) { #shopify-section-{{ section.id }} { display: none; } }</style>
 {%- endif -%}
 {%- liquid
   assign mobile_image = section.settings.mobile_image | default: image
