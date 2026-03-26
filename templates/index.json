@@ -478,7 +478,8 @@
         "padding_bottom": "0px",
         "show_top_border": false,
         "show_bottom_border": false,
-        "custom_css": "@media (min-width: 64em) { #shopify-section-shoppable_banner_KqxR37 { display: none; } }"
+        "hide_on_desktop": true,
+        "hide_on_mobile": false
       }
     },
     "image_hotspot_NWqkfK": {
