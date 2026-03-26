@@ -8,6 +8,11 @@
   endif
 
   assign image = section.settings.image
+-%}
+{%- if section.settings.custom_css != blank -%}
+  <style>{{ section.settings.custom_css }}</style>
+{%- endif -%}
+{%- liquid
   assign mobile_image = section.settings.mobile_image | default: image
 
   assign padding_aspect_ratio = 1.0 | divided_by: image.aspect_ratio | times: 100 | append: '%'
