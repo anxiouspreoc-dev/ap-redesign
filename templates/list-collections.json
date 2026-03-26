@@ -37,7 +37,7 @@
           "type": "_section-header",
           "static": true,
           "settings": {
-            "layout_header": "left",
+            "layout_header": "center",
             "subheading": "",
             "heading": "The Oversized Bags",
             "page_title": false,
@@ -118,7 +118,7 @@
           "type": "_section-header",
           "static": true,
           "settings": {
-            "layout_header": "left",
+            "layout_header": "center",
             "subheading": "",
             "heading": "The Mid Bags",
             "page_title": false,
@@ -139,7 +139,7 @@
         }
       },
       "settings": {
-        "collection": "",
+        "collection": "mid-sized-bags",
         "product_list": [],
         "columns_desktop": "4",
         "columns_mobile": "2",
@@ -149,7 +149,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -199,7 +199,7 @@
           "type": "_section-header",
           "static": true,
           "settings": {
-            "layout_header": "left",
+            "layout_header": "center",
             "subheading": "",
             "heading": "The Clutch Bags",
             "page_title": false,
@@ -220,7 +220,7 @@
         }
       },
       "settings": {
-        "collection": "",
+        "collection": "clutch-bags",
         "product_list": [],
         "columns_desktop": "4",
         "columns_mobile": "2",
@@ -230,7 +230,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
