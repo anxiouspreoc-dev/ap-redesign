@@ -225,7 +225,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "color_exception": "#ff0064",
-          "color_border": "#e5e5e5",
+          "color_border": "#ffffff",
           "primary_button": "#ff0064",
           "primary_button_border": "#ff0064",
           "on_primary_button": "#ffffff",
