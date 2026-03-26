@@ -20,14 +20,15 @@ Replace the `/collections` page from a simple collection-tile grid to a richer e
 This is the only file that changes. It is rewritten to replace the single `main-list-collections` section with 5 stacked sections in the following order:
 
 ```
-1. featured-collection    → Collection group #1 (e.g. Oversized Bags)
-2. banner-grid            → Promo banner #1
-3. featured-collection    → Collection group #2 (e.g. Mid Bags)
-4. banner-grid            → Promo banner #2
-5. featured-collection    → Collection group #3 (e.g. Clutch Bags)
+1. section-header         → Page title ("Collections"), page_title: true — for SEO H1
+2. featured-collection    → Collection group #1 (e.g. Oversized Bags)
+3. banner-grid            → Promo banner #1
+4. featured-collection    → Collection group #2 (e.g. Mid Bags)
+5. banner-grid            → Promo banner #2
+6. featured-collection    → Collection group #3 (e.g. Clutch Bags)
 ```
 
-The `main-list-collections` section is removed entirely. No Liquid section or block files are created or modified.
+The `main-list-collections` section is removed from the template JSON. The `sections/main-list-collections.liquid` file is not deleted — it is simply no longer referenced by this template. No Liquid section or block files are created or modified.
 
 ## Section Configuration Details
 
