@@ -83,7 +83,7 @@
           "type": "link_list",
           "settings": {
             "block_size": "small",
-            "heading": "Helpful Links",
+            "heading": "Customer Care",
             "menu": "footer-helpful-links",
             "collapse": true
           }
