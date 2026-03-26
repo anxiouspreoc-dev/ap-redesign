@@ -502,6 +502,8 @@ Write the following content exactly to `templates/list-collections.json`:
 
 Run the following to confirm the file is valid JSON (no syntax errors):
 
+Run from the repo root (`/Applications/XAMPP/xamppfiles/htdocs/ap-redesign-2`):
+
 ```bash
 python3 -c "import json; json.load(open('templates/list-collections.json')); print('JSON valid')"
 ```
