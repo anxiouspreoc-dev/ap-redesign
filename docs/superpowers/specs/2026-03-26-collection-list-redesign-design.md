@@ -54,7 +54,7 @@ The merchant selects the collection from the customizer's collection picker. Eac
 
 **Section type:** `banner-grid`
 
-Contains 3 `_banner-grid-item` blocks arranged in a `2 + 1 + 1` column layout on desktop, stacking vertically on mobile.
+Contains 3 `_banner-grid-item` blocks. On desktop the text panel spans 2 columns × 2 rows tall, with the two image blocks stacked in the remaining single column. On mobile all three blocks stack vertically.
 
 The `banner-grid` section renders on a 4-column desktop grid (`repeat(4, 1fr)`) and a 2-column mobile grid. Set the following `_banner-grid-item` values for the `2 + 1 + 1` layout:
 
