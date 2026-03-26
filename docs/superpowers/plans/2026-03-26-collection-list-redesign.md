@@ -106,6 +106,7 @@ Write the following content exactly to `templates/list-collections.json`:
           "blocks_order": ["btn-1"]
         }
       },
+      "blocks_order": ["section-header", "button-group"],
       "settings": {
         "layout_desktop": "grid",
         "columns_desktop": "4",
