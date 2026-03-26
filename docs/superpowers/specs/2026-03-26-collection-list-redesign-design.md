@@ -55,6 +55,17 @@ The merchant selects the collection from the customizer's collection picker. Eac
 
 Contains 3 `_banner-grid-item` blocks arranged in a `2 + 1 + 1` column layout on desktop, stacking vertically on mobile.
 
+The `banner-grid` section renders on a 4-column desktop grid (`repeat(4, 1fr)`) and a 2-column mobile grid. Set the following `_banner-grid-item` values for the `2 + 1 + 1` layout:
+
+| Block | `column_desktop` | `row_desktop` | `column_mobile` | `row_mobile` |
+|---|---|---|---|---|
+| Text panel (left) | `2` | `2` | `2` | `1` |
+| Lifestyle image #1 | `1` | `1` | `1` | `1` |
+| Lifestyle image #2 | `1` | `1` | `1` | `1` |
+
+**Static `_section-header` block (always present in banner-grid):**
+Leave all fields blank (heading, subheading, text). If left at preset defaults it will render unwanted heading text above the promo panel.
+
 **Block 1 — Text panel (left, 2 cols wide):**
 - Type: `_banner-grid-item` → contains `_grid-image-banner`
 - No image set — color scheme provides the background
