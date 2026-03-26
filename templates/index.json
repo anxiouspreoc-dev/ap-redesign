@@ -444,7 +444,7 @@
         "mini_product_3pEAkD": {
           "type": "mini-product",
           "settings": {
-            "product": "",
+            "product": "the-oversized-lilac-w-purple-with-strap",
             "style": "card",
             "color_scheme": ""
           },
@@ -477,7 +477,8 @@
         "padding_top": "0px",
         "padding_bottom": "0px",
         "show_top_border": false,
-        "show_bottom_border": false
+        "show_bottom_border": false,
+        "custom_css": ""
       }
     },
     "image_hotspot_NWqkfK": {
