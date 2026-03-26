@@ -541,7 +541,8 @@
         "padding_bottom": "0px",
         "show_top_border": false,
         "show_bottom_border": false,
-        "custom_css": "@media (max-width: 63.9375em) { #shopify-section-image_hotspot_NWqkfK { display: none; } }"
+        "hide_on_desktop": false,
+        "hide_on_mobile": true
       }
     },
     "featured_collection_gDpxp7": {
