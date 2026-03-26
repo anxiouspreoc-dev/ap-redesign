@@ -630,7 +630,7 @@
               "settings": {
                 "product": "the-oversized-silver-w-lime-green-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
+                "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6"
               },
               "blocks": {}
             }
@@ -644,7 +644,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
+            "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
