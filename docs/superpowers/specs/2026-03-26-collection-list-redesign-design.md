@@ -78,10 +78,26 @@ Leave all fields blank (heading, subheading, text). If left at preset defaults i
 - No text overlay
 - Merchant configures: image upload per cell
 
+## SEO Considerations
+
+The current template sets `page_title: true` on its `_section-header` block, rendering the `<h1>` for the `/collections` page. In the new template, set `page_title: false` on all `_section-header` blocks within the three `featured-collection` sections (collection names are not appropriate H1s for the `/collections` URL). Add a standalone `section-header` section as the first section in the template, configured with `page_title: true` and a heading of "Collections" (or equivalent), to preserve the page H1 for SEO.
+
+Updated section order in `list-collections.json`:
+
+```
+1. section-header          → Page title ("Collections"), page_title: true
+2. featured-collection     → Collection group #1
+3. banner-grid             → Promo banner #1
+4. featured-collection     → Collection group #2
+5. banner-grid             → Promo banner #2
+6. featured-collection     → Collection group #3
+```
+
 ## What Is NOT Changing
 
 - `card-product` snippet — existing product cards are used as-is
-- Any section or block Liquid files — zero modifications
+- `sections/main-list-collections.liquid` — the file is retained, it is simply no longer referenced by this template
+- Any other section or block Liquid files — zero modifications
 - Collection pages, header, footer, or any other templates
 
 ## Customizer Setup (after deployment)
