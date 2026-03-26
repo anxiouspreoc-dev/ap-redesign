@@ -68,9 +68,11 @@ No other files created or modified.
 
 ## Template Update
 
-After the section is created, update `templates/list-collections.json` to replace the two `banner-grid` section entries (`banner-grid-1`, `banner-grid-2`) with two `collection-promo-banner` sections (`promo-banner-1`, `promo-banner-2`), preserving the same position in the `order` array.
+After the section is created, update `templates/list-collections.json` to replace the existing `banner-grid-2` section entry with a `collection-promo-banner` section (key: `promo-banner-1`), preserving its position in the `order` array.
 
-The two `banner-grid` keys are removed from `sections` and `order`. The `sections/banner-grid.liquid` file itself is not deleted.
+The `banner-grid-2` key is removed from both `sections` and `order`. The `sections/banner-grid.liquid` file itself is not deleted.
+
+Note: the template currently has a single banner-grid section (`banner-grid-2`). If the user has added additional banner-grid sections via the customizer, those should also be replaced with `collection-promo-banner` instances.
 
 ## Out of Scope
 
