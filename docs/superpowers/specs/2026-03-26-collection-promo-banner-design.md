@@ -52,12 +52,19 @@ No other files created or modified.
 - Background and text color driven by `color_scheme` setting using `render 'color-scheme-attributes'`
 
 ### Image Cells (×2)
-- Renders the image using `render 'image'` (theme snippet) with lazy loading and responsive `sizes`
+- Renders the image using the inline Shopify Liquid pattern:
+  ```liquid
+  {{ image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,600,800,1000', sizes: '(min-width: 64em) 25vw, 50vw' }}
+  ```
 - Overlays a circular cart-icon link button (`<a>`) anchored to the bottom-right corner using absolute positioning
-- The link button uses `class="button button--primary button--square"` — matching the existing quick-add button visual on product cards
-- The cart icon renders via `render 'icon', icon: 'bag'` (or whichever icon `settings.quick_add_button_icon` resolves to — use `settings.quick_add_button_icon` directly for consistency)
-- If no image is set, renders the theme placeholder via `placeholder_svg_tag`
-- If no link is set, the cart icon button is not rendered
+- The link button uses `class="button button--primary button--square"` — matching the existing quick-add button visual on product cards. Using `<a>` instead of `<button>` is intentional (no add-to-cart behavior, plain navigation link).
+- The cart icon renders via:
+  ```liquid
+  render 'icon', icon: settings.quick_add_button_icon, class: 'quick-add__icon icon--s'
+  ```
+  This uses the same global icon setting as the product cards for visual consistency.
+- If no image is set, renders the theme placeholder via `placeholder_svg_tag 'product-1'`
+- If no link is set (`image_1_link` / `image_2_link` is blank), the cart icon button is not rendered
 
 ## Template Update
 
