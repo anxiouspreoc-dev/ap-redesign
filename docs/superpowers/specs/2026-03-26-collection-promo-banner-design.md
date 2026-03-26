@@ -40,8 +40,8 @@ No other files created or modified.
 | `image_2` | `image_picker` | Right lifestyle image |
 | `image_2_link` | `url` | URL the cart icon on image 2 links to |
 | `color_scheme` | `color_scheme` | Color scheme for the text panel background/text |
-| `padding_top` | `select` | Section top padding (standard theme options) |
-| `padding_bottom` | `select` | Section bottom padding |
+| `padding_top` | `select` | Section top padding — copy options verbatim from `sections/banner-grid.liquid` schema |
+| `padding_bottom` | `select` | Section bottom padding — copy options verbatim from `sections/banner-grid.liquid` schema |
 
 ## Components
 
