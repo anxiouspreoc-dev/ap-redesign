@@ -7,6 +7,9 @@
     assign loading = 'eager'
   endif
 -%}
+{%- if section.settings.custom_css != blank -%}
+  <style>{{ section.settings.custom_css }}</style>
+{%- endif -%}
 
 {%- render 'media-banner-padding', settings: section.settings, id: section.id %}
 
