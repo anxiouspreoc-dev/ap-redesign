@@ -477,9 +477,7 @@
         "padding_top": "0px",
         "padding_bottom": "0px",
         "show_top_border": false,
-        "show_bottom_border": false,
-        "hide_on_desktop": true,
-        "hide_on_mobile": false
+        "show_bottom_border": false
       }
     },
     "image_hotspot_NWqkfK": {
@@ -540,9 +538,7 @@
         "padding_top": "0px",
         "padding_bottom": "0px",
         "show_top_border": false,
-        "show_bottom_border": false,
-        "hide_on_desktop": false,
-        "hide_on_mobile": true
+        "show_bottom_border": false
       }
     },
     "featured_collection_gDpxp7": {
