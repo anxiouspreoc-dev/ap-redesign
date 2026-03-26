@@ -36,6 +36,7 @@ The following block types are referenced inside sections — confirm they exist 
 - `blocks/_grid-image-banner.liquid` ✓
 - `blocks/heading-group.liquid` ✓
 - `blocks/_heading.liquid` ✓
+- `blocks/_subheading.liquid` ✓
 
 ---
 
