@@ -43,7 +43,7 @@
           {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg collection-promo-banner__img' }}
         {%- endif -%}
         {%- if section.settings.image_1_link != blank -%}
-          <a href="{{ section.settings.image_1_link }}" class="button button--primary button--square collection-promo-banner__cart-link">
+          <a href="{{ section.settings.image_1_link }}" class="button button--primary button--square collection-promo-banner__cart-link" data-color-scheme="{{ section.settings.image_button_color_scheme }}">
             {%- render 'icon', icon: settings.quick_add_button_icon, class: 'quick-add__icon icon--s' -%}
             <span class="visually-hidden">Shop now</span>
           </a>
