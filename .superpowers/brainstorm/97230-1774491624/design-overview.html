@@ -1,0 +1,70 @@
+<h2>Collection List Page — Design Overview</h2>
+<p class="subtitle">The /collections page is rebuilt by replacing list-collections.json with stacked existing sections. No new Liquid files needed.</p>
+
+<div class="section">
+  <h3>Page Structure</h3>
+  <p>The template contains 5 sections in sequence, all fully configurable in the Shopify customizer:</p>
+
+  <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;font-family:monospace;font-size:13px">
+
+    <div style="background:#d4edda;border:2px solid #28a745;border-radius:8px;padding:16px">
+      <strong>1. Featured Collection</strong> — e.g. "The Oversized Bags"<br>
+      <span style="color:#555;font-size:12px">Section type: <code>featured-collection</code> | Layout: grid, 4 cols desktop / 2 mobile | _section-header block for title + tagline</span>
+    </div>
+
+    <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:8px;padding:16px">
+      <strong>2. Promo Banner</strong> — "Yes, you need another one."<br>
+      <span style="color:#555;font-size:12px">Section type: <code>banner-grid</code> | 3 cells: [text panel 2 cols] + [lifestyle image] + [lifestyle image]</span>
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:6px;margin-top:10px">
+        <div style="background:#c8e6c9;border-radius:4px;padding:10px;font-size:11px;text-align:center"><strong>_grid-image-banner</strong><br>No image · Color scheme<br>Heading + text + button block</div>
+        <div style="background:#b3d9ff;border-radius:4px;padding:10px;font-size:11px;text-align:center"><strong>_grid-image-banner</strong><br>Lifestyle image<br>(no text overlay)</div>
+        <div style="background:#b3d9ff;border-radius:4px;padding:10px;font-size:11px;text-align:center"><strong>_grid-image-banner</strong><br>Lifestyle image<br>(no text overlay)</div>
+      </div>
+    </div>
+
+    <div style="background:#d4edda;border:2px solid #28a745;border-radius:8px;padding:16px">
+      <strong>3. Featured Collection</strong> — e.g. "The Mid Bags"<br>
+      <span style="color:#555;font-size:12px">Section type: <code>featured-collection</code> | Same configuration as #1, different collection selected</span>
+    </div>
+
+    <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:8px;padding:16px">
+      <strong>4. Promo Banner</strong> — "Look, you've made it this far."<br>
+      <span style="color:#555;font-size:12px">Section type: <code>banner-grid</code> | Same structure as #2, different color scheme + copy</span>
+    </div>
+
+    <div style="background:#d4edda;border:2px solid #28a745;border-radius:8px;padding:16px">
+      <strong>5. Featured Collection</strong> — e.g. "The Clutch Bags"<br>
+      <span style="color:#555;font-size:12px">Section type: <code>featured-collection</code> | Same configuration</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>What changes in the codebase</h3>
+  <ul style="line-height:2">
+    <li><strong>templates/list-collections.json</strong> — rewritten with the 5 sections above and sensible default settings. The <code>main-list-collections</code> section is removed.</li>
+    <li><strong>No new Liquid files</strong> — all sections and blocks already exist in the theme.</li>
+    <li><strong>Shopify customizer</strong> — merchant selects collections, uploads promo images, edits copy in the theme editor.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Key configuration for each Featured Collection section</h3>
+  <ul style="line-height:2">
+    <li>Layout: <strong>Grid</strong> (not slideshow), 4 desktop cols / 2 mobile cols</li>
+    <li>Product limit: configurable (e.g. 4–8 per collection)</li>
+    <li><strong>_section-header</strong> block: heading = collection name, text = playful tagline</li>
+    <li><strong>button-group</strong> block: optional "View all" CTA linking to the collection page</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Key configuration for each Banner Grid (promo) section</h3>
+  <ul style="line-height:2">
+    <li>3 <code>_banner-grid-item</code> blocks: columns 2+1+1 on desktop, stacked on mobile</li>
+    <li>Left cell: <code>_grid-image-banner</code> with no image — uses a color scheme as background, <code>heading-group</code> block for title + body, <code>button-group</code> for CTA</li>
+    <li>Center + Right cells: <code>_grid-image-banner</code> with lifestyle images, no text overlay</li>
+  </ul>
+</div>
+
+<p style="margin-top:24px;padding:12px;background:#f0f0f0;border-radius:6px">Does this structure look right? Any sections you'd want to add, remove, or change before I write the full spec?</p>
