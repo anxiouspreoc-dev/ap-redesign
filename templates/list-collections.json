@@ -141,38 +141,38 @@
         "show_bottom_border": false
       }
     },
-    "banner-grid-2": {
-      "type": "banner-grid",
-      "blocks": {
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "layout_header": "left",
-            "subheading": "",
-            "heading": "",
-            "page_title": false,
-            "heading_size": "h2",
-            "text": "",
-            "button_label": "",
-            "button_link": ""
-          },
-          "blocks": {}
-        }
-      },
+    "collection_promo_banner_GVUxkD": {
+      "type": "collection-promo-banner",
+      "name": "Collection Promo Banner",
       "settings": {
-        "container_type": "max",
-        "height": "medium",
-        "mobile_height": "small",
-        "grid_gap_vertical": "var(--space-xs)",
-        "grid_gap_horizontal": "var(--space-xs)",
-        "color_scheme": "scheme-1",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "heading": "Yes, you need another one.",
+        "text": "<p>Not sure why. You just do.</p>",
+        "button_label": "Load to bag",
+        "button_link": "",
+        "image_1": "shopify://shop_images/general-img-square.png",
+        "image_1_link": "#",
+        "image_2": "shopify://shop_images/general-img-square.png",
+        "image_2_link": "#",
+        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
         "padding_top": "default",
-        "padding_bottom": "default",
-        "show_top_border": false,
-        "show_bottom_border": false
+        "padding_bottom": "default"
+      }
+    },
+    "collection_promo_banner_bn9q4G": {
+      "type": "collection-promo-banner",
+      "name": "Collection Promo Banner",
+      "settings": {
+        "heading": "Yes, you need another one.",
+        "text": "<p>Not sure why. You just do.</p>",
+        "button_label": "Load to bag",
+        "button_link": "",
+        "image_1": "shopify://shop_images/general-img-square.png",
+        "image_1_link": "#",
+        "image_2": "shopify://shop_images/general-img-square.png",
+        "image_2_link": "#",
+        "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
+        "padding_top": "default",
+        "padding_bottom": "default"
       }
     },
     "featured-collection-3": {
@@ -228,7 +228,8 @@
     "featured-collection-1",
     "collection_promo_banner_FH7Txx",
     "featured-collection-2",
-    "banner-grid-2",
-    "featured-collection-3"
+    "collection_promo_banner_GVUxkD",
+    "featured-collection-3",
+    "collection_promo_banner_bn9q4G"
   ]
 }
