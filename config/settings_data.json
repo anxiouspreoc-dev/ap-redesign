@@ -1227,5 +1227,10 @@
       "card_mini_title_font_style": "subheading",
       "card_mini_vertical_alignment": "middle"
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".card-product__quick-add {border-radius: 9px !important;}"
+    ]
   }
 }
