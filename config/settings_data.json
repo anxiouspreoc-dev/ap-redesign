@@ -1230,7 +1230,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".card-product__quick-add {border-radius: 9px !important;}"
+      ".card-product__quick-add,.mini-product__quick-add{border-radius: 9px !important;}"
     ]
   }
 }
