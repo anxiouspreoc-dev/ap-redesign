@@ -446,7 +446,7 @@
           "settings": {
             "product": "the-oversized-lilac-w-purple-with-strap",
             "style": "card",
-            "color_scheme": ""
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
           },
           "blocks": {}
         }
@@ -600,7 +600,7 @@
         "arrow_position": "overlay",
         "counter_style": "progress",
         "button_style": "primary",
-        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
+        "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -630,7 +630,7 @@
               "settings": {
                 "product": "the-oversized-silver-w-lime-green-with-strap",
                 "style": "card",
-                "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6"
+                "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
               },
               "blocks": {}
             }
@@ -644,7 +644,7 @@
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
-            "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+            "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
           },
@@ -1115,7 +1115,7 @@
         "media_grid_image_EKcbmE": {
           "type": "_media-grid-image",
           "settings": {
-            "image": "shopify://shop_images/Instagram_image.png",
+            "image": "shopify://shop_images/New_arrivals_image_c63cddb6-7ee9-46ca-a4f4-47134b188b32.png",
             "image_ratio": "2 / 3",
             "link": "",
             "link_label": "",
