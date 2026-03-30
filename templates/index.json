@@ -958,7 +958,7 @@
               "name": "t:icon",
               "settings": {
                 "icon": "box",
-                "icon_size": "icon--xxl"
+                "icon_size": "icon--s"
               },
               "blocks": {}
             },
