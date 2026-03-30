@@ -995,7 +995,7 @@
               "name": "t:icon",
               "settings": {
                 "icon": "globe",
-                "icon_size": "icon--xxl"
+                "icon_size": "icon--s"
               },
               "blocks": {}
             },
