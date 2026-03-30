@@ -4745,15 +4745,13 @@ model-viewer,
   color: rgb(var(--color-text-secondary));
 }
 /* Green features bar: icon + text inline */
-#shopify-section-multicolumn_trWDVF .rte.rich-text__padding-text,
-#Slider-multicolumn_trWDVF .rte.rich-text__padding-text {
+#shopify-section-multicolumn_trWDVF .rte.rich-text__padding-text {
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
   gap: var(--space-xs);
 }
-#shopify-section-multicolumn_trWDVF .rte.rich-text__padding-text > *,
-#Slider-multicolumn_trWDVF .rte.rich-text__padding-text > * {
+#shopify-section-multicolumn_trWDVF .rte.rich-text__padding-text > * {
   margin-block-start: 0 !important;
 }
 .footer__item--collapsible ul {
