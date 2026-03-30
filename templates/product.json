@@ -168,7 +168,7 @@
       "custom_css": [
         "button {text-transform: uppercase;}",
         ".product-info__icon-with-text {position: relative;}",
-        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}",
+        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #C9FC00 !important; border-color: #C9FC00 !important; }",
         ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
         ".product-info__price .text-xs.secondary {display: none;}",
         "div#shopify-block-AanpGQzFjTnB5eUFQU__klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important;}"
@@ -202,8 +202,8 @@
     "pdp-behind-the-bag": {
       "type": "pdp-behind-the-bag",
       "custom_css": [
-        ".pdp-behind-the-bag__text-col,.pdp-behind-the-bag__inner{display: none;}",
-        "@media (max-width: 490px){.pdp-behind-the-bag__inner{display: block; }}"
+        ".pdp-behind-the-bag__text-col,.pdp-behind-the-bag__inner {display: none;}",
+        "@media (max-width: 490px) {.pdp-behind-the-bag__inner {display: block; }}"
       ],
       "settings": {
         "default_image": "shopify://shop_images/New_arrivals_image_ecfcd960-28ed-4e79-ba74-a73c1e81fd51.png",
@@ -216,7 +216,7 @@
     "pdp-colorways": {
       "type": "pdp-colorways",
       "custom_css": [
-        "button {background: #ff0164 !important; border-color: #ff0164 !important; color: white !important;}"
+        "button {background: #c9fc00 !important; border-color: #c9fc00 !important; color: black !important;}"
       ],
       "settings": {
         "heading": "THE MID FOR EVERY MOOD.",
