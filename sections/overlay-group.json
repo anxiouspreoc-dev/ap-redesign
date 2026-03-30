@@ -18,10 +18,10 @@
           "type": "_cart-upsell",
           "settings": {
             "style": "card",
-            "product": "",
+            "product": "anxious-preoccupied-gift-card",
             "text": "<p>Make your gift unforgettable with our luxurious gift box.</p>",
             "font_style_text": "body text-s",
-            "color_scheme": "scheme-5"
+            "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31"
           },
           "blocks": {}
         }
