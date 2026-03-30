@@ -301,7 +301,8 @@
     "custom_liquid_JYxC8j": {
       "type": "custom-liquid",
       "custom_css": [
-        "div {display: none;}"
+        "div {display: none;}",
+        "button#product-form-template--26356507869569__main15102241636737-submit {color: black !important;}"
       ],
       "name": "t:custom-liquid",
       "settings": {
