@@ -55,6 +55,7 @@
         },
         "spacer": {
           "type": "spacer",
+          "disabled": true,
           "settings": {}
         },
         "spacer_yCnHpA": {
