@@ -4737,9 +4737,19 @@ model-viewer,
 .footer__item--newsletter .rich-text__text {
   --gap: var(--space-xs);
 }
+.footer__item--rich-text .rte p {
+  white-space: nowrap;
+}
 .footer__item--rich-text .rich-text__text,
 .footer__item--newsletter .rich-text__text {
   color: rgb(var(--color-text-secondary));
+}
+/* Green features bar: icon + text inline */
+#shopify-section-multicolumn_trWDVF .rte.rich-text__padding-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
 }
 .footer__item--collapsible ul {
   padding-block: 0;
