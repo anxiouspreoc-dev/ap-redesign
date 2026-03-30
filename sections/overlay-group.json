@@ -32,11 +32,11 @@
       "settings": {
         "heading_size": "h3",
         "layout_desktop": "vertical",
-        "show_dynamic_checkout": false,
+        "show_dynamic_checkout": true,
         "show_view_cart": true,
         "product_image_width": 120,
         "font_style_title": "heading h6",
-        "font_style_price": "caption",
+        "font_style_price": "body text-xs",
         "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31"
       }
     },
