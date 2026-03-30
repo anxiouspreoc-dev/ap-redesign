@@ -132,6 +132,9 @@
             </div>
           {%- endunless -%}
         {%- endif -%}
+        {%- if product.metafields.custom.sticker != blank -%}
+          <div class="card-product__sticker">{{ product.metafields.custom.sticker }}</div>
+        {%- endif -%}
         {%- if settings.enable_quick_add -%}
           {% render 'quick-add', product: product, section_id: section_id, button_style: settings.quick_add_style, classes: 'card-product__quick-add expand-link--ignore' %}
         {%- endif -%}
