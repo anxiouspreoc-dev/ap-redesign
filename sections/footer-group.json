@@ -44,7 +44,7 @@
         "logo_FVpTwB": {
           "type": "logo",
           "settings": {
-            "block_size": "small",
+            "block_size": "large",
             "use_alt_logo": true,
             "max_width": "column",
             "link": "",
