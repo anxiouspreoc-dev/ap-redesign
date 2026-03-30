@@ -201,6 +201,10 @@
     },
     "pdp-behind-the-bag": {
       "type": "pdp-behind-the-bag",
+      "custom_css": [
+        ".pdp-behind-the-bag__text-col,.pdp-behind-the-bag__inner{display: none;}",
+        "@media (max-width: 490px){.pdp-behind-the-bag__inner{display: block; }}"
+      ],
       "settings": {
         "default_image": "shopify://shop_images/New_arrivals_image_ecfcd960-28ed-4e79-ba74-a73c1e81fd51.png",
         "default_heading": "JOANNE ON THE MID",
