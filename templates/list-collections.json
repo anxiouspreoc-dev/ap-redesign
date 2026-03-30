@@ -79,6 +79,9 @@
     },
     "collection_promo_banner_FH7Txx": {
       "type": "collection-promo-banner",
+      "custom_css": [
+        "a.collection-promo-banner__cart-link {background: #c9fc04; border-color: #c9fc04; border-radius: 10px; color: black !important;}"
+      ],
       "name": "Collection Promo Banner",
       "settings": {
         "heading": "Yes, you need another one.",
@@ -143,6 +146,9 @@
     },
     "collection_promo_banner_GVUxkD": {
       "type": "collection-promo-banner",
+      "custom_css": [
+        "a.collection-promo-banner__cart-link {background: #c9fc04; border-color: #c9fc04; border-radius: 10px; color: black !important;}"
+      ],
       "name": "Collection Promo Banner",
       "settings": {
         "heading": "Yes, you need another one.",
@@ -207,6 +213,9 @@
     },
     "collection_promo_banner_bn9q4G": {
       "type": "collection-promo-banner",
+      "custom_css": [
+        "a.collection-promo-banner__cart-link {background: #c9fc04; border-color: #c9fc04; border-radius: 10px; color: black !important;}"
+      ],
       "name": "Collection Promo Banner",
       "settings": {
         "heading": "Yes, you need another one.",
