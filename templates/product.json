@@ -305,7 +305,7 @@
       ],
       "name": "t:custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #ff0164 !important;\n    border-color: #ff0164 !important;\n}\n\nbutton#product-form-template--26356507869569__main15102241636737-submit {\n  color: black !important;\n}\n</style>",
+        "custom_liquid": "<style>\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #ff0164 !important;\n    border-color: #ff0164 !important;\n}\n\nbutton#product-form-template--26356507869569__main15102241636737-submit {\n  color: black !important;\n}\n\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #c9fc04 !important;\n    border-color: #c9fc04 !important;\n    color: black !important;\n}\n</style>",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
