@@ -1243,7 +1243,7 @@
         "media_grid_image_Y8XfWC"
       ],
       "custom_css": [
-        ".quick-add__submit {background: #ff0164; border-color: #ff0164; color: white; border-radius: 9px;}",
+        ".quick-add__submit {background: #C9FC00; border-color: #C9FC00; color: black; border-radius: 9px;}",
         "a.button.button--text {opacity: 1;}"
       ],
       "name": "t:media-grid",
