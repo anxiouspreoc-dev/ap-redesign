@@ -168,7 +168,7 @@
       "custom_css": [
         "button {text-transform: uppercase;}",
         ".product-info__icon-with-text {position: relative;}",
-        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #C9FC00 !important; border-color: #C9FC00 !important; }",
+        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #c9fc00 !important; border-color: #c9fc00; color: black;}",
         ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
         ".product-info__price .text-xs.secondary {display: none;}",
         "div#shopify-block-AanpGQzFjTnB5eUFQU__klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important;}"
