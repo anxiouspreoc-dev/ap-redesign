@@ -298,6 +298,22 @@
           "secondary_button_border": "#d70f62",
           "on_secondary_button": "#ffffff"
         }
+      },
+      "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31": {
+        "settings": {
+          "text": "#000000",
+          "text_secondary": "#6f7473",
+          "background": "#ffffff",
+          "background_gradient": "",
+          "color_exception": "#b00000",
+          "color_border": "#6f7473",
+          "primary_button": "#ff0064",
+          "primary_button_border": "#ff0064",
+          "on_primary_button": "#ffffff",
+          "secondary_button": "rgba(0,0,0,0)",
+          "secondary_button_border": "#000000",
+          "on_secondary_button": "#000000"
+        }
       }
     }
   },
