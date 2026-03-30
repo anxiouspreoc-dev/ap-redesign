@@ -390,6 +390,7 @@
           "blocks": {
             "stacked_image_Kty6La": {
               "type": "_stacked-image",
+              "disabled": true,
               "settings": {
                 "image": "shopify://shop_images/About_image_container.png",
                 "image_ratio": "1",
@@ -401,7 +402,6 @@
             },
             "stacked_image_y8wtVi": {
               "type": "_stacked-image",
-              "disabled": true,
               "settings": {
                 "image": "shopify://shop_images/About_image.png",
                 "image_ratio": "1",
