@@ -958,7 +958,7 @@
               "name": "t:icon",
               "settings": {
                 "icon": "box",
-                "icon_size": "icon--s"
+                "icon_size": "icon--m"
               },
               "blocks": {}
             },
@@ -966,7 +966,7 @@
               "type": "_single-heading",
               "settings": {
                 "heading": "Free Shipping Over €150",
-                "heading_size": "h4"
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -995,7 +995,7 @@
               "name": "t:icon",
               "settings": {
                 "icon": "globe",
-                "icon_size": "icon--s"
+                "icon_size": "icon--m"
               },
               "blocks": {}
             },
@@ -1003,7 +1003,7 @@
               "type": "_single-heading",
               "settings": {
                 "heading": "Vegan Leather",
-                "heading_size": "h4"
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -1032,15 +1032,15 @@
               "name": "t:icon",
               "settings": {
                 "icon": "heart",
-                "icon_size": "icon--s"
+                "icon_size": "icon--m"
               },
               "blocks": {}
             },
             "single_heading_fGNmLd": {
               "type": "_single-heading",
               "settings": {
-                "heading": "<strong>Handmade</strong>",
-                "heading_size": "h4"
+                "heading": "Handmade",
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -1103,8 +1103,8 @@
         "color_scheme": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
         "enable_color_scheme_transition": true,
         "color_scheme_transition": "scheme-275dde94-a5f0-47dc-a9d3-afa02c5b687c",
-        "padding_top": "var(--space-s)",
-        "padding_bottom": "var(--space-xs)",
+        "padding_top": "var(--space-2xs)",
+        "padding_bottom": "var(--space-2xs)",
         "show_top_border": false,
         "show_bottom_border": false
       }
