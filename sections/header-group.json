@@ -104,7 +104,7 @@
         "enable_blur": false,
         "use_alt_logo": false,
         "transparent_header_color": "#ffffff",
-        "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
+        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "padding_top": "var(--space-xs)",
         "padding_bottom": "var(--space-xs)",
         "show_borders": false
