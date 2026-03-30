@@ -85,7 +85,8 @@
     "blog_card_tag_style": "primary",
     "tags_position": "above",
     "enable_cart_discounts": true,
-    "show_cart_count_at_zero": true,
+    "show_free_shipping_message": false,
+    "show_cart_count_at_zero": false,
     "cart_count_style": "badge",
     "enable_instant_page": true,
     "show_focus_outlines": false,
@@ -1230,7 +1231,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".card-product__quick-add,.mini-product__quick-add{border-radius: 9px !important;}"
+      ".card-product__quick-add,.mini-product__quick-add {border-radius: 9px !important;}"
     ]
   }
 }
