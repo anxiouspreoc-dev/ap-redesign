@@ -457,6 +457,7 @@
       "name": "t:shoppable-banner",
       "settings": {
         "video": "shopify://files/videos/two models lilac and gold bags_edited_compressed.mp4",
+        "mobile_video": "shopify://files/videos/two models lilac and gold bags_edited_compressed.mp4",
         "enable_autoplay": true,
         "play_button_display": "always",
         "button_style": "text",
