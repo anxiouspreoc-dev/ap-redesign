@@ -19,7 +19,7 @@
         "description": "none",
         "layout_header": "left",
         "show_submenu": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
