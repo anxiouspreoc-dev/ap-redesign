@@ -12,18 +12,47 @@
     "header": {
       "type": "collection-header",
       "settings": {
-        "background_type": "color_scheme",
+        "background_type": "image",
         "image": "shopify://shop_images/Joanne_holding_silver_barrel.jpg",
-        "height": "adapt",
+        "height": "small",
         "heading_size": "h2",
-        "description": "admin",
-        "layout_header": "center",
+        "description": "none",
+        "layout_header": "left",
         "show_submenu": true,
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
         "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "rich_text_zjnXRq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jYgxLK": {
+          "type": "text",
+          "name": "t:text",
+          "settings": {
+            "text": "{{ closest.collection.description }}",
+            "font_style": "body"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_jYgxLK"
+      ],
+      "name": "t:rich-text",
+      "settings": {
+        "horizontal_alignment": "center",
+        "container_width": "md",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -56,6 +85,7 @@
   },
   "order": [
     "header",
+    "rich_text_zjnXRq",
     "main"
   ]
 }
