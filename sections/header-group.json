@@ -16,7 +16,6 @@
       "blocks": {
         "text": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>Free shipping on all orders over €150</p>",
             "font_style": "caption"
@@ -24,6 +23,7 @@
         },
         "text-2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Surprise gift on all orders over $200</p>",
             "font_style": "caption"
