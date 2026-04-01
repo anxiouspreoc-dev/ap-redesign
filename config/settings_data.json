@@ -1248,7 +1248,8 @@
   "platform_customizations": {
     "custom_css": [
       ".card-product__quick-add,.mini-product__quick-add {border-radius: 9px !important;}",
-      ".card-product__sticker {transform: none; border-radius: 5px; font-size: small;}"
+      ".card-product__sticker {transform: none; border-radius: 5px; font-size: small;}",
+      "button#quick-add-sections--26356507509121__cart-drawerASWQ2SDA2OXJLWUNmQ__cart-upsell15176067842433-submit {background-color: rgb(201 252 4); border-color: rgb(201 252 4); color: black;}"
     ]
   }
 }
