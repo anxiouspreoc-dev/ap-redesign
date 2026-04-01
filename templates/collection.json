@@ -11,6 +11,9 @@
   "sections": {
     "header": {
       "type": "collection-header",
+      "custom_css": [
+        "h1{display: none;}"
+      ],
       "settings": {
         "background_type": "image",
         "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
@@ -31,6 +34,26 @@
     "rich_text_zjnXRq": {
       "type": "rich-text",
       "blocks": {
+        "heading_group_9bNHF8": {
+          "type": "heading-group",
+          "name": "t:heading",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "heading_EdLgD4": {
+              "type": "_heading",
+              "settings": {
+                "heading": "{{ closest.collection.title }}",
+                "heading_size": "h1"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_EdLgD4"
+          ]
+        },
         "text_jYgxLK": {
           "type": "text",
           "name": "t:text",
@@ -42,6 +65,7 @@
         }
       },
       "block_order": [
+        "heading_group_9bNHF8",
         "text_jYgxLK"
       ],
       "name": "t:rich-text",
