@@ -13,6 +13,7 @@
       "type": "collection-header",
       "settings": {
         "background_type": "color_scheme",
+        "image": "shopify://shop_images/Joanne_holding_silver_barrel.jpg",
         "height": "adapt",
         "heading_size": "h2",
         "description": "admin",
