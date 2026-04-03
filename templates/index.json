@@ -456,8 +456,8 @@
       ],
       "name": "t:shoppable-banner",
       "settings": {
-        "video": "shopify://files/videos/two models lilac and gold bags_edited_compressed_683ba848-6e8c-4daa-ba76-c7dc3e9e1240.mp4",
-        "mobile_video": "shopify://files/videos/two models lilac and gold bags_edited_compressed_683ba848-6e8c-4daa-ba76-c7dc3e9e1240.mp4",
+        "video": "shopify://files/videos/two models lilac and gold bags_edited_REV2 (1).mp4",
+        "mobile_video": "shopify://files/videos/two models lilac and gold bags_edited_REV2 (1).mp4",
         "enable_autoplay": true,
         "play_button_display": "always",
         "button_style": "text",
