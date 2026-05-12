@@ -444,7 +444,7 @@
         "mini_product_3pEAkD": {
           "type": "mini-product",
           "settings": {
-            "product": "the-oversized-lilac-w-purple-with-strap",
+            "product": "the-mid-lilac-w-purple-with-travel-strap",
             "style": "card",
             "color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d"
           },
@@ -1119,7 +1119,7 @@
         "media_grid_image_EKcbmE": {
           "type": "_media-grid-image",
           "settings": {
-            "image": "shopify://shop_images/New_arrivals_image_c63cddb6-7ee9-46ca-a4f4-47134b188b32.png",
+            "image": "shopify://shop_images/Joanne_w__OS_Silver_d5cb3696-befe-4314-89c6-0fa0c4a49a22.jpg",
             "image_ratio": "2 / 3",
             "link": "",
             "link_label": "",
@@ -1193,7 +1193,7 @@
         "media_grid_image_ghikiJ": {
           "type": "_media-grid-image",
           "settings": {
-            "image": "shopify://shop_images/Instagram_image_580cd7a2-7028-4ab3-9d3b-14aeecf7f4ae.png",
+            "image": "shopify://shop_images/LILAC_BACKGROUND_1.png",
             "image_ratio": "2 / 3",
             "link": "",
             "link_label": "",
@@ -1204,7 +1204,7 @@
         "media_grid_image_Y8XfWC": {
           "type": "_media-grid-image",
           "settings": {
-            "image": "shopify://shop_images/Instagram_image_7c4fac53-88d1-483c-9b94-bdccc524d8f2.png",
+            "image": "shopify://shop_images/Joanne_holding_Mid_Gold.jpg",
             "image_ratio": "2 / 3",
             "link": "",
             "link_label": "",
