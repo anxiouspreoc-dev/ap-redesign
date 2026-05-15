@@ -104,6 +104,20 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
       }
     },
     "color_schemes": {
@@ -1250,7 +1264,7 @@
       ".card-product__quick-add,.mini-product__quick-add {border-radius: 9px !important;}",
       ".card-product__sticker {transform: none; border-radius: 5px; font-size: small;}",
       "button#quick-add-sections--26356507509121__cart-drawerASWQ2SDA2OXJLWUNmQ__cart-upsell15176067842433-submit {background-color: rgb(201 252 4); border-color: rgb(201 252 4); color: black;}",
-      ".product-form__submit{color: black !important; }"
+      ".product-form__submit {color: black !important;}"
     ]
   }
 }
