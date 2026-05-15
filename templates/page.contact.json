@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "contact": {
@@ -79,7 +88,8 @@
             "color_scheme": "",
             "enable_color_scheme_transition": false,
             "color_scheme_transition": ""
-          }
+          },
+          "blocks": {}
         },
         "block-rich-text": {
           "type": "_block-rich-text",
@@ -105,7 +115,8 @@
                   "settings": {
                     "heading": "Need Help Now?",
                     "heading_size": "h2"
-                  }
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -117,7 +128,8 @@
               "settings": {
                 "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our <a href=\"#\" title=\"FAQ\">FAQ</a>. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
                 "font_style": "body"
-              }
+              },
+              "blocks": {}
             },
             "button-group": {
               "type": "button-group",
@@ -129,8 +141,10 @@
                   "type": "_button",
                   "settings": {
                     "button_style": "primary",
-                    "button_label": "Go to FAQ"
-                  }
+                    "button_label": "Go to FAQ",
+                    "button_link": ""
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -149,7 +163,10 @@
         "image-banner",
         "block-rich-text"
       ],
+      "disabled": true,
       "settings": {
+        "container_type": "max",
+        "border_radius": "section",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
