@@ -17,21 +17,23 @@
   </div>
 {%- endcapture -%}
 
-<div {% render 'color-scheme-attributes',  scoped_settings: section.settings, borders: true, class: 'media-banner-section' %} data-support-transparent-header>
-  <div class="padding--section" style="{% render 'padding-override', settings: section.settings %}">
-     <div class="container container--{{ section.settings.container_type }}">
-      {%-
-        render 'media-banner',
-        settings: section.settings,
-        content: content,
-        id: section.id,
-        fetch_priority: fetch_priority,
-        loading: loading,
-        enable_banner_click: section.settings.enable_banner_click
-      -%}
+{%- if section.settings.image != blank and section.settings.mobile_image != blank -%}
+  <div {% render 'color-scheme-attributes', scoped_settings: section.settings, borders: true, class: 'media-banner-section' %} data-support-transparent-header>
+    <div class="padding--section" style="{% render 'padding-override', settings: section.settings %}">
+      <div class="container container--{{ section.settings.container_type }}">
+        {%-
+          render 'media-banner',
+          settings: section.settings,
+          content: content,
+          id: section.id,
+          fetch_priority: fetch_priority,
+          loading: loading,
+          enable_banner_click: section.settings.enable_banner_click
+        -%}
+      </div>
     </div>
   </div>
-</div>
+{%- endif -%}
 {% # theme-check-enable UnusedAssign %}
 
 {% schema %}
