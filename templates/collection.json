@@ -108,6 +108,7 @@
     },
     "image_banner_ba4XAc": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:image-banner",
       "settings": {
         "image": "shopify://shop_images/hero_2400x900_b302bf27-2b3b-4ac3-ae52-4c6339cf256a.png",
