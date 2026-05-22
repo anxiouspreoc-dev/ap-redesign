@@ -142,7 +142,7 @@
       "settings": {
         "background_type": "image",
         "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
-        "height": "small",
+        "height": "medium",
         "heading_size": "h2",
         "description": "none",
         "layout_header": "left",
