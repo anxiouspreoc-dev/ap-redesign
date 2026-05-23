@@ -14,6 +14,7 @@
       "blocks": {
         "heading_group_zNEkWp": {
           "type": "heading-group",
+          "disabled": true,
           "settings": {
             "page_title": false
           },
@@ -83,6 +84,7 @@
         "text_fWGb88",
         "button_group_pewk9w"
       ],
+      "disabled": true,
       "name": "t:image-banner",
       "settings": {
         "height": "adapt",
@@ -144,7 +146,7 @@
         "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
         "height": "medium",
         "heading_size": "h2",
-        "description": "none",
+        "description": "admin",
         "layout_header": "left",
         "show_submenu": true,
         "color_scheme": "scheme-2",
@@ -183,7 +185,7 @@
           "type": "text",
           "name": "t:text",
           "settings": {
-            "text": "{{ closest.collection.description }}",
+            "text": "<p>Discover the complete collection of Anxious Preoccupied bags, designed for those who want to stand out. From our iconic metallic tote bags and sculptural bucket bags to everyday crossbody styles and sleek clutches, find the perfect blend of disruptive design and modern functionality. </p>",
             "font_style": "body text-s"
           },
           "blocks": {}
@@ -195,7 +197,7 @@
       ],
       "name": "t:rich-text",
       "settings": {
-        "horizontal_alignment": "center",
+        "horizontal_alignment": "left",
         "container_width": "md",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
