@@ -142,7 +142,7 @@
         "h1 {display: none;}"
       ],
       "settings": {
-        "background_type": "image",
+        "background_type": "color_scheme",
         "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
         "height": "medium",
         "heading_size": "h2",
@@ -195,6 +195,7 @@
         "heading_group_9bNHF8",
         "text_jYgxLK"
       ],
+      "disabled": true,
       "name": "t:rich-text",
       "settings": {
         "horizontal_alignment": "left",
