@@ -1,0 +1,242 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_iAPUdb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_group_zNEkWp": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "subheading_3EwrAL": {
+              "type": "_subheading",
+              "settings": {
+                "subheading": "Subheading"
+              },
+              "blocks": {}
+            },
+            "heading_b8WacA": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Image banner",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "subheading_3EwrAL",
+            "heading_b8WacA"
+          ]
+        },
+        "text_fWGb88": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
+            "font_style": "body"
+          },
+          "blocks": {}
+        },
+        "button_group_pewk9w": {
+          "type": "button-group",
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {
+            "button_3Q3LHQ": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "Button label",
+                "button_link": ""
+              },
+              "blocks": {}
+            },
+            "button_kiimVV": {
+              "type": "_button",
+              "settings": {
+                "button_style": "text",
+                "button_label": "Button label",
+                "button_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_3Q3LHQ",
+            "button_kiimVV"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_zNEkWp",
+        "text_fWGb88",
+        "button_group_pewk9w"
+      ],
+      "name": "t:image-banner",
+      "settings": {
+        "height": "adapt",
+        "mobile_height": "adapt",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "default",
+        "container_type": "full",
+        "container_width": "md",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "enable_banner_click": false,
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "scheme-4",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "image_banner_ba4XAc": {
+      "type": "image-banner",
+      "disabled": true,
+      "name": "t:image-banner",
+      "settings": {
+        "image": "shopify://shop_images/hero_2400x900_b302bf27-2b3b-4ac3-ae52-4c6339cf256a.png",
+        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
+        "height": "medium",
+        "mobile_height": "small",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "0px",
+        "container_type": "full",
+        "container_width": "md",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "enable_banner_click": false,
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "scheme-4",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "header": {
+      "type": "collection-header",
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "background_type": "image",
+        "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
+        "height": "medium",
+        "heading_size": "h2",
+        "description": "none",
+        "layout_header": "left",
+        "show_submenu": true,
+        "color_scheme": "scheme-2",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "rich_text_zjnXRq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_group_9bNHF8": {
+          "type": "heading-group",
+          "name": "t:heading",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "heading_EdLgD4": {
+              "type": "_heading",
+              "settings": {
+                "heading": "{{ closest.collection.title }}",
+                "heading_size": "h1"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_EdLgD4"
+          ]
+        },
+        "text_jYgxLK": {
+          "type": "text",
+          "name": "t:text",
+          "settings": {
+            "text": "{{ closest.collection.description }}",
+            "font_style": "body text-s"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_group_9bNHF8",
+        "text_jYgxLK"
+      ],
+      "name": "t:rich-text",
+      "settings": {
+        "horizontal_alignment": "center",
+        "container_width": "md",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_limit": 16,
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "container_type": "max",
+        "enable_infinite_scroll": true,
+        "link": "",
+        "enable_sorting": true,
+        "enable_filtering": true,
+        "filter_layout": "sidebar",
+        "enable_sticky": true,
+        "enable_max_height": false,
+        "open_filters_by_default": true,
+        "active_filter_style": "primary",
+        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "image_banner_iAPUdb",
+    "image_banner_ba4XAc",
+    "header",
+    "rich_text_zjnXRq",
+    "main"
+  ]
+}
