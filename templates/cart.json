@@ -1,1 +1,34 @@
-{"sections":{"main":{"type":"main-cart","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "heading_size": "h1",
+        "horizontal_alignment": "center",
+        "show_dynamic_checkout": true,
+        "product_image_width": 120,
+        "font_style_title": "heading h6",
+        "font_style_price": "caption",
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
