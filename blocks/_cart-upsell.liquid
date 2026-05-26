@@ -1,5 +1,6 @@
 {%- assign product_match = cart.items | where: 'product_id', block.settings.product.id -%}
 {%- if product_match.size == 0 -%}
+  <h3>You May Also Like</h3>
   <div class="flex justify-{{ section.settings.horizontal_alignment }}" {{  block.shopify_attributes }}>
     {%- case block.settings.style -%}
       {%- when 'card' -%}
