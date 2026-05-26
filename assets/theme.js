@@ -830,11 +830,14 @@ class CustomDialog extends HTMLElement {
   }
 
   preventBodyScroll() {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) document.body.style.paddingInlineEnd = `${scrollbarWidth}px`;
     document.body.style.overflowY = 'hidden';
     document.body.style['overscroll-behavior'] = 'none';
   }
 
   allowBodyScroll() {
+    document.body.style.paddingInlineEnd = '';
     document.body.style.overflowY = '';
     document.body.style['overscroll-behavior'] = '';
   }
