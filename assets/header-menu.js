@@ -236,7 +236,7 @@ class HeaderMenu extends HTMLElement {
   }
 
   toggleTrigger(event) {
-    const trigger = event.currentTarget;
+    const trigger = event.target;
     const submenu = document.getElementById(trigger.getAttribute('aria-controls'));
     if (trigger.getAttribute('aria-expanded') === 'true') {
       this.closeSubmenu(submenu);
