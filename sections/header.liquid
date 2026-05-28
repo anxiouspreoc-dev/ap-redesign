@@ -47,13 +47,13 @@
     <ul class="list-unstyled header__primary-menu-list" role="list">
       {%- for link in section.settings.menu.links -%}
         <li>
-          {%- if link.links != blank -%}
-            {%- assign megamenu = false -%}
-            {%- for block in section.blocks %}
-              {%- if block.type == 'megamenu' and block.settings.menu == link.title -%}
-                {%- assign megamenu = block -%}
-              {% endif -%}
-            {%- endfor -%}
+          {%- assign megamenu = false -%}
+          {%- for block in section.blocks %}
+            {%- if block.type == 'megamenu' and block.settings.menu == link.title -%}
+              {%- assign megamenu = block -%}
+            {% endif -%}
+          {%- endfor -%}
+          {%- if link.links != blank or megamenu != false -%}
             <div id="Disclosure-HeaderMenu-{{ forloop.index }}" class="header__menu-disclosure">
               <button class="header__menu-item button-unstyled" aria-expanded="false" aria-controls="HeaderMenu-MenuList-{{ forloop.index }}-{{ link.title | handle }}">
                 <span class="header__menu-item-text">{{- link.title | escape -}}</span>
