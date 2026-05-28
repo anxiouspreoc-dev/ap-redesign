@@ -52,7 +52,7 @@
         "megamenu": {
           "type": "megamenu",
           "settings": {
-            "menu": "Shop All",
+            "menu": "Shop",
             "color_scheme": "scheme-5",
             "color_scheme_style": "split",
             "use_alt_logo": false,
