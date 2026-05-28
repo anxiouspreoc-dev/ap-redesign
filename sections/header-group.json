@@ -56,6 +56,7 @@
             "color_scheme": "scheme-5",
             "color_scheme_style": "split",
             "use_alt_logo": false,
+            "image_1": "shopify://shop_images/Copy_of_giant_model_with_barrell_neon_green.png",
             "image_ratio_1": "2 / 3",
             "label_1": "Bestsellers",
             "link_1": "shopify://collections/best-sellers",
@@ -66,29 +67,10 @@
             "label_3": "Featured",
             "link_3": "shopify://collections/all-products"
           }
-        },
-        "megamenu-2": {
-          "type": "megamenu",
-          "settings": {
-            "menu": "",
-            "color_scheme": "scheme-3",
-            "color_scheme_style": "split",
-            "use_alt_logo": false,
-            "image_ratio_1": "default",
-            "label_1": "Lina Walker-Smith & Primavera: A Radiant Partnership",
-            "link_1": "",
-            "image_ratio_2": "default",
-            "label_2": "Glow from Within: Primavera’s New Collection Redefines Beauty",
-            "link_2": "",
-            "image_ratio_3": "default",
-            "label_3": "",
-            "link_3": ""
-          }
         }
       },
       "block_order": [
-        "megamenu",
-        "megamenu-2"
+        "megamenu"
       ],
       "custom_css": [],
       "settings": {
