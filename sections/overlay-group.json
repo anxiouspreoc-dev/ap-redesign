@@ -117,10 +117,10 @@
         "promo-7"
       ],
       "settings": {
-        "menu": "main-menu",
+        "menu": "main-menu-copy",
         "enable_search": true,
-        "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051",
-        "enable_color_scheme_transition": true,
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "enable_color_scheme_transition": false,
         "color_scheme_transition": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b"
       }
     },
