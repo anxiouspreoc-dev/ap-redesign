@@ -56,6 +56,7 @@
             "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
             "color_scheme_style": "split",
             "use_alt_logo": false,
+            "image_1": "shopify://shop_images/lilacfun2.png",
             "image_ratio_1": "2 / 3",
             "label_1": "Bestsellers",
             "link_1": "shopify://collections/best-sellers",
@@ -63,6 +64,7 @@
             "image_ratio_2": "2 / 3",
             "label_2": "New In",
             "link_2": "shopify://collections/new-arrivals",
+            "image_3": "shopify://shop_images/lilac_fun_74298674-f01b-4c4d-b66e-bc43029638bc.png",
             "image_ratio_3": "2 / 3",
             "label_3": "Featured",
             "link_3": "shopify://collections/all-products"
