@@ -74,9 +74,7 @@
       "block_order": [
         "megamenu"
       ],
-      "custom_css": [
-        ".header__megamenu-links span.button.button--text {text-align: center; display: block; font-weight: bold; border-bottom: 0;}"
-      ],
+      "custom_css": [],
       "settings": {
         "menu": "main-menu-copy",
         "layout_desktop": "horizontal",
