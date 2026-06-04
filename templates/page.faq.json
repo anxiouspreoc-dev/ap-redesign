@@ -471,7 +471,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached. Click <a href=\"/pages/faqs\" title=\"FAQs\">here</a> to view our full returns process.</p>",
+                "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached. Click <a href=\"/pages/returns\" title=\"Returns\">here</a> to view our full returns process.</p>",
                 "font_style": "body"
               },
               "blocks": {}
