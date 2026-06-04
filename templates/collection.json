@@ -141,7 +141,7 @@
       ],
       "settings": {
         "background_type": "image",
-        "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
+        "image": "shopify://shop_images/BarrelBeige9.jpg",
         "height": "small",
         "heading_size": "h2",
         "description": "none",
