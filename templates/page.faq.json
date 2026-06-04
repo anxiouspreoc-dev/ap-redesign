@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
@@ -14,7 +23,8 @@
               "settings": {
                 "heading": "FAQ",
                 "heading_size": "h1"
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -26,7 +36,8 @@
           "settings": {
             "text": "<p>We've gathered answers to the most frequently asked questions to make your shopping experience easier and more enjoyable. </p><p>If you still have any questions or need further assistance, don't hesitate to <a href=\"#\" title=\"Contact\">reach out</a> to our support team. We're here to help and ensure you have the best experience with our products!</p>",
             "font_style": "body"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -61,7 +72,7 @@
         "faq-heading": {
           "type": "heading-group",
           "settings": {
-            "page_title": false
+            "page_title": true
           },
           "blocks": {
             "title": {
@@ -1342,7 +1353,8 @@
         "c7-q3"
       ],
       "settings": {
-        "horizontal_alignment": "left",
+        "anchor_id": "",
+        "horizontal_alignment": "center",
         "container_width": "xl",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
@@ -1359,6 +1371,7 @@
         "image-banner": {
           "type": "_image-banner",
           "settings": {
+            "image": "shopify://shop_images/CleanShot_2026-05-20_at_Joanne_Only_-_Google_Drive.Google_Chrome.21.png",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
@@ -1373,7 +1386,8 @@
             "color_scheme": "",
             "enable_color_scheme_transition": false,
             "color_scheme_transition": ""
-          }
+          },
+          "blocks": {}
         },
         "block-rich-text": {
           "type": "_block-rich-text",
@@ -1381,7 +1395,7 @@
             "vertical_alignment": "middle",
             "horizontal_alignment": "center",
             "container_width": "md",
-            "color_scheme": "scheme-5",
+            "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
             "enable_color_scheme_transition": false,
             "color_scheme_transition": "",
             "padding_top": "default",
@@ -1399,7 +1413,8 @@
                   "settings": {
                     "heading": "Can't Find the Answer You're Looking for?",
                     "heading_size": "h2"
-                  }
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1411,7 +1426,8 @@
               "settings": {
                 "text": "<p>Our support team is ready to help you with your questions, seven days a week.</p>",
                 "font_style": "body"
-              }
+              },
+              "blocks": {}
             },
             "button-group": {
               "type": "button-group",
@@ -1423,8 +1439,10 @@
                   "type": "_button",
                   "settings": {
                     "button_style": "primary",
-                    "button_label": "Contact"
-                  }
+                    "button_label": "Contact",
+                    "button_link": "shopify://pages/contact"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1444,6 +1462,8 @@
         "block-rich-text"
       ],
       "settings": {
+        "container_type": "max",
+        "border_radius": "section",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
