@@ -1,6 +1,8 @@
 
 {%- if section.blocks.size > 0 -%}
-  <div {% render 'color-scheme-attributes',  scoped_settings: section.settings, borders: true %}>
+  <div
+    {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handleize }}"{% endif %}
+    {% render 'color-scheme-attributes', scoped_settings: section.settings, borders: true %}>
     <div
       class="rich-text padding--section {{ section.settings.horizontal_alignment }}" style="{% render 'padding-override', settings: section.settings %}">
       <div class="container container--{{ section.settings.container_width }}">
