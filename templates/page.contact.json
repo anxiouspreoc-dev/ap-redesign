@@ -1354,9 +1354,10 @@
         "c7-q2",
         "c7-q3"
       ],
+      "custom_css": [],
       "settings": {
         "anchor_id": "faq",
-        "horizontal_alignment": "left",
+        "horizontal_alignment": "center",
         "container_width": "md",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
