@@ -1463,6 +1463,7 @@
         "image-banner",
         "block-rich-text"
       ],
+      "disabled": true,
       "settings": {
         "container_type": "max",
         "border_radius": "section",
