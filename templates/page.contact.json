@@ -127,7 +127,7 @@
             "text": {
               "type": "text",
               "settings": {
-                "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our <a href=\"#faq\" title=\"FAQ\">FAQ</a>. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
+                "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our FAQ. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
                 "font_style": "body"
               },
               "blocks": {}
