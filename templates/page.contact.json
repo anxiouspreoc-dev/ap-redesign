@@ -9,6 +9,65 @@
  */
 {
   "sections": {
+    "contact": {
+      "type": "contact-form",
+      "blocks": {
+        "name": {
+          "type": "text",
+          "settings": {
+            "field_label": "Name",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "email": {
+          "type": "email",
+          "settings": {
+            "field_label": "Email",
+            "columns": "2"
+          }
+        },
+        "telephone": {
+          "type": "telephone",
+          "settings": {
+            "field_label": "Phone number",
+            "required": false,
+            "columns": "2"
+          }
+        },
+        "message": {
+          "type": "textarea",
+          "settings": {
+            "field_label": "Message",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "telephone",
+        "message"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "Contact",
+        "page_title": true,
+        "heading_size": "h1",
+        "text": "<p>Our team is available Monday through Sunday to assist you with your enquiries. Email us here or text on 800-431-9000.</p>",
+        "button_style": "primary",
+        "button_width": "default",
+        "horizontal_alignment": "center",
+        "container_width": "xs",
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": true,
+        "show_bottom_border": false
+      }
+    },
     "split-card": {
       "type": "split-card",
       "blocks": {
@@ -116,65 +175,6 @@
         "show_top_border": false,
         "show_bottom_border": false,
         "show_borders": false
-      }
-    },
-    "contact": {
-      "type": "contact-form",
-      "blocks": {
-        "name": {
-          "type": "text",
-          "settings": {
-            "field_label": "Name",
-            "required": false,
-            "columns": "2"
-          }
-        },
-        "email": {
-          "type": "email",
-          "settings": {
-            "field_label": "Email",
-            "columns": "2"
-          }
-        },
-        "telephone": {
-          "type": "telephone",
-          "settings": {
-            "field_label": "Phone number",
-            "required": false,
-            "columns": "2"
-          }
-        },
-        "message": {
-          "type": "textarea",
-          "settings": {
-            "field_label": "Message",
-            "required": false
-          }
-        }
-      },
-      "block_order": [
-        "name",
-        "email",
-        "telephone",
-        "message"
-      ],
-      "settings": {
-        "subheading": "",
-        "heading": "Contact",
-        "page_title": true,
-        "heading_size": "h1",
-        "text": "<p>Our team is available Monday through Sunday to assist you with your enquiries. Email us here or text on 800-431-9000.</p>",
-        "button_style": "primary",
-        "button_width": "default",
-        "horizontal_alignment": "center",
-        "container_width": "xs",
-        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
-        "padding_top": "default",
-        "padding_bottom": "default",
-        "show_top_border": true,
-        "show_bottom_border": false
       }
     },
     "faq": {
@@ -1480,8 +1480,8 @@
     }
   },
   "order": [
-    "split-card",
     "contact",
+    "split-card",
     "faq"
   ]
 }
