@@ -9,6 +9,115 @@
  */
 {
   "sections": {
+    "split-card": {
+      "type": "split-card",
+      "blocks": {
+        "image-banner": {
+          "type": "_image-banner",
+          "settings": {
+            "image": "shopify://shop_images/CleanShot_2026-05-20_at_Joanne_Only_-_Google_Drive.Google_Chrome.21.png",
+            "height": "medium",
+            "mobile_height": "large",
+            "stack": "none",
+            "spacing": "0px",
+            "media_content_padding": "default",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "enable_banner_click": false,
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {}
+        },
+        "block-rich-text": {
+          "type": "_block-rich-text",
+          "settings": {
+            "vertical_alignment": "middle",
+            "horizontal_alignment": "center",
+            "container_width": "md",
+            "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": "",
+            "padding_top": "default",
+            "padding_bottom": "default"
+          },
+          "blocks": {
+            "heading-group": {
+              "type": "heading-group",
+              "settings": {
+                "page_title": false
+              },
+              "blocks": {
+                "heading": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Need Help Now?",
+                    "heading_size": "h2"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading"
+              ]
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our <a href=\"#faq\" title=\"FAQ\">FAQ</a>. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "button-group": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "Go to FAQ",
+                    "button_link": "#faq"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button"
+              ]
+            }
+          },
+          "block_order": [
+            "heading-group",
+            "text",
+            "button-group"
+          ]
+        }
+      },
+      "block_order": [
+        "image-banner",
+        "block-rich-text"
+      ],
+      "settings": {
+        "container_type": "max",
+        "border_radius": "section",
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "padding_top": "0px",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_borders": false
+      }
+    },
     "contact": {
       "type": "contact-form",
       "blocks": {
@@ -59,7 +168,7 @@
         "button_width": "default",
         "horizontal_alignment": "center",
         "container_width": "xs",
-        "color_scheme": "",
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "default",
@@ -1354,6 +1463,7 @@
         "c7-q2",
         "c7-q3"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "anchor_id": "faq",
@@ -1367,120 +1477,11 @@
         "show_top_border": false,
         "show_bottom_border": true
       }
-    },
-    "split-card": {
-      "type": "split-card",
-      "blocks": {
-        "image-banner": {
-          "type": "_image-banner",
-          "settings": {
-            "height": "medium",
-            "mobile_height": "large",
-            "stack": "none",
-            "spacing": "0px",
-            "media_content_padding": "default",
-            "container_width": "md",
-            "horizontal_alignment": "center",
-            "vertical_alignment": "middle",
-            "enable_banner_click": false,
-            "enable_overlay": false,
-            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-            "color_scheme": "",
-            "enable_color_scheme_transition": false,
-            "color_scheme_transition": ""
-          },
-          "blocks": {}
-        },
-        "block-rich-text": {
-          "type": "_block-rich-text",
-          "settings": {
-            "vertical_alignment": "middle",
-            "horizontal_alignment": "center",
-            "container_width": "md",
-            "color_scheme": "scheme-5",
-            "enable_color_scheme_transition": false,
-            "color_scheme_transition": "",
-            "padding_top": "default",
-            "padding_bottom": "default"
-          },
-          "blocks": {
-            "heading-group": {
-              "type": "heading-group",
-              "settings": {
-                "page_title": false
-              },
-              "blocks": {
-                "heading": {
-                  "type": "_heading",
-                  "settings": {
-                    "heading": "Need Help Now?",
-                    "heading_size": "h2"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading"
-              ]
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We're here for you! For quick answers to common questions about orders, shipping, returns, and more, visit our <a href=\"#faq\" title=\"FAQ\">FAQ</a>. If you need further assistance, our team is happy to help – simply reach out, and we’ll get back to you as soon as possible.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            },
-            "button-group": {
-              "type": "button-group",
-              "settings": {
-                "horizontal_alignment": "inherit"
-              },
-              "blocks": {
-                "button": {
-                  "type": "_button",
-                  "settings": {
-                    "button_style": "primary",
-                    "button_label": "Go to FAQ",
-                    "button_link": "#faq"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "button"
-              ]
-            }
-          },
-          "block_order": [
-            "heading-group",
-            "text",
-            "button-group"
-          ]
-        }
-      },
-      "block_order": [
-        "image-banner",
-        "block-rich-text"
-      ],
-      "disabled": true,
-      "settings": {
-        "container_type": "max",
-        "border_radius": "section",
-        "color_scheme": "",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
-        "padding_top": "0px",
-        "padding_bottom": "default",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "show_borders": false
-      }
     }
   },
   "order": [
+    "split-card",
     "contact",
-    "faq",
-    "split-card"
+    "faq"
   ]
 }
