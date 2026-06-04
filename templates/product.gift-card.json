@@ -1,0 +1,326 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "pdp-product-information": {
+          "type": "_pdp-product-information",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "left",
+            "vertical_alignment": "top",
+            "container_width": "xs",
+            "padding_top": "var(--space-l)",
+            "padding_bottom": "var(--space-m)"
+          },
+          "blocks": {
+            "pdp-badges": {
+              "type": "_pdp-badges",
+              "settings": {
+                "button_style": "primary"
+              },
+              "blocks": {}
+            },
+            "pdp-title": {
+              "type": "_pdp-title",
+              "settings": {
+                "heading_size": "h2",
+                "enable_share": false,
+                "share_color_scheme": ""
+              },
+              "blocks": {}
+            },
+            "pdp-price": {
+              "type": "_pdp-price",
+              "settings": {
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "klarna_on_site_messaging_app_block_h3ntJK": {
+              "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+              "settings": {
+                "data_key": "credit-promotion-auto-size",
+                "theme": "default",
+                "topPadding": "0",
+                "bottomPadding": "0",
+                "messagePrefix": ""
+              }
+            },
+            "pdp_variant_picker_3Cq7Ly": {
+              "type": "_pdp-variant-picker",
+              "name": "t:variant-picker",
+              "settings": {
+                "variant_picker_style": "dropdown",
+                "swatch_style": "default",
+                "variant_images": "",
+                "option_1": "",
+                "option_1_page": "",
+                "option_1_label": "icon",
+                "option_2": "",
+                "option_2_page": "",
+                "option_2_label": "icon",
+                "option_3": "",
+                "option_3_page": "",
+                "option_3_label": "icon"
+              },
+              "blocks": {}
+            },
+            "pdp-rating": {
+              "type": "_pdp-rating",
+              "settings": {},
+              "blocks": {}
+            },
+            "pdp-preorder-message": {
+              "type": "_pdp-preorder-message",
+              "settings": {},
+              "blocks": {}
+            },
+            "pdp-subtitle": {
+              "type": "_pdp-subtitle",
+              "settings": {
+                "text": "{{ closest.product.metafields.custom.subtitle.value }}",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "pdp-buy-buttons": {
+              "type": "_pdp-buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": false,
+                "show_quantity_selector": true,
+                "show_gift_card_recipient": false
+              },
+              "blocks": {}
+            },
+            "pdp-features": {
+              "type": "_pdp-features",
+              "settings": {},
+              "blocks": {}
+            },
+            "pdp-collapsible-details": {
+              "type": "_pdp-collapsible",
+              "settings": {
+                "heading": "DETAILS",
+                "font_style": "heading h6",
+                "text": "{{ closest.product.description }}",
+                "page": "",
+                "open_by_default": false
+              },
+              "blocks": {}
+            },
+            "pdp_collapsible_4gmynA": {
+              "type": "_pdp-collapsible",
+              "name": "t:collapsible",
+              "settings": {
+                "heading": "Size Guide",
+                "font_style": "heading h6",
+                "text": "{{ closest.product.metafields.custom.size_guide | metafield_tag }}",
+                "page": "",
+                "open_by_default": false
+              },
+              "blocks": {}
+            },
+            "pdp-collapsible-delivery": {
+              "type": "_pdp-collapsible",
+              "settings": {
+                "heading": "DELIVERY INFO",
+                "font_style": "heading h6",
+                "text": "{{ closest.product.metafields.custom.delivery | metafield_tag }}",
+                "page": "",
+                "open_by_default": false
+              },
+              "blocks": {}
+            },
+            "pdp-pairs-with": {
+              "type": "_pdp-pairs-with",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "pdp-badges",
+            "pdp-title",
+            "pdp-price",
+            "klarna_on_site_messaging_app_block_h3ntJK",
+            "pdp_variant_picker_3Cq7Ly",
+            "pdp-rating",
+            "pdp-preorder-message",
+            "pdp-subtitle",
+            "pdp-buy-buttons",
+            "pdp-features",
+            "pdp-collapsible-details",
+            "pdp_collapsible_4gmynA",
+            "pdp-collapsible-delivery",
+            "pdp-pairs-with"
+          ]
+        }
+      },
+      "custom_css": [
+        "button {text-transform: uppercase;}",
+        ".product-info__icon-with-text {position: relative;}",
+        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #c9fc00 !important; border-color: #c9fc00; color: black;}",
+        ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
+        ".product-info__price .text-xs.secondary {display: none;}",
+        "div#shopify-block-AanpGQzFjTnB5eUFQU__klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important;}"
+      ],
+      "settings": {
+        "media_style": "thumbnails",
+        "mobile_max_width": "100%",
+        "enable_zoom": false,
+        "enable_autoplay": true,
+        "media_color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
+        "spacing": "0px",
+        "button_style": "primary",
+        "image_aspect_ratio": "adapt",
+        "animation_style": "fade",
+        "counter_style": "hidden",
+        "enable_looping": true,
+        "color_scheme": "scheme-1",
+        "enable_satc_mobile": true,
+        "enable_satc_desktop": true,
+        "show_satc_image": true,
+        "show_satc_variant": true,
+        "show_satc_price": true,
+        "show_satc_rating": false,
+        "satc_color_scheme": "scheme-1",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_block_borders": false,
+        "enable_transparent_header": false
+      }
+    },
+    "pdp-behind-the-bag": {
+      "type": "pdp-behind-the-bag",
+      "custom_css": [
+        ".pdp-behind-the-bag__text-col,.pdp-behind-the-bag__inner {display: none;}",
+        "@media (max-width: 490px) {.pdp-behind-the-bag__inner {display: block; }}"
+      ],
+      "settings": {
+        "default_image": "shopify://shop_images/New_arrivals_image_ecfcd960-28ed-4e79-ba74-a73c1e81fd51.png",
+        "default_heading": "JOANNE ON THE MID",
+        "default_text": "<p>“I carry everything. Lip balm, laptop, charger, a notebook I never write in. The Mid was designed for that level of delusion. It’s big enough to be useful, small enough to still look like you have your life together. ”</p>",
+        "padding_top": "var(--space-xl)",
+        "padding_bottom": "0px"
+      }
+    },
+    "pdp-colorways": {
+      "type": "pdp-colorways",
+      "custom_css": [
+        "button {background: #c9fc00 !important; border-color: #c9fc00 !important; color: black !important;}"
+      ],
+      "settings": {
+        "heading": "{{ product.metafields.custom.colorway_heading.value }}",
+        "subheading": "Metallic. Minimal. Slightly unhinged. Explore other colourways and finishes.",
+        "default_collection": "{{ product.metafields.custom.colorways_collections.value }}",
+        "product_limit": 8,
+        "container_type": "max",
+        "column_behavior": "slideshow",
+        "color_scheme": "scheme-1",
+        "padding_top": "var(--space-l)",
+        "padding_bottom": "var(--space-l)"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "center",
+            "subheading": "EXPLORE THE COLLECTIONS",
+            "heading": "Different shapes. Same emotional support.",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "button_jby8L8": {
+              "type": "_button",
+              "name": "t:button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "SHOP ALL",
+                "button_link": "shopify://collections/all-products"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_jby8L8"
+          ]
+        }
+      },
+      "settings": {
+        "collection_list": [
+          "the-barrel",
+          "the-bucket",
+          "mid-sized-bags",
+          "clutch-bags",
+          "the-micro",
+          "the-organizer",
+          "oversized-handbags"
+        ],
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "layout_desktop": "slideshow",
+        "container_type": "max",
+        "horizontal_alignment": "center",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "var(--space-l)",
+        "padding_bottom": "var(--space-l)",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "custom_liquid_JYxC8j": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "div {display: none;}"
+      ],
+      "name": "t:custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nbutton.product-form__submit.button.button--primary.sticky-atc__button {\n    background: #ff0164 !important;\n    border-color: #ff0164 !important;\n}\n\nbutton#product-form-template--26356507869569__main15102241636737-submit {\n  color: black !important;\n}\n\nbutton.product-form__submit.button.button--primary.sticky-atc__button,\nbutton#cart-drawer-Checkout {\n    background: #c9fc04 !important;\n    border-color: #c9fc04 !important;\n    color: black !important;\ntext-transform: uppercase;\n}\n</style>",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-behind-the-bag",
+    "pdp-colorways",
+    "collection-list",
+    "custom_liquid_JYxC8j"
+  ]
+}
