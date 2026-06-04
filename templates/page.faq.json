@@ -471,7 +471,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached.</p>",
+                "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached. Click here to view our full returns process.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -610,7 +610,7 @@
         "c2-q7": {
           "type": "collapsible",
           "settings": {
-            "heading": "What happens if a parcel is marked delivered but I haven&rsquo;t received it?",
+            "heading": "What happens if a parcel is marked delivered but I haven’t received it?",
             "font_style": "heading h6",
             "open_by_default": false
           },
@@ -652,7 +652,7 @@
         "c2-q9": {
           "type": "collapsible",
           "settings": {
-            "heading": "What if I don&rsquo;t have the complete delivery address?",
+            "heading": "What if I don’t have the complete delivery address?",
             "font_style": "heading h6",
             "open_by_default": false
           },
