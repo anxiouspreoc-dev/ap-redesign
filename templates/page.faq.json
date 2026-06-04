@@ -58,186 +58,1288 @@
     "main": {
       "type": "collapsible-content",
       "blocks": {
-        "heading-group": {
+        "faq-heading": {
           "type": "heading-group",
           "settings": {
             "page_title": false
           },
           "blocks": {
-            "heading": {
+            "title": {
               "type": "_heading",
               "settings": {
-                "heading": "Ordering & Returns",
-                "heading_size": "h4"
-              }
+                "heading": "Frequently Asked Questions",
+                "heading_size": "h2"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "heading"
+            "title"
           ]
         },
-        "collapsible": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Where does Primavera ship?",
-            "font_style": "caption"
-          },
-          "blocks": {
-            "text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We currently ship worldwide. Shipping rates and delivery times vary depending on your location. You can view estimated shipping costs at checkout.</p>",
-                "font_style": "body"
-              }
-            }
-          },
-          "block_order": [
-            "text"
-          ]
-        },
-        "collapsible-2": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "How long does shipping take?",
-            "font_style": "caption"
-          },
-          "blocks": {
-            "text-2": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Orders are typically processed within 1-3 business days. Delivery times depend on your location:</p><ul><li>Domestic (U.S.): 3-7 business days</li><li>Europe: 5-10 business days</li><li>International: 7-14 business days</li></ul><p>Expedited shipping options are available at checkout.</p>",
-                "font_style": "body"
-              }
-            }
-          },
-          "block_order": [
-            "text-2"
-          ]
-        },
-        "collapsible-3": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "What is your return policy?",
-            "font_style": "caption"
-          },
-          "blocks": {
-            "text-3": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We accept returns within 14 days of receiving your order, provided the item is unworn and in its original packaging. Custom or engraved pieces are final sale. To initiate a return, email us at <a href=\"#\" title=\"mailto:returns@primaverajewelry.com\">returns@example.com</a>.</p>",
-                "font_style": "body"
-              }
-            }
-          },
-          "block_order": [
-            "text-3"
-          ]
-        },
-        "collapsible-4": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Do you offer gift wrapping?",
-            "font_style": "caption"
-          },
-          "blocks": {
-            "text-4": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Your pieces will arrive in our 100% recyclable box and reusable cotton pouch. Sending as a gift? Add the finishing touches with our signature gift box, available to add within your cart.</p>",
-                "font_style": "body"
-              }
-            }
-          },
-          "block_order": [
-            "text-4"
-          ]
-        },
-        "collapsible-5": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "How can I track my order?",
-            "font_style": "caption"
-          },
-          "blocks": {
-            "text-5": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Once your order ships, you’ll receive a confirmation email with a tracking link. If you haven’t received tracking details within 3 business days, reach out to us at <a href=\"#\" title=\"mailto:support@example.com\">support@example.com</a>.</p>",
-                "font_style": "body"
-              }
-            }
-          },
-          "block_order": [
-            "text-5"
-          ]
-        },
-        "heading-group-2": {
+        "cat-0-orders-shipping": {
           "type": "heading-group",
           "settings": {
             "page_title": false
           },
           "blocks": {
-            "heading-2": {
+            "h": {
               "type": "_heading",
               "settings": {
-                "heading": "Corporate",
+                "heading": "Orders & Shipping",
                 "heading_size": "h4"
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "heading-2"
+            "h"
           ]
         },
-        "collapsible-6": {
+        "c0-q0": {
           "type": "collapsible",
           "settings": {
-            "heading": "Are Primavera products sustainable?",
-            "font_style": "caption"
+            "heading": "Where do you ship to?",
+            "font_style": "heading h6",
+            "open_by_default": false
           },
           "blocks": {
-            "text-6": {
+            "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>At Primavera, sustainability is at the heart of everything we do. We are committed to using ethically sourced ingredients, eco-conscious packaging, and responsible production practices to minimize our environmental impact. Our formulations prioritize vegan, cruelty-free, and skin-friendly ingredients, while our packaging is designed with recyclability and reduced waste in mind. We continuously strive to make beauty more sustainable—without compromising on quality or performance.</p>",
+                "text": "<p>We currently ship across Ireland, the UK, Europe, the US, Canada, Australia and selected international destinations. Shipping availability and rates are calculated at checkout based on your location.</p>",
                 "font_style": "body"
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "text-6"
+            "txt"
           ]
         },
-        "collapsible-7": {
+        "c0-q1": {
           "type": "collapsible",
           "settings": {
-            "heading": "Do you offer wholesale partnerships?",
-            "font_style": "caption"
+            "heading": "How long will my order take to arrive?",
+            "font_style": "heading h6",
+            "open_by_default": false
           },
           "blocks": {
-            "text-7": {
+            "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We love partnering with boutiques and retailers. If you’re interested in carrying Primavera, please email us at <a>wholesale@example.com</a>.</p>",
+                "text": "<p>Delivery timelines vary depending on where you&rsquo;re based:</p><ul><li>Ireland: 1&ndash;3 working days</li><li>UK: 3&ndash;7 working days</li><li>Europe: 5&ndash;10 working days</li><li>International: 7&ndash;14 working days</li></ul><p>Please note delivery times may vary during launches, promotions or peak periods.</p>",
                 "font_style": "body"
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "text-7"
+            "txt"
+          ]
+        },
+        "c0-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How much is shipping?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shipping costs are calculated at checkout based on destination and order value. We occasionally offer complimentary shipping during selected promotional periods.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c0-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Will I receive tracking information?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Yes. Once your order ships, you&rsquo;ll receive a confirmation email with tracking details so you can follow your emotionally supportive parcel every step of the way.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c0-q4": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "My tracking hasn&rsquo;t updated &ndash; what should I do?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Tracking can occasionally take 24&ndash;48 hours to refresh once your order has been dispatched. If there&rsquo;s still no movement after this timeframe, contact us at <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">hi@anxiouspreoccupied.com</a> and we&rsquo;ll look into it for you.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c0-q5": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do I have to pay customs or duties?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>For international orders outside the EU, customs duties or import taxes may apply depending on your country&rsquo;s regulations. These charges are the responsibility of the customer.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c0-q6": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I change or cancel my order after placing it?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We move quickly once orders are placed, so we can&rsquo;t guarantee changes or cancellations. If you need help urgently, contact us as soon as possible and we&rsquo;ll do our best.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c0-q7": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What happens if my parcel is returned to sender?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>If a parcel is returned due to an incorrect address, failed delivery attempts or refusal of delivery, additional shipping charges may apply to resend the order.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-1-products-materials": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Products & Materials",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c1-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What are your bags made from?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Our bags are crafted using premium vegan leather and carefully selected hardware designed to balance practicality, durability and style.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Are your bags suitable for everyday use?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Very much so. Our bags are designed for real life, commuting, travelling, overpacking emotionally and physically, and carrying far more than you originally intended.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How do I care for my bag?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We recommend wiping your bag gently with a soft damp cloth and storing it away from direct sunlight when not in use. Avoid overexposure to moisture, oils or rough surfaces.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Will my bag fit a laptop?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Many of our larger styles are designed to fit everyday essentials including laptops. Product dimensions are listed on each product page to help guide sizing.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q4": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Will sold out products come back?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Some styles are restocked, while others are limited runs. If a product is sold out, sign up to receive our newsletter and be first to know about restocks.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q5": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do your metallic bags scratch?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Metallic finishes naturally show wear differently over time depending on usage. We design our bags to be worn and loved, not kept in emotional storage.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c1-q6": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Are your products sustainably made?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We work with suppliers and manufacturing partners who align with our focus on thoughtful, lower impact production and responsible sourcing practices where possible.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-2-returns-exchanges": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Returns & Exchanges",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c2-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What is your returns policy?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do you offer exchanges?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We currently process exchanges as a return and repurchase to ensure the fastest turnaround.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Are return shipping costs covered?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Customers are responsible for return shipping costs unless the item received is faulty or incorrect.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How long do refunds take?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Once your return is received and approved, refunds are typically processed within 5&ndash;10 working days back to your original payment method.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q4": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I return sale items?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Final/Clearance Sale items and gift cards are final sale unless faulty. Promotional items can be returned.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q5": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What happens if my item arrives damaged?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>If your order arrives damaged or faulty, please contact us within 48 hours of delivery with your order number and photos of the issue so we can help resolve it quickly. Email <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">hi@anxiouspreoccupied.com</a>.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q6": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I return an item without original packaging?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Original packaging is preferred to ensure products arrive back safely. Returns without packaging may not be eligible for full refund approval if the item arrives damaged.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q7": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What happens if a parcel is marked delivered but I haven&rsquo;t received it?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Please contact Customer Care as soon as possible. Courier investigations and delivery claims are time-sensitive and most courier partners require non-delivery concerns to be raised within a limited timeframe following the recorded delivery date.</p><p>Tracking screenshots and proof of delivery may be requested during investigation.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q8": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What if the recipient is not available during delivery?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Couriers usually attempt delivery 2&ndash;3 times. If they cannot deliver, the parcel will be returned to us. A new shipping fee will be required if you&rsquo;d like it sent again.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q9": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What if I don&rsquo;t have the complete delivery address?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Please double-check the delivery details in your order confirmation email. We cannot be responsible for delays or lost parcels caused by incorrect or incomplete addresses. If a parcel cannot be retrieved due to an incorrect address, the delivery is considered fulfilled and no refund will be issued. To avoid delays, please provide a daytime delivery address and a valid local contact number.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c2-q10": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "I need to update something in my order. What should I do?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Please review your order confirmation. If you spot any incorrect details, contact us immediately at <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">hi@anxiouspreoccupied.com</a> so we can make the necessary changes.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-3-gift-cards": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Gift Cards",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c3-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How do digital gift cards work?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Our digital gift cards are delivered instantly by email and contain a unique code that can be used at checkout.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c3-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do gift cards expire?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>No panic, our digital gift cards currently do not expire.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c3-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I send a gift card directly to someone else?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Absolutely. Enter the recipient&rsquo;s email address at purchase or forward the digital gift card email once received.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c3-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can gift cards be refunded?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Digital gift cards are non-refundable and cannot be exchanged for cash.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-4-payments": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Payments",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c4-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What payment methods do you accept?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We accept major debit and credit cards along with selected accelerated payment methods including Apple Pay, Google Pay, PayPal and Shopify Payments where available.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c4-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Is my payment information secure?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Yes. All payments are processed securely through encrypted payment gateways. We do not store your card details.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c4-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I pay in instalments?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Installment payment options may be available depending on your location and the payment providers available at checkout.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-5-pre-orders": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Pre-Orders",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c5-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What is a pre-order?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A pre-order allows you to secure an item before it officially ships or restocks.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c5-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "When will my pre-order ship?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Estimated shipping windows are listed clearly on the product page at the time of purchase.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c5-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Will I receive other items in my order sooner?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>If your order includes a pre-order item, your full order may ship together once all items are available unless otherwise stated.</p><p>If you&rsquo;d like an in-stock item shipped sooner, we can arrange a split shipment. A second shipping fee will apply. Please contact our team to set it up.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c5-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can pre-order timelines change?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Occasionally, production or shipping delays can impact timelines. If anything changes significantly, we&rsquo;ll keep you updated by email.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-6-brand-community": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Brand & Community",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c6-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Who founded Anxious Preoccupied?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Anxious Preoccupied was co-founded by Joanne McNally and Nikki Lannen.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What is Anxious Preoccupied?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We&rsquo;re an accessories brand creating personality-led bags and accessories designed for everyday chaos, overthinking and excellent outfits.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Is Anxious Preoccupied an Irish brand?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Yes, Anxious Preoccupied is proudly Irish designed.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Where can I shop Anxious Preoccupied in person?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Selected styles are stocked through retail partners and pop-up locations throughout the year. Follow us on social for the latest updates and launches.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q4": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How do I contact customer support?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>You can reach us at <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">hi@anxiouspreoccupied.com</a> and our team will get back to you as soon as possible during business hours, Monday&ndash;Friday.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q5": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do you collaborate with creators or brands?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We love hearing from aligned brands and creators. Partnership or collaboration enquiries can be sent via our contact email.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q6": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I stock Anxious Preoccupied in my store?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Wholesale enquiries are always welcome. Please contact us with details about your store and location.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q7": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Do you offer press samples or PR gifting?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>For press, gifting or media enquiries, please reach out to our team directly with relevant information and deadlines.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c6-q8": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How do I stay updated on launches and restocks?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Sign up to our newsletter and follow us on social media for first access to launches, restocks, events and emotionally charged product drops.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-7-care-maintenance": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Care & Maintenance",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "c7-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Is the material water proof?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Our material offers light water resistance. To preserve its finish and longevity, we recommend avoiding prolonged contact with water or soaking.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c7-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Why does my bag look slightly misshapen when it arrives?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Your bag is packaged in a box for protection and may arrive slightly out of shape. Simply let it sit for a day or two and it will return to its original form.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c7-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How long can the bag stay under the sun?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We recommend avoiding prolonged direct sunlight or high heat, especially when the bag is not in use. Short periods are fine, but extended exposure can lead to damage.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c7-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What temperatures should be avoided?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Avoid exposing the bag to extreme heat or extreme cold. High temperatures can soften or warp materials, while very cold conditions may make them less flexible. Store and use your bag in moderate temperatures whenever possible.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
           ]
         }
       },
       "block_order": [
-        "heading-group",
-        "collapsible",
-        "collapsible-2",
-        "collapsible-3",
-        "collapsible-4",
-        "collapsible-5",
-        "heading-group-2",
-        "collapsible-6",
-        "collapsible-7"
+        "faq-heading",
+        "cat-0-orders-shipping",
+        "c0-q0",
+        "c0-q1",
+        "c0-q2",
+        "c0-q3",
+        "c0-q4",
+        "c0-q5",
+        "c0-q6",
+        "c0-q7",
+        "cat-1-products-materials",
+        "c1-q0",
+        "c1-q1",
+        "c1-q2",
+        "c1-q3",
+        "c1-q4",
+        "c1-q5",
+        "c1-q6",
+        "cat-2-returns-exchanges",
+        "c2-q0",
+        "c2-q1",
+        "c2-q2",
+        "c2-q3",
+        "c2-q4",
+        "c2-q5",
+        "c2-q6",
+        "c2-q7",
+        "c2-q8",
+        "c2-q9",
+        "c2-q10",
+        "cat-3-gift-cards",
+        "c3-q0",
+        "c3-q1",
+        "c3-q2",
+        "c3-q3",
+        "cat-4-payments",
+        "c4-q0",
+        "c4-q1",
+        "c4-q2",
+        "cat-5-pre-orders",
+        "c5-q0",
+        "c5-q1",
+        "c5-q2",
+        "c5-q3",
+        "cat-6-brand-community",
+        "c6-q0",
+        "c6-q1",
+        "c6-q2",
+        "c6-q3",
+        "c6-q4",
+        "c6-q5",
+        "c6-q6",
+        "c6-q7",
+        "c6-q8",
+        "cat-7-care-maintenance",
+        "c7-q0",
+        "c7-q1",
+        "c7-q2",
+        "c7-q3"
       ],
       "settings": {
         "horizontal_alignment": "left",
