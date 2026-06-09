@@ -113,7 +113,7 @@
       "type": "image-banner",
       "name": "t:image-banner",
       "settings": {
-        "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
+        "image": "shopify://shop_images/ChatGPT_Image_Jun_9_2026_08_58_40_PM.png",
         "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
         "height": "medium",
         "mobile_height": "small",
