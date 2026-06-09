@@ -110,8 +110,8 @@
       "type": "image-banner",
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/hero_2400x900_b302bf27-2b3b-4ac3-ae52-4c6339cf256a.png",
-        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
+        "image": "shopify://shop_images/Joanne_w__OS_Silver.jpg",
+        "mobile_image": "shopify://shop_images/Joanne_w__OS_Silver.jpg",
         "height": "medium",
         "mobile_height": "small",
         "stack": "none",
