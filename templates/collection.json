@@ -187,7 +187,7 @@
           "name": "t:text",
           "settings": {
             "text": "{{ closest.collection.description }}",
-            "font_style": "body text-s"
+            "font_style": "body text-xs"
           },
           "blocks": {}
         }
