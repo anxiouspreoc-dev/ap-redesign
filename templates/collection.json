@@ -83,6 +83,7 @@
         "text_fWGb88",
         "button_group_pewk9w"
       ],
+      "disabled": true,
       "name": "t:image-banner",
       "settings": {
         "image": "shopify://shop_images/TurquoiseOrganizerInsideBag.png",
@@ -110,7 +111,6 @@
     },
     "image_banner_ba4XAc": {
       "type": "image-banner",
-      "disabled": true,
       "name": "t:image-banner",
       "settings": {
         "image": "shopify://shop_images/Joanne_w__OS_Silver.jpg",
