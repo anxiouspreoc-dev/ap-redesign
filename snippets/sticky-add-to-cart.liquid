@@ -41,7 +41,7 @@
           srcset="{{ media.preview_image | image_url: width: 100 }} 100w, {{ media.preview_image | image_url: width: 200 }} 200w"
           sizes="6.25rem"
           src="{{ media.preview_image | image_url: width: 1445 }}"
-          alt="{{ media.alt | escape }}"
+          alt="{{ media.alt | default: product.title | default: shop.name | escape }}"
           loading="lazy"
           width="{{ media.preview_image.width }}"
           height="{{ media.preview_image.height }}"
