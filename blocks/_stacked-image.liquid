@@ -25,6 +25,7 @@
         {%- endif -%}
         {%- capture sizes -%}calc(50vw * calc({{ block.settings.max_width }} / 100)){%- endcapture -%}
         {%- assign widths = '100, 200, 300, 400, 600, 800, 1000, 1200, 1300, 1400, 1600, 1800, 2000' -%}
+        {%- assign stacked_image_alt = block.settings.image.alt | default: shop.name -%}
         {{
           block.settings.image
           | image_url: width: 2200
@@ -33,7 +34,8 @@
             widths: widths,
             fetchpriority: fetch_priority,
             class: 'stacked-images-with-text__image',
-            loading: loading
+            loading: loading,
+            alt: stacked_image_alt
         }}
         {%- if block.settings.link != blank -%}
           </a>
