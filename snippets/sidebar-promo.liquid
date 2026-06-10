@@ -26,10 +26,11 @@
     {% if block.settings.image != blank %}
       <div class="menu-drawer__promo-link image-card expand-link faded-out" data-animate-fade >
         <div class="image-ratio image-card__image-wrapper" style="--image-ratio: {{ image_ratio }}">
+          {%- assign sidebar_promo_image_alt = block.settings.image.alt | default: block.settings.label | default: shop.name -%}
           {{
             block.settings.image
             | image_url: width: 800
-            | image_tag: sizes: '50vw', widths: widths, class: 'image-card__image', loading: 'lazy'
+            | image_tag: sizes: '50vw', widths: widths, class: 'image-card__image', loading: 'lazy', alt: sidebar_promo_image_alt
           }}
         </div>
         {%- if block.settings.link != blank -%}
