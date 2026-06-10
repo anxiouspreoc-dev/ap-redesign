@@ -81,7 +81,8 @@
                   <div class="cart-item__product-image">
                     {%- assign widths = '100, 150, 200, 250, 300, 400, 600, 800, 1200' -%}
                     <div class="cart-item__image-wrapper image-ratio" style="--image-ratio: {{ image_ratio }};--image-max-width: var(--space-2xl);">
-                      {{ item.image | image_url: width: 2200 | image_tag: class: '', sizes: '12.5rem', widths: widths }}
+                      {%- assign order_item_image_alt = item.image.alt | default: item.title | default: shop.name -%}
+                      {{ item.image | image_url: width: 2200 | image_tag: class: '', sizes: '12.5rem', widths: widths, alt: order_item_image_alt }}
                     </div>
                   </div>
                 {%- else -%}
