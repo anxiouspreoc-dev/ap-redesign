@@ -31,10 +31,11 @@
       {%- endcapture -%}
 
       <div class="card-collection__media-wrapper card__media-wrapper {% if settings.card_collection_image_ratio == 'circle' %}border-radius-circle{% endif %}" style="--image-ratio: {{ image_ratio }};">
+        {%- assign collection_image_alt = image.alt | default: card_collection.title | default: shop.name -%}
         {{
           image
           | image_url: width: image.width
-          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low'
+          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low', alt: collection_image_alt
         }}
       </div>
     {%- endif -%}
