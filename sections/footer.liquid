@@ -96,12 +96,14 @@
                     {%- endif -%}
                   {%- endif -%}
                   <div class="footer__image-wrapper image-ratio" style="--image-ratio: {{ image_ratio }};--image-max-width: {{ max_width }};">
+                    {%- assign footer_image_alt = block.settings.image.alt | default: block.settings.link_label | default: shop.name -%}
                     {{
                       block.settings.image
                       | image_url: width: 2200
                       | image_tag:
                         sizes: sizes,
-                        widths: widths
+                        widths: widths,
+                        alt: footer_image_alt
                     }}
                   </div>
                   {%- if block.settings.link != blank -%}
