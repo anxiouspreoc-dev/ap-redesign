@@ -117,10 +117,11 @@
               card-border-radius
             {% endif %}
           {% endcapture %}
+          {%- assign featured_image_alt = featured.image.alt | default: featured.title | default: shop.name -%}
           {{
             featured.image
             | image_url: width: 2200
-            | image_tag: sizes: sizes, widths: widths, fetchpriority: 'high', class: class
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: 'high', class: class, alt: featured_image_alt
           }}
         </div>
       {% else %}
