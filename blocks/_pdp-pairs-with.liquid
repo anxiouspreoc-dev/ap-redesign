@@ -11,11 +11,12 @@
           <li class="pdp-pairs-with__card">
             {%- if paired_product.featured_image != blank -%}
               <a href="{{ paired_product.url }}" class="pdp-pairs-with__image-link" tabindex="-1" aria-hidden="true">
+                {%- assign paired_product_image_alt = paired_product.featured_image.alt | default: paired_product.title | default: shop.name -%}
                 {{ paired_product.featured_image | image_url: width: 320 | image_tag:
                   class: 'pdp-pairs-with__image',
                   width: 130,
                   height: 130,
-                  alt: paired_product.featured_image.alt | escape
+                  alt: paired_product_image_alt
                 }}
               </a>
             {%- endif -%}
