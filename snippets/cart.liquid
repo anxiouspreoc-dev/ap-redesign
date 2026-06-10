@@ -83,7 +83,8 @@ endunless
                         <span class="visually-hidden">{{ item.title | escape }}</span>
                       </a>
                       <div class="cart-item__image-wrapper image-ratio" style="--image-ratio: {{ image_ratio }};">
-                        {{ item.image | image_url: width: 2200 | image_tag: class: '', sizes: image_size, widths: widths, loading: 'lazy' }}
+                        {%- assign cart_item_image_alt = item.image.alt | default: item.product.title | default: shop.name -%}
+                        {{ item.image | image_url: width: 2200 | image_tag: class: '', sizes: image_size, widths: widths, loading: 'lazy', alt: cart_item_image_alt }}
                       </div>
                     </div>
                   {%- else -%}
