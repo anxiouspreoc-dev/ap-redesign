@@ -629,7 +629,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-silver-w-lime-green-with-strap",
+                "product": "the-oversized-tote-bag-silver-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -654,7 +654,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-silver-w-lime-green-with-strap",
+                "product": "the-oversized-tote-bag-silver-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -781,7 +781,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-silver-w-lime-green-with-strap",
+                "product": "the-oversized-tote-bag-silver-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -807,7 +807,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-silver-w-lime-green-with-strap",
+                "product": "the-oversized-tote-bag-silver-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -1123,7 +1123,7 @@
             "image_ratio": "2 / 3",
             "link": "",
             "link_label": "",
-            "product": "the-oversized-silver-w-lime-green-with-strap"
+            "product": "the-oversized-tote-bag-silver-metallic"
           },
           "blocks": {}
         },
