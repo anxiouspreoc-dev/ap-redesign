@@ -13,6 +13,7 @@
   {%- endif -%}
   {%- if block.settings.image != blank -%}
     {%- assign widths = '100, 200, 300, 400, 600, 800, 1200' -%}
+    {%- assign logo_list_image_alt = block.settings.image.alt | default: shop.name -%}
     {{
       block.settings.image
       | image_url: width: 2200
@@ -21,7 +22,8 @@
         widths: widths,
         fetchpriority: fetch_priority,
         loading: loading,
-        class: 'logo-list__logo'
+        class: 'logo-list__logo',
+        alt: logo_list_image_alt
     }}
   {%- else -%}
     <div style="display: block; block-size: 5rem; inline-size: 10rem; background-color: rgba(var(--color-foreground), 0.2);">
