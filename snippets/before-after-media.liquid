@@ -11,10 +11,11 @@
     <div>
       {%- assign sizes = '100vw' -%}
       {%- assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200' -%}
+      {%- assign before_after_image_alt = block.settings.image.alt | default: shop.name -%}
       {{
         block.settings.image
         | image_url: width: 2200
-        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'before-after__media', loading: loading
+        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'before-after__media', loading: loading, alt: before_after_image_alt
       }}
     </div>
   {%- else -%}
