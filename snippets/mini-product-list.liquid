@@ -19,7 +19,8 @@
     {%- if product.featured_media != blank -%}
       {%- assign widths = '100, 150, 200, 250, 300, 400, 600, 800' -%}
       <div class="mini-product__image-wrapper image-ratio" style="--image-ratio: {{ image_ratio }}; --image-max-width: {{ image_size }};">
-        {{ product.featured_media | image_url: width: 800 | image_tag: class: 'mini-product__image', sizes: image_size, width: widths }}
+        {%- assign mini_image_alt = product.featured_media.alt | default: product.title | default: shop.name -%}
+        {{ product.featured_media | image_url: width: 800 | image_tag: class: 'mini-product__image', sizes: image_size, width: widths, alt: mini_image_alt }}
       </div>
     {%- endif -%}
     <div class="mini-product__content">
