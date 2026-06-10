@@ -42,7 +42,7 @@
     "
     sizes="(min-width: 48em) 50vw, 1100px"
     src="{{ media.preview_image | image_url: width: 1445 }}"
-    alt="{{ media.alt | escape }}"
+    alt="{{ media.alt | default: product.title | default: shop.name | escape }}"
     loading="{{ loading }}"
     fetchpriority="{{ fetch_priority }}"
     width="{{ media.preview_image.width }}"
