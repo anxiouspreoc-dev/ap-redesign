@@ -42,12 +42,14 @@
           {%- endcapture -%}
           {%- assign widths = '100, 200, 300, 400, 600, 800, 1200' -%}
           <div class="icon-with-text__image-wrapper" style="--image-max-width: {{ sizes }}">
+            {%- assign inventory_image_alt = block.settings.image.alt | default: shop.name -%}
             {{
               block.settings.image
               | image_url: width: 2200
               | image_tag:
                 sizes: sizes,
-                widths: widths
+                widths: widths,
+                alt: inventory_image_alt
             }}
           </div>
         {%- endif -%}
