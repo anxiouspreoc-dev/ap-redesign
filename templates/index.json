@@ -494,7 +494,7 @@
               "type": "_hotspot-content",
               "settings": {
                 "label": "The Oversized — Gold With Orange Lining",
-                "link": "shopify://products/the-oversized-gold-w-orange-with-strap",
+                "link": "shopify://products/the-oversized-tote-bag-gold-metallic",
                 "horizontal_position": 34,
                 "vertical_position": 53,
                 "mobile_horizontal_position": 14,
@@ -704,7 +704,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-gold-w-orange-with-strap",
+                "product": "the-oversized-tote-bag-gold-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -729,7 +729,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-gold-w-orange-with-strap",
+                "product": "the-oversized-tote-bag-gold-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
