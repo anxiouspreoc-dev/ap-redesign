@@ -41,6 +41,7 @@
           <span class="visually-hidden">{{ block.settings.link_label }}</span>
         </a>
       {%- endif -%}
+      {%- assign image_block_alt = block.settings.image.alt | default: block.settings.link_label | default: shop.name -%}
       {{
         block.settings.image
         | image_url: width: 2200
@@ -49,7 +50,8 @@
           widths: widths,
           fetchpriority: fetch_priority,
           class: '',
-          loading: loading
+          loading: loading,
+          alt: image_block_alt
       }}
       <div class="rich-text__image-quick-add">
         {% render 'quick-add', product: block.settings.product, section: section -%}
