@@ -49,10 +49,11 @@
         {% if type == 'image' %}
           <div class="media-wrapper" style="--padding-aspect-ratio: {{ padding_aspect_ratio }};">
             {%- assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200' -%}
+            {%- assign collection_header_image_alt = image.alt | default: collection.title | default: shop.name -%}
             {{
               image
               | image_url: width: 2200
-              | image_tag: sizes: '100vw', widths: widths, fetchpriority: fetch_priority, class: 'media'
+              | image_tag: sizes: '100vw', widths: widths, fetchpriority: fetch_priority, class: 'media', alt: collection_header_image_alt
             }}
           </div>
         {% endif %}
