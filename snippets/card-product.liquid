@@ -111,16 +111,18 @@
         {%- endif -%}
       {%- endcapture -%}
       <div class="card__media-wrapper" style="--image-ratio: {{ image_ratio }};">
+        {%- assign card_image_alt = product.featured_media.alt | default: product.title | default: shop.name -%}
         {{
           product.featured_media
           | image_url: width: product.featured_media.width
-          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low'
+          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low', alt: card_image_alt
         }}
         {%- if product.media[1] != null and settings.card_show_second_image -%}
+          {%- assign card_image_alt_2 = product.media[1].alt | default: product.title | default: shop.name -%}
           {{
             product.media[1]
             | image_url: width: product.media[1].width
-            | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low', class: 'card__media-hover'
+            | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: 'low', class: 'card__media-hover', alt: card_image_alt_2
           }}
         {%- endif -%}
         {%- if settings.badge_display == 'image' -%}
