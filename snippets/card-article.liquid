@@ -34,10 +34,11 @@
         {%- endif -%}
       {%- endcapture -%}
       <div class="card__media-adapt">
+        {%- assign article_image_alt = article.image.alt | default: article.title | default: shop.name -%}
         {{
           article.image
           | image_url: width: article.image.width
-          | image_tag: sizes: sizes, widths: widths, loading: loading, class: 'card-border-radius'
+          | image_tag: sizes: sizes, widths: widths, loading: loading, class: 'card-border-radius', alt: article_image_alt
         }}
       </div>
     {%- else -%}
