@@ -506,7 +506,7 @@
               "type": "_hotspot-content",
               "settings": {
                 "label": "The Oversized — Lilac With Purple Lining",
-                "link": "shopify://products/the-oversized-lilac-w-purple-with-strap",
+                "link": "shopify://products/the-oversized-tote-bag-lilac-metallic",
                 "horizontal_position": 72,
                 "vertical_position": 72,
                 "mobile_horizontal_position": 80,
@@ -679,7 +679,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-lilac-w-purple-with-strap",
+                "product": "the-oversized-tote-bag-lilac-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -755,7 +755,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-lilac-w-purple-with-strap",
+                "product": "the-oversized-tote-bag-lilac-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
