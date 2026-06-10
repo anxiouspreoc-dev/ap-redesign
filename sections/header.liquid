@@ -140,10 +140,11 @@
                         {% if megamenu.settings[image_id] != blank %}
                           <div class="header__promo-link image-card expand-link">
                             <div class="image-card__image-wrapper  image-ratio" style="--image-ratio: {{ image_ratio }}">
+                              {%- assign megamenu_image_alt = megamenu.settings[image_id].alt | default: megamenu.settings[label_id] | default: shop.name -%}
                               {{
                                 megamenu.settings[image_id]
                                 | image_url: width: 800
-                                | image_tag: sizes: '25vw', widths: widths, loading: 'lazy'
+                                | image_tag: sizes: '25vw', widths: widths, loading: 'lazy', alt: megamenu_image_alt
                               }}
                             </div>
                             {% if megamenu.settings[label_id] != blank %}
