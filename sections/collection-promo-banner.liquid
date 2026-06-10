@@ -29,6 +29,7 @@
       {%- comment -%}--- Image Cell 1 ---{%- endcomment -%}
       <div class="collection-promo-banner__image-cell">
         {%- if section.settings.image_1 != blank -%}
+          {%- assign promo_image_1_alt = section.settings.image_1.alt | default: section.settings.heading | default: shop.name -%}
           {{
             section.settings.image_1
             | image_url: width: 800
@@ -37,7 +38,8 @@
               fetchpriority: fetch_priority,
               widths: '400,600,800,1000',
               sizes: '(min-width: 64em) 25vw, 50vw',
-              class: 'collection-promo-banner__img'
+              class: 'collection-promo-banner__img',
+              alt: promo_image_1_alt
           }}
         {%- else -%}
           {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg collection-promo-banner__img' }}
