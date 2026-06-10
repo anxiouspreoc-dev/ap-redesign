@@ -41,10 +41,11 @@
       {%- endcapture -%}
 
       <div class="flex image-ratio card__media-wrapper alignment--bottom-right" style="--image-ratio: {{ image_ratio }};">
+        {%- assign media_grid_image_alt = block.settings.image.alt | default: block.settings.product.title | default: shop.name -%}
         {{
           block.settings.image
           | image_url: width: block.settings.image.width
-          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: fetch_priority
+          | image_tag: sizes: sizes, widths: widths, loading: loading, fetchpriority: fetch_priority, alt: media_grid_image_alt
         }}
         {%- if block.settings.product != blank -%}
           {% render 'quick-add', product: block.settings.product, section: section, button_style: section.settings.button_style -%}
