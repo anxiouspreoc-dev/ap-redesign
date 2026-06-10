@@ -67,10 +67,11 @@
       {%- if image != blank -%}
         <div class="media-wrapper {% if settings.mobile_image != blank or section.settings.mobile_video != blank %}hidden md:block{% endif %}">
           {%- assign widths = '200, 300, 400, 500, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200' -%}
+          {%- assign banner_image_alt = image.alt | default: shop.name -%}
           {{
             image
             | image_url: width: 2200
-            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'media', loading: loading
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: 'media', loading: loading, alt: banner_image_alt
           }}
         </div>
       {%- endif -%}
