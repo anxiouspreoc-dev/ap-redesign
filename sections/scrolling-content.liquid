@@ -56,6 +56,7 @@
                         <a href="{{ block.settings.link }}">
                       {%- endif -%}
                       {% assign sizes = block.settings.max_width | append: 'px' %}
+                      {%- assign scrolling_image_alt = block.settings.image.alt | default: shop.name -%}
                       {{
                         block.settings.image
                         | image_url: width: block.settings.image.width
@@ -64,7 +65,8 @@
                           widths: widths,
                           fetchpriority: fetch_priority,
                           loading: loading,
-                          style: style
+                          style: style,
+                          alt: scrolling_image_alt
                       }}
                       {%- if block.settings.link != blank -%}
                         </a>
