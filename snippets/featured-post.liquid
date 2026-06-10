@@ -77,10 +77,11 @@
             {% if section.settings.container_type == 'max' %}
               {% assign sizes = 'min(100vw, 87.5rem)' %}
             {% endif %}
+            {%- assign featured_image_alt = featured.image.alt | default: featured.title | default: shop.name -%}
             {{
               featured.image
               | image_url: width: 2200
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: 'high', class: 'media'
+              | image_tag: sizes: sizes, widths: widths, fetchpriority: 'high', class: 'media', alt: featured_image_alt
             }}
           </div>
         {% else %}
