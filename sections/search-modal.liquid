@@ -117,10 +117,11 @@
                         endif
                       -%}
                       <div class="image-card__image-wrapper image-ratio" style="--image-ratio: {{ image_ratio }}">
+                        {%- assign search_promo_image_alt = collection.featured_image.alt | default: collection.title | default: shop.name -%}
                         {{
                           collection.featured_image
                           | image_url: width: 240
-                          | image_tag: sizes: '15rem', widths: widths, class: 'header__promo-image', loading: 'lazy'
+                          | image_tag: sizes: '15rem', widths: widths, class: 'header__promo-image', loading: 'lazy', alt: search_promo_image_alt
                         }}
                       </div>
                     {%- endif -%}
