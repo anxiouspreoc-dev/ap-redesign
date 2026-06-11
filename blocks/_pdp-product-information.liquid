@@ -3,6 +3,10 @@
     <section class="product-info padding--section-block" style="{% render 'padding-override', settings: block.settings, scope: 'block' %}">
       <div class="product-info__container container container--{{ block.settings.container_width }}">
         <div class="product-info__blocks">
+          {%- assign pdp_product = section.settings.product | default: product -%}
+          {%- if pdp_product.tags contains 'preorder' -%}
+            <h5 class="product-info__preorder-pill">{{ 'products.product.preorder' | t }}</h5>
+          {%- endif -%}
           {% content_for 'blocks' %}
         </div>
       </div>
