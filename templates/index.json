@@ -244,6 +244,15 @@
           },
           "blocks": {}
         },
+        "logo_gYbJJV": {
+          "type": "_logo",
+          "name": "t:logo",
+          "settings": {
+            "image": "shopify://shop_images/Vogue-logo.png",
+            "link": ""
+          },
+          "blocks": {}
+        },
         "logo_7REeCA": {
           "type": "_logo",
           "settings": {
@@ -310,6 +319,7 @@
       },
       "block_order": [
         "logo_cRJrCV",
+        "logo_gYbJJV",
         "logo_7REeCA",
         "logo_ny3Mpz",
         "logo_cDhPgh"
