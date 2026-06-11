@@ -7,9 +7,6 @@
     <li class="exception list-separator__item" data-badge="sale">Sale</li>
   {%- endif -%}
   {%- assign tags_lower = product.tags | join: ',' | downcase | split: ',' -%}
-  {%- if tags_lower contains 'preorder' -%}
-    <li class="list-separator__item" data-badge="pre-order">Pre-order</li>
-  {%- endif -%}
   {%- if tags_lower contains 'bestseller' or tags_lower contains 'best-seller' -%}
     <li class="list-separator__item" data-badge="bestseller">Bestseller</li>
   {%- endif -%}
