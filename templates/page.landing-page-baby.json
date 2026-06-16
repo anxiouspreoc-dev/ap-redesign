@@ -411,19 +411,6 @@
     "stacked_images_with_text_D7GBkh": {
       "type": "stacked-images-with-text",
       "blocks": {
-        "image_fe4nt8": {
-          "type": "image",
-          "name": "t:image",
-          "settings": {
-            "image_ratio": "default",
-            "max_width": 400,
-            "horizontal_alignment": "left",
-            "link": "",
-            "link_label": "",
-            "product": ""
-          },
-          "blocks": {}
-        },
         "heading_group_fJUbii": {
           "type": "heading-group",
           "settings": {
@@ -481,7 +468,6 @@
         },
         "stacked-images": {
           "type": "_stacked-images",
-          "disabled": true,
           "static": true,
           "settings": {},
           "blocks": {
@@ -513,7 +499,6 @@
         }
       },
       "block_order": [
-        "image_fe4nt8",
         "heading_group_fJUbii",
         "text_p84iPG",
         "button_group_8TmMCd"
@@ -530,9 +515,9 @@
     }
   },
   "order": [
+    "stacked_images_with_text_D7GBkh",
     "main",
     "testimonials_LxatnE",
-    "video_reels_tGRfQF",
-    "stacked_images_with_text_D7GBkh"
+    "video_reels_tGRfQF"
   ]
 }
