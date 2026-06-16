@@ -16,6 +16,28 @@ class CollectionInfiniteScroll extends HTMLElement {
     });
   }
 
+  setupAutoLoad() {
+    if (!('IntersectionObserver' in window)) return;
+    this.loadMoreContainer = this.querySelector('#ProductLoadMore');
+    if (!this.loadMoreContainer) return;
+    // Trigger a load 600px before the "Load more" button reaches the viewport.
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) this.autoLoad();
+        });
+      },
+      { rootMargin: '600px 0px' }
+    );
+    this.observer.observe(this.loadMoreContainer);
+  }
+
+  autoLoad() {
+    if (this.isLoading || !this.loadMoreContainer) return;
+    const button = this.loadMoreContainer.querySelector('[data-load-direction="more"]');
+    if (button) button.click();
+  }
+
   onClick(event) {
     if (this.isLoading) return;
     const page = event.target.getAttribute('data-product-page');
