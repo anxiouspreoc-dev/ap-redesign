@@ -6,6 +6,8 @@ class CollectionInfiniteScroll extends HTMLElement {
     this.container = document.getElementById('ProductGrid');
     this.isLoading = false;
 
+    this.setupAutoLoad();
+
     document.addEventListener('DOMContentLoaded', (event) => {
       const hash = window.location.hash;
       if (hash) {
