@@ -10,12 +10,26 @@ if (!customElements.get('thumbnail-gallery')) {
         this.thumbnails.forEach((thumbnail) => {
           thumbnail.addEventListener('click', this.onClick.bind(this));
         });
+
+        this.prevButton = this.querySelector('[data-gallery-prev]');
+        this.nextButton = this.querySelector('[data-gallery-next]');
+        this.prevButton?.addEventListener('click', () => this.step(-1));
+        this.nextButton?.addEventListener('click', () => this.step(1));
       }
 
       onClick(event) {
         const id = event.currentTarget.dataset.thumbnail;
 
         this.activateMedia(id);
+      }
+
+      step(direction) {
+        const ids = [...this.media].map((el) => el.dataset.mediaId);
+        if (ids.length === 0) return;
+        const active = [...this.media].find((el) => el.hasAttribute('data-active')) || this.media[0];
+        const current = ids.indexOf(active.dataset.mediaId);
+        const next = (current + direction + ids.length) % ids.length;
+        this.activateMedia(ids[next]);
       }
 
       activateMedia(id) {
