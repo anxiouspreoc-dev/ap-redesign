@@ -54,10 +54,7 @@
           <script src="{{ 'custom-select.js' | asset_url }}" defer="defer"></script>
           <span class="variant-picker__legend">
             <label for="{{ option_id }}" id="label_{{ option_id }}" class="caption">
-              {{ option.name }}:
-              <span data-selected-value>
-                {% if variant %}{{- option.selected_value -}}{% endif %}
-              </span>
+              {{ option.name }}
             </label>
             {%- render 'variant-picker-modal', block: block,  option: option -%}
           </span>
