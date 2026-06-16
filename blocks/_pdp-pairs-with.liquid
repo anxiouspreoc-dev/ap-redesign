@@ -3,7 +3,9 @@
 
 <div class="pdp-pairs-with" {{ block.shopify_attributes }}>
   {%- if pairs != blank and pairs.size > 0 -%}
-    <h2 class="pdp-pairs-with__heading">PAIRS WITH:</h2>
+    {%- if block.settings.heading != blank -%}
+      <h2 class="pdp-pairs-with__heading">{{ block.settings.heading }}</h2>
+    {%- endif -%}
 
     <div class="pdp-pairs-with__scroll-wrapper">
       <ul class="pdp-pairs-with__list list-unstyled" role="list">
