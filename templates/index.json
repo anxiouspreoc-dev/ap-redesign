@@ -26,6 +26,7 @@
             "horizontal_alignment": "center",
             "vertical_alignment": "bottom",
             "enable_banner_click": false,
+            "enhance_text_readability": true,
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
             "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
