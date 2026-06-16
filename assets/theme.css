@@ -475,6 +475,13 @@ shopify-accelerated-checkout-cart {
   gap: var(--space-2xs);
   align-items: center;
 }
+.newsletter__success-code {
+  margin-block-start: var(--space-2xs);
+}
+.newsletter__code {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
 .form {
   display: grid;
   gap: var(--space-m) var(--space-xs);
