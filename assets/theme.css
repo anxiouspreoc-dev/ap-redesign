@@ -5603,10 +5603,15 @@ product-recommendations > * {
   justify-content: center;
   inline-size: 2.75rem;
   block-size: 2.75rem;
+  padding: 0;
+  border: none;
   border-radius: 50%;
   background: rgba(var(--color-background), 0.85);
   color: rgb(var(--color-foreground));
   opacity: 0.85;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 .pdp-thumbnails__arrow:hover {
