@@ -82,6 +82,16 @@
               {% render 'product-media', media: media, settings: settings, index: forloop.index %}
             </div>
           {%- endfor -%}
+          {%- if product.media.size > 1 -%}
+            <button type="button" class="pdp-thumbnails__arrow pdp-thumbnails__arrow--prev button button--square button--{{ settings.button_style }}" data-gallery-prev>
+              <span class="visually-hidden">{{ 'sections.slider.previous_slide' | t }}</span>
+              {%- render 'icon', icon: 'caret-left', class: 'icon--l' -%}
+            </button>
+            <button type="button" class="pdp-thumbnails__arrow pdp-thumbnails__arrow--next button button--square button--{{ settings.button_style }}" data-gallery-next>
+              <span class="visually-hidden">{{ 'sections.slider.next_slide' | t }}</span>
+              {%- render 'icon', icon: 'caret-right', class: 'icon--l' -%}
+            </button>
+          {%- endif -%}
         </div>
       </thumbnail-gallery>
     {% else %}
