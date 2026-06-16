@@ -122,6 +122,16 @@ class CollectionInfiniteScroll extends HTMLElement {
       const spinner = button.querySelector('.loading__spinner');
       if (spinner) spinner.classList.add('hidden');
     });
+
+    // Keep auto-loading if the "Load more" button is still within reach of the
+    // viewport (IntersectionObserver won't re-fire while it stays intersecting).
+    if (direction === 'more' && this.loadMoreContainer) {
+      requestAnimationFrame(() => {
+        const stillHasMore = this.loadMoreContainer.querySelector('[data-load-direction="more"]');
+        const rect = this.loadMoreContainer.getBoundingClientRect();
+        if (stillHasMore && rect.top < window.innerHeight + 600) this.autoLoad();
+      });
+    }
   }
 }
 customElements.define('collection-infinite-scroll', CollectionInfiniteScroll);
