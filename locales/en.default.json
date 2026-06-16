@@ -430,6 +430,7 @@
   "newsletter": {
     "label": "Email",
     "success": "Thanks for subscribing.",
+    "use_code": "Use code:",
     "button_label": "Subscribe"
   },
   "contact": {
