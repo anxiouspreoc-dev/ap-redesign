@@ -2163,6 +2163,26 @@ external-media.deferred-media[data-loaded=true] .deferred-media__controls {
   background: var(--overlay);
   z-index: 2;
 }
+/* Readability treatment: bottom gradient scrim + light text so the heading/body
+   stays legible over busy photos. Toggled per banner via "enhance_text_readability". */
+.media-banner__readability-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.32) 32%, rgba(0, 0, 0, 0) 62%);
+}
+.media-banner--readable .media-banner__content-inner,
+.media-banner--readable .media-banner__content-inner .heading,
+.media-banner--readable .media-banner__content-inner :is(h1, h2, h3, h4, h5, h6, p) {
+  color: #ffffff;
+}
+.media-banner--readable .media-banner__content-inner {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+.media-banner--readable .media-banner__content-inner .button {
+  text-shadow: none;
+}
 .media-banner__inner {
   position: relative;
   display: flex;
