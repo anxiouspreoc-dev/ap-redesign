@@ -33,7 +33,7 @@
 {%- endif -%}
 
 <div
-  class="media-banner {{ class }} height--{{ height | default: 'adapt' }} media-banner--stack-{{ stack }} mobile-height--{{ mobile_height }} {% if enable_banner_click %}media-banner--banner-click{% endif %} {% if settings.play_button_display == 'hover_focus' %}play-pause--hover-focus{% endif %} expand-link {% if settings.spacing == '0px' %}media-banner--no-frame{% endif %} {% if section.settings.color_scheme != settings.color_scheme %}media-banner--color-scheme-different{% endif %}"
+  class="media-banner {{ class }} height--{{ height | default: 'adapt' }} media-banner--stack-{{ stack }} mobile-height--{{ mobile_height }} {% if enable_banner_click %}media-banner--banner-click{% endif %} {% if settings.play_button_display == 'hover_focus' %}play-pause--hover-focus{% endif %} expand-link {% if settings.spacing == '0px' %}media-banner--no-frame{% endif %} {% if settings.enhance_text_readability %}media-banner--readable{% endif %} {% if section.settings.color_scheme != settings.color_scheme %}media-banner--color-scheme-different{% endif %}"
   style="--image-padding: {{ settings.spacing | default: '0px'}}; {% if settings.media_content_padding and settings.media_content_padding != 'default' %}--media-content-padding: {{ settings.media_content_padding }}{% endif %}"
 >
   <div class="media-banner__padding">
