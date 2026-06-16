@@ -51,6 +51,7 @@ if (!customElements.get('thumbnail-gallery')) {
         this.thumbnails.forEach((el) => {
           if (el.dataset.thumbnail === id) {
             el.setAttribute('aria-pressed', true);
+            el.scrollIntoView({ block: 'nearest', inline: 'nearest' });
           } else {
             el.removeAttribute('aria-pressed');
           }
