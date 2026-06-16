@@ -2603,5 +2603,17 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "t:newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "newsletter_discount_code",
+        "label": "Discount code",
+        "info": "Shown in the newsletter success message after a visitor subscribes (e.g. WELCOME10). Leave blank to hide.",
+        "default": "WELCOME10"
+      }
+    ]
   }
 ]
