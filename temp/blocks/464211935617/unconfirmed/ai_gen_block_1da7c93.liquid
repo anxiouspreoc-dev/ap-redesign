@@ -1,6 +1,502 @@
+{% doc %}
+  @prompt
+    Create a full-width feature section with a small all-caps label at the top that reads "What makes it work", followed by a large heading that reads "Every single thing you need. Zero nappy bag energy."
+    Below the heading, display a 2x2 grid of feature cards. Each card has: an image upload field at the top (for an icon or small graphic), a short bold title, and 2 sentences of body copy. 
+    
+    Below the grid, display a horizontal row of pill-shaped chips that read: "Works for the office too", "Running errands", "Gym bag", "Travel carry-on", "Back to brunch".
+    Add editable settings in the sidebar for: section background colour, section padding top and bottom, each card's background colour, card border colour, card border radius, image size per card, chip background colour, chip text colour, all heading and body text colours.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-feature-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.section_background_color }};
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-feature-section__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-feature-section__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .ai-feature-section__label-{{ ai_gen_id }} {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: {{ block.settings.label_color }};
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .ai-feature-section__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-feature-section__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    margin-bottom: 48px;
+  }
+
+  .ai-feature-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border: 1px solid {{ block.settings.card_border_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .ai-feature-card__image-wrapper-{{ ai_gen_id }} {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ai-feature-card__image-{{ ai_gen_id }} {
+    width: {{ block.settings.card_image_size }}px;
+    height: {{ block.settings.card_image_size }}px;
+    object-fit: contain;
+  }
+
+  .ai-feature-card__image-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.card_image_size }}px;
+    height: {{ block.settings.card_image_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+
+  .ai-feature-card__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-feature-card__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_title_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.card_title_color }};
+    margin: 0 0 12px 0;
+  }
+
+  .ai-feature-card__body-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_body_size }}px;
+    color: {{ block.settings.card_body_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-feature-section__chips-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .ai-feature-chip-{{ ai_gen_id }} {
+    background-color: {{ block.settings.chip_background_color }};
+    color: {{ block.settings.chip_text_color }};
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-feature-section__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .ai-feature-section__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.6 }}px;
+    }
+
+    .ai-feature-card-{{ ai_gen_id }} {
+      padding: 24px;
+    }
+
+    .ai-feature-section__chips-{{ ai_gen_id }} {
+      gap: 8px;
+    }
+
+    .ai-feature-chip-{{ ai_gen_id }} {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-feature-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-feature-section__container-{{ ai_gen_id }}">
+    <div class="ai-feature-section__header-{{ ai_gen_id }}">
+      {% if block.settings.label != blank %}
+        <div class="ai-feature-section__label-{{ ai_gen_id }}">{{ block.settings.label }}</div>
+      {% endif %}
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-feature-section__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="ai-feature-section__grid-{{ ai_gen_id }}">
+      {% for i in (1..4) %}
+        {% liquid
+          assign card_image_key = 'card_' | append: i | append: '_image'
+          assign card_title_key = 'card_' | append: i | append: '_title'
+          assign card_body_key = 'card_' | append: i | append: '_body'
+          
+          assign card_image = block.settings[card_image_key]
+          assign card_title = block.settings[card_title_key]
+          assign card_body = block.settings[card_body_key]
+        %}
+        
+        <div class="ai-feature-card-{{ ai_gen_id }}">
+          <div class="ai-feature-card__image-wrapper-{{ ai_gen_id }}">
+            {% if card_image %}
+              <img
+                src="{{ card_image | image_url: width: 400 }}"
+                alt="{{ card_image.alt | escape }}"
+                class="ai-feature-card__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="{{ block.settings.card_image_size }}"
+                height="{{ block.settings.card_image_size }}"
+              >
+            {% else %}
+              <div class="ai-feature-card__image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          
+          {% if card_title != blank %}
+            <h3 class="ai-feature-card__title-{{ ai_gen_id }}">{{ card_title }}</h3>
+          {% endif %}
+          
+          {% if card_body != blank %}
+            <div class="ai-feature-card__body-{{ ai_gen_id }}">{{ card_body }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="ai-feature-section__chips-{{ ai_gen_id }}">
+      {% for i in (1..5) %}
+        {% liquid
+          assign chip_text_key = 'chip_' | append: i | append: '_text'
+          assign chip_text = block.settings[chip_text_key]
+        %}
+        
+        {% if chip_text != blank %}
+          <div class="ai-feature-chip-{{ ai_gen_id }}">{{ chip_text }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Feature section",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "What makes it work"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Every single thing you need. Zero nappy bag energy."
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_1_title",
+      "label": "Title",
+      "default": "Feature title"
+    },
+    {
+      "type": "textarea",
+      "id": "card_1_body",
+      "label": "Body text",
+      "default": "Add a short description here. Keep it to 2 sentences for best results."
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_2_title",
+      "label": "Title",
+      "default": "Feature title"
+    },
+    {
+      "type": "textarea",
+      "id": "card_2_body",
+      "label": "Body text",
+      "default": "Add a short description here. Keep it to 2 sentences for best results."
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_3_title",
+      "label": "Title",
+      "default": "Feature title"
+    },
+    {
+      "type": "textarea",
+      "id": "card_3_body",
+      "label": "Body text",
+      "default": "Add a short description here. Keep it to 2 sentences for best results."
+    },
+    {
+      "type": "header",
+      "content": "Card 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "card_4_title",
+      "label": "Title",
+      "default": "Feature title"
+    },
+    {
+      "type": "textarea",
+      "id": "card_4_body",
+      "label": "Body text",
+      "default": "Add a short description here. Keep it to 2 sentences for best results."
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_image_size",
+      "label": "Image size",
+      "min": 40,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 12,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "Title size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "card_body_size",
+      "label": "Body size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "card_body_color",
+      "label": "Body color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Chips"
+    },
+    {
+      "type": "text",
+      "id": "chip_1_text",
+      "label": "Chip 1 text",
+      "default": "Works for the office too"
+    },
+    {
+      "type": "text",
+      "id": "chip_2_text",
+      "label": "Chip 2 text",
+      "default": "Running errands"
+    },
+    {
+      "type": "text",
+      "id": "chip_3_text",
+      "label": "Chip 3 text",
+      "default": "Gym bag"
+    },
+    {
+      "type": "text",
+      "id": "chip_4_text",
+      "label": "Chip 4 text",
+      "default": "Travel carry-on"
+    },
+    {
+      "type": "text",
+      "id": "chip_5_text",
+      "label": "Chip 5 text",
+      "default": "Back to brunch"
+    },
+    {
+      "type": "color",
+      "id": "chip_background_color",
+      "label": "Background color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "chip_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature section"
+    }
+  ]
+}
 {% endschema %}
