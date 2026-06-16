@@ -56,5 +56,11 @@
         {{- 'newsletter.success' | t -}}
       </h3>
     </div>
+    {%- if discount_code != blank -%}
+      <p class="newsletter__success-code body text-s justify-inherit">
+        {{ 'newsletter.use_code' | t }}
+        <strong class="newsletter__code">{{ discount_code }}</strong>
+      </p>
+    {%- endif -%}
   {%- endif -%}
   {%- endform -%}
