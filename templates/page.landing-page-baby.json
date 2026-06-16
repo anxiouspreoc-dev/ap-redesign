@@ -9,6 +9,92 @@
  */
 {
   "sections": {
+    "stacked_images_with_text_D7GBkh": {
+      "type": "stacked-images-with-text",
+      "blocks": {
+        "heading_group_fJUbii": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "subheading_pM8aKC": {
+              "type": "_subheading",
+              "settings": {
+                "subheading": "New Use, Same Bestseller"
+              },
+              "blocks": {}
+            },
+            "heading_FT3dVL": {
+              "type": "_heading",
+              "settings": {
+                "heading": "The not-a-diaper-bag diaper bag.",
+                "heading_size": "h3"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "subheading_pM8aKC",
+            "heading_FT3dVL"
+          ]
+        },
+        "text_p84iPG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You already carry the world in your AP tote. Turns out, it can carry a baby's world in it too, without looking like it does.</p>",
+            "font_style": "body text-xs"
+          },
+          "blocks": {}
+        },
+        "stacked-images": {
+          "type": "_stacked-images",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stacked_image_hhcTF3": {
+              "type": "_stacked-image",
+              "settings": {
+                "image": "shopify://shop_images/MidSilver12.jpg",
+                "image_ratio": "2 / 3",
+                "max_width": 90,
+                "link": "",
+                "link_label": ""
+              },
+              "blocks": {}
+            },
+            "stacked_image_E3WV9z": {
+              "type": "_stacked-image",
+              "settings": {
+                "image": "shopify://shop_images/MidSilver13_48c88ebd-70c5-4df7-883f-150ed00baa9b.png",
+                "image_ratio": "2 / 3",
+                "max_width": 100,
+                "link": "",
+                "link_label": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "stacked_image_hhcTF3",
+            "stacked_image_E3WV9z"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_fJUbii",
+        "text_p84iPG"
+      ],
+      "name": "t:stacked-images-with-text",
+      "settings": {
+        "horizontal_alignment": "center",
+        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -19,6 +105,186 @@
         "horizontal_alignment": "left",
         "container_width": "md",
         "color_scheme": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "178160125271e08a23": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_203e495_acFdzJ": {
+          "type": "ai_gen_block_203e495",
+          "settings": {
+            "label": "What makes it work",
+            "heading": "Every single thing you need. Zero nappy bag energy.",
+            "heading_size": 48,
+            "label_color": "#000000",
+            "heading_color": "#000000",
+            "section_background_color": "#ffffff",
+            "section_padding_top": 40,
+            "section_padding_bottom": 40,
+            "card_1_image": "shopify://shop_images/4_5358c366-6ac8-4bdc-b6c4-87002706465c.png",
+            "card_1_title": "Changing pad",
+            "card_1_body": "Includes a stylish changing pad, with a pocket for wipes and nappies. Because fumbling in a bag mid-change is everyone's nightmare.",
+            "card_2_image": "shopify://shop_images/1_9764234d-81ea-45fb-b6a9-28056acf2bdf.png",
+            "card_2_title": "SOOTHER POUCH",
+            "card_2_body": "Includes a soother pouch to keep them clean",
+            "card_3_image": "shopify://shop_images/3_de13ac8d-3ed1-4228-b842-9d424ee413e4.png",
+            "card_3_title": "Buggy straps",
+            "card_3_body": "Hangs straight onto your pram so your hands stay free. Or in your hands if you want. Flexible.",
+            "card_4_image": "shopify://shop_images/2_77c42727-7b81-4167-9d17-21dbaa430d0a.png",
+            "card_4_title": "Wipe-clean material",
+            "card_4_body": "Stain-resistant and wipe-clean. Because children are chaotic and your bag shouldn't suffer for it.",
+            "card_background_color": "#ffffff",
+            "card_border_color": "#e0e0e0",
+            "card_border_radius": 12,
+            "card_image_size": 48,
+            "grid_gap": 24,
+            "card_title_size": 18,
+            "card_title_color": "#000000",
+            "card_body_size": 14,
+            "card_body_color": "#666666",
+            "chip_1_text": "Works for the office too",
+            "chip_2_text": "Running errands",
+            "chip_3_text": "Gym bag",
+            "chip_4_text": "Travel carry-on",
+            "chip_5_text": "Back to brunch",
+            "chip_background_color": "#C8F70E",
+            "chip_text_color": "#000000"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_203e495_acFdzJ"
+      ],
+      "settings": {}
+    },
+    "video_reels_tGRfQF": {
+      "type": "video-reels",
+      "blocks": {
+        "video_reels_video_TTzjrR": {
+          "type": "_video-reels-video",
+          "settings": {
+            "video": "shopify://files/videos/mariawithprambag_compressed_8ce3694d-797a-4533-b8b8-e74721268342.mp4",
+            "creator_name": "",
+            "creator_link": "",
+            "video_ratio": "9 / 16",
+            "color_scheme": "",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
+          },
+          "blocks": {
+            "product": {
+              "type": "mini-product",
+              "static": true,
+              "settings": {
+                "product": "the-mid-tote-bag-silver-metallic",
+                "style": "card",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "video_reels_video_AGUdKP": {
+          "type": "_video-reels-video",
+          "settings": {
+            "video": "shopify://files/videos/laura-crossingstreet_ed7db537-7737-44e2-b9b8-059e1744b44c_ac3e7f43-ec11-4a9f-88f2-5e3edd984386_0b9fae14-4198-48a5-995b-92e941d702ef.mp4",
+            "creator_name": "",
+            "creator_link": "",
+            "video_ratio": "9 / 16",
+            "color_scheme": "",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
+          },
+          "blocks": {
+            "product": {
+              "type": "mini-product",
+              "static": true,
+              "settings": {
+                "product": "the-mid-tote-bag-lilac-metallic",
+                "style": "card",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "video_reels_video_yd9z89": {
+          "type": "_video-reels-video",
+          "settings": {
+            "video": "shopify://files/videos/janinefillingbagorganiser(1)_42f88850-c36c-4e22-8d08-814e572ef166.mp4",
+            "creator_name": "",
+            "creator_link": "",
+            "video_ratio": "9 / 16",
+            "color_scheme": "",
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)"
+          },
+          "blocks": {
+            "product": {
+              "type": "mini-product",
+              "static": true,
+              "settings": {
+                "product": "the-organizer-lime-green-bag-organizer",
+                "style": "card",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "center",
+            "subheading": "See it in action",
+            "heading": "On the buggy. Off the buggy.",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>Watch it work — on a pram, as a tote, in the wild.</p>",
+            "button_label": "",
+            "button_link": ""
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "video_reels_video_TTzjrR",
+        "video_reels_video_AGUdKP",
+        "video_reels_video_yd9z89"
+      ],
+      "name": "t:video-reels",
+      "settings": {
+        "enable_autoplay": true,
+        "enable_mute_toggle": true,
+        "hide_inactive_products": true,
+        "product_position": "overlay",
+        "columns_desktop": "3",
+        "container_type": "max",
+        "grid_gap_horizontal": "default",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
         "padding_top": "default",
         "padding_bottom": "default",
         "show_top_border": false,
@@ -36,7 +302,8 @@
               "type": "image",
               "static": true,
               "settings": {
-                "image_ratio": "default",
+                "image": "shopify://shop_images/MidSilver3.webp",
+                "image_ratio": "1",
                 "max_width": 1400,
                 "horizontal_alignment": "inherit",
                 "link": "",
@@ -57,8 +324,8 @@
               "type": "_single-heading",
               "static": true,
               "settings": {
-                "heading": "“Showcase a customer review.”",
-                "heading_size": "h5"
+                "heading": "I brought this to a work meeting and nobody suspected it had a nappy and a changing mat in it. I consider this a win.",
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -66,13 +333,14 @@
               "type": "text",
               "static": true,
               "settings": {
-                "text": "<p>Author</p>",
+                "text": "<p>Ciara D.</p>",
                 "font_style": "caption"
               },
               "blocks": {}
             },
             "author-secondary": {
               "type": "text",
+              "disabled": true,
               "static": true,
               "settings": {
                 "text": "<p>Author title</p>",
@@ -91,6 +359,7 @@
               "type": "image",
               "static": true,
               "settings": {
+                "image": "shopify://shop_images/MidSilver3.webp",
                 "image_ratio": "default",
                 "max_width": 1400,
                 "horizontal_alignment": "inherit",
@@ -112,8 +381,8 @@
               "type": "_single-heading",
               "static": true,
               "settings": {
-                "heading": "“Showcase a customer review.”",
-                "heading_size": "h5"
+                "heading": "My life changed completely when I had my first baby. My style didn't have to",
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -121,13 +390,14 @@
               "type": "text",
               "static": true,
               "settings": {
-                "text": "<p>Author</p>",
+                "text": "<p>Amanda L.</p>",
                 "font_style": "caption"
               },
               "blocks": {}
             },
             "author-secondary": {
               "type": "text",
+              "disabled": true,
               "static": true,
               "settings": {
                 "text": "<p>Author title</p>",
@@ -146,6 +416,7 @@
               "type": "image",
               "static": true,
               "settings": {
+                "image": "shopify://shop_images/MidSilver3.webp",
                 "image_ratio": "default",
                 "max_width": 1400,
                 "horizontal_alignment": "inherit",
@@ -167,8 +438,8 @@
               "type": "_single-heading",
               "static": true,
               "settings": {
-                "heading": "“Showcase a customer review.”",
-                "heading_size": "h5"
+                "heading": "I refused to become a woman who carried a bag with cartoon ducks on it.",
+                "heading_size": "h6"
               },
               "blocks": {}
             },
@@ -176,13 +447,14 @@
               "type": "text",
               "static": true,
               "settings": {
-                "text": "<p>Author</p>",
+                "text": "<p>Sophia C.</p>",
                 "font_style": "caption"
               },
               "blocks": {}
             },
             "author-secondary": {
               "type": "text",
+              "disabled": true,
               "static": true,
               "settings": {
                 "text": "<p>Author title</p>",
@@ -198,12 +470,12 @@
           "static": true,
           "settings": {
             "layout_header": "center",
-            "subheading": "Subheading",
-            "heading": "Testimonials",
+            "subheading": "From the mums who've tested it",
+            "heading": "The reviews are in. The nappy bag is out.",
             "page_title": false,
             "heading_size": "h2",
-            "text": "<p>This is an optional description. Use this text to provide context and guidance for the content below. For example, you could briefly describe features, inspiration or relevant promotions. Leave the text blank if you prefer to remove it.</p>",
-            "button_label": "Button label",
+            "text": "",
+            "button_label": "",
             "button_link": ""
           },
           "blocks": {}
@@ -233,141 +505,39 @@
         "show_bottom_border": false
       }
     },
-    "video_reels_tGRfQF": {
-      "type": "video-reels",
+    "before_after_rEwwez": {
+      "type": "before-after",
       "blocks": {
-        "video_reels_video_TTzjrR": {
-          "type": "_video-reels-video",
-          "settings": {
-            "creator_name": "",
-            "creator_link": "",
-            "video_ratio": "9 / 16",
-            "color_scheme": "",
-            "enable_overlay": false,
-            "overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
-          },
-          "blocks": {
-            "product": {
-              "type": "mini-product",
-              "static": true,
-              "settings": {
-                "product": "",
-                "style": "card",
-                "color_scheme": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
-        "video_reels_video_yd9z89": {
-          "type": "_video-reels-video",
-          "settings": {
-            "creator_name": "",
-            "creator_link": "",
-            "video_ratio": "9 / 16",
-            "color_scheme": "",
-            "enable_overlay": false,
-            "overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
-          },
-          "blocks": {
-            "product": {
-              "type": "mini-product",
-              "static": true,
-              "settings": {
-                "product": "",
-                "style": "card",
-                "color_scheme": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
-        "video_reels_video_AGUdKP": {
-          "type": "_video-reels-video",
-          "settings": {
-            "creator_name": "",
-            "creator_link": "",
-            "video_ratio": "9 / 16",
-            "color_scheme": "",
-            "enable_overlay": false,
-            "overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
-          },
-          "blocks": {
-            "product": {
-              "type": "mini-product",
-              "static": true,
-              "settings": {
-                "product": "",
-                "style": "card",
-                "color_scheme": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
-        "video_reels_video_Kqzept": {
-          "type": "_video-reels-video",
-          "settings": {
-            "creator_name": "",
-            "creator_link": "",
-            "video_ratio": "9 / 16",
-            "color_scheme": "",
-            "enable_overlay": false,
-            "overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
-          },
-          "blocks": {
-            "product": {
-              "type": "mini-product",
-              "static": true,
-              "settings": {
-                "product": "",
-                "style": "card",
-                "color_scheme": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
-        "video_reels_video_LM3TUF": {
-          "type": "_video-reels-video",
-          "settings": {
-            "creator_name": "",
-            "creator_link": "",
-            "video_ratio": "9 / 16",
-            "color_scheme": "",
-            "enable_overlay": false,
-            "overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%)"
-          },
-          "blocks": {
-            "product": {
-              "type": "mini-product",
-              "static": true,
-              "settings": {
-                "product": "",
-                "style": "card",
-                "color_scheme": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
         "section-header": {
           "type": "_section-header",
           "static": true,
           "settings": {
             "layout_header": "center",
-            "subheading": "Subheading",
-            "heading": "Video reels",
+            "subheading": "",
+            "heading": "One bag, multiple lives",
             "page_title": false,
             "heading_size": "h2",
-            "text": "<p>This is an optional description. Use this text to provide context and guidance for the content below. For example, you could briefly describe features, inspiration or relevant promotions. Leave the text blank if you prefer to remove it.</p>",
-            "button_label": "Button label",
+            "text": "<p>It's a diaper bag when you need it to be. It's your work bag the rest of the time. It doesn't look like either — it just looks like a really good bag.</p>",
+            "button_label": "",
             "button_link": ""
+          },
+          "blocks": {}
+        },
+        "before": {
+          "type": "_before",
+          "static": true,
+          "settings": {
+            "image": "shopify://shop_images/1_4a819d74-cdd1-463c-afe2-11cf47e0c458.png",
+            "label": "Before"
+          },
+          "blocks": {}
+        },
+        "after": {
+          "type": "_after",
+          "static": true,
+          "settings": {
+            "image": "shopify://shop_images/2_58a3f27f-46a1-46f4-801e-88f15bb2e266.png",
+            "label": "After"
           },
           "blocks": {}
         },
@@ -375,140 +545,34 @@
           "type": "button-group",
           "static": true,
           "settings": {
-            "horizontal_alignment": "inherit"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "video_reels_video_TTzjrR",
-        "video_reels_video_yd9z89",
-        "video_reels_video_AGUdKP",
-        "video_reels_video_Kqzept",
-        "video_reels_video_LM3TUF"
-      ],
-      "name": "t:video-reels",
-      "settings": {
-        "enable_autoplay": true,
-        "enable_mute_toggle": true,
-        "hide_inactive_products": true,
-        "product_position": "overlay",
-        "columns_desktop": "3",
-        "container_type": "max",
-        "grid_gap_horizontal": "default",
-        "arrow_position": "overlay",
-        "counter_style": "progress",
-        "button_style": "primary",
-        "color_scheme": "",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
-        "padding_top": "default",
-        "padding_bottom": "default",
-        "show_top_border": false,
-        "show_bottom_border": false
-      }
-    },
-    "stacked_images_with_text_D7GBkh": {
-      "type": "stacked-images-with-text",
-      "blocks": {
-        "heading_group_fJUbii": {
-          "type": "heading-group",
-          "settings": {
-            "page_title": false
+            "horizontal_alignment": "center"
           },
           "blocks": {
-            "subheading_pM8aKC": {
-              "type": "_subheading",
-              "settings": {
-                "subheading": "Subheading"
-              },
-              "blocks": {}
-            },
-            "heading_FT3dVL": {
-              "type": "_heading",
-              "settings": {
-                "heading": "Stacked images with text",
-                "heading_size": "h2"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "subheading_pM8aKC",
-            "heading_FT3dVL"
-          ]
-        },
-        "text_p84iPG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
-            "font_style": "body"
-          },
-          "blocks": {}
-        },
-        "button_group_8TmMCd": {
-          "type": "button-group",
-          "settings": {
-            "horizontal_alignment": "inherit"
-          },
-          "blocks": {
-            "button_tNrF8K": {
+            "button_VchPRg": {
               "type": "_button",
               "settings": {
                 "button_style": "primary",
-                "button_label": "Button label",
+                "button_label": "Shop Our Baby Bundle Now",
                 "button_link": ""
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "button_tNrF8K"
-          ]
-        },
-        "stacked-images": {
-          "type": "_stacked-images",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "stacked_image_hhcTF3": {
-              "type": "_stacked-image",
-              "settings": {
-                "image_ratio": "1",
-                "max_width": 90,
-                "link": "",
-                "link_label": ""
-              },
-              "blocks": {}
-            },
-            "stacked_image_E3WV9z": {
-              "type": "_stacked-image",
-              "settings": {
-                "image_ratio": "2 / 3",
-                "max_width": 80,
-                "link": "",
-                "link_label": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "stacked_image_hhcTF3",
-            "stacked_image_E3WV9z"
+            "button_VchPRg"
           ]
         }
       },
-      "block_order": [
-        "heading_group_fJUbii",
-        "text_p84iPG",
-        "button_group_8TmMCd"
-      ],
-      "name": "t:stacked-images-with-text",
+      "name": "t:beforeafter-image",
       "settings": {
-        "horizontal_alignment": "center",
-        "color_scheme": "",
+        "badges_style": "text",
+        "vertical_alignment": "top",
+        "container_type": "max",
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
         "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme_transition": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+        "padding_top": "var(--space-3xs)",
+        "padding_bottom": "var(--space-m)",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -517,7 +581,9 @@
   "order": [
     "stacked_images_with_text_D7GBkh",
     "main",
+    "178160125271e08a23",
+    "video_reels_tGRfQF",
     "testimonials_LxatnE",
-    "video_reels_tGRfQF"
+    "before_after_rEwwez"
   ]
 }
