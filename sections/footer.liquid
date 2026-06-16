@@ -30,7 +30,8 @@
                 {%- render 'newsletter',
                   form_id: 'ContactFooter',
                   settings: block.settings,
-                  horizontal_alignment: section.settings.horizontal_alignment
+                  horizontal_alignment: section.settings.horizontal_alignment,
+                  discount_code: settings.newsletter_discount_code
                 -%}
                 {%- if block.settings.show_social == true or shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
                   <div class="footer__social-links justify-{{ section.settings.horizontal_alignment }}">
