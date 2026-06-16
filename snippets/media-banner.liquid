@@ -101,6 +101,9 @@
           <div class="media-wrapper"></div>
         {%- endif -%}
       {%- endif -%}
+      {%- if settings.enhance_text_readability -%}
+        <div class="media-banner__readability-scrim" aria-hidden="true"></div>
+      {%- endif -%}
       {%- if settings.enable_overlay %}
         <div class="media-banner__overlay" style="--overlay: {{ settings.overlay }}"></div>
       {%- endif -%}
