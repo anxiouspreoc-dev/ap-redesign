@@ -34,6 +34,9 @@ class CollectionInfiniteScroll extends HTMLElement {
 
   autoLoad() {
     if (this.isLoading || !this.loadMoreContainer) return;
+    // When the final page has loaded the container is hidden (display:none) but
+    // may still hold a stale button — don't re-trigger off it.
+    if (this.loadMoreContainer.style.display === 'none') return;
     const button = this.loadMoreContainer.querySelector('[data-load-direction="more"]');
     if (button) button.click();
   }
