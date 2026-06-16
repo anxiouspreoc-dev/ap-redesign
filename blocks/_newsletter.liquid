@@ -1,5 +1,5 @@
 <div class="newsletter" {{ block.shopify_attributes }}>
-  {% render 'newsletter-form', settings: block.settings, form_id: block.id  %}
+  {% render 'newsletter-form', settings: block.settings, form_id: block.id, discount_code: settings.newsletter_discount_code %}
 </div>
 
 {% schema %}
