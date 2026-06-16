@@ -481,6 +481,7 @@ shopify-accelerated-checkout-cart {
 .newsletter__code {
   font-weight: 700;
   letter-spacing: 0.04em;
+  color: #e0531f;
 }
 .form {
   display: grid;
