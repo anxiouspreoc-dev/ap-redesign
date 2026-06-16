@@ -24,12 +24,14 @@ if (!customElements.get('thumbnail-gallery')) {
       }
 
       step(direction) {
-        const ids = [...this.media].map((el) => el.dataset.mediaId);
-        if (ids.length === 0) return;
-        const active = [...this.media].find((el) => el.hasAttribute('data-active')) || this.media[0];
-        const current = ids.indexOf(active.dataset.mediaId);
-        const next = (current + direction + ids.length) % ids.length;
-        this.activateMedia(ids[next]);
+        // Use only the main media wrappers — the <img> inside each also carries
+        // data-media-id, so querying broadly would list every id twice.
+        const mains = [...this.querySelectorAll('.pdp-thumbnails__main[data-media-id]')];
+        if (mains.length === 0) return;
+        const activeIndex = mains.findIndex((el) => el.hasAttribute('data-active'));
+        const current = activeIndex === -1 ? 0 : activeIndex;
+        const next = (current + direction + mains.length) % mains.length;
+        this.activateMedia(mains[next].dataset.mediaId);
       }
 
       activateMedia(id) {
