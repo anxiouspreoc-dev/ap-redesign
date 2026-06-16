@@ -62,6 +62,7 @@
   %}
 {% endcapture %}
 
+{%- if product_count > 0 or request.design_mode -%}
 <div {% render 'color-scheme-attributes', scoped_settings: section.settings, borders: true %}>
   <div class="pdp-colorways padding--section gap--section" style="{% render 'padding-override', settings: section.settings %}">
 
