@@ -5591,6 +5591,33 @@ product-recommendations > * {
   grid-row: 1;
   grid-column: 1;
   min-inline-size: 0;
+  position: relative;
+}
+.pdp-thumbnails__arrow {
+  position: absolute;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border-radius: 50%;
+  background: rgba(var(--color-background), 0.85);
+  color: rgb(var(--color-foreground));
+  opacity: 0.85;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+.pdp-thumbnails__arrow:hover {
+  opacity: 1;
+  background: rgba(var(--color-background), 1);
+}
+.pdp-thumbnails__arrow--prev {
+  inset-inline-start: var(--space-xs);
+}
+.pdp-thumbnails__arrow--next {
+  inset-inline-end: var(--space-xs);
 }
 .pdp-thumbnails__main {
   position: var(--inactive-thumbnail-position, absolute);
