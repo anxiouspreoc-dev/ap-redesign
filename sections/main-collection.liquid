@@ -4,8 +4,6 @@
 -%}
 
 <div {% render 'color-scheme-attributes',  scoped_settings: section.settings, borders: true %}>
-  {%- comment -%} Semantic page H1 for the collection (visually hidden — the styled title is shown by the Rich text section above). {%- endcomment -%}
-  <h1 class="visually-hidden">{{ collection.title | escape }}</h1>
   <div class="product-grid padding--section" style="{% render 'padding-override', settings: section.settings %}">
     {%- paginate collection.products by section.settings.product_limit -%}
       {%- liquid
