@@ -166,7 +166,7 @@
           "type": "heading-group",
           "name": "t:heading",
           "settings": {
-            "page_title": false
+            "page_title": true
           },
           "blocks": {
             "heading_EdLgD4": {
