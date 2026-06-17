@@ -36,10 +36,11 @@
     {{- product.title | escape -}}
   </{{ title_tag }}>
 
+  {%- comment -%} Non-heading duplicate (shown only in quick-add/featured-product, where the primary heading is hidden) — kept as a span so the main product page has exactly one h1. {%- endcomment -%}
   <a href="{{ product.url }}" class="product-info__heading-link">
-    <{{ title_tag }} class="heading {{ block.settings.heading_size }}">
+    <span class="heading {{ block.settings.heading_size }}">
       {{- product.title | escape -}}
-    </{{ title_tag }}>
+    </span>
   </a>
 
   {{ share }}
