@@ -32,11 +32,25 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {%- liquid
+      assign meta_description = page_description
+      if meta_description == blank
+        case request.page_type
+          when 'collection'
+            assign meta_description = collection.description | strip_html | truncate: 160
+          when 'product'
+            assign meta_description = product.description | strip_html | truncate: 160
+          when 'article'
+            assign meta_description = article.excerpt_or_content | strip_html | truncate: 160
+        endcase
+      endif
+      assign meta_description = meta_description | default: shop.description | default: shop.name
+    -%}
+    {% if meta_description != blank %}
+      <meta name="description" content="{{ meta_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', meta_description: meta_description %}
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
