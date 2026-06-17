@@ -30,7 +30,7 @@
           </a>
           {% render 'close-button' %}
         </header>
-        <h1 class="visually-hidden" id="search-modal-heading">{{  'search.search' | t }}</h1>
+        <h2 class="visually-hidden" id="search-modal-heading">{{  'search.search' | t }}</h2>
         {%- if settings.predictive_search_enabled -%}
           <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- else -%}
