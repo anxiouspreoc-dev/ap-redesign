@@ -1,13 +1,16 @@
 {%- assign features = product.metafields.custom.product_features.value -%}
 
-<ul class="pdp-features list-unstyled">
-  {%- if features != blank and features.size > 0 -%}
+{%- if features != blank and features.size > 0 -%}
+  <ul class="pdp-features list-unstyled">
     {%- for feature in features -%}
       <li class="pdp-features__item">
         <span class="pdp-features__text">{{ feature }}</span>
       </li>
     {%- endfor -%}
-  {%- else -%}
+  </ul>
+{%- elsif request.design_mode -%}
+  {%- comment -%} Placeholder shown only in the theme editor, never on the live storefront. {%- endcomment -%}
+  <ul class="pdp-features list-unstyled">
     <li class="pdp-features__item pdp-features__item--placeholder">
       <span class="pdp-features__text">Feature 1 — update via product metafields</span>
     </li>
@@ -17,8 +20,8 @@
     <li class="pdp-features__item pdp-features__item--placeholder">
       <span class="pdp-features__text">Feature 3 — update via product metafields</span>
     </li>
-  {%- endif -%}
-</ul>
+  </ul>
+{%- endif -%}
 
 {% style %}
 .pdp-features {
