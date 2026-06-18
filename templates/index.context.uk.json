@@ -11,16 +11,20 @@
   "context": {
     "market": "uk"
   },
-  "parent": "header-group.json",
+  "parent": "index.json",
   "sections": {
-    "announcement_bar": {
+    "multicolumn_trWDVF": {
       "settings": {},
       "blocks": {
-        "text": {
-          "disabled": false,
-          "settings": {
-            "text": "<p>Free shipping on all orders over £135</p>"
-          }
+        "column_H9DMiU": {
+          "blocks": {
+            "single_heading_x68DPm": {
+              "settings": {
+                "heading": "Free Shipping Over £135"
+              }
+            }
+          },
+          "settings": {}
         }
       }
     }
