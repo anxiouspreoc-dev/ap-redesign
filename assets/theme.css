@@ -7631,16 +7631,4 @@ recently-viewed {
   }
 }
 
-/* Temporary: hide the Shopify Inbox chat on phones — below 490px the app
-   switches to a full-screen window whose close button sits off-screen and
-   can't be reached. 490px matches Inbox's own phone breakpoint, so the chat
-   still works as a normal popup on larger screens. Remove once the app-side
-   mobile bug is fixed. */
-@media (max-width: 490px) {
-  inbox-online-store-chat,
-  #shopify-chat {
-    display: none !important;
-  }
-}
-
 /* css/theme.css */
