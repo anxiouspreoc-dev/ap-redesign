@@ -73,6 +73,7 @@
         },
         "link_list-2": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "block_size": "small",
             "heading": "Shop Apparel",
