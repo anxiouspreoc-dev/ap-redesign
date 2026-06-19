@@ -7631,4 +7631,14 @@ recently-viewed {
   }
 }
 
+/* Temporary: hide the Shopify Inbox chat on phones — its window overflows the
+   screen and the close button is unreachable on mobile. Remove once the
+   app-side mobile bug is fixed. */
+@media (max-width: 47.99em) {
+  inbox-online-store-chat,
+  #shopify-chat {
+    display: none !important;
+  }
+}
+
 /* css/theme.css */
