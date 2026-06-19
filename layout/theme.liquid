@@ -80,6 +80,16 @@
           bottom: 12% !important;
         }
       }
+
+      /* Safety net: force the chat visible on phones, overriding any stale/cached
+         "display:none" rule. This inline <style> is in <body>, so it loads after
+         theme.css and wins the cascade. */
+      @media (max-width: 490px){
+        inbox-online-store-chat,
+        #shopify-chat{
+          display: block !important;
+        }
+      }
     </style>
     <a class="skip-to-content-link button button--primary" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
