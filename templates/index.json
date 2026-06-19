@@ -15,8 +15,8 @@
         "image-banner": {
           "type": "_image-banner",
           "settings": {
-            "image": "shopify://shop_images/HOME_PAGE_-_Convertible_Clutch.jpg",
-            "mobile_image": "shopify://shop_images/ConvertibleClutchToteGoldLifestyleJoanne_254c1f74-32ff-4f08-8cd4-d95588be9e6d.jpg",
+            "image": "shopify://shop_images/Home_Page_Desktop_Banner_1920_x_1080_px.png",
+            "mobile_image": "shopify://shop_images/Home_Page_MOBILE_BANNER_360_x_660_px.png",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
@@ -51,7 +51,7 @@
                 "heading": {
                   "type": "_heading",
                   "settings": {
-                    "heading": "BAGS FOR THE EMOTIONALLY ATTACHED.",
+                    "heading": "Beautifully organized chaos",
                     "heading_size": "h3"
                   },
                   "blocks": {}
@@ -652,7 +652,7 @@
         "video_reels_video_yAiGxt": {
           "type": "_video-reels-video",
           "settings": {
-            "video": "shopify://files/videos/SnapInsta.to_AQONd2SvNstkDXfUCxzKU-nJy1MpuRJ1eZLOUq11GsX-o5OfGUePVjGXx2ETbbShCp5dec9rOFnsSF_xuy9XseyC0xv4savr9ZiZGMQ.mp4",
+            "video": "shopify://files/videos/Compressed_SnapInsta.to_AQONd2SvNstkDXfUCxzKU-nJy1MpuRJ1eZLOUq11GsX-o5OfGUePVjGXx2ETbbShCp5dec9rOFnsSF_xuy9XseyC0xv4savr9ZiZGMQ_40bfa86f-934d-4dc3-9742-fb2c2a8be8ae.mp4",
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
@@ -727,7 +727,7 @@
         "video_reels_video_VwBNEK": {
           "type": "_video-reels-video",
           "settings": {
-            "video": "shopify://files/videos/download (1).mp4",
+            "video": "shopify://files/videos/AnnaLannenOSBumBagLilac.mp4",
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
@@ -740,7 +740,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-tote-bag-silver-metallic",
+                "product": "the-oversized-bum-bag-lilac",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -805,7 +805,7 @@
           "type": "_video-reels-video",
           "name": "t:video",
           "settings": {
-            "video": "shopify://files/videos/SnapInsta.to_AQPtN57gO9Hm0l9zrp_9JNsDv75RyxtMRgCYH_eKy7qbPYKL5PpTZSWouUp6fn1PwyMaQyt-bNXanaYW6YHG7Z_q7B0Baf5RscOSyFc.mp4",
+            "video": "shopify://files/videos/gold mid unboxing (1).mp4",
             "creator_name": "",
             "creator_link": "",
             "video_ratio": "9 / 16",
@@ -818,7 +818,7 @@
               "type": "mini-product",
               "static": true,
               "settings": {
-                "product": "the-oversized-tote-bag-silver-metallic",
+                "product": "the-mid-tote-bag-gold-metallic",
                 "style": "card",
                 "color_scheme": "scheme-8b844f31-27d7-4868-ad52-4fa16480d051"
               },
@@ -911,7 +911,7 @@
         "text_ekqPym": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. </p>",
+            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. <br/><strong>Get 10% off your first order when you subscribe.</strong></p>",
             "font_style": "body"
           },
           "blocks": {}
