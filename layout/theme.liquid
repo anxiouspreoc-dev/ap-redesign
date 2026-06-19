@@ -68,12 +68,15 @@
   </head>
   <body class="input--{{ settings.input_style }} label--{{ settings.label_style }} {% if settings.enable_overlay_borders %}overlay--borders{% endif %} {% if settings.enable_overlay_blur %}overlay--blur{% endif %} page--{{ template.name }} {% if template.suffix %}page--{{ template.name }}-{{ template.suffix | handleize }}{% endif %} horizontal-gap--m-{{ settings.grid_gap_horizontal_mobile | remove: 'var(--' | remove: ')' }} horizontal-gap--{{ settings.grid_gap_horizontal | remove: 'var(--' | remove: ')' }}" id="PageBody">
     <style>
-      inbox-online-store-chat{
+      /* Lift the chat button above the sticky add-to-cart bar — but ONLY while the
+         chat is closed. When open (full-screen on mobile) the offset would push the
+         window's top + close button off-screen, so don't apply it then. */
+      inbox-online-store-chat[is-open="false"]{
         bottom: 7% !important;
       }
 
       @media (max-width: 490px){
-        inbox-online-store-chat{
+        inbox-online-store-chat[is-open="false"]{
           bottom: 12% !important;
         }
       }
