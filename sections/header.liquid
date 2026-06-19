@@ -39,6 +39,25 @@
     .header__heading-logo-transparent {
       inline-size: 250px;
     }
+    /* Keep the logo centered on mobile regardless of the menu/icon widths.
+       The grid sizes the side columns to their content, so the wider icon side
+       pushed the logo off-centre. Pin the menu left + icons right and
+       absolutely centre the logo instead. */
+    .header--horizontal.header--logo-center .header__container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header--horizontal.header--logo-center .header__heading {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .header--horizontal.header--logo-center .header__heading-link {
+      pointer-events: auto;
+    }
   }
 
   .header__promo span.button.button--text {
