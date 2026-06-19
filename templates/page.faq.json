@@ -55,6 +55,7 @@
         "horizontal_alignment": "left",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
+        "enhance_text_readability": false,
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
         "color_scheme": "scheme-4",
@@ -824,7 +825,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We accept major debit and credit cards along with selected accelerated payment methods including Apple Pay, Google Pay, PayPal and Shopify Payments where available.</p>",
+                "text": "<p>We accept major debit and credit cards along with selected accelerated payment methods including Apple Pay, Google Pay, PayPal, Klarna and Shopify Payments where available.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1381,6 +1382,7 @@
             "horizontal_alignment": "center",
             "vertical_alignment": "middle",
             "enable_banner_click": false,
+            "enhance_text_readability": false,
             "enable_overlay": false,
             "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
             "color_scheme": "",
