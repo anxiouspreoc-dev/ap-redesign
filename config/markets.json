@@ -13,6 +13,9 @@
       "parent": "@default"
     },
     "uk": {
+      "parent": "international"
+    },
+    "international": {
       "parent": "@default"
     }
   }

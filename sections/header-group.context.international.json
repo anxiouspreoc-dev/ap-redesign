@@ -12,5 +12,17 @@
     "market": "international"
   },
   "parent": "header-group.json",
-  "sections": {}
+  "sections": {
+    "announcement_bar": {
+      "settings": {},
+      "blocks": {
+        "text-2": {
+          "disabled": false,
+          "settings": {
+            "text": "<p>‎ </p>"
+          }
+        }
+      }
+    }
+  }
 }
