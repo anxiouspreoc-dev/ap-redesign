@@ -911,7 +911,7 @@
         "text_ekqPym": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. </p>",
+            "text": "<p>We’ll send you new drops, exclusive access and emails that won’t spike your nervous system. <br/>Get 10% off your first order when you subscribe.</p>",
             "font_style": "body"
           },
           "blocks": {}
