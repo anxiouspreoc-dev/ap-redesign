@@ -92,6 +92,7 @@
   {% content_for "block", type: "_pdp-product-information", id: "pdp-product-information" %}
 {% endcapture %}
 
+{% render 'breadcrumbs', product: product, collection: collection %}
 {% render 'product', title_tag: 'h1', update_url: true, content: content, section: section %}
 
 {% schema %}
