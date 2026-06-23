@@ -9,9 +9,15 @@
 <div {% render 'color-scheme-attributes',  scoped_settings: section.settings, borders: true %}>
   <div class="container container--{{ section.settings.container_width }}">
     <div class="contact gap--section padding--section {{ section.settings.horizontal_alignment }}" style="{% render 'padding-override', settings: section.settings %}">
-      {% if section.settings.heading != blank or section.settings.subheading != blank or section.settings.text != blank %}
+      {% if section.settings.heading != blank or section.settings.subheading != blank or section.settings.text != blank or section.settings.phone != blank %}
         <div class="contact__rte rte">
           {%- render 'generic-blocks', settings: section.settings, horizontal_alignment: section.settings.horizontal_alignment -%}
+          {%- if section.settings.phone != blank -%}
+            {%- assign phone_href = section.settings.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' -%}
+            <p class="contact__phone">
+              <a href="tel:{{ phone_href }}">{{ section.settings.phone }}</a>
+            </p>
+          {%- endif -%}
         </div>
       {% endif %}
 
