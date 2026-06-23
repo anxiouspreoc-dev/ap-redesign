@@ -1,0 +1,31 @@
+{% comment %}
+  Free-shipping message that is market-aware (audit issue #16).
+
+  - Only renders for Ireland (IE) and the United Kingdom (GB).
+  - Hidden for every other country/market, so the hardcoded euro figure
+    never shows to shoppers browsing in another currency (e.g. PHP).
+  - Ireland and the UK each show their own threshold/text.
+
+  Detection uses the shopper's active country (localization.country.iso_code),
+  which follows the Shopify Market they are browsing in.
+
+  EDIT THE TWO MESSAGES BELOW to match your live shipping policy.
+{% endcomment %}
+
+{%- liquid
+  assign country = localization.country.iso_code
+
+  assign ie_message = 'Free Shipping Over €150'
+  assign uk_message = 'Free Shipping Over £130'
+
+  assign message = ''
+  if country == 'IE'
+    assign message = ie_message
+  elsif country == 'GB'
+    assign message = uk_message
+  endif
+-%}
+
+{%- if message != blank -%}
+  <h3 class="rich-text__heading heading h6 free-shipping-message">{{ message }}</h3>
+{%- endif -%}
