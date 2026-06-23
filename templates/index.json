@@ -965,20 +965,10 @@
           "type": "_column",
           "settings": {},
           "blocks": {
-            "icon_L6CeKw": {
-              "type": "_icon",
-              "name": "t:icon",
-              "settings": {
-                "icon": "box",
-                "icon_size": "icon--m"
-              },
-              "blocks": {}
-            },
             "single_heading_x68DPm": {
-              "type": "_single-heading",
+              "type": "liquid",
               "settings": {
-                "heading": "Free Shipping Over €150",
-                "heading_size": "h6"
+                "liquid": "{% render 'free-shipping-message' %}"
               },
               "blocks": {}
             },
@@ -993,7 +983,6 @@
             }
           },
           "block_order": [
-            "icon_L6CeKw",
             "single_heading_x68DPm",
             "text_LnjEtU"
           ]
