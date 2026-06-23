@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "social_instagram_link": "https://www.instagram.com/anxiouspreoccupied_/",
     "spacing_size": "medium",
     "grid_gap_horizontal": "var(--space-xs)",
     "grid_gap_vertical": "var(--space-l)",
