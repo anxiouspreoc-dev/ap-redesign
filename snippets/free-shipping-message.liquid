@@ -1,10 +1,12 @@
 {% comment %}
-  Free-shipping message that is market-aware (audit issue #16).
+  Market-aware free-shipping message (audit issue #16).
 
-  - Only renders for Ireland (IE) and the United Kingdom (GB).
-  - Hidden for every other country/market, so the hardcoded euro figure
-    never shows to shoppers browsing in another currency (e.g. PHP).
-  - Ireland and the UK each show their own threshold/text.
+  - Only renders for Ireland (IE) and the United Kingdom (GB), each with its
+    own threshold/text.
+  - For every other country/market it outputs an EMPTY <free-shipping-bar>
+    element. The CSS rule below hides the whole column slide when empty, so the
+    hardcoded euro figure never shows to shoppers browsing in another currency
+    (e.g. PHP) and no broken empty slide is left behind.
 
   Detection uses the shopper's active country (localization.country.iso_code),
   which follows the Shopify Market they are browsing in.
@@ -26,6 +28,9 @@
   endif
 -%}
 
-{%- if message != blank -%}
-  <h3 class="rich-text__heading heading h6 free-shipping-message">{{ message }}</h3>
-{%- endif -%}
+{%- style -%}
+  free-shipping-bar { display: contents; }
+  .slider-component__item:has(> .rte > free-shipping-bar:empty),
+  .multicolumn__item:has(free-shipping-bar:empty) { display: none; }
+{%- endstyle -%}
+<free-shipping-bar>{%- if message != blank -%}{%- render 'icon', icon: 'box', class: 'icon--m' -%}<h3 class="rich-text__heading heading h6 free-shipping-message">{{ message }}</h3>{%- endif -%}</free-shipping-bar>
