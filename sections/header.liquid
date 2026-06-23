@@ -383,12 +383,12 @@
       {%- endif -%}
     </div>
 
-    {% comment %} Logo {% endcomment %}
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading h6">
-    {%- else -%}
+    {% comment %}
+      Logo. Rendered as a div (not an h1) so the page's content heading
+      remains the single H1 — avoids the empty/duplicate H1 the logo h1
+      produced on the homepage. See audit issue #3.
+    {% endcomment %}
       <div class="header__heading">
-    {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link h6">
         {%- if settings.logo != blank -%}
           <div class="header__logo-wrapper">
