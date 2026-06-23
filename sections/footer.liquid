@@ -28,7 +28,7 @@
             {%- when 'newsletter' -%}
               <div class="footer__item footer__item--newsletter footer__item--{{ block.settings.block_size }} {{ section.settings.horizontal_alignment }}" {{ block.shopify_attributes }}>
                 {%- render 'newsletter',
-                  form_id: 'ContactFooter',
+                  form_id: block.id,
                   settings: block.settings,
                   horizontal_alignment: section.settings.horizontal_alignment,
                   discount_code: settings.newsletter_discount_code
