@@ -1,0 +1,44 @@
+{% doc %}
+  Renders breadcrumb navigation for a product page: Home / Collection / Product.
+  The collection segment is omitted when no collection context is available.
+
+  @param {object} product - A Shopify Product object
+  @param {object} [collection] - Optional collection context (when the product
+    was reached through a collection URL). Falls back to the product's first collection.
+
+  @example
+  {% render 'breadcrumbs', product: product, collection: collection %}
+{% enddoc %}
+
+{%- liquid
+  assign product_collection = collection | default: product.collections.first
+-%}
+
+{%- if product != blank -%}
+  <nav
+    class="breadcrumbs caption container container--xl"
+    aria-label="{{ 'accessibility.breadcrumbs' | t }}"
+  >
+    <ul class="breadcrumbs__list list-unstyled">
+      <li class="breadcrumbs__list-item">
+        <a href="{{ routes.root_url }}" class="link-hover-underline secondary">
+          <span>{{- 'general.breadcrumbs_homepage' | t -}}</span>
+        </a>
+      </li>
+      {%- if product_collection != blank and product_collection.url != blank -%}
+        <li class="breadcrumbs__list-item">
+          <span class="breadcrumbs__separator secondary" aria-hidden="true">/</span>
+          <a href="{{ product_collection.url }}" class="link-hover-underline secondary">
+            <span>{{- product_collection.title -}}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      <li class="breadcrumbs__list-item">
+        <span class="breadcrumbs__separator secondary" aria-hidden="true">/</span>
+        <a href="{{ product.url }}" class="link-hover-underline" aria-current="page">
+          <span>{{- product.title -}}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+{%- endif -%}
