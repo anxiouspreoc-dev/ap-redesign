@@ -21,6 +21,11 @@
         endfor
 
         assign show_filters = true
+        # Hide the filters sidebar entirely when the collection has no filters
+        # available (e.g. Best Sellers), otherwise an empty "Filters" panel renders.
+        if collection.filters.size == 0
+          assign show_filters = false
+        endif
         if count == 0 and collection.products.size == 0
           assign show_filters = false
         endif
