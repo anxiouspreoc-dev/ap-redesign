@@ -142,7 +142,7 @@
                     data-muted="{% if section.settings.enable_autoplay %}true{% else %}false{% endif %}"
                   >
                     <button class="button button--{{ button_style }} button--square deferred-media__button ">
-                      <span data-label class="visually-hidden">{{ umute_text }}</span>
+                      <span data-label class="visually-hidden">{{ unmute_text }}</span>
                       {%- render 'icon', icon: 'speaker-muted', class: 'mute-button__muted icon--s' -%}
                       {%- render 'icon', icon: 'speaker', class: 'mute-button__unmuted icon--s' -%}
                     </button>
