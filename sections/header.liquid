@@ -421,11 +421,7 @@
           <span>{{ shop.name }}</span>
         {%- endif -%}
       </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
-    {%- else -%}
       </div>
-    {%- endif -%}
 
     {%- if section.settings.layout_desktop == 'horizontal' and section.settings.logo_position == 'left' -%}
       <div class="header__middle">
