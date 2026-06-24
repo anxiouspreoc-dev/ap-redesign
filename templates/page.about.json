@@ -216,6 +216,7 @@
         "media-grid-image-4",
         "media-grid-image-5"
       ],
+      "disabled": true,
       "settings": {
         "columns_desktop": "4",
         "columns_mobile": "2",
