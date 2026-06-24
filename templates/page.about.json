@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
@@ -8,10 +17,13 @@
           "settings": {
             "text": "<p>Joanne McNally &amp; Nikki Lannen, Founders</p>",
             "font_style": "body text-s"
-          }
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["text"],
+      "block_order": [
+        "text"
+      ],
       "settings": {
         "height": "medium",
         "mobile_height": "large",
@@ -23,6 +35,7 @@
         "horizontal_alignment": "left",
         "vertical_alignment": "bottom",
         "enable_banner_click": false,
+        "enhance_text_readability": false,
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
         "color_scheme": "scheme-4",
@@ -39,46 +52,75 @@
       "blocks": {
         "rich-text-column": {
           "type": "_rich-text-column",
-          "settings": { "horizontal_alignment": "left" },
+          "settings": {
+            "horizontal_alignment": "left"
+          },
           "blocks": {
             "heading-group": {
               "type": "heading-group",
-              "settings": { "page_title": true },
+              "settings": {
+                "page_title": true
+              },
               "blocks": {
                 "subheading": {
                   "type": "_subheading",
-                  "settings": { "subheading": "About Anxious Preoccupied" }
+                  "settings": {
+                    "subheading": "About Anxious Preoccupied"
+                  },
+                  "blocks": {}
                 },
                 "heading": {
                   "type": "_heading",
                   "settings": {
                     "heading": "Emotional baggage, but make it chic.",
                     "heading_size": "h2"
-                  }
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["subheading", "heading"]
+              "block_order": [
+                "subheading",
+                "heading"
+              ]
             },
-            "text": { "type": "text", "settings": { "text": "", "font_style": "body" } }
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
           },
-          "block_order": ["heading-group", "text"]
+          "block_order": [
+            "heading-group",
+            "text"
+          ]
         },
         "rich-text-column-2": {
           "type": "_rich-text-column",
-          "settings": { "horizontal_alignment": "left" },
+          "settings": {
+            "horizontal_alignment": "left"
+          },
           "blocks": {
             "text-2": {
               "type": "text",
               "settings": {
-                "text": "<p>Anxious Preoccupied is the brainchild of best friends (15 years and counting), comedian Joanne McNally and businesswoman Nikki Lannen, who launched the brand in September 2023 with one shared belief: life is chaotic, so your accessories shouldn&rsquo;t be.</p><p>Named after Joanne&rsquo;s self-proclaimed favourite attachment style, Anxious Preoccupied bags are practical, playful and just a little bit unhinged. Think emotional baggage, but make it chic.</p><p>Together, they created Anxious Preoccupied because they wanted bags that could keep up with real life. Bold, beautiful, and unbothered. Bags that don&rsquo;t just look good, but actually work for everyday life, with handcrafted quality, sustainable materials and designs that turn heads (for all the right reasons).</p><p><strong>Their vision is simple: to create bags that make women feel unstoppable.</strong></p>",
+                "text": "<p>Anxious Preoccupied is the brainchild of best friends (15 years and counting), comedian Joanne McNally and businesswoman Nikki Lannen, who launched the brand in September 2023 with one shared belief: life is chaotic, so your accessories shouldn’t be.<br/><br/>Named after Joanne’s self-proclaimed favourite attachment style, Anxious Preoccupied bags are practical, playful and just a little bit unhinged. Think emotional baggage, but make it chic.<br/><br/>Together, they created Anxious Preoccupied because they wanted bags that could keep up with real life. Bold, beautiful, and unbothered. Bags that don't just look good, but actually work for everyday life, handmade with quality materials and designs that turn heads (for all the right reasons).<br/><br/><strong>Their vision is simple: to create bags that make women feel unstoppable.</strong></p>",
                 "font_style": "body"
-              }
+              },
+              "blocks": {}
             }
           },
-          "block_order": ["text-2"]
+          "block_order": [
+            "text-2"
+          ]
         }
       },
-      "block_order": ["rich-text-column", "rich-text-column-2"],
+      "block_order": [
+        "rich-text-column",
+        "rich-text-column-2"
+      ],
       "settings": {
         "vertical_alignment": "top",
         "color_scheme": "",
@@ -93,11 +135,56 @@
     "media-grid": {
       "type": "media-grid",
       "blocks": {
-        "media-grid-image": { "type": "_media-grid-image", "settings": { "image_ratio": "2 / 3", "link": "", "link_label": "" } },
-        "media-grid-image-2": { "type": "_media-grid-image", "settings": { "image_ratio": "2 / 3", "link": "", "link_label": "" } },
-        "media-grid-image-3": { "type": "_media-grid-image", "settings": { "image_ratio": "2 / 3", "link": "", "link_label": "" } },
-        "media-grid-image-4": { "type": "_media-grid-image", "settings": { "image_ratio": "2 / 3", "link": "", "link_label": "" } },
-        "media-grid-image-5": { "type": "_media-grid-image", "settings": { "image_ratio": "2 / 3", "link": "", "link_label": "" } },
+        "media-grid-image": {
+          "type": "_media-grid-image",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "link": "",
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
+        },
+        "media-grid-image-2": {
+          "type": "_media-grid-image",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "link": "",
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
+        },
+        "media-grid-image-3": {
+          "type": "_media-grid-image",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "link": "",
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
+        },
+        "media-grid-image-4": {
+          "type": "_media-grid-image",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "link": "",
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
+        },
+        "media-grid-image-5": {
+          "type": "_media-grid-image",
+          "settings": {
+            "image_ratio": "2 / 3",
+            "link": "",
+            "link_label": "",
+            "product": ""
+          },
+          "blocks": {}
+        },
         "section-header": {
           "type": "_section-header",
           "static": true,
@@ -110,15 +197,25 @@
             "text": "",
             "button_label": "",
             "button_link": ""
-          }
+          },
+          "blocks": {}
         },
         "button-group": {
           "type": "button-group",
           "static": true,
-          "settings": { "horizontal_alignment": "inherit" }
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["media-grid-image", "media-grid-image-2", "media-grid-image-3", "media-grid-image-4", "media-grid-image-5"],
+      "block_order": [
+        "media-grid-image",
+        "media-grid-image-2",
+        "media-grid-image-3",
+        "media-grid-image-4",
+        "media-grid-image-5"
+      ],
       "settings": {
         "columns_desktop": "4",
         "columns_mobile": "2",
@@ -143,28 +240,45 @@
       "blocks": {
         "heading-group": {
           "type": "heading-group",
-          "settings": { "page_title": false },
+          "settings": {
+            "page_title": false
+          },
           "blocks": {
             "heading": {
               "type": "_heading",
-              "settings": { "heading": "Regulate your inbox.", "heading_size": "h2" }
+              "settings": {
+                "heading": "Regulate your inbox.",
+                "heading_size": "h2"
+              },
+              "blocks": {}
             }
           },
-          "block_order": ["heading"]
+          "block_order": [
+            "heading"
+          ]
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>Sign up for the Anxious Preoccupied newsletter and be first to know about new drops, restocks and exclusive access.</p>",
             "font_style": "body"
-          }
+          },
+          "blocks": {}
         },
         "newsletter": {
           "type": "_newsletter",
-          "settings": { "button_style": "secondary", "button_width": "default" }
+          "settings": {
+            "button_style": "secondary",
+            "button_width": "default"
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["heading-group", "text", "newsletter"],
+      "block_order": [
+        "heading-group",
+        "text",
+        "newsletter"
+      ],
       "settings": {
         "height": "medium",
         "mobile_height": "large",
@@ -180,10 +294,17 @@
         "color_scheme": "scheme-2",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
         "show_top_border": false,
         "show_bottom_border": false
       }
     }
   },
-  "order": ["image-banner", "rich-text-columns", "media-grid", "newsletter"]
+  "order": [
+    "image-banner",
+    "rich-text-columns",
+    "media-grid",
+    "newsletter"
+  ]
 }
