@@ -333,6 +333,12 @@ endunless
       </cart-checkbox>
     {% endif %}
 
+    {%- if section.blocks.size > 0 and section.settings.layout_desktop != 'horizontal' -%}
+      <div class="{{ position }}__blocks-wrapper">
+        {{- blocks -}}
+      </div>
+    {%- endif -%}
+
     <div class="cart__buttons{% if position == 'cart-drawer' %} center{% endif %}">
       <button
         type="submit"
