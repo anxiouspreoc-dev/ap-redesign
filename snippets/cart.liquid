@@ -258,8 +258,8 @@ endunless
     </div>
   </form>
 
-  {%- if section.blocks.size > 0 and section.settings.layout_desktop == 'horizontal' -%}
-    <div class="{{ position }}__blocks-wrapper flex flex-col block lg:hidden">
+  {%- if section.blocks.size > 0 -%}
+    <div class="{{ position }}__blocks-wrapper flex flex-col{% if section.settings.layout_desktop == 'horizontal' %} block lg:hidden {% endif %}">
       {{- blocks -}}
     </div>
   {%- endif -%}
