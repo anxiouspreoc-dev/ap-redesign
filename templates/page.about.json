@@ -94,10 +94,10 @@
             "image_rWRqMf": {
               "type": "image",
               "name": "t:image",
-              "disabled": true,
               "settings": {
+                "image": "shopify://shop_images/Nikki_and_Joanne_-_About_Page.jpg",
                 "image_ratio": "default",
-                "max_width": 1400,
+                "max_width": 820,
                 "horizontal_alignment": "inherit",
                 "link": "",
                 "link_label": "",
