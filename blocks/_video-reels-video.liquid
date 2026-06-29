@@ -60,27 +60,14 @@
       {%- endcapture -%}
 
       <div {% render 'color-scheme-attributes', scoped_settings: block.settings, class: 'card-border-radius' %} >
-        {%- if block.settings.creator_image != blank or block.settings.creator_name != blank -%}
+        {%- if block.settings.creator_image != blank -%}
           <div class="video-reels__creator media-object expand-link">
-            {%- if block.settings.creator_image != blank -%}
-              <div class="media-object__image-wrapper" >
-                {{
-                  block.settings.creator_image
-                  | image_url: width: 72
-                  | image_tag: sizes: '1.5rem', widths: '24, 48, 72', fetchpriority: fetch_priority, alt: "", class: 'media-object__image border-radius-circle', loading: loading
-                }}
-              </div>
-            {%- endif -%}
-            <div class="media-object__content">
-              {%- if block.settings.creator_link -%}
-                <a class="expand-link__link" href="{{ block.settings.creator_link }}">
-              {%- endif -%}
-              <span class="body text-s">
-                {{ block.settings.creator_name }}
-              </span>
-              {%- if block.settings.creator_link -%}
-              </a>
-              {%- endif -%}
+            <div class="media-object__image-wrapper" >
+              {{
+                block.settings.creator_image
+                | image_url: width: 72
+                | image_tag: sizes: '1.5rem', widths: '24, 48, 72', fetchpriority: fetch_priority, alt: "", class: 'media-object__image border-radius-circle', loading: loading
+              }}
             </div>
           </div>
         {%- endif -%}
