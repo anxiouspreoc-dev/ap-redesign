@@ -90,11 +90,26 @@
                 "font_style": "body"
               },
               "blocks": {}
+            },
+            "image_rWRqMf": {
+              "type": "image",
+              "name": "t:image",
+              "disabled": true,
+              "settings": {
+                "image_ratio": "default",
+                "max_width": 1400,
+                "horizontal_alignment": "inherit",
+                "link": "",
+                "link_label": "",
+                "product": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "heading-group",
-            "text"
+            "text",
+            "image_rWRqMf"
           ]
         },
         "rich-text-column-2": {
