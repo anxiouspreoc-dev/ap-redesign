@@ -85,13 +85,9 @@
     var target = document.querySelector(location.hash);
     if (!target) return;
     setTimeout(function() {
-      var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
-      var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-      // Open the first collapsible after the anchor (opt-in via data-open-first or hash allowlist)
+      // Open the first collapsible BEFORE scrolling so layout shift doesn't disrupt scroll position
       var openFirst = target.hasAttribute('data-open-first') || ['#preorders'].indexOf(location.hash) !== -1;
       if (openFirst) {
-        // Blocks are wrapped in shopify-block divs — walk up to the block container, then traverse siblings
         var blockEl = target;
         while (blockEl && blockEl.parentElement && !blockEl.parentElement.classList.contains('rich-text__blocks')) {
           blockEl = blockEl.parentElement;
@@ -103,6 +99,14 @@
           sibling = sibling.nextElementSibling;
         }
       }
+      // Scroll after layout has settled (double rAF ensures the DOM has repainted)
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
+          var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+      });
     }, 50);
   });
 </script>
