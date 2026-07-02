@@ -81,16 +81,21 @@
   });
 
   window.addEventListener('load', function() {
-    if (location.hash) {
-      var target = document.querySelector(location.hash);
-      if (target) {
-        setTimeout(function() {
-          var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
-          var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        }, 50);
+    if (!location.hash) return;
+    var target = document.querySelector(location.hash);
+    if (!target) return;
+    setTimeout(function() {
+      var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
+      var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      // Open the first collapsible question after this anchor
+      var sibling = target.nextElementSibling;
+      while (sibling) {
+        var details = sibling.querySelector('details');
+        if (details) { details.open = true; break; }
+        sibling = sibling.nextElementSibling;
       }
-    }
+    }, 50);
   });
 </script>
 
