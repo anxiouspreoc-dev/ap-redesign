@@ -15,6 +15,7 @@
         "heading-group": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": true
           },
           "blocks": {
@@ -73,6 +74,7 @@
         "faq-heading": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": true
           },
           "blocks": {
@@ -92,6 +94,7 @@
         "cat-0-orders-shipping": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -300,6 +303,7 @@
         "cat-5-pre-orders": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -335,6 +339,27 @@
           },
           "block_order": [
             "text_rThcJG"
+          ]
+        },
+        "collapsible_3yEy9V": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Where is my pre-order?",
+            "font_style": "heading h6",
+            "open_by_default": true
+          },
+          "blocks": {
+            "text_Jg34th": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Your bag is currently in production or in transit, and we're working hard to get it to you as soon as possible.<br/><br/>Below are our current estimated shipping timeframes. Please note that these are estimates and may be subject to change due to unforeseen delays. We'll continue to keep this page updated with the latest information.<br/><br/><strong>Shipping expected to begin from Late July 2026</strong></p><ul><li>The Mid Tote Bag: Gold Metallic</li><li>The Mid Tote Bag: Lilac Metallic</li><li>The Mid Tote Bag: Silver Metallic</li><li>The Mid Tote Bag: Black (Turquoise & Lime Green Interior)</li><li>The Mid Tote Bag: Beige</li><li>The Organizer: Lime Green Bag Organizer</li><li>The Organizer: Orange Bag Organizer</li><li>The Organizer: Turquoise Bag Organizer</li></ul><p></p><p><strong>Shipping expected to begin from Mid August 2026</strong></p><ul><li>The Oversized Bum Bag: Gold</li><li>The Oversized Bum Bag: Silver</li><li>The Oversized Bum Bag: Black</li></ul><p><br/></p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_Jg34th"
           ]
         },
         "c5-q1": {
@@ -403,6 +428,7 @@
         "cat-1-products-materials": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -569,6 +595,7 @@
         "cat-2-returns-exchanges": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -819,6 +846,7 @@
         "cat-3-gift-cards": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -922,6 +950,7 @@
         "cat-4-payments": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -1004,6 +1033,7 @@
         "cat-6-brand-community": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -1212,6 +1242,7 @@
         "cat-7-care-maintenance": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -1327,6 +1358,7 @@
         "c0-q7",
         "cat-5-pre-orders",
         "collapsible_xkLzUz",
+        "collapsible_3yEy9V",
         "c5-q1",
         "c5-q2",
         "c5-q3",
@@ -1429,6 +1461,7 @@
             "heading-group": {
               "type": "heading-group",
               "settings": {
+                "anchor_id": "",
                 "page_title": false
               },
               "blocks": {
