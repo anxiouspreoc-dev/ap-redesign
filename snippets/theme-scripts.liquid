@@ -79,6 +79,19 @@
   document.addEventListener("DOMContentLoaded",function(){
     document.documentElement.classList.add('js');
   });
+
+  window.addEventListener('load', function() {
+    if (location.hash) {
+      var target = document.querySelector(location.hash);
+      if (target) {
+        setTimeout(function() {
+          var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
+          var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }, 50);
+      }
+    }
+  });
 </script>
 
 <template data-overflow-previous>
