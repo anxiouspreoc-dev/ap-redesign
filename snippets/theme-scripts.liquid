@@ -88,10 +88,15 @@
       var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
       var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: top, behavior: 'smooth' });
-      // Open the first collapsible question after the anchor (opt-in via data-open-first or hash allowlist)
+      // Open the first collapsible after the anchor (opt-in via data-open-first or hash allowlist)
       var openFirst = target.hasAttribute('data-open-first') || ['#preorders'].indexOf(location.hash) !== -1;
       if (openFirst) {
-        var sibling = target.nextElementSibling;
+        // Blocks are wrapped in shopify-block divs — walk up to the block container, then traverse siblings
+        var blockEl = target;
+        while (blockEl && blockEl.parentElement && !blockEl.parentElement.classList.contains('rich-text__blocks')) {
+          blockEl = blockEl.parentElement;
+        }
+        var sibling = blockEl ? blockEl.nextElementSibling : null;
         while (sibling) {
           var details = sibling.querySelector('details');
           if (details) { details.open = true; break; }
