@@ -129,6 +129,27 @@
             "txt"
           ]
         },
+        "collapsible_yGgXQW": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Where is my order?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_HK9ry3": {
+              "type": "text",
+              "settings": {
+                "text": "<p>You can check the latest status of your order anytime through your account.<br/><br/>Step 1: Go to <a href=\"http://account.anxiouspreoccupied.com/\" target=\"_blank\">account.anxiouspreoccupied.com</a><br/>Step 2: Enter your email address ; we'll send a six-digit code to that inbox.<br/>Step 3: Enter the code to log in and view your orders.<br/><br/>From there you'll see the latest status of each order. If it's on its way, you'll find a tracking link so you can see exactly where your item is.<br/><br/><strong>Please note:</strong> if your order includes a pre-order item, you won't see a tracking number until that item is ready to ship. For the latest expected shipping dates, check the 'Where is my pre-order?' section below.<br/><br/></p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_HK9ry3"
+          ]
+        },
         "c0-q1": {
           "type": "collapsible",
           "settings": {
@@ -267,6 +288,109 @@
               "type": "text",
               "settings": {
                 "text": "<p>If a parcel is returned due to an incorrect address, failed delivery attempts or refusal of delivery, additional shipping charges may apply to resend the order.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "cat-5-pre-orders": {
+          "type": "heading-group",
+          "settings": {
+            "page_title": false
+          },
+          "blocks": {
+            "h": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Pre-Orders",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "collapsible_xkLzUz": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What is a pre-order?",
+            "font_style": "heading h6",
+            "open_by_default": true
+          },
+          "blocks": {
+            "text_rThcJG": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A pre-order allows you to secure an item before it officially ships or restocks.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_rThcJG"
+          ]
+        },
+        "c5-q1": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "When will my pre-order ship?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Estimated shipping windows are listed clearly on the product page at the time of purchase.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c5-q2": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Will I receive other items in my order sooner?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>If your order includes a pre-order item, your full order may ship together once all items are available unless otherwise stated.</p><p>If you&rsquo;d like an in-stock item shipped sooner, we can arrange a split shipment. A second shipping fee will apply. Please contact our team to set it up.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
+        "c5-q3": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can pre-order timelines change?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Occasionally, production or shipping delays can impact timelines. If anything changes significantly, we&rsquo;ll keep you updated by email.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -877,110 +1001,6 @@
             "txt"
           ]
         },
-        "cat-5-pre-orders": {
-          "type": "heading-group",
-          "settings": {
-            "anchor_id": "preorders",
-            "page_title": false
-          },
-          "blocks": {
-            "h": {
-              "type": "_heading",
-              "settings": {
-                "heading": "Pre-Orders",
-                "heading_size": "h4"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "h"
-          ]
-        },
-        "c5-q0": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "What is a pre-order?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>A pre-order allows you to secure an item before it officially ships or restocks.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
-        "c5-q1": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "When will my pre-order ship?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Estimated shipping windows are listed clearly on the product page at the time of purchase.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
-        "c5-q2": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Will I receive other items in my order sooner?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>If your order includes a pre-order item, your full order may ship together once all items are available unless otherwise stated.</p><p>If you&rsquo;d like an in-stock item shipped sooner, we can arrange a split shipment. A second shipping fee will apply. Please contact our team to set it up.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
-        "c5-q3": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Can pre-order timelines change?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Occasionally, production or shipping delays can impact timelines. If anything changes significantly, we&rsquo;ll keep you updated by email.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
         "cat-6-brand-community": {
           "type": "heading-group",
           "settings": {
@@ -1297,6 +1317,7 @@
         "faq-heading",
         "cat-0-orders-shipping",
         "c0-q0",
+        "collapsible_yGgXQW",
         "c0-q1",
         "c0-q2",
         "c0-q3",
@@ -1304,6 +1325,11 @@
         "c0-q5",
         "c0-q6",
         "c0-q7",
+        "cat-5-pre-orders",
+        "collapsible_xkLzUz",
+        "c5-q1",
+        "c5-q2",
+        "c5-q3",
         "cat-1-products-materials",
         "c1-q0",
         "c1-q1",
@@ -1333,11 +1359,6 @@
         "c4-q0",
         "c4-q1",
         "c4-q2",
-        "cat-5-pre-orders",
-        "c5-q0",
-        "c5-q1",
-        "c5-q2",
-        "c5-q3",
         "cat-6-brand-community",
         "c6-q0",
         "c6-q1",
