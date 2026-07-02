@@ -877,15 +877,10 @@
             "txt"
           ]
         },
-        "anchor-preorders": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div id=\"preorders\" style=\"scroll-margin-top: var(--sticky-header-height, 0px);\"></div>"
-          }
-        },
         "cat-5-pre-orders": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "preorders",
             "page_title": false
           },
           "blocks": {
