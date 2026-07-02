@@ -88,14 +88,15 @@
       var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
       var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: top, behavior: 'smooth' });
-      // If anchor has data-open-first, open the first collapsible question after it
-      if (target.dataset.openFirst) {
-        var sibling = target.nextElementSibling;
-        while (sibling) {
-          var details = sibling.querySelector('details');
-          if (details) { details.open = true; break; }
-          sibling = sibling.nextElementSibling;
+      // Open the first collapsible question after anchors that opt in via data-open-first
+      var sibling = target.nextElementSibling;
+      while (sibling) {
+        var details = sibling.querySelector('details');
+        if (details) {
+          if (target.hasAttribute('data-open-first')) details.open = true;
+          break;
         }
+        sibling = sibling.nextElementSibling;
       }
     }, 50);
   });
