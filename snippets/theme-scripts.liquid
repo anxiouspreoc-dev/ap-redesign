@@ -82,16 +82,33 @@
 
   window.addEventListener('load', function() {
     if (!location.hash) return;
-    var target = document.querySelector(location.hash);
+    var hashId = location.hash.slice(1);
+    var target = document.getElementById(hashId);
+
+    // Fallback: find by heading text for known anchors (covers Shopify cache delay)
+    if (!target) {
+      var knownAnchors = { 'preorders': 'Pre-Orders' };
+      var labelText = knownAnchors[hashId];
+      if (labelText) {
+        var candidates = document.querySelectorAll('.rich-text__heading-group');
+        for (var i = 0; i < candidates.length; i++) {
+          if (candidates[i].textContent.trim() === labelText) { target = candidates[i]; break; }
+        }
+      }
+    }
+
     if (!target) return;
+
     setTimeout(function() {
-      // Open the first collapsible BEFORE scrolling so layout shift doesn't disrupt scroll position
+      // Walk up to the shopify-block wrapper inside rich-text__blocks
+      var blockEl = target;
+      while (blockEl && blockEl.parentElement && !blockEl.parentElement.classList.contains('rich-text__blocks')) {
+        blockEl = blockEl.parentElement;
+      }
+
+      // Open first collapsible BEFORE scrolling (avoids layout-shift disrupting scroll)
       var openFirst = target.hasAttribute('data-open-first') || ['#preorders'].indexOf(location.hash) !== -1;
       if (openFirst) {
-        var blockEl = target;
-        while (blockEl && blockEl.parentElement && !blockEl.parentElement.classList.contains('rich-text__blocks')) {
-          blockEl = blockEl.parentElement;
-        }
         var sibling = blockEl ? blockEl.nextElementSibling : null;
         while (sibling) {
           var details = sibling.querySelector('details');
@@ -99,7 +116,8 @@
           sibling = sibling.nextElementSibling;
         }
       }
-      // Scroll after layout has settled (double rAF ensures the DOM has repainted)
+
+      // Scroll after layout settles
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           var headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')) || 0;
