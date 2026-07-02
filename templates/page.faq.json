@@ -902,7 +902,7 @@
           "settings": {
             "heading": "What is a pre-order?",
             "font_style": "heading h6",
-            "open_by_default": false
+            "open_by_default": true
           },
           "blocks": {
             "txt": {
