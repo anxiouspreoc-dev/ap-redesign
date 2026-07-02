@@ -10,7 +10,7 @@ if request.page_type == 'collection'
 endif
 -%}
 
-<{{ heading_level }} {{ block.shopify_attributes }} {% if block.settings.anchor_id != blank %}id="{{ block.settings.anchor_id | handleize }}"{% endif %} class="rich-text__heading-group heading-group media-banner__pointer">
+<{{ heading_level }} {{ block.shopify_attributes }} {% if block.settings.anchor_id != blank %}id="{{ block.settings.anchor_id | handleize }}" data-open-first{% endif %} class="rich-text__heading-group heading-group media-banner__pointer">
   {% content_for 'blocks' %}
 </{{  heading_level }}>
 
