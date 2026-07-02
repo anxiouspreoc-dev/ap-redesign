@@ -111,27 +111,6 @@
             "h"
           ]
         },
-        "c0-q0": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Where do you ship to?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We currently ship across Ireland, the UK, Europe, the US, Canada, Australia and selected international destinations. Shipping availability and rates are calculated at checkout based on your location.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
         "collapsible_yGgXQW": {
           "type": "collapsible",
           "settings": {
@@ -151,6 +130,27 @@
           },
           "block_order": [
             "text_HK9ry3"
+          ]
+        },
+        "c0-q0": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Where do you ship to?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We currently ship across Ireland, the UK, Europe, the US, Canada, Australia and selected international destinations. Shipping availability and rates are calculated at checkout based on your location.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
           ]
         },
         "c0-q1": {
@@ -320,27 +320,6 @@
             "h"
           ]
         },
-        "collapsible_xkLzUz": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "What is a pre-order?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "text_rThcJG": {
-              "type": "text",
-              "settings": {
-                "text": "<p>A pre-order allows you to secure an item before it officially ships or restocks.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_rThcJG"
-          ]
-        },
         "collapsible_3yEy9V": {
           "type": "collapsible",
           "settings": {
@@ -360,6 +339,27 @@
           },
           "block_order": [
             "text_Jg34th"
+          ]
+        },
+        "collapsible_xkLzUz": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What is a pre-order?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_rThcJG": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A pre-order allows you to secure an item before it officially ships or restocks.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_rThcJG"
           ]
         },
         "c5-q1": {
@@ -1347,8 +1347,8 @@
       "block_order": [
         "faq-heading",
         "cat-0-orders-shipping",
-        "c0-q0",
         "collapsible_yGgXQW",
+        "c0-q0",
         "c0-q1",
         "c0-q2",
         "c0-q3",
@@ -1357,8 +1357,8 @@
         "c0-q6",
         "c0-q7",
         "cat-5-pre-orders",
-        "collapsible_xkLzUz",
         "collapsible_3yEy9V",
+        "collapsible_xkLzUz",
         "c5-q1",
         "c5-q2",
         "c5-q3",
