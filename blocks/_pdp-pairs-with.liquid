@@ -118,7 +118,7 @@
     if (window.innerWidth < 750) return;
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // already horizontal (trackpad)
     e.preventDefault();
-    list.scrollLeft += e.deltaY;
+    list.scrollBy({ left: e.deltaY, behavior: 'instant' });
   }, { passive: false });
 })();
 </script>
