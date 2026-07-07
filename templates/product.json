@@ -141,9 +141,24 @@
               },
               "blocks": {}
             },
+            "pdp_complementary_9dUDMz": {
+              "type": "_pdp-complementary",
+              "name": "t:complementary-products",
+              "settings": {
+                "heading": "Complementary products",
+                "font_style": "heading h4",
+                "block_text": "<p>This is an optional description.</p>",
+                "product_list_limit": 10,
+                "style": "list",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            },
             "pdp-pairs-with": {
               "type": "_pdp-pairs-with",
-              "settings": {},
+              "settings": {
+                "heading": "You might also like"
+              },
               "blocks": {}
             }
           },
@@ -161,6 +176,7 @@
             "pdp-collapsible-details",
             "pdp_collapsible_4gmynA",
             "pdp-collapsible-delivery",
+            "pdp_complementary_9dUDMz",
             "pdp-pairs-with"
           ]
         }
