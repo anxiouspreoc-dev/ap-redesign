@@ -156,6 +156,7 @@
             },
             "pdp-pairs-with": {
               "type": "_pdp-pairs-with",
+              "disabled": true,
               "settings": {
                 "heading": "You might also like"
               },
