@@ -2628,9 +2628,9 @@
       {
         "type": "text",
         "id": "preorder_reveal_date",
-        "label": "Hide until (YYYY-MM-DD)",
-        "info": "Once this date is reached, products in the pre-order collection will appear across the site as normal. Leave blank to keep hidden indefinitely.",
-        "placeholder": "2025-12-01"
+        "label": "Hide until",
+        "info": "Enter a date and time in the format YYYY-MM-DD HH:MM (e.g. 2025-12-01 09:00). Once this moment is reached, products in the pre-order collection will appear across the site as normal. Leave blank to keep hidden indefinitely.",
+        "placeholder": "2025-12-01 09:00"
       }
     ]
   }
