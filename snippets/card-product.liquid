@@ -29,6 +29,7 @@
       endunless
     endif
   -%}
+  <!-- debug preorder: hidden={{ preorder_hidden }} col_handle={{ preorder_col_handle }} product_cols={% for c in product.collections %}{{ c.handle }},{% endfor %} -->
   {%- unless preorder_hidden -%}
   {%- capture product_badges -%}
     {%- if product.tags contains 'preorder' -%}
