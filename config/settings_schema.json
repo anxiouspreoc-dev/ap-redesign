@@ -2615,5 +2615,23 @@
         "default": "WELCOME10"
       }
     ]
+  },
+  {
+    "name": "Pre-orders",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "preorder_collection",
+        "label": "Pre-order collection",
+        "info": "Products in this collection will be hidden everywhere on the site until the reveal date below. They remain accessible via the collection URL at all times."
+      },
+      {
+        "type": "text",
+        "id": "preorder_reveal_date",
+        "label": "Hide until (YYYY-MM-DD)",
+        "info": "Once this date is reached, products in the pre-order collection will appear across the site as normal. Leave blank to keep hidden indefinitely.",
+        "placeholder": "2025-12-01"
+      }
+    ]
   }
 ]
