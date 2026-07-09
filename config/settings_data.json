@@ -9,7 +9,6 @@
  */
 {
   "current": {
-    "social_instagram_link": "https://www.instagram.com/anxiouspreoccupied_/",
     "spacing_size": "medium",
     "grid_gap_horizontal": "var(--space-xs)",
     "grid_gap_vertical": "var(--space-l)",
@@ -86,12 +85,14 @@
     "blog_card_show_read_more": false,
     "blog_card_tag_style": "primary",
     "tags_position": "above",
+    "social_instagram_link": "https://www.instagram.com/anxiouspreoccupied_/",
     "enable_cart_discounts": true,
     "show_free_shipping_message": false,
     "show_cart_count_at_zero": false,
     "cart_count_style": "badge",
     "enable_instant_page": true,
     "show_focus_outlines": false,
+    "preorder_collection": "early-access",
     "card_heading_size": "h6",
     "card_mini_button_style": "primary",
     "card_mini_button_type": "quick_add",
@@ -111,14 +112,14 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
+          "greeting_message": "",
           "button_color": "#000000",
           "secondary_color": "#FFFFFF",
           "ternary_color": "#6A6A6A",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": ""
+          "button_vertical_position": "lowest"
         }
       }
     },
