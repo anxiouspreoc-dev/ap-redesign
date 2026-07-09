@@ -1,4 +1,35 @@
 {%- if product and product != empty -%}
+  {%- liquid
+    assign preorder_hidden = false
+    if settings.preorder_collection != blank
+      assign preorder_col_handle = settings.preorder_collection.handle
+      # On the preorder collection page itself, always show
+      assign on_preorder_page = false
+      if request.page_type == 'collection' and collection.handle == preorder_col_handle
+        assign on_preorder_page = true
+      endif
+      unless on_preorder_page
+        # Check if reveal date has passed
+        assign date_revealed = false
+        if settings.preorder_reveal_date != blank
+          assign today_ts = 'now' | date: '%s' | plus: 0
+          assign reveal_ts = settings.preorder_reveal_date | date: '%s' | plus: 0
+          if today_ts >= reveal_ts
+            assign date_revealed = true
+          endif
+        endif
+        unless date_revealed
+          for col in product.collections
+            if col.handle == preorder_col_handle
+              assign preorder_hidden = true
+              break
+            endif
+          endfor
+        endunless
+      endunless
+    endif
+  -%}
+  {%- unless preorder_hidden -%}
   {%- capture product_badges -%}
     {%- if product.tags contains 'preorder' -%}
       <li class="list-separator__item" data-badge="pre-order">{{ 'products.product.preorder' | t }}</li>
