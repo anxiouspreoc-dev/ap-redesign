@@ -3,13 +3,11 @@
     assign preorder_hidden = false
     if settings.preorder_collection != blank
       assign preorder_col_handle = settings.preorder_collection.handle
-      # On the preorder collection page itself, always show
       assign on_preorder_page = false
       if request.page_type == 'collection' and collection.handle == preorder_col_handle
         assign on_preorder_page = true
       endif
       unless on_preorder_page
-        # Check if reveal date has passed
         assign date_revealed = false
         if settings.preorder_reveal_date != blank
           assign today_ts = 'now' | date: '%s' | plus: 0
@@ -19,8 +17,8 @@
           endif
         endif
         unless date_revealed
-          for col in product.collections
-            if col.handle == preorder_col_handle
+          for pp in settings.preorder_collection.products
+            if pp.id == product.id
               assign preorder_hidden = true
               break
             endif
@@ -29,7 +27,6 @@
       endunless
     endif
   -%}
-  <!-- debug preorder: hidden={{ preorder_hidden }} col_handle={{ preorder_col_handle }} product_cols={% for c in product.collections %}{{ c.handle }},{% endfor %} -->
   {%- unless preorder_hidden -%}
   {%- capture product_badges -%}
     {%- if product.tags contains 'preorder' -%}
