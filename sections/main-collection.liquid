@@ -103,12 +103,32 @@
                   {%- endif -%}
                 </div>
               {% endif %}
+              {%- liquid
+                assign preorder_ids = ''
+                if settings.preorder_collection != blank and collection.handle != settings.preorder_collection.handle
+                  assign preorder_date_revealed = false
+                  if settings.preorder_reveal_date != blank
+                    assign today_ts = 'now' | date: '%s' | plus: 0
+                    assign reveal_ts = settings.preorder_reveal_date | date: '%s' | plus: 0
+                    if today_ts >= reveal_ts
+                      assign preorder_date_revealed = true
+                    endif
+                  endif
+                  unless preorder_date_revealed
+                    for pp in settings.preorder_collection.products
+                      assign preorder_ids = preorder_ids | append: pp.id | append: ','
+                    endfor
+                  endunless
+                endif
+              -%}
               <ul
                 id="ProductGrid"
                 data-id="{{ section.id }}"
                 class="grid grid--text grid-cols-{{ columns_mobile }} lg:grid-cols-{{ columns_desktop }}"
               >
                 {%- for product in collection.products -%}
+                  {%- assign product_id_check = product.id | append: ',' -%}
+                  {%- unless preorder_ids contains product_id_check -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > columns_desktop -%}
                     {%- assign lazy_load = true -%}
@@ -116,6 +136,7 @@
                   <li>
                     {%- render 'card-product' product: product, lazy_load: lazy_load, page: paginate.current_page, enable_collection_filter: true -%}
                   </li>
+                  {%- endunless -%}
                 {%- endfor -%}
               </ul>
               {% if section.settings.enable_infinite_scroll %}
