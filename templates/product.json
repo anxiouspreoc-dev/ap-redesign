@@ -144,11 +144,10 @@
             "pdp_complementary_9dUDMz": {
               "type": "_pdp-complementary",
               "name": "t:complementary-products",
-              "disabled": true,
               "settings": {
-                "heading": "Complementary products",
+                "heading": "You May Also Like",
                 "font_style": "heading h4",
-                "block_text": "<p>This is an optional description.</p>",
+                "block_text": "",
                 "product_list_limit": 10,
                 "style": "list",
                 "color_scheme": ""
@@ -157,6 +156,7 @@
             },
             "pdp-pairs-with": {
               "type": "_pdp-pairs-with",
+              "disabled": true,
               "settings": {
                 "heading": "You might also like"
               },
