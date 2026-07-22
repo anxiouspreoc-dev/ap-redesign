@@ -131,9 +131,18 @@ if (!customElements.get('product-page')) {
           });
           this.return;
         } else {
+          const newSubmitButton = html.querySelector('[type="submit"]');
           this.productForm?.toggleSubmitButton(
-            html.querySelector('[type="submit"]')?.hasAttribute('aria-disabled') ?? true,
-            window.variantStrings.soldOut
+            newSubmitButton?.hasAttribute('aria-disabled') ?? true,
+            window.variantStrings.soldOut,
+            newSubmitButton
+              ? {
+                  variantId: newSubmitButton.dataset.variantId,
+                  productTitle: newSubmitButton.dataset.productTitle,
+                  variantTitle: newSubmitButton.dataset.variantTitle,
+                  productUrl: newSubmitButton.dataset.productUrl,
+                }
+              : null
           );
         }
 

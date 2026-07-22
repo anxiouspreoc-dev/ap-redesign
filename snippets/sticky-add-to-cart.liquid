@@ -89,16 +89,20 @@
         tabindex="0"
         type="submit"
         name="add"
-        class="product-form__submit button button--primary sticky-atc__button"
+        class="product-form__submit button button--primary sticky-atc__button {% if disable_button %}klaviyo-bis-trigger{% endif %}"
         aria-describedby="title-{{ section.id }}-{{ product.id }}"
         {% if disable_button %}
           aria-disabled="true"
+          data-variant-id="{{ variant.id }}"
+          data-product-title="{{ product.title | escape }}"
+          data-variant-title="{{ variant.title | escape }}"
+          data-product-url="{{ request.origin | append: product.url }}"
         {% endif %}
       >
         {%- if variant.available -%}
           <span>{{ buy_text }}</span>
         {%- elsif variant.available == false -%}
-          <span>{{ 'products.product.sold_out' | t }}</span>
+          <span>Notify Me When Available</span>
         {%- else -%}
           <span>{{ 'products.product.select_option' | t: count: product.options.size }}</span>
         {%- endif -%}
