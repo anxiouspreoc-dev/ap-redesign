@@ -86,6 +86,9 @@
             {% if disable_button %}
               aria-disabled="true"
               data-variant-id="{{ variant.id }}"
+              data-product-title="{{ product.title | escape }}"
+              data-variant-title="{{ variant.title | escape }}"
+              data-product-url="{{ request.origin | append: product.url }}"
             {% endif %}
           >
             {%- if variant.available -%}
