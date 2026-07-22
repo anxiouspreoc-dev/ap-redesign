@@ -102,6 +102,14 @@
               },
               "blocks": {}
             },
+            "growave_loyalty_wishlist_block_product_fave_button_LfKF6H": {
+              "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.product.faveButton/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+              "settings": {
+                "option_button_class": "",
+                "custom_css": "",
+                "shadow_root_options": "null"
+              }
+            },
             "pdp-features": {
               "type": "_pdp-features",
               "settings": {},
@@ -173,6 +181,7 @@
             "pdp-preorder-message",
             "pdp-subtitle",
             "pdp-buy-buttons",
+            "growave_loyalty_wishlist_block_product_fave_button_LfKF6H",
             "pdp-features",
             "pdp-collapsible-details",
             "pdp_collapsible_4gmynA",
@@ -331,32 +340,6 @@
         "show_top_border": false,
         "show_bottom_border": false
       }
-    },
-    "17847200031f73df17": {
-      "type": "apps",
-      "blocks": {
-        "growave_loyalty_wishlist_block_product_fave_button_dHXJT6": {
-          "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.product.faveButton/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-          "settings": {
-            "option_button_class": "",
-            "custom_css": "",
-            "shadow_root_options": "null"
-          }
-        }
-      },
-      "block_order": [
-        "growave_loyalty_wishlist_block_product_fave_button_dHXJT6"
-      ],
-      "settings": {
-        "container_type": "max",
-        "color_scheme": "",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "padding_top": "default",
-        "padding_bottom": "default"
-      }
     }
   },
   "order": [
@@ -364,7 +347,6 @@
     "pdp-behind-the-bag",
     "pdp-colorways",
     "collection-list",
-    "custom_liquid_JYxC8j",
-    "17847200031f73df17"
+    "custom_liquid_JYxC8j"
   ]
 }
