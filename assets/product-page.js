@@ -135,7 +135,14 @@ if (!customElements.get('product-page')) {
           this.productForm?.toggleSubmitButton(
             newSubmitButton?.hasAttribute('aria-disabled') ?? true,
             window.variantStrings.soldOut,
-            newSubmitButton?.dataset.variantId
+            newSubmitButton
+              ? {
+                  variantId: newSubmitButton.dataset.variantId,
+                  productTitle: newSubmitButton.dataset.productTitle,
+                  variantTitle: newSubmitButton.dataset.variantTitle,
+                  productUrl: newSubmitButton.dataset.productUrl,
+                }
+              : null
           );
         }
 
