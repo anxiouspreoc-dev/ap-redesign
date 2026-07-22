@@ -81,12 +81,10 @@
             id="{{ product_form_id }}-submit"
             type="submit"
             name="add"
-            class="product-form__submit button button--full {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit button button--full {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %} {% if disable_button %}klaviyo-bis-trigger{% endif %}"
             aria-describedby="title-{{ section.id }}-{{ product.id }}"
             {% if disable_button %}
               aria-disabled="true"
-              data-klaviyo-bis
-              data-product-id="{{ product.id }}"
               data-variant-id="{{ variant.id }}"
             {% endif %}
           >
