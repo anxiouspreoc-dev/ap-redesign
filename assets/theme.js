@@ -1907,32 +1907,14 @@ class ProductForm extends HTMLElement {
     }
   }
 
-  toggleSubmitButton(disable = true, text, bisData) {
+  toggleSubmitButton(disable = true, text) {
     if (disable) {
       this.submitButton.setAttribute('aria-disabled', true);
       if (text) this.submitButtonText.textContent = text;
       window.utils.announce(text);
-      if (bisData?.variantId) {
-        this.submitButton.classList.add('klaviyo-bis-trigger');
-        this.submitButton.dataset.variantId = bisData.variantId;
-        this.submitButton.dataset.productTitle = bisData.productTitle || '';
-        this.submitButton.dataset.variantTitle = bisData.variantTitle || '';
-        this.submitButton.dataset.productUrl = bisData.productUrl || '';
-      } else {
-        this.submitButton.classList.remove('klaviyo-bis-trigger');
-        delete this.submitButton.dataset.variantId;
-        delete this.submitButton.dataset.productTitle;
-        delete this.submitButton.dataset.variantTitle;
-        delete this.submitButton.dataset.productUrl;
-      }
     } else {
       this.submitButton.removeAttribute('aria-disabled');
       this.submitButtonText.textContent = this.buyText;
-      this.submitButton.classList.remove('klaviyo-bis-trigger');
-      delete this.submitButton.dataset.variantId;
-      delete this.submitButton.dataset.productTitle;
-      delete this.submitButton.dataset.variantTitle;
-      delete this.submitButton.dataset.productUrl;
     }
   }
 
