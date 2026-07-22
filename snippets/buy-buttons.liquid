@@ -85,12 +85,15 @@
             aria-describedby="title-{{ section.id }}-{{ product.id }}"
             {% if disable_button %}
               aria-disabled="true"
+              data-klaviyo-bis
+              data-product-id="{{ product.id }}"
+              data-variant-id="{{ variant.id }}"
             {% endif %}
           >
             {%- if variant.available -%}
               <span>{{ buy_text }}</span>
             {%- elsif variant.available == false -%}
-              <span>{{ 'products.product.sold_out' | t }}</span>
+              <span>Notify Me When Available</span>
             {%- else -%}
               <span>{{ 'products.product.select_option' | t: count: product.options.size }}</span>
             {%- endif -%}
