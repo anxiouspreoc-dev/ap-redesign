@@ -93,6 +93,13 @@
               },
               "blocks": {}
             },
+            "xflow_back_in_stock_notify_me_button_eQD9Te": {
+              "type": "shopify://apps/xflow-back-in-stock/blocks/notify-me-button/019a5dc5-6ce0-7f26-9db3-2d60647ed1f0",
+              "settings": {
+                "product": "{{closest.product}}",
+                "button_label": ""
+              }
+            },
             "pdp-buy-buttons": {
               "type": "_pdp-buy-buttons",
               "settings": {
@@ -172,6 +179,7 @@
             "pdp-rating",
             "pdp-preorder-message",
             "pdp-subtitle",
+            "xflow_back_in_stock_notify_me_button_eQD9Te",
             "pdp-buy-buttons",
             "pdp-features",
             "pdp-collapsible-details",
