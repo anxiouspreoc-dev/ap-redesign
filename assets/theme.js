@@ -1609,6 +1609,74 @@ class ErrorModal extends CustomDialog {
 
 customElements.define('error-modal', ErrorModal);
 
+class NotifyMeModal extends CustomDialog {
+  constructor() {
+    super();
+    this.productLine = this.querySelector('[data-notify-product-line]');
+    this.form = this.querySelector('[data-notify-form]');
+    this.errorEl = this.querySelector('[data-notify-error]');
+    this.submitButton = this.querySelector('[data-notify-submit]');
+    this.formState = this.querySelector('[data-notify-state="form"]');
+    this.successState = this.querySelector('[data-notify-state="success"]');
+
+    document.addEventListener('click', this.onDocumentClick.bind(this));
+    this.form.addEventListener('submit', this.onSubmit.bind(this));
+  }
+
+  onDocumentClick(event) {
+    const trigger = event.target.closest('.klaviyo-bis-trigger');
+    if (!trigger) return;
+
+    event.preventDefault();
+
+    this.variantId = trigger.dataset.variantId;
+    this.productTitle = trigger.dataset.productTitle || '';
+    this.variantTitle = trigger.dataset.variantTitle || '';
+    this.productUrl = trigger.dataset.productUrl || '';
+
+    this.productLine.textContent = [this.productTitle, this.variantTitle].filter(Boolean).join(' — ');
+    this.errorEl.hidden = true;
+    this.form.reset();
+    this.formState.hidden = false;
+    this.successState.hidden = true;
+
+    this.returnFocus = trigger;
+    this.openDialog();
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+
+    const email = this.form.elements.email.value.trim();
+    if (!email || !this.form.checkValidity()) {
+      this.errorEl.textContent = window.accessibilityStrings.generalError;
+      this.errorEl.hidden = false;
+      return;
+    }
+
+    this.submitButton.classList.add('loading');
+
+    window._learnq = window._learnq || [];
+    window._learnq.push(['identify', { $email: email }]);
+    window._learnq.push([
+      'track',
+      'Requested Back In Stock',
+      {
+        ProductName: this.productTitle,
+        VariantName: this.variantTitle,
+        VariantId: this.variantId,
+        ProductURL: this.productUrl,
+      },
+    ]);
+
+    this.submitButton.classList.remove('loading');
+    this.formState.hidden = true;
+    this.successState.hidden = false;
+  }
+}
+
+customElements.define('notify-me-modal', NotifyMeModal);
+
 const isYoutubeLoaded = new Promise((resolve) => {
   window.onYouTubeIframeAPIReady = () => resolve();
 });
