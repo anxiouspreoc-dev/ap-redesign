@@ -1839,14 +1839,23 @@ class ProductForm extends HTMLElement {
     }
   }
 
-  toggleSubmitButton(disable = true, text) {
+  toggleSubmitButton(disable = true, text, variantId) {
     if (disable) {
       this.submitButton.setAttribute('aria-disabled', true);
       if (text) this.submitButtonText.textContent = text;
       window.utils.announce(text);
+      if (variantId) {
+        this.submitButton.classList.add('klaviyo-bis-trigger');
+        this.submitButton.dataset.variantId = variantId;
+      } else {
+        this.submitButton.classList.remove('klaviyo-bis-trigger');
+        delete this.submitButton.dataset.variantId;
+      }
     } else {
       this.submitButton.removeAttribute('aria-disabled');
       this.submitButtonText.textContent = this.buyText;
+      this.submitButton.classList.remove('klaviyo-bis-trigger');
+      delete this.submitButton.dataset.variantId;
     }
   }
 
