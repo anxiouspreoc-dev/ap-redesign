@@ -89,12 +89,10 @@
         tabindex="0"
         type="submit"
         name="add"
-        class="product-form__submit button button--primary sticky-atc__button"
+        class="product-form__submit button button--primary sticky-atc__button {% if disable_button %}klaviyo-bis-trigger{% endif %}"
         aria-describedby="title-{{ section.id }}-{{ product.id }}"
         {% if disable_button %}
           aria-disabled="true"
-          data-klaviyo-bis
-          data-product-id="{{ product.id }}"
           data-variant-id="{{ variant.id }}"
         {% endif %}
       >
