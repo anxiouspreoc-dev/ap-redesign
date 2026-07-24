@@ -119,7 +119,7 @@
       "settings": {
         "menu": "main-menu-copy",
         "enable_search": true,
-        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b"
       }
@@ -127,8 +127,13 @@
     "search_modal": {
       "type": "search-modal",
       "settings": {
-        "popular_search": "",
-        "collection_list": [],
+        "popular_search": "top-searches",
+        "collection_list": [
+          "the-bucket",
+          "the-micro",
+          "mid-sized-bags",
+          "clutch-bags"
+        ],
         "color_scheme": "scheme-1",
         "use_alt_logo": false
       }

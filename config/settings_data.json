@@ -79,6 +79,7 @@
     "product_block_card_image_ratio": "1",
     "product_block_card_image_width": 80,
     "product_block_card_button_style": "primary",
+    "card_collection_image_ratio": "1",
     "card_collection_title_font_style": "heading h6",
     "blog_card_title_font_style": "h6",
     "blog_card_show_excerpt": false,
