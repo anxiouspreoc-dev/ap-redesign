@@ -9,41 +9,42 @@
  */
 {
   "sections": {
-    "stacked_images_with_text_D7GBkh": {
-      "type": "stacked-images-with-text",
+    "stacked_images_with_text_original_hDPje4": {
+      "type": "stacked-images-with-text-original",
       "blocks": {
-        "heading_group_fJUbii": {
+        "heading_group_WDQQce": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
-            "subheading_pM8aKC": {
+            "subheading_PawWfC": {
               "type": "_subheading",
               "settings": {
                 "subheading": "New Use, Same Bestseller"
               },
               "blocks": {}
             },
-            "heading_FT3dVL": {
+            "heading_BnxJ8G": {
               "type": "_heading",
               "settings": {
                 "heading": "The not-a-diaper-bag diaper bag.",
-                "heading_size": "h3"
+                "heading_size": "h2"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "subheading_pM8aKC",
-            "heading_FT3dVL"
+            "subheading_PawWfC",
+            "heading_BnxJ8G"
           ]
         },
-        "text_p84iPG": {
+        "text_66draM": {
           "type": "text",
           "settings": {
             "text": "<p>You already carry the world in your AP tote. Turns out, it can carry a baby's world in it too, without looking like it does.</p>",
-            "font_style": "body text-xs"
+            "font_style": "body"
           },
           "blocks": {}
         },
@@ -52,22 +53,22 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "stacked_image_hhcTF3": {
+            "stacked_image_R7yDP9": {
               "type": "_stacked-image",
               "settings": {
                 "image": "shopify://shop_images/MidSilver12.jpg",
                 "image_ratio": "2 / 3",
-                "max_width": 90,
+                "max_width": 100,
                 "link": "",
                 "link_label": ""
               },
               "blocks": {}
             },
-            "stacked_image_E3WV9z": {
+            "stacked_image_MbQmpJ": {
               "type": "_stacked-image",
               "settings": {
                 "image": "shopify://shop_images/MidSilver13_48c88ebd-70c5-4df7-883f-150ed00baa9b.png",
-                "image_ratio": "2 / 3",
+                "image_ratio": "default",
                 "max_width": 100,
                 "link": "",
                 "link_label": ""
@@ -76,21 +77,21 @@
             }
           },
           "block_order": [
-            "stacked_image_hhcTF3",
-            "stacked_image_E3WV9z"
+            "stacked_image_R7yDP9",
+            "stacked_image_MbQmpJ"
           ]
         }
       },
       "block_order": [
-        "heading_group_fJUbii",
-        "text_p84iPG"
+        "heading_group_WDQQce",
+        "text_66draM"
       ],
-      "name": "t:stacked-images-with-text",
+      "name": "Stacked Images (Original)",
       "settings": {
         "horizontal_alignment": "center",
         "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme_transition": "scheme-2",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -151,7 +152,7 @@
             "chip_3_text": "Gym bag",
             "chip_4_text": "Travel carry-on",
             "chip_5_text": "Back to brunch",
-            "chip_background_color": "#C8F70E",
+            "chip_background_color": "#c8f70e",
             "chip_text_color": "#000000"
           },
           "blocks": {}
@@ -579,7 +580,7 @@
     }
   },
   "order": [
-    "stacked_images_with_text_D7GBkh",
+    "stacked_images_with_text_original_hDPje4",
     "main",
     "178160125271e08a23",
     "video_reels_tGRfQF",
