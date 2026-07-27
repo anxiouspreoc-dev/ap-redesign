@@ -15,6 +15,7 @@
         "heading_group_zNEkWp": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -98,6 +99,7 @@
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
+        "enhance_text_readability": false,
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
         "color_scheme": "scheme-4",
@@ -125,6 +127,7 @@
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
+        "enhance_text_readability": false,
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
         "color_scheme": "scheme-4",
@@ -166,6 +169,7 @@
           "type": "heading-group",
           "name": "t:heading",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -220,7 +224,7 @@
         "link": "",
         "enable_sorting": true,
         "enable_filtering": true,
-        "filter_layout": "sidebar",
+        "filter_layout": "modal",
         "enable_sticky": true,
         "enable_max_height": false,
         "open_filters_by_default": true,
