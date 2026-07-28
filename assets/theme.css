@@ -7649,4 +7649,17 @@ recently-viewed {
   letter-spacing: var(--font-body-letter-spacing);
 }
 
+.product-info__badges,
+.media-banner__content-inner .caption,
+.product-info__sku .caption,
+.rich-text__badges,
+.linked-products-picker .caption {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  font-size: var(--font-body-size);
+  text-transform: none;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
 /* css/theme.css */
