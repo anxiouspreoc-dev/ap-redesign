@@ -190,17 +190,6 @@
           ]
         }
       },
-      "custom_css": [
-        "button {text-transform: uppercase;}",
-        ".product-info__icon-with-text {position: relative;}",
-        ".buy-buttons__button-group.button.button--full.button--primary {background-color: #c9fc00 !important; border-color: #c9fc00; color: black;}",
-        ".custom-select__option-main {font-family: var(--font-body-family) !important; font-weight: 700 !important; font-size: medium !important;}",
-        ".product-info__price .text-xs.secondary {display: none;}",
-        "div#shopify-block-AanpGQzFjTnB5eUFQU__klarna_on_site_messaging_app_block_h3ntJK {margin-top: 0 !important;}",
-        "xflow-bis-button, .xflow-bis-button__wrapper {display: block; width: 100%;}",
-        ".xflow-button.xflow-button {display: block; width: 100%; text-align: center; font-family: var(--font-button-family) !important; font-weight: var(--font-button-weight) !important; font-size: var(--font-button-size) !important; text-transform: uppercase !important; letter-spacing: var(--font-button-letter-spacing); line-height: var(--leading-tight); background-color: #c9fc00 !important; border: var(--border-thickness) solid #c9fc00 !important; color: #000 !important; border-radius: var(--border-radius-button) !important; padding-block: var(--font-button-padding-block) !important; padding-inline: var(--font-button-padding-inline) !important; cursor: pointer;}",
-        ".xflow-button.xflow-button:hover {background-color: #b8e600 !important; border-color: #b8e600 !important;}"
-      ],
       "settings": {
         "media_style": "thumbnails",
         "mobile_max_width": "100%",
