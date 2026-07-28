@@ -191,15 +191,9 @@
     --font-heading-letter-casing: {{ settings.font_heading_letter_casing }};
     --font-heading-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.font_heading_letter_spacing | divided_by: 100.0 }}{% endif %}em;
 
-    {%- if settings.font_subheading == 'heading' -%}
-      --font-subheading-family: var(--font-heading-family);
-      --font-subheading-style: {{ settings.font_heading.style }};
-      --font-subheading-weight: {{ settings.font_heading.weight }};
-    {% else %}
-      --font-subheading-family: var(--font-body-family);
-      --font-subheading-style: {{ settings.font_body.style }};
-      --font-subheading-weight: {{ settings.font_body.weight }};
-    {% endif %}
+    --font-subheading-family: var(--font-body-family);
+    --font-subheading-style: {{ settings.font_body.style }};
+    --font-subheading-weight: {{ settings.font_body.weight }};
 
     --font-subheading-size: var(--font-body-size);
 
