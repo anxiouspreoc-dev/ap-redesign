@@ -8,6 +8,17 @@
   {%- endcase -%}
 </div>
 
+{% style %}
+.rich-text__mini-product .price {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  font-size: var(--font-body-size);
+  text-transform: none;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:mini-product",
