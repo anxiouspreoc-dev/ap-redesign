@@ -75,7 +75,7 @@
     "badge_display": "image",
     "badge_style": "primary",
     "product_block_title_font_style": "caption",
-    "product_block_price_font_style": "caption-xs",
+    "product_block_price_font_style": "body",
     "product_block_card_image_ratio": "1",
     "product_block_card_image_width": 80,
     "product_block_card_button_style": "primary",
