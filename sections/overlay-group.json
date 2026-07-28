@@ -36,7 +36,7 @@
         "show_view_cart": true,
         "product_image_width": 120,
         "font_style_title": "heading h6",
-        "font_style_price": "body text-xs",
+        "font_style_price": "body",
         "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31"
       }
     },
