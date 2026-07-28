@@ -155,31 +155,31 @@
       {%- when 'xsmall' -%}
         --font-xs-size: 0.75rem;
         --font-s-size: 0.875rem;
-        --font-body-size: 0.75rem;
+        --font-body-size: var(--font-s-size);
         --font-l-size: 0.875rem;
         --font-xl-size: 1rem;
       {%- when 'small' -%}
         --font-xs-size: 0.75rem;
         --font-s-size: 0.875rem;
-        --font-body-size: 0.875rem;
+        --font-body-size: var(--font-s-size);
         --font-l-size: 1rem;
         --font-xl-size: 1.125rem;
       {%- when 'medium' -%}
         --font-xs-size: 0.75rem;
         --font-s-size: 0.875rem;
-        --font-body-size: 1rem;
+        --font-body-size: var(--font-s-size);
         --font-l-size: 1.125rem;
         --font-xl-size: 1.25rem;
       {%- when 'large' -%}
         --font-xs-size: clamp(0.7813rem, 0.9208rem + -0.1595vw, 0.8889rem);
         --font-s-size: clamp(0.9375rem, 1.0185rem + -0.0926vw, 1rem);
-        --font-body-size: 1.125rem;
+        --font-body-size: var(--font-s-size);
         --font-l-size: 1.25rem;
         --font-xl-size: 1.375rem;
       {%- when 'xlarge' -%}
         --font-xs-size: clamp(0.8681rem, 1.0231rem + -0.1772vw, 0.9877rem);
         --font-s-size: clamp(1.0417rem, 1.1317rem + -0.1029vw, 1.1111rem);
-        --font-body-size: 1.25rem;
+        --font-body-size: var(--font-s-size);
         --font-l-size: 1.375rem;
         --font-xl-size: 1.5rem;
     {%- endcase -%}
