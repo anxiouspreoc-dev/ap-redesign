@@ -190,6 +190,7 @@
           ]
         }
       },
+      "custom_css": [],
       "settings": {
         "media_style": "thumbnails",
         "mobile_max_width": "100%",
