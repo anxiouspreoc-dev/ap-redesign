@@ -4,7 +4,7 @@
 {%- assign metafield_key = block.settings.option_value_metafield | split: '.' | last -%}
 
 {% if block.settings.product_list.count > 0 %}
-  <div class="variant-picker">
+  <div class="variant-picker linked-products-picker">
     <div class="variant-picker__input variant-picker__input--images justify-inherit">
       {% if block.settings.option_name != blank%}
         <div class="variant-picker__legend justify-inherit">
