@@ -8,6 +8,16 @@
   <span class="caption text-s secondary" data-sku>{{- variant.sku -}}</span>
 </p>
 
+{% style %}
+.product-info__sku .caption {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  text-transform: none;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:sku",
