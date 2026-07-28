@@ -7631,4 +7631,22 @@ recently-viewed {
   }
 }
 
+.cart__main .caption,
+.cart__main .caption-xs,
+.cart__main .caption-sm,
+.card-product .caption,
+.card-product .caption-xs,
+.card-product .caption-sm,
+.article__tags,
+.before-after__label,
+.quantity-input__legend,
+.quantity-input__input {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  font-size: var(--font-body-size);
+  text-transform: none;
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
 /* css/theme.css */
