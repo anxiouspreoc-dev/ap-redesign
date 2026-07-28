@@ -7653,7 +7653,9 @@ recently-viewed {
 .media-banner__content-inner .caption,
 .product-info__sku .caption,
 .rich-text__badges,
-.linked-products-picker .caption {
+.linked-products-picker .caption,
+.complementary-products .price,
+.complementary-products .mini-product__title {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
