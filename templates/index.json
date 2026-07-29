@@ -106,6 +106,7 @@
       "block_order": [
         "image-banner"
       ],
+      "name": "Split card 1st",
       "settings": {
         "container_type": "max",
         "border_radius": "section",
@@ -125,8 +126,8 @@
         "image_banner_w36JiD": {
           "type": "_image-banner",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_Desktop_Banner_1920_x_1080_px.png",
-            "mobile_image": "shopify://shop_images/Home_Page_MOBILE_BANNER_360_x_660_px.png",
+            "image": "shopify://shop_images/Home_Page_Desktop_Option_1.jpg",
+            "mobile_image": "shopify://shop_images/Home_Page_Banner_Mobile_Size.jpg",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
@@ -217,6 +218,119 @@
         "image_banner_w36JiD"
       ],
       "disabled": true,
+      "name": "Split card 2nd (for switching)",
+      "settings": {
+        "container_type": "max",
+        "border_radius": "section",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_borders": false
+      }
+    },
+    "split_card_T6LRfK": {
+      "type": "split-card",
+      "blocks": {
+        "image_banner_wQAPqE": {
+          "type": "_image-banner",
+          "settings": {
+            "image": "shopify://shop_images/Home_Page_Desktop_Option_2.jpg",
+            "mobile_image": "shopify://shop_images/Home_Page_Mobile_Banner_after_Zipped_Mid.jpg",
+            "height": "medium",
+            "mobile_height": "large",
+            "stack": "none",
+            "spacing": "0px",
+            "media_content_padding": "var(--space-l)",
+            "text_color": "",
+            "container_width": "xxs",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "bottom",
+            "enable_banner_click": false,
+            "enhance_text_readability": true,
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {
+            "heading_group_ii8Ayh": {
+              "type": "heading-group",
+              "settings": {
+                "anchor_id": "",
+                "page_title": true
+              },
+              "blocks": {
+                "subheading_dWX46L": {
+                  "type": "_subheading",
+                  "disabled": true,
+                  "settings": {
+                    "subheading": "New Collection"
+                  },
+                  "blocks": {}
+                },
+                "heading_VrYRbC": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Beautifully organized chaos",
+                    "heading_size": "h3"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "subheading_dWX46L",
+                "heading_VrYRbC"
+              ]
+            },
+            "mini_product_wUn6jG": {
+              "type": "mini-product",
+              "name": "t:mini-product",
+              "disabled": true,
+              "settings": {
+                "product": "",
+                "style": "card",
+                "color_scheme": ""
+              },
+              "blocks": {}
+            },
+            "button_group_FhBkLz": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button_pWQyVX": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "SHOP NOW",
+                    "button_link": "shopify://collections/all-products"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_pWQyVX"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_ii8Ayh",
+            "mini_product_wUn6jG",
+            "button_group_FhBkLz"
+          ]
+        }
+      },
+      "block_order": [
+        "image_banner_wQAPqE"
+      ],
+      "disabled": true,
+      "name": "Split card 3rd (for switching)",
       "settings": {
         "container_type": "max",
         "border_radius": "section",
@@ -1388,6 +1502,7 @@
   "order": [
     "split-card",
     "split_card_d3egMJ",
+    "split_card_T6LRfK",
     "rich-text",
     "collection_list_LJnUAE",
     "logo_list_Ny7bgw",
