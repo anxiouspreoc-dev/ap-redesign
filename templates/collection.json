@@ -139,6 +139,35 @@
         "show_bottom_border": false
       }
     },
+    "image_banner_BhgFyb": {
+      "type": "image-banner",
+      "disabled": true,
+      "name": "Image banner (for switching)",
+      "settings": {
+        "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
+        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
+        "height": "medium",
+        "mobile_height": "small",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "0px",
+        "container_type": "full",
+        "container_width": "md",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "enable_banner_click": false,
+        "enhance_text_readability": false,
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "scheme-4",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
     "header": {
       "type": "collection-header",
       "disabled": true,
@@ -242,6 +271,7 @@
   "order": [
     "image_banner_iAPUdb",
     "image_banner_ba4XAc",
+    "image_banner_BhgFyb",
     "header",
     "rich_text_zjnXRq",
     "main"
