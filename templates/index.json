@@ -127,7 +127,7 @@
           "type": "_image-banner",
           "settings": {
             "image": "shopify://shop_images/Home_Page_Desktop_Option_1.jpg",
-            "mobile_image": "shopify://shop_images/Home_Page_Banner_Mobile_Size.jpg",
+            "mobile_image": "shopify://shop_images/Home_Page_Mobile_Banner_Zipped_Mid.jpg",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
