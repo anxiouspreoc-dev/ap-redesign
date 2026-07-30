@@ -15,7 +15,11 @@
     assign mobile_height = settings.mobile_height | default: height | default: 'adapt'
   endunless
 
-  if section.blocks.size > 1 and section.id contains 'split_banner' or section.blocks.size > 1 and section.id contains 'split_card'
+  assign is_split_section = false
+  if section.id contains 'split_banner' or section.id contains 'split_card'
+    assign is_split_section = true
+  endif
+  if is_split_section and section.blocks.size > 1
     assign sizes = '(min-width:48em) 50vw, 100vw'
   endif
 
