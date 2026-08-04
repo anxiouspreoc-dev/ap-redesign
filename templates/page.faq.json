@@ -529,6 +529,27 @@
             "txt"
           ]
         },
+        "collapsible_WHctTr": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What bags does the Organizer fit into?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_pQrDEE": {
+              "type": "text",
+              "settings": {
+                "text": "<p>This sleek bag insert keeps your essentials perfectly in place from baby gear to tech to daily must-haves. Designed for modern life with smart compartments and a comfortable sleeve for your laptop. Fits within our Mid, Zipped Mid and Oversized Totes and most larger totes.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_pQrDEE"
+          ]
+        },
         "c1-q4": {
           "type": "collapsible",
           "settings": {
@@ -1367,6 +1388,7 @@
         "c1-q1",
         "c1-q2",
         "c1-q3",
+        "collapsible_WHctTr",
         "c1-q4",
         "c1-q5",
         "c1-q6",
@@ -1432,6 +1454,7 @@
             "stack": "none",
             "spacing": "0px",
             "media_content_padding": "default",
+            "text_color": "",
             "container_width": "md",
             "horizontal_alignment": "center",
             "vertical_alignment": "middle",
