@@ -1103,7 +1103,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We&rsquo;re an accessories brand creating personality-led bags and accessories designed for everyday chaos, overthinking and excellent outfits.</p>",
+                "text": "<p>We’re an accessories brand creating personality-led bags and accessories designed for everyday chaos, overthinking and excellent outfits. </p>",
                 "font_style": "body"
               },
               "blocks": {}
