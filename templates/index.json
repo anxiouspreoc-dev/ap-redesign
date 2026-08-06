@@ -126,6 +126,7 @@
       "blocks": {
         "image_banner_w36JiD": {
           "type": "_image-banner",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Home_Page_Banner_Half_Moon.jpg",
             "mobile_image": "shopify://shop_images/Home_Page_Mobile_Banner_Half_Moon_Mobilei.jpg",
@@ -218,7 +219,6 @@
       "block_order": [
         "image_banner_w36JiD"
       ],
-      "disabled": true,
       "name": "Split card 2nd (for switching)",
       "settings": {
         "container_type": "max",
