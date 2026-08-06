@@ -218,6 +218,7 @@
       "block_order": [
         "image_banner_w36JiD"
       ],
+      "disabled": true,
       "name": "Split card 2nd (for switching)",
       "settings": {
         "container_type": "max",
@@ -239,7 +240,7 @@
           "type": "_image-banner",
           "settings": {
             "image": "shopify://shop_images/Home_Page_Desktop_Option_2.jpg",
-            "mobile_image": "shopify://shop_images/Home_Page_Mobile_Banner_after_Zipped_Mid.jpg",
+            "mobile_image": "shopify://shop_images/Home_Page_Mobile_Banner_Zipped_Mid.jpg",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
@@ -329,7 +330,6 @@
       "block_order": [
         "image_banner_wQAPqE"
       ],
-      "disabled": true,
       "name": "Split card 3rd (for switching)",
       "settings": {
         "container_type": "max",
