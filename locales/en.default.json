@@ -147,6 +147,7 @@
       "quick_add": "Quick add",
       "add_to_cart": "Add to cart",
       "preorder": "Preorder",
+      "new_in": "New In",
       "shop_product": "Shop Now",
       "select_options": "Please select all options.",
       "inventory_in_stock_show_count": "{{ inventory_quantity }} available",
