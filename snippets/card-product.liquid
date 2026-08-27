@@ -32,7 +32,7 @@
     {%- if product.tags contains 'preorder' -%}
       <li class="list-separator__item" data-badge="pre-order">{{ 'products.product.preorder' | t }}</li>
     {%- elsif product.tags contains 'new-in' -%}
-      <li class="list-separator__item" data-badge="new-in">{{ 'products.product.new_in' | t }}</li>
+      <li class="list-separator__item" data-badge="new-in">New In</li>
     {%- elsif settings.card_show_sold_out_badge and product.selected_or_first_available_variant.available == false -%}
       <li class="list-separator__item">{{ 'products.product.sold_out' | t }}</li>
     {%- elsif settings.card_show_sale_badge and product.compare_at_price > product.price and product.available -%}
