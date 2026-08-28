@@ -12,6 +12,14 @@
 
 {%- liquid
   assign product_collection = collection | default: product.collections.first
+  unless collection != blank
+    for c in product.collections
+      if c.handle == 'the-padded-laptop-case' or c.handle == 'the-padded-tablet-case'
+        assign product_collection = c
+        break
+      endif
+    endfor
+  endunless
 -%}
 
 {%- if product != blank -%}
