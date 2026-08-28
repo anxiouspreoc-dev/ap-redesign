@@ -118,7 +118,7 @@
         "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
         "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
         "height": "medium",
-        "mobile_height": "small",
+        "mobile_height": "adapt",
         "stack": "none",
         "spacing": "0px",
         "media_content_padding": "0px",
