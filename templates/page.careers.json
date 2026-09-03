@@ -60,106 +60,34 @@
       }
     },
     "open-roles": {
-      "type": "collapsible-content",
+      "type": "blog-posts",
       "blocks": {
-        "roles-heading": {
-          "type": "heading-group",
+        "section-header": {
+          "type": "_section-header",
           "settings": {
-            "anchor_id": "",
-            "page_title": false
+            "layout_header": "left",
+            "subheading": "",
+            "heading": "Open Roles",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": ""
           },
-          "blocks": {
-            "title": {
-              "type": "_heading",
-              "settings": {
-                "heading": "Open Roles",
-                "heading_size": "h2"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "title"
-          ]
-        },
-        "job-operations-manager": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Operations Manager",
-            "font_style": "heading h4",
-            "open_by_default": true
-          },
-          "blocks": {
-            "meta": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Location:</strong> Dublin &nbsp;·&nbsp; <strong>Employment type:</strong> Full-time &nbsp;·&nbsp; <strong>Reports to:</strong> Founders / Directors</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            },
-            "about": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>About Anxious Preoccupied</strong></p><p>Anxious Preoccupied is an Irish accessories brand founded by comedian and broadcaster Joanne McNally and entrepreneur Nikki Lannen. As the business continues to grow across ecommerce, retail and wholesale, we are looking for an experienced and highly organised Operations Manager to take ownership of the day-to-day operational running of the brand.</p><p><strong>The Role</strong></p><p>The Operations Manager will play a central role in ensuring Anxious Preoccupied operates efficiently across inventory, logistics, ecommerce, retail and supplier management.</p><p>This is a hands-on role requiring someone who can manage immediate operational priorities while also planning ahead, improving processes and providing the analysis needed to support commercial decision-making. The successful candidate will work closely with the founders, suppliers, fulfilment partners, retail partners and wider brand team.</p><p>Responsibilities will include, but are not limited to, the following:</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            },
-            "responsibilities": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Operations</strong></p><ul><li>Oversee the day-to-day operational requirements of the business across ecommerce, retail and wholesale.</li><li>Develop, document and improve internal processes to support the continued growth of the brand.</li><li>Coordinate activity across suppliers, fulfilment partners, retail partners and internal team members.</li><li>Identify operational issues or inefficiencies and implement practical solutions.</li><li>Maintain accurate operational records, trackers, timelines and supporting documentation.</li><li>Ensure key operational deadlines, launches and deliveries remain on track.</li><li>Support the wider team with general administrative and operational requirements as needed.</li></ul><p><strong>Inventory and Stock Management</strong></p><ul><li>Maintain accurate oversight of inventory across Shopify, the fulfilment centre, retail partners and any additional stock locations.</li><li>Monitor stock levels, stock movements, sell-through and availability by product and colourway.</li><li>Conduct regular stock reconciliations and investigate discrepancies.</li><li>Establish appropriate minimum stock levels and replenishment triggers.</li><li>Identify slow-moving, ageing or high-risk inventory and recommend appropriate actions.</li><li>Allocate stock across ecommerce, retail and wholesale channels based on demand and commercial priorities.</li><li>Ensure new products and stock deliveries are accurately set up and recorded across all relevant systems.</li></ul><p><strong>Supplier and Order Planning</strong></p><ul><li>Manage relationships and day-to-day communication with product, packaging and operational suppliers.</li><li>Prepare and manage purchase orders, production schedules and delivery timelines.</li><li>Support seasonal and ongoing order planning using sales history, current stock, lead times and forecast demand.</li><li>Monitor supplier performance, production progress, shipping dates and potential delays.</li><li>Maintain accurate records of product costs, order quantities, deposits, balances and delivery dates.</li><li>Review supplier invoices and ensure they correspond with agreed pricing and quantities.</li><li>Identify potential supply-chain risks and communicate these clearly and promptly.</li><li>Support product development and new-product launches from an operational perspective.</li></ul><p><strong>Logistics and Fulfilment</strong></p><ul><li>Manage the day-to-day relationship with the brand's fulfilment and logistics partners.</li><li>Coordinate inbound stock deliveries, freight, customs documentation and warehouse bookings.</li><li>Monitor outbound order fulfilment, delivery performance and associated costs.</li><li>Resolve fulfilment, courier, customs or delivery issues as they arise.</li><li>Review shipping methods, courier performance and logistics costs to identify opportunities for improvement.</li><li>Ensure operational readiness for launches, promotions and peak trading periods.</li><li>Oversee processes relating to returns, exchanges, damaged stock and inventory adjustments.</li></ul><p><strong>Retail and Wholesale Operations</strong></p><ul><li>Coordinate stock orders, replenishment and deliveries for retail and wholesale partners.</li><li>Manage retailer order documentation, product information, barcodes, pricing files and delivery requirements.</li><li>Monitor sales, stock levels, returns and sell-through across retail locations.</li><li>Ensure retail partners receive accurate and up-to-date product and operational information.</li><li>Support the setup and launch of new retail locations, pop-ups and wholesale accounts.</li><li>Coordinate stocktakes, transfers and stock reconciliations with retail partners.</li><li>Support the delivery of in-store merchandising, display, packaging and collateral requirements.</li><li>Maintain strong working relationships with retail operational teams and resolve issues efficiently.</li></ul><p><strong>Shopify and Ecommerce</strong></p><ul><li>Manage the operational administration of the Shopify website.</li><li>Create and update products, variants, pricing, inventory, collections, product descriptions and supporting information.</li><li>Ensure product information, imagery and stock availability are accurate across the website.</li><li>Coordinate website updates for new launches, restocks, promotions and seasonal activity.</li><li>Monitor the customer journey and identify operational or technical issues affecting conversion or customer experience.</li><li>Work with relevant partners to troubleshoot Shopify, payment, integration or fulfilment issues.</li><li>Maintain discount codes, bundles, gift cards and other ecommerce functionality as required.</li><li>Support ecommerce reporting and provide regular updates on sales, orders, returns and product performance.</li></ul><p><strong>Website, Product Imagery and Content Coordination</strong></p><ul><li>Coordinate product photography, ecommerce imagery and website content requirements.</li><li>Prepare product and shot lists and ensure all required assets are delivered on time.</li><li>Organise and maintain the brand's image and product-asset library.</li><li>Upload, resize and correctly assign product imagery across Shopify.</li><li>Ensure website content is accurate, consistent and aligned with the brand.</li><li>Coordinate with photographers, designers and other external partners where required.</li><li>Support basic website administration and flag any development work requiring external support.</li></ul><p><strong>Packaging</strong></p><ul><li>Manage stock levels and ordering of all ecommerce, retail and product packaging.</li><li>Coordinate packaging production, supplier communication, approvals and delivery timelines.</li><li>Monitor usage levels and forecast future packaging requirements.</li><li>Ensure packaging specifications, quantities, costs and delivery dates are accurately recorded.</li><li>Identify opportunities to improve packaging quality, functionality, cost efficiency and sustainability.</li><li>Coordinate packaging requirements for new products, gifting activity, wholesale orders and seasonal campaigns.</li><li>Ensure fulfilment partners have the correct packaging materials and packing instructions.</li></ul><p><strong>Planning, Reporting and Analysis</strong></p><ul><li>Prepare regular reporting on sales, stock, sell-through, returns, fulfilment and operational performance.</li><li>Analyse product performance by style, colourway, channel and retail location.</li><li>Develop demand forecasts and stock plans to support purchasing decisions.</li><li>Provide clear recommendations based on sales trends, inventory position and upcoming activity.</li><li>Support annual, seasonal and launch planning across stock, operations and logistics.</li><li>Maintain a central operational calendar covering production, deliveries, launches, retail activity and key deadlines.</li><li>Track and report against agreed operational KPIs.</li><li>Provide the founders and wider team with accurate, timely information to support decision-making.</li></ul><p><strong>Budget and Cost Management</strong></p><ul><li>Prepare and manage operational budgets across inventory, logistics, fulfilment, packaging, suppliers and ecommerce.</li><li>Track actual expenditure against agreed budgets and forecasts.</li><li>Maintain visibility of product costs, freight, duties, packaging and fulfilment expenses.</li><li>Review invoices, supplier charges and logistics costs for accuracy.</li><li>Identify cost-saving opportunities without compromising quality or customer experience.</li><li>Support cash-flow planning by maintaining accurate visibility of upcoming supplier payments, purchase orders and operational commitments.</li><li>Provide regular budget updates and flag potential overspend or cost risks at an early stage.</li><li>Support margin analysis and commercial decision-making across products and sales channels.</li></ul><p><strong>General Administration</strong></p><ul><li>Maintain accurate product, supplier, retailer and operational files.</li><li>Coordinate meetings, actions, deadlines and follow-ups relating to operational projects.</li><li>Prepare reports, spreadsheets, presentations and documentation as required.</li><li>Support customer service with stock, product, fulfilment and delivery queries where needed.</li><li>Assist with ad hoc projects and wider business priorities as the brand continues to grow.</li></ul>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            },
-            "experience": {
-              "type": "text",
-              "settings": {
-                "text": "<p><strong>Experience and Skills</strong></p><ul><li>Previous experience in an operations, ecommerce, retail, inventory or supply-chain role.</li><li>Experience within a consumer, fashion, accessories, beauty or lifestyle brand is highly desirable.</li><li>Strong working knowledge of Shopify and ecommerce operations.</li><li>Experience managing inventory, purchase orders, suppliers and logistics partners.</li><li>Strong numerical, analytical and commercial skills.</li><li>Confident working with Excel or Google Sheets, including reporting, forecasting and data analysis.</li><li>Experience managing budgets, costs and supplier invoices.</li><li>Excellent organisational and project-management skills.</li><li>Strong attention to detail and a high level of accuracy.</li><li>Clear and confident written and verbal communication skills.</li><li>Ability to manage multiple priorities, deadlines and stakeholders.</li><li>Comfortable working independently and taking ownership of projects from start to finish.</li><li>Must be able to drive.</li></ul><p><strong>The Person</strong></p><p>The ideal candidate will be highly organised, commercially aware and naturally solutions-focused. They will be comfortable moving between detailed administrative work, supplier management, data analysis and fast-paced operational problem-solving.</p><p>They will take ownership of their area, anticipate issues before they arise and communicate clearly when priorities, timelines or budgets are at risk. As part of a growing business, they should also be flexible, proactive and willing to support across different areas when required.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "meta",
-            "about",
-            "responsibilities",
-            "experience"
-          ]
-        },
-        "apply-button-group": {
-          "type": "button-group",
-          "settings": {
-            "horizontal_alignment": "inherit"
-          },
-          "blocks": {
-            "apply-button": {
-              "type": "_button",
-              "settings": {
-                "button_style": "primary",
-                "button_label": "Apply Now",
-                "button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application%20-%20Operations%20Manager"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "apply-button"
-          ]
+          "blocks": {}
         }
       },
       "block_order": [
-        "roles-heading",
-        "job-operations-manager",
-        "apply-button-group"
+        "section-header"
       ],
       "settings": {
-        "anchor_id": "",
-        "horizontal_alignment": "center",
-        "container_width": "xl",
+        "blog": "careers",
+        "product_limit": 12,
+        "columns_desktop": "3",
+        "columns_mobile": "1",
+        "layout_desktop": "grid",
+        "container_type": "max",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
