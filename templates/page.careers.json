@@ -121,7 +121,21 @@
                 "font_style": "body"
               },
               "blocks": {}
-            },
+            }
+          },
+          "block_order": [
+            "meta",
+            "about",
+            "responsibilities",
+            "experience"
+          ]
+        },
+        "apply-button-group": {
+          "type": "button-group",
+          "settings": {
+            "horizontal_alignment": "inherit"
+          },
+          "blocks": {
             "apply-button": {
               "type": "_button",
               "settings": {
@@ -133,17 +147,14 @@
             }
           },
           "block_order": [
-            "meta",
-            "about",
-            "responsibilities",
-            "experience",
             "apply-button"
           ]
         }
       },
       "block_order": [
         "roles-heading",
-        "job-operations-manager"
+        "job-operations-manager",
+        "apply-button-group"
       ],
       "settings": {
         "anchor_id": "",
