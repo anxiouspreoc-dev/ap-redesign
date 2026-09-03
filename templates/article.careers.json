@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "breadcrumbs": {
+          "type": "breadcrumbs",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "enable_share": true,
+            "heading_size": "h1",
+            "show_date": false,
+            "show_author": false
+          }
+        },
+        "tags": {
+          "type": "tags",
+          "settings": {
+            "button_style": "secondary"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "apply-cta": {
+          "type": "button-group",
+          "settings": {},
+          "blocks": {
+            "apply-button": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "Apply Now",
+                "button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "apply-button"
+          ]
+        },
+        "back_link": {
+          "type": "back_link",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "breadcrumbs",
+        "title",
+        "tags",
+        "content",
+        "apply-cta",
+        "back_link"
+      ],
+      "settings": {
+        "horizontal_alignment": "left",
+        "container_width": "md",
+        "color_scheme": "scheme-1",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
