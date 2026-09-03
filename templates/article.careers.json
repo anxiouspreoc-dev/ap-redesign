@@ -48,7 +48,7 @@
       ],
       "settings": {
         "horizontal_alignment": "left",
-        "container_width": "md",
+        "container_width": "sm",
         "color_scheme": "scheme-1",
         "padding_top": "default",
         "padding_bottom": "default",
