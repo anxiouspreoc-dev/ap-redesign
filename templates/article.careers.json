@@ -25,18 +25,13 @@
         "content": {
           "type": "content",
           "settings": {}
-        },
-        "back_link": {
-          "type": "back_link",
-          "settings": {}
         }
       },
       "block_order": [
         "breadcrumbs",
         "title",
         "tags",
-        "content",
-        "back_link"
+        "content"
       ],
       "settings": {
         "horizontal_alignment": "left",
