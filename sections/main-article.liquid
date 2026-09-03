@@ -155,6 +155,12 @@
             </div>
         {%- endcase -%}
       {% endfor %}
+
+      {%- if section.settings.show_apply_button -%}
+        <div class="article__cta justify-{{ section.settings.horizontal_alignment }}">
+          {%- render 'button', button_label: section.settings.apply_button_label, button_link: section.settings.apply_button_link, button_style: 'primary' -%}
+        </div>
+      {%- endif -%}
     </article>
 
     {%- if blog.comments_enabled? -%}
