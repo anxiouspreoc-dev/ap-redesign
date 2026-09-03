@@ -26,13 +26,6 @@
           "type": "content",
           "settings": {}
         },
-        "apply-cta": {
-          "type": "apply_button",
-          "settings": {
-            "button_label": "Apply Now",
-            "button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application"
-          }
-        },
         "back_link": {
           "type": "back_link",
           "settings": {}
@@ -43,7 +36,6 @@
         "title",
         "tags",
         "content",
-        "apply-cta",
         "back_link"
       ],
       "settings": {
@@ -53,7 +45,10 @@
         "padding_top": "default",
         "padding_bottom": "default",
         "show_top_border": false,
-        "show_bottom_border": true
+        "show_bottom_border": true,
+        "show_apply_button": true,
+        "apply_button_label": "Apply Now",
+        "apply_button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application"
       }
     }
   },
