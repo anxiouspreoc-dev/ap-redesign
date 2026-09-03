@@ -772,9 +772,22 @@
       "limit": 1
     },
     {
-      "type": "button-group",
-      "name": "t:buttons",
-      "limit": 1
+      "type": "apply_button",
+      "name": "t:button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:button-label",
+          "default": "Apply Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:button-link"
+        }
+      ]
     }
   ]
 }
