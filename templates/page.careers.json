@@ -163,7 +163,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Or send your application to hello@anxiouspreoccupied.com</p>",
-            "font_style": "caption"
+            "font_style": "body"
           },
           "blocks": {}
         }
