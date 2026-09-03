@@ -7,10 +7,6 @@
         {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
-          {%- when 'apply_button' -%}
-            <div class="article__cta justify-{{ section.settings.horizontal_alignment }}" {{ block.shopify_attributes }}>
-              {%- render 'button', button_label: block.settings.button_label, button_link: block.settings.button_link, button_style: 'primary', block: block -%}
-            </div>
           {%- when 'featured_image' -%}
             {%- if article.image -%}
               <div
