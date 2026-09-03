@@ -27,22 +27,11 @@
           "settings": {}
         },
         "apply-cta": {
-          "type": "button-group",
-          "settings": {},
-          "blocks": {
-            "apply-button": {
-              "type": "_button",
-              "settings": {
-                "button_style": "primary",
-                "button_label": "Apply Now",
-                "button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "apply-button"
-          ]
+          "type": "apply_button",
+          "settings": {
+            "button_label": "Apply Now",
+            "button_link": "mailto:hello@anxiouspreoccupied.com?subject=Application"
+          }
         },
         "back_link": {
           "type": "back_link",
