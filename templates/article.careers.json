@@ -64,7 +64,7 @@
         "padding_top": "default",
         "padding_bottom": "default",
         "show_top_border": false,
-        "show_bottom_border": false
+        "show_bottom_border": true
       }
     }
   },
