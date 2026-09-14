@@ -331,7 +331,7 @@
             "text_Jg34th": {
               "type": "text",
               "settings": {
-                "text": "<p>Your bag is currently in production or in transit, and we're working hard to get it to you as soon as possible.<br/><br/>Below are our current estimated shipping timeframes. Please note that these are estimates and may be subject to change due to unforeseen delays. We'll continue to keep this page updated with the latest information.</p><p><strong>Shipping expected to begin from Late August 2026</strong></p><ul><li>The Oversized Bum Bag: Gold</li><li>The Oversized Bum Bag: Silver</li><li>The Oversized Bum Bag: Lilac</li><li>The Mid Tote: Neon Pink Bag</li><li>The Mid Tote: Neon Yellow Bag</li><li>The Zipped Mid Tote Bag: Neon Pink (Pink Interior)</li><li>The Mid Tote Bag: Silver Metallic</li><li>The Mid Tote Bag: Gold Metallic</li><li>The Zipped Mid Tote Bag: Silver Metallic</li><li>The Oversized Tote Bag: Silver Metallic</li><li>The Zipped Mid Tote Bag: Gold Metallic</li><li>The Mid Tote Bag: Lilac Metallic</li><li>The Organizer: Lime Green Bag Organizer</li></ul>",
+                "text": "<p>Your bag is currently in production or in transit, and we're working hard to get it to you as soon as possible.<br/><br/>Below are our current estimated shipping timeframes. Please note that these are estimates and may be subject to change due to unforeseen delays. We'll continue to keep this page updated with the latest information.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1363,6 +1363,27 @@
           "block_order": [
             "txt"
           ]
+        },
+        "collapsible_4pXBEn": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How should I store my bag?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_hYUNxn": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We recommend storing your bag separately from darker or highly pigmented items. Prolonged contact with contrasting colours may cause colour transfer, particularly between very light or bright shades and darker materials. Heat, moisture and friction can increase the risk.<br/><br/>Avoid storing your bag pressed directly against other bags, clothing or fabrics for extended periods, and take extra care around denim and other strongly dyed materials.<br/><br/>Colour transfer caused by contact with another item is considered external damage rather than a manufacturing fault. This does not affect your statutory consumer rights.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_hYUNxn"
+          ]
         }
       },
       "block_order": [
@@ -1427,7 +1448,8 @@
         "c7-q0",
         "c7-q1",
         "c7-q2",
-        "c7-q3"
+        "c7-q3",
+        "collapsible_4pXBEn"
       ],
       "settings": {
         "anchor_id": "",
