@@ -1363,6 +1363,27 @@
           "block_order": [
             "txt"
           ]
+        },
+        "collapsible_T3gN8w": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "How should I store my bag?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_Xawwzc": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We recommend storing your bag separately from darker or highly pigmented items. Prolonged contact with contrasting colours may cause colour transfer, particularly between very light or bright shades and darker materials. Heat, moisture and friction can increase the risk.<br/><br/>Avoid storing your bag pressed directly against other bags, clothing or fabrics for extended periods, and take extra care around denim and other strongly dyed materials.<br/><br/>Colour transfer caused by contact with another item is considered external damage rather than a manufacturing fault. This does not affect your statutory consumer rights.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_Xawwzc"
+          ]
         }
       },
       "block_order": [
@@ -1427,7 +1448,8 @@
         "c7-q0",
         "c7-q1",
         "c7-q2",
-        "c7-q3"
+        "c7-q3",
+        "collapsible_T3gN8w"
       ],
       "settings": {
         "anchor_id": "",
