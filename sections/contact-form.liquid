@@ -136,7 +136,11 @@
                   class="field__input"
                   aria-required="{{ block.settings.required }}"
                   {% if block.settings.required %}
-                    required
+                    {% if is_conditional %}
+                      data-required
+                    {% else %}
+                      required
+                    {% endif %}
                   {% endif %}
                   autocorrect="off"
                   {% if form.errors %}
