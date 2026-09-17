@@ -35,76 +35,6 @@
             "columns": "2"
           }
         },
-        "enquiry-type": {
-          "type": "enquiry_type",
-          "settings": {
-            "field_label": "I'm reaching out about",
-            "option_general_label": "General Enquiry",
-            "option_wholesale_label": "Wholesale Partnership",
-            "option_creator_label": "Creator / Influencer Partnership"
-          }
-        },
-        "wholesale-business-name": {
-          "type": "text",
-          "settings": {
-            "field_label": "Business / Store Name",
-            "required": true,
-            "columns": "1",
-            "conditional_group": "wholesale"
-          }
-        },
-        "wholesale-website": {
-          "type": "text",
-          "settings": {
-            "field_label": "Website or Instagram",
-            "required": false,
-            "columns": "1",
-            "conditional_group": "wholesale"
-          }
-        },
-        "wholesale-location": {
-          "type": "text",
-          "settings": {
-            "field_label": "Store Location",
-            "required": false,
-            "columns": "1",
-            "conditional_group": "wholesale"
-          }
-        },
-        "wholesale-details": {
-          "type": "textarea",
-          "settings": {
-            "field_label": "Tell us about your business",
-            "required": false,
-            "conditional_group": "wholesale"
-          }
-        },
-        "creator-handle": {
-          "type": "text",
-          "settings": {
-            "field_label": "Instagram / TikTok Handle",
-            "required": true,
-            "columns": "1",
-            "conditional_group": "creator"
-          }
-        },
-        "creator-platform": {
-          "type": "text",
-          "settings": {
-            "field_label": "Platform & Follower Count",
-            "required": false,
-            "columns": "1",
-            "conditional_group": "creator"
-          }
-        },
-        "creator-details": {
-          "type": "textarea",
-          "settings": {
-            "field_label": "Tell us about your content & audience",
-            "required": false,
-            "conditional_group": "creator"
-          }
-        },
         "message": {
           "type": "textarea",
           "settings": {
@@ -117,14 +47,6 @@
         "name",
         "email",
         "telephone",
-        "enquiry-type",
-        "wholesale-business-name",
-        "wholesale-website",
-        "wholesale-location",
-        "wholesale-details",
-        "creator-handle",
-        "creator-platform",
-        "creator-details",
         "message"
       ],
       "settings": {

@@ -53,39 +53,8 @@
 
         {%- for block in section.blocks -%}
           {%- capture input_id -%}{{ form_id }}-{{ forloop.index }}-{{ block.settings.field_label | handleize }}{%- endcapture -%}
-          {%- assign is_conditional = false -%}
-          {%- if block.settings.conditional_group != blank -%}
-            {%- assign is_conditional = true -%}
-          {%- endif -%}
-          <div
-            {{ block.shopify_attributes }}
-            class="{% if block.settings.columns == '1' %}form__row--half{% endif %}"
-            {% if is_conditional %}
-              data-conditional-group="{{ block.settings.conditional_group }}"
-              hidden
-            {% endif %}
-          >
+          <div {{ block.shopify_attributes }} class="{% if block.settings.columns == '1' %}form__row--half{% endif %}">
           {%- case block.type -%}
-            {%- when 'enquiry_type' -%}
-              <div class="field">
-                <label class="field__label" for="{{ input_id }}">
-                  {{- block.settings.field_label | escape -}}<span aria-hidden="true">*</span>
-                </label>
-                <div class="select">
-                  <select
-                    id="{{ input_id }}"
-                    name="contact[{{ block.settings.field_label | escape }}]"
-                    class="select__field secondary"
-                    data-enquiry-type-select
-                    required
-                  >
-                    <option value="general">{{ block.settings.option_general_label | escape }}</option>
-                    <option value="wholesale">{{ block.settings.option_wholesale_label | escape }}</option>
-                    <option value="creator">{{ block.settings.option_creator_label | escape }}</option>
-                  </select>
-                  {%- render 'icon', icon: 'caret-down', class: 'icon--xs select__icon' -%}
-                </div>
-              </div>
             {%- when 'email' -%}
               {%- if form.errors contains 'email' -%}
                 <div id="{{ form_id }}-email-error">
@@ -136,11 +105,7 @@
                   class="field__input"
                   aria-required="{{ block.settings.required }}"
                   {% if block.settings.required %}
-                    {% if is_conditional %}
-                      data-required
-                    {% else %}
-                      required
-                    {% endif %}
+                    required
                   {% endif %}
                   autocorrect="off"
                   {% if form.errors %}
@@ -169,11 +134,7 @@
                   placeholder=" "
                   aria-required="{{ block.settings.required }}"
                   {% if block.settings.required %}
-                    {% if is_conditional %}
-                      data-required
-                    {% else %}
-                      required
-                    {% endif %}
+                    required
                   {% endif %}
                   dir="auto"
                 ></textarea>
@@ -335,33 +296,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  (function () {
-    document.querySelectorAll('[data-enquiry-type-select]').forEach(function (select) {
-      var form = select.closest('form');
-      if (!form) return;
-
-      function update() {
-        var value = select.value;
-        form.querySelectorAll('[data-conditional-group]').forEach(function (group) {
-          var isMatch = group.getAttribute('data-conditional-group') === value;
-          group.hidden = !isMatch;
-          group.querySelectorAll('[data-required]').forEach(function (field) {
-            if (isMatch) {
-              field.setAttribute('required', 'required');
-            } else {
-              field.removeAttribute('required');
-            }
-          });
-        });
-      }
-
-      select.addEventListener('change', update);
-      update();
-    });
-  })();
-</script>
 
 {% schema %}
 {
@@ -706,27 +640,6 @@
               "label": "t:two"
             }
           ]
-        },
-        {
-          "type": "select",
-          "id": "conditional_group",
-          "label": "Only show for",
-          "info": "Shows this field only when the matching Enquiry Type option is selected. Leave as 'Always visible' for general fields.",
-          "default": "",
-          "options": [
-            {
-              "value": "",
-              "label": "Always visible"
-            },
-            {
-              "value": "wholesale",
-              "label": "Wholesale Partnership"
-            },
-            {
-              "value": "creator",
-              "label": "Creator / Influencer Partnership"
-            }
-          ]
         }
       ]
     },
@@ -809,58 +722,6 @@
           "id": "required",
           "label": "t:required",
           "default": false
-        },
-        {
-          "type": "select",
-          "id": "conditional_group",
-          "label": "Only show for",
-          "info": "Shows this field only when the matching Enquiry Type option is selected. Leave as 'Always visible' for general fields.",
-          "default": "",
-          "options": [
-            {
-              "value": "",
-              "label": "Always visible"
-            },
-            {
-              "value": "wholesale",
-              "label": "Wholesale Partnership"
-            },
-            {
-              "value": "creator",
-              "label": "Creator / Influencer Partnership"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "enquiry_type",
-      "name": "Enquiry type dropdown",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "field_label",
-          "label": "t:label",
-          "default": "I'm reaching out about"
-        },
-        {
-          "type": "text",
-          "id": "option_general_label",
-          "label": "Option 1 label",
-          "default": "General Enquiry"
-        },
-        {
-          "type": "text",
-          "id": "option_wholesale_label",
-          "label": "Option 2 label",
-          "default": "Wholesale Partnership"
-        },
-        {
-          "type": "text",
-          "id": "option_creator_label",
-          "label": "Option 3 label",
-          "default": "Creator / Influencer Partnership"
         }
       ]
     },
