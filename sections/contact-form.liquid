@@ -809,6 +809,58 @@
           "id": "required",
           "label": "t:required",
           "default": false
+        },
+        {
+          "type": "select",
+          "id": "conditional_group",
+          "label": "Only show for",
+          "info": "Shows this field only when the matching Enquiry Type option is selected. Leave as 'Always visible' for general fields.",
+          "default": "",
+          "options": [
+            {
+              "value": "",
+              "label": "Always visible"
+            },
+            {
+              "value": "wholesale",
+              "label": "Wholesale Partnership"
+            },
+            {
+              "value": "creator",
+              "label": "Creator / Influencer Partnership"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "enquiry_type",
+      "name": "Enquiry type dropdown",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "field_label",
+          "label": "t:label",
+          "default": "I'm reaching out about"
+        },
+        {
+          "type": "text",
+          "id": "option_general_label",
+          "label": "Option 1 label",
+          "default": "General Enquiry"
+        },
+        {
+          "type": "text",
+          "id": "option_wholesale_label",
+          "label": "Option 2 label",
+          "default": "Wholesale Partnership"
+        },
+        {
+          "type": "text",
+          "id": "option_creator_label",
+          "label": "Option 3 label",
+          "default": "Creator / Influencer Partnership"
         }
       ]
     },
