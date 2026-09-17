@@ -336,6 +336,33 @@
   </div>
 </div>
 
+<script>
+  (function () {
+    document.querySelectorAll('[data-enquiry-type-select]').forEach(function (select) {
+      var form = select.closest('form');
+      if (!form) return;
+
+      function update() {
+        var value = select.value;
+        form.querySelectorAll('[data-conditional-group]').forEach(function (group) {
+          var isMatch = group.getAttribute('data-conditional-group') === value;
+          group.hidden = !isMatch;
+          group.querySelectorAll('[data-required]').forEach(function (field) {
+            if (isMatch) {
+              field.setAttribute('required', 'required');
+            } else {
+              field.removeAttribute('required');
+            }
+          });
+        });
+      }
+
+      select.addEventListener('change', update);
+      update();
+    });
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:contact-form",
