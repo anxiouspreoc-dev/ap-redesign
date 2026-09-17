@@ -1567,6 +1567,7 @@
   },
   "order": [
     "contact",
+    "partnerships",
     "split-card",
     "faq"
   ]
