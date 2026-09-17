@@ -169,7 +169,11 @@
                   placeholder=" "
                   aria-required="{{ block.settings.required }}"
                   {% if block.settings.required %}
-                    required
+                    {% if is_conditional %}
+                      data-required
+                    {% else %}
+                      required
+                    {% endif %}
                   {% endif %}
                   dir="auto"
                 ></textarea>
