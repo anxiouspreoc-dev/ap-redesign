@@ -69,6 +69,90 @@
         "show_bottom_border": false
       }
     },
+    "partnerships": {
+      "type": "collapsible-content",
+      "blocks": {
+        "partnerships-heading": {
+          "type": "heading-group",
+          "settings": {
+            "anchor_id": "",
+            "page_title": false
+          },
+          "blocks": {
+            "title": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Partner With Us",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title"
+          ]
+        },
+        "wholesale": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Wholesale Partnership",
+            "font_style": "heading h4",
+            "open_by_default": false
+          },
+          "blocks": {
+            "intro": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Looking to stock Anxious Preoccupied in your store? Fill out the form below and our team will be in touch.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "intro"
+          ]
+        },
+        "creator": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Creator / Influencer Partnership",
+            "font_style": "heading h4",
+            "open_by_default": false
+          },
+          "blocks": {
+            "intro": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Interested in collaborating with us? Fill out the form below and our team will be in touch.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "intro"
+          ]
+        }
+      },
+      "block_order": [
+        "partnerships-heading",
+        "wholesale",
+        "creator"
+      ],
+      "settings": {
+        "anchor_id": "partnerships",
+        "horizontal_alignment": "center",
+        "container_width": "md",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
     "split-card": {
       "type": "split-card",
       "blocks": {
