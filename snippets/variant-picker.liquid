@@ -93,7 +93,9 @@
                   </option>
                 {%- endfor -%}
               </select>
-              {%- render 'icon', icon: 'caret-down', class: 'icon--xs select__icon' -%}
+              <svg class="select__icon variant-picker__select-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
             <template>
               {%- for value in option.values -%}
