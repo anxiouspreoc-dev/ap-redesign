@@ -5374,10 +5374,9 @@ model-viewer,
   inset-inline-end: 1rem;
   color: rgb(var(--color-foreground));
 }
-.variant-picker__input--dropdown .select__icon.icon--xs {
-  inline-size: 1.0625rem;
-  block-size: 1.0625rem;
-  color: rgb(var(--color-foreground));
+.variant-picker__input--dropdown .select__icon.variant-picker__select-icon {
+  inline-size: 0.875rem;
+  block-size: 0.875rem;
 }
 .variant-picker__input--dropdown .variant-picker__option-title {
   font-size: 0.875rem;
