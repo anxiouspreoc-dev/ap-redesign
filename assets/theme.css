@@ -5353,7 +5353,7 @@ model-viewer,
   color: rgb(var(--color-text-secondary));
 }
 .variant-picker__input--dropdown .select {
-  border: var(--border-thickness) solid rgb(var(--color-border));
+  border: var(--border-thickness) solid rgb(var(--color-foreground));
   border-radius: var(--border-radius-input, 4px);
   transition: border-color 0.15s ease;
 }
