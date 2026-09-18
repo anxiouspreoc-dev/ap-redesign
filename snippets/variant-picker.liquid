@@ -98,6 +98,14 @@
             <template>
               {%- for value in option.values -%}
                 {%- capture input_id -%}{{ product_form_id }}-{{ option.position }}-{{ forloop.index0 -}}{%- endcapture -%}
+                {%- liquid
+                  assign value_parts = value | split: ' with '
+                  assign value_primary = value_parts[0]
+                  assign value_secondary = ''
+                  if value_parts.size > 1
+                    assign value_secondary = value_parts[1]
+                  endif
+                -%}
                 <div class="custom-select__option {% unless value.available %}custom-select__option--disabled{% endunless %} {% if variant and value.selected %}custom-select__option--highlighted{% endif %}" role="option" id="{{ input_id }}-option" {% if variant and value.selected %}aria-selected="true"{% endif %} data-value="{{ value | escape }}">
                   <div class="custom-select__option-wrapper">
                     <div class="custom-select__option-main caption">
@@ -105,7 +113,10 @@
                         {%- render 'swatch', swatch: value.swatch, fallback: value -%}
                       {% endif %}
                       <div>
-                        {{- value -}}
+                        <div class="variant-picker__option-title">{{- value_primary -}}</div>
+                        {%- if value_secondary != '' -%}
+                          <div class="variant-picker__option-subtitle">{{- value_secondary -}}</div>
+                        {%- endif -%}
                         {% unless value.available %}
                           <span class="custom-select__option-suffix">- {{ 'products.product.unavailable' | t }}</span>
                         {% endunless %}
