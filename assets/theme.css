@@ -5345,6 +5345,34 @@ model-viewer,
 .variant-picker__select {
   inline-size: 100%;
 }
+.variant-picker__input--dropdown .variant-picker__legend label {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: rgb(var(--color-text-secondary));
+}
+.variant-picker__input--dropdown .select {
+  border: var(--border-thickness) solid rgb(var(--color-border));
+  border-radius: var(--border-radius-input, 4px);
+  transition: border-color 0.15s ease;
+}
+.variant-picker__input--dropdown .select__field,
+.variant-picker__input--dropdown .custom-select__option-main {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  text-transform: none;
+  letter-spacing: normal;
+}
+.variant-picker__input--dropdown .select__field {
+  border: 0;
+  padding-inline: var(--input-horizontal-padding);
+  padding-block: var(--input-vertical-padding);
+}
+.variant-picker__input--dropdown .select:hover,
+.variant-picker__input--dropdown .select:focus-within {
+  border-color: rgb(var(--color-foreground));
+}
 .variant-picker__modal-button {
   display: flex;
   padding-block: var(--space-2xs);
