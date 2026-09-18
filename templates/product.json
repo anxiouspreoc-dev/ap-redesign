@@ -219,6 +219,7 @@
     },
     "pdp-behind-the-bag": {
       "type": "pdp-behind-the-bag",
+      "disabled": true,
       "custom_css": [
         ".pdp-behind-the-bag__text-col,.pdp-behind-the-bag__inner {display: none;}",
         "@media (max-width: 490px) {.pdp-behind-the-bag__inner {display: block; }}"
