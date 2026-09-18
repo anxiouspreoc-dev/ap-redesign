@@ -5366,8 +5366,12 @@ model-viewer,
 }
 .variant-picker__input--dropdown .select__field {
   border: 0;
-  padding-inline: var(--input-horizontal-padding);
+  padding-inline-start: 1rem;
+  padding-inline-end: 2.5rem;
   padding-block: var(--input-vertical-padding);
+}
+.variant-picker__input--dropdown .select__icon {
+  inset-inline-end: 1rem;
 }
 .variant-picker__input--dropdown .select:hover,
 .variant-picker__input--dropdown .select:focus-within {
