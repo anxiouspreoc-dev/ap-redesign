@@ -5377,6 +5377,7 @@ model-viewer,
 .variant-picker__input--dropdown .select__icon.icon--xs {
   inline-size: 1.0625rem;
   block-size: 1.0625rem;
+  color: rgb(var(--color-foreground));
 }
 .variant-picker__input--dropdown .variant-picker__option-title {
   font-size: 0.875rem;
