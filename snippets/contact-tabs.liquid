@@ -117,6 +117,16 @@
       if (customElements.get('contact-tabs')) return;
       customElements.define('contact-tabs', class extends HTMLElement {
         connectedCallback() {
+          // Shopify's spam filter silently drops contact messages containing links or @handles (the visitor
+          // still sees "Thanks"). Strip "https://" and leading "@" from the extra forms' answers on submit.
+          this.addEventListener('submit', (e) => {
+            const form = e.target;
+            if (!form.closest || !form.closest('[data-panel]') || form.closest('[data-panel]').dataset.panel === 'general') return;
+            form.querySelectorAll('input[type="text"], textarea').forEach((el) => {
+              el.value = el.value.replace(/https?:\/\//gi, '').replace(/(^|\s)@+/g, '$1');
+            });
+          }, true);
+
           // Gate: tabs only with ?dev=1 (remembered per tab so the post-submit redirect still works).
           let dev = new URLSearchParams(window.location.search).get('dev') === '1';
           try {
