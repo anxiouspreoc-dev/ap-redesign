@@ -1,8 +1,8 @@
 {%- comment -%}
   Wholesale + Creator/Influencer enquiry buttons for the Contact page.
-  Each button reveals a Hulk Form Builder form (paste the form's embed code / shortcode in the settings).
-  Everything is hidden from visitors unless the URL contains ?dev=1 (content is held in <template>
-  tags, so the Hulk scripts do not even load for normal visitors).
+  Each button reveals a native Shopify contact form (emails go to the store's default address, tagged
+  with a hidden "Enquiry type" field so a Gmail filter can forward them). Hidden from visitors unless
+  the URL contains ?dev=1 (while "gate" is ticked).
 {%- endcomment -%}
 
 <div {% render 'color-scheme-attributes', scoped_settings: section.settings, borders: true %}>
@@ -25,19 +25,87 @@
           </button>
         </div>
 
-        <div class="partnership-forms__panel" id="pf-wholesale-{{ section.id }}" data-panel="wholesale" role="tabpanel" hidden>
-          {%- if section.settings.wholesale_intro != blank -%}
-            <p class="partnership-forms__intro">{{ section.settings.wholesale_intro }}</p>
-          {%- endif -%}
-          <template data-form="wholesale">{{ section.settings.wholesale_embed }}</template>
-        </div>
+        {%- capture wholesale_fields -%}
+          business|Business name|text|1|~contact_name|Contact name|text|1|~location|Location (town/city and country)|text|1|~customers|Tell us about your customers|textarea|1|~email|Email address|email|1|~website|Website URL|text|0|~instagram|Instagram handle|text|0|
+        {%- endcapture -%}
+        {%- capture creator_fields -%}
+          your_name|Your name|text|1|~email|Email address|email|1|~location|Location|text|1|~instagram|Instagram handle|text|0|~tiktok|TikTok handle|text|0|~other|Other channel or website|text|0|~platform|Main platform|select|1|Instagram,TikTok,YouTube,Blog,Other~audience|Approximate audience size on your main platform|text|0|~partnership|Type of partnership you’re interested in|select|1|Gifting,Paid content,Event,Affiliate,Other
+        {%- endcapture -%}
 
-        <div class="partnership-forms__panel" id="pf-creator-{{ section.id }}" data-panel="creator" role="tabpanel" hidden>
-          {%- if section.settings.creator_intro != blank -%}
-            <p class="partnership-forms__intro">{{ section.settings.creator_intro }}</p>
+        {%- assign panel_keys = 'wholesale,creator' | split: ',' -%}
+        {%- for key in panel_keys -%}
+          {%- if key == 'wholesale' -%}
+            {%- assign fields = wholesale_fields | split: '~' -%}
+            {%- assign intro = section.settings.wholesale_intro -%}
+            {%- assign enquiry_type = 'Wholesale enquiry' -%}
+          {%- else -%}
+            {%- assign fields = creator_fields | split: '~' -%}
+            {%- assign intro = section.settings.creator_intro -%}
+            {%- assign enquiry_type = 'Creator / influencer enquiry' -%}
           {%- endif -%}
-          <template data-form="creator">{{ section.settings.creator_embed }}</template>
-        </div>
+          {%- assign form_id = 'pf-' | append: key | append: '-' | append: section.id -%}
+
+          <div class="partnership-forms__panel" id="{{ form_id }}-panel" data-panel="{{ key }}" role="tabpanel" hidden>
+            {%- if intro != blank -%}
+              <p class="partnership-forms__intro">{{ intro }}</p>
+            {%- endif -%}
+            {%- form 'contact', id: form_id, class: 'form' -%}
+              {%- if form.posted_successfully? -%}
+                <div class="form__success">
+                  {%- render 'icon', icon: 'check', class: 'icon--m' -%}
+                  <h3 class="body text-s" tabindex="-1">{{ 'contact.success' | t }}</h3>
+                </div>
+              {%- else -%}
+                {%- if form.errors -%}
+                  <div class="form__errors text-s exception" role="alert">
+                    {%- render 'icon', icon: 'warning', class: 'icon--xs' -%}
+                    {{ 'contact.error_heading' | t }}
+                  </div>
+                {%- endif -%}
+                <input type="hidden" name="contact[Enquiry type]" value="{{ enquiry_type }}">
+                {%- for field in fields -%}
+                  {%- assign f = field | split: '|' -%}
+                  {%- assign f_key = f[0] | strip -%}
+                  {%- assign f_label = f[1] -%}
+                  {%- assign f_type = f[2] -%}
+                  {%- assign f_req = f[3] -%}
+                  {%- assign f_opts = f[4] | strip -%}
+                  {%- assign f_id = form_id | append: '-' | append: f_key -%}
+                  {%- if f_key == 'your_name' or f_key == 'contact_name' -%}
+                    {%- assign f_name = 'contact[name]' -%}
+                  {%- elsif f_key == 'email' -%}
+                    {%- assign f_name = 'contact[email]' -%}
+                  {%- else -%}
+                    {%- assign f_name = 'contact[' | append: f_label | append: ']' -%}
+                  {%- endif -%}
+                  <div class="field partnership-forms__field">
+                    <label class="field__label" for="{{ f_id }}">
+                      {{- f_label -}}{%- if f_req == '1' -%}<span aria-hidden="true"> *</span>{%- endif -%}
+                    </label>
+                    {%- if f_type == 'textarea' -%}
+                      <textarea id="{{ f_id }}" name="{{ f_name }}" rows="4" class="field__input" placeholder=" " dir="auto" {% if f_req == '1' %}required aria-required="true"{% endif %}></textarea>
+                    {%- elsif f_type == 'select' -%}
+                      <div class="select">
+                        <select id="{{ f_id }}" name="{{ f_name }}" class="select__field" {% if f_req == '1' %}required aria-required="true"{% endif %}>
+                          <option value="" selected disabled>Please select</option>
+                          {%- assign opt_list = f_opts | split: ',' -%}
+                          {%- for o in opt_list -%}
+                            <option value="{{ o | strip }}">{{ o | strip }}</option>
+                          {%- endfor -%}
+                        </select>
+                        {%- render 'icon', icon: 'caret-down', class: 'icon--xs select__icon' -%}
+                      </div>
+                    {%- else -%}
+                      <input id="{{ f_id }}" name="{{ f_name }}" type="{{ f_type }}" class="field__input" placeholder=" " dir="auto" {% if f_type == 'email' %}autocomplete="email" spellcheck="false" autocapitalize="off"{% endif %} {% if f_req == '1' %}required aria-required="true"{% endif %}>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+                <p class="partnership-forms__required text-s">* Required field</p>
+                <button type="submit" class="button button--primary">{{ section.settings.submit_label }}</button>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+        {%- endfor -%}
       </div>
     </partnership-forms>
   </div>
@@ -51,6 +119,9 @@
   .partnership-forms__buttons .button[aria-selected="true"] { background: rgb(var(--color-foreground)); color: rgb(var(--color-background)); }
   .partnership-forms__panel { margin-block-start: 2rem; text-align: start; }
   .partnership-forms__intro { margin-block-end: 1.25rem; text-align: center; }
+  .partnership-forms__field { margin-block-end: 1rem; }
+  .partnership-forms__required { margin-block: 0.5rem 1rem; }
+  .partnership-forms__panel .button { inline-size: 100%; }
 </style>
 
 <script>
@@ -58,40 +129,33 @@
     if (customElements.get('partnership-forms')) return;
     customElements.define('partnership-forms', class extends HTMLElement {
       connectedCallback() {
-        // Gate: only reveal with ?dev=1 (or in the theme editor) while gating is on.
+        // Gate: reveal only with ?dev=1 (remembered for this tab so the post-submit redirect still shows it).
         const gated = this.dataset.gate === 'true';
-        const allowed = !gated
-          || new URLSearchParams(window.location.search).get('dev') === '1'
-          || Boolean(window.Shopify && window.Shopify.designMode);
-        if (!allowed) return;
+        let dev = new URLSearchParams(window.location.search).get('dev') === '1';
+        try {
+          if (dev) sessionStorage.setItem('ap-dev', '1');
+          else dev = sessionStorage.getItem('ap-dev') === '1';
+        } catch (e) {}
+        if (gated && !dev && !(window.Shopify && window.Shopify.designMode)) return;
         this.hidden = false;
         this.buttons = [...this.querySelectorAll('[data-target]')];
         this.buttons.forEach((b) => b.addEventListener('click', () => this.toggle(b.dataset.target)));
+
+        // After a submission Shopify redirects back with #<form id>: reopen that panel.
+        const hash = window.location.hash.replace('#', '');
+        const posted = this.querySelector(`[data-panel] form[id="${hash}"]`);
+        if (posted) {
+          this.toggle(posted.closest('[data-panel]').dataset.panel);
+          this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
 
       toggle(name) {
         this.buttons.forEach((b) => {
           const open = b.dataset.target === name && b.getAttribute('aria-selected') !== 'true';
           b.setAttribute('aria-selected', String(open));
-          const panel = this.querySelector(`[data-panel="${b.dataset.target}"]`);
-          panel.hidden = !open;
-          if (open) this.load(panel);
+          this.querySelector(`[data-panel="${b.dataset.target}"]`).hidden = !open;
         });
-      }
-
-      // Inject the form markup/scripts on first open so Hulk initialises inside a visible container.
-      load(panel) {
-        if (panel.dataset.loaded) return;
-        panel.dataset.loaded = 'true';
-        const tpl = panel.querySelector('template');
-        const frag = tpl.content.cloneNode(true);
-        frag.querySelectorAll('script').forEach((old) => {
-          const s = document.createElement('script');
-          [...old.attributes].forEach((a) => s.setAttribute(a.name, a.value));
-          s.textContent = old.textContent;
-          old.replaceWith(s);
-        });
-        panel.appendChild(frag);
       }
     });
   })();
@@ -112,21 +176,20 @@
     },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Partner with us" },
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Looking to stock Anxious Preoccupied, or work with us as a creator? Choose an option below.</p>" },
+    { "type": "text", "id": "submit_label", "label": "Submit button label", "default": "Submit enquiry" },
     { "type": "header", "content": "Wholesale form" },
     { "type": "text", "id": "wholesale_button", "label": "Button label", "default": "Wholesale enquiries" },
     { "type": "text", "id": "wholesale_intro", "label": "Intro copy", "default": "Interested in stocking Anxious Preoccupied? Tell us a little about your business and we’ll be in touch." },
-    { "type": "liquid", "id": "wholesale_embed", "label": "Hulk form embed code", "info": "Paste the Hulk Form Builder embed code / shortcode for the wholesale form." },
     { "type": "header", "content": "Creator and influencer form" },
     { "type": "text", "id": "creator_button", "label": "Button label", "default": "Creator & influencer partnerships" },
     { "type": "text", "id": "creator_intro", "label": "Intro copy", "default": "Interested in working with Anxious Preoccupied? Share your details and social channels below." },
-    { "type": "liquid", "id": "creator_embed", "label": "Hulk form embed code", "info": "Paste the Hulk Form Builder embed code / shortcode for the creator form." },
     { "type": "header", "content": "Appearance" },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
     { "type": "checkbox", "id": "enable_color_scheme_transition", "label": "Use color scheme transition", "default": false },
     { "type": "color_scheme", "id": "color_scheme_transition", "label": "Transition color scheme", "default": "scheme-2" },
     { "type": "header", "content": "Padding" },
-    { "type": "select", "id": "padding_top", "label": "Top padding", "default": "default", "options": [{ "value": "none", "label": "None" }, { "value": "default", "label": "Default" }] },
-    { "type": "select", "id": "padding_bottom", "label": "Bottom padding", "default": "default", "options": [{ "value": "none", "label": "None" }, { "value": "default", "label": "Default" }] }
+    { "type": "select", "id": "padding_top", "label": "Top padding", "default": "default", "options": [{ "value": "0px", "label": "None" }, { "value": "default", "label": "Default" }] },
+    { "type": "select", "id": "padding_bottom", "label": "Bottom padding", "default": "default", "options": [{ "value": "0px", "label": "None" }, { "value": "default", "label": "Default" }] }
   ],
   "presets": [{ "name": "Partnership forms" }]
 }
