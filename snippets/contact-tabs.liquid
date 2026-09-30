@@ -99,11 +99,13 @@
   {%- endfor -%}
 
   <style>
-    .contact-tabs__bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; margin-block-end: 2rem; border-block-end: 1px solid rgb(var(--color-border)); }
+    .contact-tabs__bar { display: flex; margin-block: 2rem 2.25rem; border-block-end: 1px solid rgb(var(--color-border)); }
     .contact-tabs__bar[hidden] { display: none; }
-    .contact-tabs__tab { appearance: none; background: none; border: 0; border-block-end: 2px solid transparent; margin-block-end: -1px; padding: 0.75rem 0.25rem; font: inherit; font-size: 0.9375rem; color: rgb(var(--color-text-secondary)); cursor: pointer; }
-    .contact-tabs__tab:hover { color: rgb(var(--color-foreground)); }
+    .contact-tabs__tab { flex: 1 1 0; appearance: none; background: none; border: 0; border-block-end: 3px solid transparent; margin-block-end: -1px; min-block-size: 3rem; padding: 0.5rem 0.5rem; font: inherit; font-size: 1rem; line-height: 1.25; text-align: center; color: rgb(var(--color-foreground) / 0.6); cursor: pointer; transition: color 0.15s ease, border-color 0.15s ease; }
+    .contact-tabs__tab:hover { color: rgb(var(--color-foreground)); border-block-end-color: rgb(var(--color-foreground) / 0.3); }
     .contact-tabs__tab[aria-selected="true"] { color: rgb(var(--color-foreground)); border-block-end-color: rgb(var(--color-foreground)); }
+    .contact-tabs__tab:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: -2px; }
+    @media (max-width: 749px) { .contact-tabs__tab { font-size: 0.9375rem; padding-inline: 0.25rem; } }
     .contact-tabs__panel { text-align: start; }
     .contact-tabs__intro { margin-block-end: 1.25rem; text-align: center; }
     .contact-tabs__field { margin-block-end: 1rem; }
@@ -128,13 +130,26 @@
           this.querySelector('.contact-tabs__bar').hidden = false;
           this.tabs.forEach((t) => t.addEventListener('click', () => this.show(t.dataset.target)));
 
+          // Deep links: /pages/contact#wholesale, #creator or ?tab=wholesale|creator.
           // After a submission Shopify redirects back with #<form id>: reopen that tab.
-          const hash = window.location.hash.replace('#', '');
-          const posted = hash && this.querySelector(`[data-panel] form[id="${hash}"]`);
-          if (posted) this.show(posted.closest('[data-panel]').dataset.panel);
+          this.fromUrl();
+          window.addEventListener('hashchange', () => this.fromUrl());
         }
 
-        show(name) {
+        fromUrl() {
+          const hash = window.location.hash.replace('#', '');
+          const param = new URLSearchParams(window.location.search).get('tab');
+          const names = this.panels.map((p) => p.dataset.panel);
+          const posted = hash && this.querySelector(`[data-panel] form[id="${hash}"]`);
+          if (posted) this.show(posted.closest('[data-panel]').dataset.panel, false);
+          else if (names.includes(hash)) this.show(hash, false);
+          else if (names.includes(param)) this.show(param, false);
+        }
+
+        show(name, sync = true) {
+          if (sync) {
+            try { history.replaceState(null, '', name === 'general' ? window.location.pathname + window.location.search : `#${name}`); } catch (e) {}
+          }
           this.tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.target === name)));
           this.panels.forEach((p) => { p.hidden = p.dataset.panel !== name; });
         }
