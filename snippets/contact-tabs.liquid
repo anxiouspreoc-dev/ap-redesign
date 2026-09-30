@@ -1,0 +1,144 @@
+{%- comment -%}
+  Tabs for the Contact page: General enquiry (the existing form) | Wholesale | Creator & influencer.
+  Wholesale/creator use native Shopify contact forms (emails go to the store's default address, tagged with a
+  hidden "Enquiry type" field so a Gmail filter can forward them to Vena).
+  Tabs are hidden from visitors unless the URL contains ?dev=1 (remembered for the tab session).
+
+  @param {string} part - 'bar' (the tab buttons) or 'panels' (the extra forms + script/styles)
+  @param {string} section_id
+  @param {string} button_style
+{%- endcomment -%}
+
+{%- if part == 'bar' -%}
+  <div class="contact-tabs__bar" role="tablist" hidden>
+    <button type="button" class="contact-tabs__tab" role="tab" aria-selected="true" data-target="general">General enquiry</button>
+    <button type="button" class="contact-tabs__tab" role="tab" aria-selected="false" data-target="wholesale">Wholesale</button>
+    <button type="button" class="contact-tabs__tab" role="tab" aria-selected="false" data-target="creator">Creator &amp; influencer</button>
+  </div>
+{%- elsif part == 'panels' -%}
+  {%- capture wholesale_fields -%}
+    business|Business name|text|1|~contact_name|Contact name|text|1|~location|Location (town/city and country)|text|1|~customers|Tell us about your customers|textarea|1|~email|Email address|email|1|~website|Website URL|text|0|~instagram|Instagram handle|text|0|
+  {%- endcapture -%}
+  {%- capture creator_fields -%}
+    your_name|Your name|text|1|~email|Email address|email|1|~location|Location|text|1|~instagram|Instagram handle|text|0|~tiktok|TikTok handle|text|0|~other|Other channel or website|text|0|~platform|Main platform|select|1|Instagram,TikTok,YouTube,Blog,Other~audience|Approximate audience size on your main platform|text|0|~partnership|Type of partnership you’re interested in|select|1|Gifting,Paid content,Event,Affiliate,Other
+  {%- endcapture -%}
+
+  {%- assign panel_keys = 'wholesale,creator' | split: ',' -%}
+  {%- for key in panel_keys -%}
+    {%- if key == 'wholesale' -%}
+      {%- assign fields = wholesale_fields | split: '~' -%}
+      {%- assign intro = 'Interested in stocking Anxious Preoccupied? Tell us a little about your business and we’ll be in touch.' -%}
+      {%- assign enquiry_type = 'Wholesale enquiry' -%}
+    {%- else -%}
+      {%- assign fields = creator_fields | split: '~' -%}
+      {%- assign intro = 'Interested in working with Anxious Preoccupied? Share your details and social channels below.' -%}
+      {%- assign enquiry_type = 'Creator / influencer enquiry' -%}
+    {%- endif -%}
+    {%- assign form_id = 'pf-' | append: key | append: '-' | append: section_id -%}
+
+    <div class="contact-tabs__panel" id="{{ form_id }}-panel" data-panel="{{ key }}" role="tabpanel" hidden>
+      {%- if intro != blank -%}
+        <p class="contact-tabs__intro">{{ intro }}</p>
+      {%- endif -%}
+      {%- form 'contact', id: form_id, class: 'form' -%}
+        {%- if form.posted_successfully? -%}
+          <div class="form__success">
+            {%- render 'icon', icon: 'check', class: 'icon--m' -%}
+            <h3 class="body text-s" tabindex="-1">{{ 'contact.success' | t }}</h3>
+          </div>
+        {%- else -%}
+          {%- if form.errors -%}
+            <div class="form__errors text-s exception" role="alert">
+              {%- render 'icon', icon: 'warning', class: 'icon--xs' -%}
+              {{ 'contact.error_heading' | t }}
+            </div>
+          {%- endif -%}
+          <input type="hidden" name="contact[Enquiry type]" value="{{ enquiry_type }}">
+          {%- for field in fields -%}
+            {%- assign f = field | split: '|' -%}
+            {%- assign f_key = f[0] | strip -%}
+            {%- assign f_label = f[1] -%}
+            {%- assign f_type = f[2] -%}
+            {%- assign f_req = f[3] -%}
+            {%- assign f_opts = f[4] | strip -%}
+            {%- assign f_id = form_id | append: '-' | append: f_key -%}
+            {%- if f_key == 'your_name' or f_key == 'contact_name' -%}
+              {%- assign f_name = 'contact[name]' -%}
+            {%- elsif f_key == 'email' -%}
+              {%- assign f_name = 'contact[email]' -%}
+            {%- else -%}
+              {%- assign f_name = 'contact[' | append: f_label | append: ']' -%}
+            {%- endif -%}
+            <div class="field contact-tabs__field">
+              <label class="field__label" for="{{ f_id }}">
+                {{- f_label -}}{%- if f_req == '1' -%}<span aria-hidden="true"> *</span>{%- endif -%}
+              </label>
+              {%- if f_type == 'textarea' -%}
+                <textarea id="{{ f_id }}" name="{{ f_name }}" rows="4" class="field__input" placeholder=" " dir="auto" {% if f_req == '1' %}required aria-required="true"{% endif %}></textarea>
+              {%- elsif f_type == 'select' -%}
+                <div class="select">
+                  <select id="{{ f_id }}" name="{{ f_name }}" class="select__field" {% if f_req == '1' %}required aria-required="true"{% endif %}>
+                    <option value="" selected disabled>Please select</option>
+                    {%- assign opt_list = f_opts | split: ',' -%}
+                    {%- for o in opt_list -%}
+                      <option value="{{ o | strip }}">{{ o | strip }}</option>
+                    {%- endfor -%}
+                  </select>
+                  {%- render 'icon', icon: 'caret-down', class: 'icon--xs select__icon' -%}
+                </div>
+              {%- else -%}
+                <input id="{{ f_id }}" name="{{ f_name }}" type="{{ f_type }}" class="field__input" placeholder=" " dir="auto" {% if f_type == 'email' %}autocomplete="email" spellcheck="false" autocapitalize="off"{% endif %} {% if f_req == '1' %}required aria-required="true"{% endif %}>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+          <p class="contact-tabs__required text-s">* Required field</p>
+          <button type="submit" class="button button--{{ button_style | default: 'primary' }}">{{ 'Submit enquiry' }}</button>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  {%- endfor -%}
+
+  <style>
+    .contact-tabs__bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; margin-block-end: 2rem; border-block-end: 1px solid rgb(var(--color-border)); }
+    .contact-tabs__bar[hidden] { display: none; }
+    .contact-tabs__tab { appearance: none; background: none; border: 0; border-block-end: 2px solid transparent; margin-block-end: -1px; padding: 0.75rem 0.25rem; font: inherit; font-size: 0.9375rem; color: rgb(var(--color-text-secondary)); cursor: pointer; }
+    .contact-tabs__tab:hover { color: rgb(var(--color-foreground)); }
+    .contact-tabs__tab[aria-selected="true"] { color: rgb(var(--color-foreground)); border-block-end-color: rgb(var(--color-foreground)); }
+    .contact-tabs__panel { text-align: start; }
+    .contact-tabs__intro { margin-block-end: 1.25rem; text-align: center; }
+    .contact-tabs__field { margin-block-end: 1rem; }
+    .contact-tabs__required { margin-block: 0.5rem 1rem; }
+    .contact-tabs__panel .button { inline-size: 100%; }
+  </style>
+  <script>
+    (() => {
+      if (customElements.get('contact-tabs')) return;
+      customElements.define('contact-tabs', class extends HTMLElement {
+        connectedCallback() {
+          // Gate: tabs only with ?dev=1 (remembered per tab so the post-submit redirect still works).
+          let dev = new URLSearchParams(window.location.search).get('dev') === '1';
+          try {
+            if (dev) sessionStorage.setItem('ap-dev', '1');
+            else dev = sessionStorage.getItem('ap-dev') === '1';
+          } catch (e) {}
+          if (this.dataset.gate === 'true' && !dev && !(window.Shopify && window.Shopify.designMode)) return;
+
+          this.tabs = [...this.querySelectorAll('[data-target]')];
+          this.panels = [...this.querySelectorAll('[data-panel]')];
+          this.querySelector('.contact-tabs__bar').hidden = false;
+          this.tabs.forEach((t) => t.addEventListener('click', () => this.show(t.dataset.target)));
+
+          // After a submission Shopify redirects back with #<form id>: reopen that tab.
+          const hash = window.location.hash.replace('#', '');
+          const posted = hash && this.querySelector(`[data-panel] form[id="${hash}"]`);
+          if (posted) this.show(posted.closest('[data-panel]').dataset.panel);
+        }
+
+        show(name) {
+          this.tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.target === name)));
+          this.panels.forEach((p) => { p.hidden = p.dataset.panel !== name; });
+        }
+      });
+    })();
+  </script>
+{%- endif -%}

@@ -56,6 +56,8 @@
         "heading_size": "h1",
         "text": "<p>Our team is available from Monday to Friday, from 9:00 AM to 5:00 PM to assist you with your enquiries.<br/>Email us <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">here</a>.</p>",
         "phone": "",
+        "enable_tabs": true,
+        "gate_tabs": true,
         "button_style": "primary",
         "button_width": "default",
         "horizontal_alignment": "center",
@@ -67,24 +69,6 @@
         "padding_bottom": "default",
         "show_top_border": true,
         "show_bottom_border": false
-      }
-    },
-    "partnerships": {
-      "type": "partnership-forms",
-      "settings": {
-        "gate_dev": true,
-        "heading": "Partner with us",
-        "text": "<p>Looking to stock Anxious Preoccupied, or work with us as a creator? Choose an option below.</p>",
-        "submit_label": "Submit enquiry",
-        "wholesale_button": "Wholesale enquiries",
-        "wholesale_intro": "Interested in stocking Anxious Preoccupied? Tell us a little about your business and we\u2019ll be in touch.",
-        "creator_button": "Creator & influencer partnerships",
-        "creator_intro": "Interested in working with Anxious Preoccupied? Share your details and social channels below.",
-        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
-        "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
-        "padding_top": "default",
-        "padding_bottom": "default"
       }
     },
     "split-card": {
@@ -1501,7 +1485,6 @@
   },
   "order": [
     "contact",
-    "partnerships",
     "split-card",
     "faq"
   ]

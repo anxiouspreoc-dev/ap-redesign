@@ -21,6 +21,11 @@
         </div>
       {% endif %}
 
+      {%- if section.settings.enable_tabs -%}
+        <contact-tabs class="contact-tabs" data-gate="{{ section.settings.gate_tabs }}">
+          {%- render 'contact-tabs', part: 'bar' -%}
+          <div class="contact-tabs__panel" data-panel="general">
+      {%- endif -%}
       {%- form 'contact', id: form_id, class: 'form', aria-labelledby: section.settings.heading -%}
         {%- if form.posted_successfully? -%}
           <div class="form__success justify-{{ section.settings.horizontal_alignment }}">
@@ -293,6 +298,11 @@
           </button>
         </div>
       {%- endform -%}
+      {%- if section.settings.enable_tabs -%}
+          </div>
+          {%- render 'contact-tabs', part: 'panels', section_id: section.id, button_style: section.settings.button_style -%}
+        </contact-tabs>
+      {%- endif -%}
     </div>
   </div>
 </div>
@@ -307,6 +317,23 @@
     ]
   },
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry tabs"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_tabs",
+      "label": "Show General / Wholesale / Creator tabs",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gate_tabs",
+      "label": "Only show tabs when the URL contains ?dev=1",
+      "info": "Untick to publish the tabs for all visitors.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "t:section-header"
