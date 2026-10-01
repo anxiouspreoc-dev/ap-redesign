@@ -57,7 +57,7 @@
         "text": "<p>Our team is available from Monday to Friday, from 9:00 AM to 5:00 PM to assist you with your enquiries.<br/>Email us <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">here</a>.</p>",
         "phone": "",
         "enable_tabs": true,
-        "gate_tabs": true,
+        "gate_tabs": false,
         "button_style": "primary",
         "button_width": "default",
         "horizontal_alignment": "center",
