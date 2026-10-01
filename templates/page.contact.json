@@ -50,14 +50,14 @@
         "message"
       ],
       "settings": {
+        "enable_tabs": true,
+        "gate_tabs": false,
         "subheading": "",
         "heading": "Contact",
         "page_title": true,
         "heading_size": "h1",
         "text": "<p>Our team is available from Monday to Friday, from 9:00 AM to 5:00 PM to assist you with your enquiries.<br/>Email us <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">here</a>.</p>",
         "phone": "",
-        "enable_tabs": true,
-        "gate_tabs": false,
         "button_style": "primary",
         "button_width": "default",
         "horizontal_alignment": "center",
@@ -77,12 +77,13 @@
         "image-banner": {
           "type": "_image-banner",
           "settings": {
-            "image": "shopify://shop_images/CleanShot_2026-05-20_at_Joanne_Only_-_Google_Drive.Google_Chrome.21.png",
+            "image": "shopify://shop_images/Joanne_w_OS_Silver_Collection_Page_Mobile_Banner_600_x_650_px.jpg",
             "height": "medium",
             "mobile_height": "large",
             "stack": "none",
             "spacing": "0px",
             "media_content_padding": "default",
+            "text_color": "",
             "container_width": "md",
             "horizontal_alignment": "center",
             "vertical_alignment": "middle",
@@ -112,6 +113,7 @@
             "heading-group": {
               "type": "heading-group",
               "settings": {
+                "anchor_id": "",
                 "page_title": false
               },
               "blocks": {
@@ -187,6 +189,7 @@
         "faq-heading": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -206,6 +209,7 @@
         "cat-0-orders-shipping": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -393,6 +397,7 @@
         "cat-1-products-materials": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -559,6 +564,7 @@
         "cat-2-returns-exchanges": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -809,6 +815,7 @@
         "cat-3-gift-cards": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -912,6 +919,7 @@
         "cat-4-payments": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -994,6 +1002,7 @@
         "cat-5-pre-orders": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -1097,6 +1106,7 @@
         "cat-6-brand-community": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
@@ -1305,6 +1315,7 @@
         "cat-7-care-maintenance": {
           "type": "heading-group",
           "settings": {
+            "anchor_id": "",
             "page_title": false
           },
           "blocks": {
