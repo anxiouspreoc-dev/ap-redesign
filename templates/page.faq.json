@@ -623,7 +623,7 @@
             "h": {
               "type": "_heading",
               "settings": {
-                "heading": "Returns & Exchanges",
+                "heading": "Returns",
                 "heading_size": "h4"
               },
               "blocks": {}
@@ -645,27 +645,6 @@
               "type": "text",
               "settings": {
                 "text": "<p>We accept returns on eligible full-price items within 30 days of delivery, provided items are unused, in original condition and returned with all packaging and tags attached. Click <a href=\"/pages/returns\" title=\"Returns\">here</a> to view our full returns process.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
-        "c2-q1": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "Do you offer exchanges?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We currently process exchanges as a return and repurchase to ensure the fastest turnaround.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1415,7 +1394,6 @@
         "c1-q6",
         "cat-2-returns-exchanges",
         "c2-q0",
-        "c2-q1",
         "c2-q2",
         "c2-q3",
         "c2-q4",
