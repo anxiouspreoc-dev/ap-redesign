@@ -1920,7 +1920,8 @@ external-media.deferred-media[data-loaded=true] .deferred-media__controls {
 }
 .header__megamenu-links--flat {
   display: block;
-  column-width: 10rem;
+  column-count: 1;
+  column-width: auto;
   gap: calc(var(--space-l) - var(--space-3xs)) max(var(--gap-horizontal), var(--padding-text-max-default));
 }
 .header__megamenu-submenu-list {
