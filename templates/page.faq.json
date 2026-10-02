@@ -1166,7 +1166,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We love hearing from aligned brands and creators. Partnership or collaboration enquiries can be sent via our contact email.</p>",
+                "text": "<p>We love hearing from aligned brands and creators. Partnership or collaboration enquiries can be sent via our <a href=\"/pages/contact#creator\">Creator &amp; influencer enquiry form</a>.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1187,7 +1187,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>Wholesale enquiries are always welcome. Please contact us with details about your store and location.</p>",
+                "text": "<p>Wholesale enquiries are always welcome. Please contact us with details about your store and location via our <a href=\"/pages/contact#wholesale\">Wholesale enquiry form</a>.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1208,7 +1208,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>For press, gifting or media enquiries, please reach out to our team directly with relevant information and deadlines.</p>",
+                "text": "<p>For press, gifting or media enquiries, please reach out to our team directly via our <a href=\"/pages/contact#creator\">Creator &amp; influencer enquiry form</a> with relevant information and deadlines.</p>",
                 "font_style": "body"
               },
               "blocks": {}
