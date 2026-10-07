@@ -47,7 +47,7 @@
       {{ additional_props }}
     {% endif %}
   >
-  {%- if settings.button_border_radius== 'rounded' or settings.button_border_radius== 'slightly_rounded' -%}
+  {%- if settings.button_border_radius or settings.button_border_radius -%}
     <svg class="checkbox__icon-unchecked" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="0.5" y="0.5" width="15" height="15" rx="1.5" fill="" stroke="currentColor"/>
     </svg>
@@ -81,3 +81,14 @@
     )
   </span>
 </label>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- if settings.button_border_radius== 'rounded' or settings.button_border_radius==
+    'slightly_rounded' -%}"
+  to: "{%- if settings.button_border_radius or settings.button_border_radius -%}"
+  position: 1631..1704
+{% endcomment %}
