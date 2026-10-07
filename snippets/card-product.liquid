@@ -116,9 +116,9 @@
 {%- endcapture -%}
 
 {%- if section.settings.enable_infinite_scroll -%}
-  {%- capture product_link_id = -%}Product-{{ product.id }}{% endcapture %}
+  {%- capture product_link_id -%}Product-{{ product.id }}{% endcapture %}
 {%- else -%}
-  {%- capture product_link_id = -%}{{ section.id }}-Product-{{ product.id }}{% endcapture %}
+  {%- capture product_link_id -%}{{ section.id }}-Product-{{ product.id }}{% endcapture %}
 {%- endif -%}
 
   <div class="card card-product {{ class }} {% if settings.variant_display == 'hover' %}card-product--has-hover{% endif %} expand-link">
@@ -250,4 +250,16 @@
     </div>
   </div>
   {%- endunless -%}
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- capture product_link_id = -%}"
+  to: "{%- capture product_link_id -%}"
+  position: 4841..4872
+- from: "{%- capture product_link_id = -%}"
+  to: "{%- capture product_link_id -%}"
+  position: 4928..4959
+{%- endcomment -%}

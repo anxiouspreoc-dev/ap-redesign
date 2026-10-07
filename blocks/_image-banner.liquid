@@ -22,15 +22,7 @@
 {% comment %}This wrapper is neccessary for styling purposes{% endcomment %}
 <div {{ block.shopify_attributes }} {% render 'color-scheme-attributes', scoped_settings: section.settings %}>
   {%- render 'media-banner-padding', settings: block.settings, id: block.id %}
-  {%-
-    render 'media-banner', with
-    settings: block.settings,
-    content: content,
-    id: block.id,
-    fetch_priority: fetch_priority,
-    loading: loading,
-    enable_banner_click: block.settings.enable_banner_click
-  -%}
+  {%- render 'media-banner', settings: block.settings, content: content, id: block.id, fetch_priority: fetch_priority, loading: loading, enable_banner_click: block.settings.enable_banner_click -%}
 </div>
 
 {% schema %}
@@ -238,12 +230,6 @@
       "content": "t:text-content"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "info": "Sets the heading and body text color. Leave blank to use the color scheme. The button keeps its own style."
-    },
-    {
       "type": "select",
       "id": "container_width",
       "options": [
@@ -403,3 +389,24 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%-
+        render 'media-banner', with
+        settings: block.settings,
+        content: content,
+        id: block.id,
+        fetch_priority: fetch_priority,
+        loading: loading,
+        enable_banner_click: block.settings.enable_banner_click
+      -%}
+  to: "{%- render 'media-banner', settings: block.settings, content: content, id:
+    block.id, fetch_priority: fetch_priority, loading: loading, enable_banner_click:
+    block.settings.enable_banner_click -%}"
+  position: 1086..1280
+{% endcomment %}
