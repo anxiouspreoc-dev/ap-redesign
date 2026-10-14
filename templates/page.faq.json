@@ -300,6 +300,27 @@
             "txt"
           ]
         },
+        "collapsible_gpBUYt": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "What should I do if an item is missing from my order?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_FCcDKL": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Please contact our Customer Care team as soon as possible and we kindly ask that you retain the original packaging, including the shipping box or mailer, and provide the following photos where possible:</p><ul><li>The outer packaging, including the shipping label and barcode.</li><li>All items received in the parcel.</li><li>The contents as they appeared when you opened the parcel, if photos were taken at the time.</li></ul><p>Please avoid discarding the packaging until our team has had an opportunity to review your report, as these details can help us investigate this further.<br/></p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_FCcDKL"
+          ]
+        },
         "cat-5-pre-orders": {
           "type": "heading-group",
           "settings": {
@@ -1377,6 +1398,7 @@
         "c0-q5",
         "c0-q6",
         "c0-q7",
+        "collapsible_gpBUYt",
         "cat-5-pre-orders",
         "collapsible_3yEy9V",
         "collapsible_xkLzUz",
