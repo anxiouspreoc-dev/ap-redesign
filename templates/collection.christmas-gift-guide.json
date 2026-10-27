@@ -9,132 +9,203 @@
  */
 {
   "sections": {
-    "image_banner_iAPUdb": {
+    "split_card_Ei7hi7": {
+      "type": "split-card",
+      "blocks": {
+        "image_banner_hMKqXq": {
+          "type": "_image-banner",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_Anxious_Preoccupied_Preoccupied7095.jpg",
+            "height": "medium",
+            "mobile_height": "large",
+            "stack": "none",
+            "spacing": "0px",
+            "media_content_padding": "var(--space-l)",
+            "text_color": "",
+            "container_width": "md",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "enable_banner_click": false,
+            "enhance_text_readability": true,
+            "enable_overlay": false,
+            "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+            "color_scheme": "",
+            "enable_color_scheme_transition": false,
+            "color_scheme_transition": ""
+          },
+          "blocks": {
+            "heading_group_w4XrWf": {
+              "type": "heading-group",
+              "name": "t:heading",
+              "settings": {
+                "anchor_id": "",
+                "page_title": false
+              },
+              "blocks": {
+                "subheading_xLAPzB": {
+                  "type": "_subheading",
+                  "settings": {
+                    "subheading": "The Gift Guide"
+                  },
+                  "blocks": {}
+                },
+                "heading_G48rqX": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "Gifts for people who overthink gifts.",
+                    "heading_size": "h2"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "subheading_xLAPzB",
+                "heading_G48rqX"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_w4XrWf"
+          ]
+        }
+      },
+      "block_order": [
+        "image_banner_hMKqXq"
+      ],
+      "disabled": true,
+      "name": "t:split-card",
+      "settings": {
+        "container_type": "max",
+        "border_radius": "section",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_borders": false
+      }
+    },
+    "image_banner_ba4XAc": {
       "type": "image-banner",
       "blocks": {
-        "heading_group_zNEkWp": {
+        "heading_group_ddfhwa": {
           "type": "heading-group",
+          "name": "t:heading",
           "settings": {
             "anchor_id": "",
             "page_title": false
           },
           "blocks": {
-            "subheading_3EwrAL": {
+            "subheading_L7X4Kj": {
               "type": "_subheading",
               "settings": {
-                "subheading": "Subheading"
+                "subheading": "The Gift Guide"
               },
               "blocks": {}
             },
-            "heading_b8WacA": {
+            "heading_HUe8a9": {
               "type": "_heading",
               "settings": {
-                "heading": "Image banner",
+                "heading": "Gifts for people who overthink gifts.",
                 "heading_size": "h2"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "subheading_3EwrAL",
-            "heading_b8WacA"
-          ]
-        },
-        "text_fWGb88": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use this text to share information about your brand, collections or products with your customers.</p>",
-            "font_style": "body"
-          },
-          "blocks": {}
-        },
-        "button_group_pewk9w": {
-          "type": "button-group",
-          "settings": {
-            "horizontal_alignment": "inherit"
-          },
-          "blocks": {
-            "button_3Q3LHQ": {
-              "type": "_button",
-              "settings": {
-                "button_style": "primary",
-                "button_label": "Button label",
-                "button_link": ""
-              },
-              "blocks": {}
-            },
-            "button_kiimVV": {
-              "type": "_button",
-              "settings": {
-                "button_style": "text",
-                "button_label": "Button label",
-                "button_link": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "button_3Q3LHQ",
-            "button_kiimVV"
+            "subheading_L7X4Kj",
+            "heading_HUe8a9"
           ]
         }
       },
       "block_order": [
-        "heading_group_zNEkWp",
-        "text_fWGb88",
-        "button_group_pewk9w"
+        "heading_group_ddfhwa"
       ],
-      "disabled": true,
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/TurquoiseOrganizerInsideBag.png",
-        "mobile_image": "shopify://shop_images/TurquoiseOrganizerInsideBag.png",
-        "height": "small",
+        "image": "shopify://shop_images/Copy_of_Anxious_Preoccupied_Preoccupied7095.jpg",
+        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
+        "height": "large",
         "mobile_height": "adapt",
-        "stack": "none",
+        "stack": "mobile",
         "spacing": "0px",
-        "media_content_padding": "var(--space-xs)",
+        "media_content_padding": "0px",
         "container_type": "full",
-        "container_width": "md",
+        "container_width": "xs",
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
-        "enhance_text_readability": false,
+        "enhance_text_readability": true,
         "enable_overlay": false,
-        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-        "color_scheme": "scheme-4",
+        "overlay": "",
+        "color_scheme": "scheme-2",
         "enable_color_scheme_transition": false,
-        "color_scheme_transition": "",
+        "color_scheme_transition": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "padding_top": "0px",
         "padding_bottom": "0px",
         "show_top_border": false,
         "show_bottom_border": false
       }
     },
-    "image_banner_ba4XAc": {
-      "type": "image-banner",
-      "name": "t:image-banner",
+    "featured_collection_CWxk6t": {
+      "type": "featured-collection",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "Gift guide",
+            "heading": "The bestsellers",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>Not sure what to get them? Get them what everyone else wanted. These are the bags people keep coming back for, which is about as close to a safe bet as gifting gets.</p>",
+            "button_label": "Shop bestsellers",
+            "button_link": "shopify://collections/best-sellers"
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "button_xYfFUy": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "",
+                "button_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_xYfFUy"
+          ]
+        }
+      },
+      "name": "t:featured-collection",
       "settings": {
-        "image": "{{ collection.metafields.custom.image_banner_desktop.value }}",
-        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
-        "height": "medium",
-        "mobile_height": "adapt",
-        "stack": "none",
-        "spacing": "0px",
-        "media_content_padding": "0px",
-        "container_type": "full",
-        "container_width": "md",
-        "horizontal_alignment": "center",
-        "vertical_alignment": "middle",
-        "enable_banner_click": false,
-        "enhance_text_readability": false,
-        "enable_overlay": false,
-        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-        "color_scheme": "scheme-4",
+        "collection": "best-sellers",
+        "product_list": [],
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "layout_desktop": "slideshow",
+        "container_type": "max",
+        "product_limit": 8,
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
-        "padding_top": "0px",
-        "padding_bottom": "0px",
+        "padding_top": "default",
+        "padding_bottom": "default",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -229,6 +300,7 @@
         "heading_group_9bNHF8",
         "text_jYgxLK"
       ],
+      "disabled": true,
       "name": "t:rich-text",
       "settings": {
         "horizontal_alignment": "center",
@@ -244,6 +316,7 @@
     },
     "main": {
       "type": "main-collection",
+      "disabled": true,
       "settings": {
         "product_limit": 16,
         "columns_desktop": "4",
@@ -266,14 +339,234 @@
         "show_top_border": false,
         "show_bottom_border": false
       }
+    },
+    "image_hotspot_iDekCK": {
+      "type": "image-hotspot",
+      "blocks": {
+        "heading_group_3aJpKz": {
+          "type": "heading-group",
+          "settings": {
+            "anchor_id": "",
+            "page_title": false
+          },
+          "blocks": {
+            "heading_47Fnhq": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Gold, obviously.",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_47Fnhq"
+          ]
+        },
+        "hotspots": {
+          "type": "_hotspots",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "hotspot_content_dU7pBd": {
+              "type": "_hotspot-content",
+              "settings": {
+                "label": "The Padded Laptop Case",
+                "link": "shopify://products/the-padded-laptop-case-gold",
+                "horizontal_position": 50,
+                "vertical_position": 50,
+                "mobile_horizontal_position": 50,
+                "mobile_vertical_position": 50
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "hotspot_content_dU7pBd"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_3aJpKz"
+      ],
+      "name": "t:image-hotspot",
+      "settings": {
+        "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6921_1.jpg",
+        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6921_1.jpg",
+        "stack": "none",
+        "spacing": "0px",
+        "media_content_padding": "default",
+        "container_type": "full",
+        "container_width": "md",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "bottom",
+        "enable_overlay": false,
+        "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "0px",
+        "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "custom_css": ""
+      }
+    },
+    "collection_list_zxVMpq": {
+      "type": "collection-list",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "layout_header": "left",
+            "subheading": "Gift guide",
+            "heading": "Whatever the budget",
+            "page_title": false,
+            "heading_size": "h2",
+            "text": "<p>Secret Santa, sister, someone you’re trying to impress. There’s a gift here for every tier of affection.</p>",
+            "button_label": "Shop all gifts",
+            "button_link": "shopify://collections/all"
+          },
+          "blocks": {}
+        },
+        "button-group": {
+          "type": "button-group",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center"
+          },
+          "blocks": {
+            "button_CnyFdr": {
+              "type": "_button",
+              "settings": {
+                "button_style": "primary",
+                "button_label": "",
+                "button_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_CnyFdr"
+          ]
+        }
+      },
+      "name": "t:collection-list",
+      "settings": {
+        "collection_list": [
+          "gifts-under-70",
+          "gifts-under-120",
+          "gifts-under-190"
+        ],
+        "columns_desktop": "3",
+        "columns_mobile": "2",
+        "layout_desktop": "slideshow",
+        "container_type": "max",
+        "horizontal_alignment": "left",
+        "arrow_position": "overlay",
+        "counter_style": "progress",
+        "button_style": "primary",
+        "color_scheme": "",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "featured_product_hKhPbx": {
+      "type": "featured-product",
+      "blocks": {
+        "pdp-product-information": {
+          "type": "_pdp-product-information",
+          "static": true,
+          "settings": {
+            "horizontal_alignment": "center",
+            "vertical_alignment": "middle",
+            "container_width": "xxs",
+            "padding_top": "default",
+            "padding_bottom": "default"
+          },
+          "blocks": {
+            "pdp_title_YibN3V": {
+              "type": "_pdp-title",
+              "settings": {
+                "heading_size": "h2",
+                "enable_share": false,
+                "share_color_scheme": ""
+              },
+              "blocks": {}
+            },
+            "pdp_price_GyVcEV": {
+              "type": "_pdp-price",
+              "settings": {
+                "font_style": "caption"
+              },
+              "blocks": {}
+            },
+            "pdp_description_PFBtyp": {
+              "type": "_pdp-description",
+              "settings": {
+                "text": "<p><strong>For the person who already told you exactly what they want and you’ve forgotten.</strong>&nbsp;<br/>Delivered by email in seconds. Redeemable online.</p>",
+                "enable_truncation": false,
+                "word_limit": 40,
+                "title": "{{ closest.product.title }}"
+              },
+              "blocks": {}
+            },
+            "pdp_buy_buttons_k4p9jj": {
+              "type": "_pdp-buy-buttons",
+              "name": "t:buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": false,
+                "show_quantity_selector": false,
+                "show_gift_card_recipient": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "pdp_title_YibN3V",
+            "pdp_price_GyVcEV",
+            "pdp_description_PFBtyp",
+            "pdp_buy_buttons_k4p9jj"
+          ]
+        }
+      },
+      "name": "t:featured-product",
+      "settings": {
+        "product": "the-digital-gift-card",
+        "media_style": "slideshow",
+        "mobile_max_width": "75%",
+        "enable_zoom": false,
+        "enable_autoplay": true,
+        "media_color_scheme": "scheme-5b7e7a11-3f86-4fa4-81b7-0c6fe949d04d",
+        "spacing": "var(--space-s)",
+        "button_style": "text",
+        "image_aspect_ratio": "adapt",
+        "animation_style": "fade",
+        "counter_style": "hidden",
+        "enable_looping": true,
+        "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "show_block_borders": false,
+        "enable_transparent_header": false
+      }
     }
   },
   "order": [
-    "image_banner_iAPUdb",
+    "split_card_Ei7hi7",
     "image_banner_ba4XAc",
+    "featured_collection_CWxk6t",
     "image_banner_BhgFyb",
     "header",
     "rich_text_zjnXRq",
-    "main"
+    "main",
+    "image_hotspot_iDekCK",
+    "collection_list_zxVMpq",
+    "featured_product_hKhPbx"
   ]
 }
