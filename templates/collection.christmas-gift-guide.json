@@ -614,7 +614,8 @@
         }
       },
       "custom_css": [
-        ".pdp-secure-checkout,.product-info__price .secondary{display:none!important}"
+        ".pdp-secure-checkout,.product-info__price .secondary{display:none!important}",
+        ".buy-buttons button,.buy-buttons button *{color:#FFF!important}"
       ],
       "name": "t:featured-product",
       "settings": {
