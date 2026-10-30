@@ -117,7 +117,7 @@
       ],
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/AP-campaign-no-fairy-lights.png",
+        "image": "shopify://shop_images/AP-campaign-shelf-fairy-lights.png",
         "mobile_image": "shopify://shop_images/AP-campaign-shelf-fairy-lights-7356.png",
         "height": "large",
         "mobile_height": "adapt",
