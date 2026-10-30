@@ -101,7 +101,7 @@
             "heading_HUe8a9": {
               "type": "_heading",
               "settings": {
-                "heading": "Gifts for people who overthink gifts.",
+                "heading": "Gifts for the emotionally attached.",
                 "heading_size": "h2"
               },
               "blocks": {}
@@ -117,8 +117,8 @@
       ],
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/Christmas_gift_guide_hero_banner.jpg",
-        "mobile_image": "shopify://shop_images/Christmas_gift_guide_hero_banner_mobile.jpg",
+        "image": "shopify://shop_images/AP-campaign-no-fairy-lights.png",
+        "mobile_image": "shopify://shop_images/AP-campaign-shelf-fairy-lights-7356.png",
         "height": "large",
         "mobile_height": "adapt",
         "stack": "none",
@@ -437,8 +437,8 @@
                 "product": "the-mid-neon-pink",
                 "horizontal_position": 40,
                 "vertical_position": 79,
-                "mobile_horizontal_position": 50,
-                "mobile_vertical_position": 45
+                "mobile_horizontal_position": 44,
+                "mobile_vertical_position": 80
               },
               "blocks": {}
             }
@@ -453,8 +453,8 @@
         "heading_group_3aJpKz"
       ],
       "custom_css": [
-        "@media(max-width:749px){*{text-align:center!important}[class*=heading]{justify-content:center!important;align-items:center!important;margin-inline:auto!important}}",
-        "@media(min-width:750px){*{--color-foreground:255 255 255!important;--color-background:20 20 20!important}}"
+        "@media (max-width: 749px) {* {text-align: center !important; } [class*=\"heading\"] {justify-content: center !important; align-items: center !important; margin-inline: auto !important; }}",
+        "@media (min-width: 750px) {* {--color-foreground: 255 255 255 !important; } .hotspots__label {color: #141414 !important; }}"
       ],
       "name": "t:image-hotspot",
       "settings": {
