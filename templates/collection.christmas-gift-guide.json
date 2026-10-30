@@ -403,7 +403,7 @@
             "heading_47Fnhq": {
               "type": "_heading",
               "settings": {
-                "heading": "Gold, obviously.",
+                "heading": "<strong>For the one who brings the laptop to brunch.</strong>&nbsp;",
                 "heading_size": "h2"
               },
               "blocks": {}
@@ -418,31 +418,45 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "hotspot_content_dU7pBd": {
-              "type": "_hotspot-content",
+            "hotspot_product_CD3Jcn": {
+              "type": "_hotspot-product",
+              "name": "t:product-hotspot",
               "settings": {
-                "label": "The Padded Laptop Case",
-                "link": "shopify://products/the-padded-laptop-case-gold",
+                "product": "the-padded-laptop-case-black",
                 "horizontal_position": 50,
                 "vertical_position": 50,
-                "mobile_horizontal_position": 50,
+                "mobile_horizontal_position": 54,
                 "mobile_vertical_position": 50
+              },
+              "blocks": {}
+            },
+            "hotspot_product_CNLdEy": {
+              "type": "_hotspot-product",
+              "name": "t:product-hotspot",
+              "settings": {
+                "product": "the-mid-neon-pink",
+                "horizontal_position": 40,
+                "vertical_position": 79,
+                "mobile_horizontal_position": 50,
+                "mobile_vertical_position": 45
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "hotspot_content_dU7pBd"
+            "hotspot_product_CD3Jcn",
+            "hotspot_product_CNLdEy"
           ]
         }
       },
       "block_order": [
         "heading_group_3aJpKz"
       ],
+      "custom_css": [],
       "name": "t:image-hotspot",
       "settings": {
-        "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6921_1.jpg",
-        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied7140.jpg",
+        "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6805.jpg",
+        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6798_1.jpg",
         "stack": "mobile",
         "spacing": "0px",
         "media_content_padding": "default",
@@ -452,14 +466,14 @@
         "vertical_alignment": "bottom",
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-        "color_scheme": "",
+        "color_scheme": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "0px",
         "padding_bottom": "0px",
         "show_top_border": false,
         "show_bottom_border": false,
-        "custom_css": ""
+        "custom_css": "[id*=image_hotspot]{display:block!important}"
       }
     },
     "collection_list_zxVMpq": {
@@ -614,8 +628,8 @@
         }
       },
       "custom_css": [
-        ".pdp-secure-checkout,.product-info__price .secondary{display:none!important}",
-        ".buy-buttons button,.buy-buttons button *{color:#FFF!important}"
+        ".pdp-secure-checkout,.product-info__price .secondary {display: none !important;}",
+        ".buy-buttons button,.buy-buttons button * {color: #fff !important;}"
       ],
       "name": "t:featured-product",
       "settings": {
