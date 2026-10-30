@@ -98,13 +98,6 @@
             "page_title": false
           },
           "blocks": {
-            "subheading_L7X4Kj": {
-              "type": "_subheading",
-              "settings": {
-                "subheading": "The Gift Guide"
-              },
-              "blocks": {}
-            },
             "heading_HUe8a9": {
               "type": "_heading",
               "settings": {
@@ -115,7 +108,6 @@
             }
           },
           "block_order": [
-            "subheading_L7X4Kj",
             "heading_HUe8a9"
           ]
         }
@@ -145,6 +137,58 @@
         "color_scheme_transition": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
         "padding_top": "0px",
         "padding_bottom": "0px",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
+    },
+    "rich_text_bCLcH7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_group_NwYYJc": {
+          "type": "heading-group",
+          "settings": {
+            "anchor_id": "",
+            "page_title": false
+          },
+          "blocks": {
+            "subheading_LbRNBG": {
+              "type": "_subheading",
+              "settings": {
+                "subheading": "THE GIFT GUIDE"
+              },
+              "blocks": {}
+            },
+            "heading_JtAH8B": {
+              "type": "_heading",
+              "settings": {
+                "heading": "DON'T OVERTHINK IT. WE ALREADY DID.",
+                "heading_size": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "subheading_LbRNBG",
+            "heading_JtAH8B"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_group_NwYYJc"
+      ],
+      "custom_css": [
+        "/* Black subheading */p {color: #000 !important;}",
+        "/* Heading on two lines: breaks after \"IT.\" */h2 {max-width: 20ch; margin-inline: auto;}"
+      ],
+      "name": "t:rich-text",
+      "settings": {
+        "horizontal_alignment": "center",
+        "container_width": "md",
+        "color_scheme": "scheme-da4d1134-a0c4-485d-a5d8-0e838dce8a87",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
         "show_top_border": false,
         "show_bottom_border": false
       }
@@ -560,6 +604,7 @@
   "order": [
     "split_card_Ei7hi7",
     "image_banner_ba4XAc",
+    "rich_text_bCLcH7",
     "featured_collection_CWxk6t",
     "image_banner_BhgFyb",
     "header",
