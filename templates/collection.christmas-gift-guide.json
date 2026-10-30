@@ -177,8 +177,8 @@
         "heading_group_NwYYJc"
       ],
       "custom_css": [
-        "/* Black subheading */p {color: #000 !important;}",
-        "/* Heading on two lines: breaks after \"IT.\" */h2 {max-width: 20ch; margin-inline: auto;}"
+        "/* Subheading: \"THE GIFT GUIDE\" in black */.text-block:first-child,.text-block:first-child * {color: #000 !important;}",
+        "/* Heading: wrap onto two lines after \"IT.\" */.text-block:last-child,.text-block:last-child * {max-width: 20ch !important; margin-inline: auto !important;}"
       ],
       "name": "t:rich-text",
       "settings": {
