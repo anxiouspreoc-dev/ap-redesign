@@ -117,8 +117,8 @@
       ],
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/Copy_of_Anxious_Preoccupied_Preoccupied7095.jpg",
-        "mobile_image": "{{ collection.metafields.custom.image_banner_mobile.value }}",
+        "image": "shopify://shop_images/Christmas_gift_guide_hero_banner.jpg",
+        "mobile_image": "shopify://shop_images/Christmas_gift_guide_hero_banner_mobile.jpg",
         "height": "large",
         "mobile_height": "adapt",
         "stack": "none",
@@ -129,7 +129,7 @@
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
-        "enhance_text_readability": true,
+        "enhance_text_readability": false,
         "enable_overlay": false,
         "overlay": "",
         "color_scheme": "scheme-2",
@@ -452,7 +452,10 @@
       "block_order": [
         "heading_group_3aJpKz"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media(max-width:749px){*{text-align:center!important}[class*=heading]{justify-content:center!important;align-items:center!important;margin-inline:auto!important}}",
+        "@media(min-width:750px){*{--color-foreground:255 255 255!important;--color-background:20 20 20!important}}"
+      ],
       "name": "t:image-hotspot",
       "settings": {
         "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6805.jpg",
@@ -466,7 +469,7 @@
         "vertical_alignment": "bottom",
         "enable_overlay": false,
         "overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 100%)",
-        "color_scheme": "scheme-73656e8f-a33c-466c-9dc3-37c65769243b",
+        "color_scheme": "scheme-da4d1134-a0c4-485d-a5d8-0e838dce8a87",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
         "padding_top": "0px",
