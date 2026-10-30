@@ -503,7 +503,7 @@
         }
       },
       "custom_css": [
-        "h2{font-size:32px}",
+        ".content-header__heading{font-size:32px}",
         ".content-header__heading,.content-header__heading *{color:#EC1C8C!important}",
         ".content-header__heading [class*=subheading]{color:#000!important}",
         ".button-text__label{background-image:linear-gradient(to right,#EC1C8C 33.33%,#0000 33.33% 66.66%,#EC1C8C 66.66%)!important}",
