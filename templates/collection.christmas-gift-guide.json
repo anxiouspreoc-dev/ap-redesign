@@ -241,7 +241,7 @@
       ],
       "name": "t:featured-collection",
       "settings": {
-        "collection": "best-sellers",
+        "collection": "christmas-bestsellers",
         "product_list": [],
         "columns_desktop": "4",
         "columns_mobile": "2",
