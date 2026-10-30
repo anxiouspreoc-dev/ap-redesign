@@ -442,8 +442,8 @@
       "name": "t:image-hotspot",
       "settings": {
         "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6921_1.jpg",
-        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6921_1.jpg",
-        "stack": "none",
+        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied7140.jpg",
+        "stack": "mobile",
         "spacing": "0px",
         "media_content_padding": "default",
         "container_type": "full",
@@ -503,12 +503,12 @@
         }
       },
       "custom_css": [
-        ".content-header__heading{font-size:32px}",
-        ".content-header__heading,.content-header__heading *{color:#EC1C8C!important}",
-        ".content-header__heading [class*=subheading]{color:#000!important}",
-        ".button-text__label{background-image:linear-gradient(to right,#EC1C8C 33.33%,#0000 33.33% 66.66%,#EC1C8C 66.66%)!important}",
-        ".slider-component__progress:before{background:#EC1C8C!important}",
-        ".slider-component__progress{background:#E2D4F0!important}"
+        ".content-header__heading {font-size: 32px;}",
+        ".content-header__heading,.content-header__heading * {color: #ec1c8c !important;}",
+        ".content-header__heading [class*=\"subheading\"] {color: #000 !important;}",
+        ".button-text__label {background-image: linear-gradient( to right, #ec1c8c 33.33%, #0000 33.33% 66.66%, #ec1c8c 66.66% ) !important;}",
+        ".slider-component__progress:before {background: #ec1c8c !important;}",
+        ".slider-component__progress {background: #e2d4f0 !important;}"
       ],
       "name": "t:collection-list",
       "settings": {
@@ -564,6 +564,25 @@
               },
               "blocks": {}
             },
+            "pdp_variant_picker_4Uwi77": {
+              "type": "_pdp-variant-picker",
+              "name": "t:variant-picker",
+              "settings": {
+                "variant_picker_style": "dropdown",
+                "swatch_style": "default",
+                "variant_images": "",
+                "option_1": "",
+                "option_1_page": "",
+                "option_1_label": "icon",
+                "option_2": "",
+                "option_2_page": "",
+                "option_2_label": "icon",
+                "option_3": "",
+                "option_3_page": "",
+                "option_3_label": "icon"
+              },
+              "blocks": {}
+            },
             "pdp_description_PFBtyp": {
               "type": "_pdp-description",
               "settings": {
@@ -588,11 +607,15 @@
           "block_order": [
             "pdp_title_YibN3V",
             "pdp_price_GyVcEV",
+            "pdp_variant_picker_4Uwi77",
             "pdp_description_PFBtyp",
             "pdp_buy_buttons_k4p9jj"
           ]
         }
       },
+      "custom_css": [
+        ".pdp-secure-checkout,.product-info__price .secondary{display:none!important}"
+      ],
       "name": "t:featured-product",
       "settings": {
         "product": "the-digital-gift-card",
