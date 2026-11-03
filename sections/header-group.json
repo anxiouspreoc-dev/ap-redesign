@@ -50,6 +50,26 @@
     "header": {
       "type": "header",
       "blocks": {
+        "megamenu_FELDAp": {
+          "type": "megamenu",
+          "settings": {
+            "menu": "BAGS",
+            "color_scheme": "scheme-1",
+            "color_scheme_style": "fade",
+            "use_alt_logo": false,
+            "image_1": "shopify://shop_images/IMG_8004.jpg",
+            "image_ratio_1": "2 / 3",
+            "label_1": "The Neon Collection",
+            "link_1": "shopify://collections/the-neon-collection",
+            "image_2": "shopify://shop_images/OSBumBagSilverJoanne.jpg",
+            "image_ratio_2": "2 / 3",
+            "label_2": "New In",
+            "link_2": "shopify://collections/new-arrivals",
+            "image_ratio_3": "default",
+            "label_3": "",
+            "link_3": ""
+          }
+        },
         "megamenu": {
           "type": "megamenu",
           "settings": {
@@ -73,11 +93,12 @@
         }
       },
       "block_order": [
+        "megamenu_FELDAp",
         "megamenu"
       ],
       "custom_css": [],
       "settings": {
-        "menu": "main-menu-copy",
+        "menu": "main-desktop-nav",
         "layout_desktop": "horizontal",
         "logo_position": "center",
         "interaction_mode": "hover",

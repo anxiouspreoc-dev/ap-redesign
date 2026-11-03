@@ -36,7 +36,7 @@
         "show_view_cart": true,
         "product_image_width": 120,
         "font_style_title": "heading h6",
-        "font_style_price": "body",
+        "font_style_price": "body text-xs",
         "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31"
       }
     },
@@ -117,7 +117,7 @@
         "promo-7"
       ],
       "settings": {
-        "menu": "main-menu-copy",
+        "menu": "main-desktop-nav",
         "enable_search": true,
         "color_scheme": "scheme-d76d7b48-da45-4d97-a538-1d74349672f6",
         "enable_color_scheme_transition": false,
