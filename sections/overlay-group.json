@@ -46,18 +46,20 @@
         "promo": {
           "type": "promo",
           "settings": {
-            "menu": "",
+            "menu": "ACCESSORIES",
+            "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied7140.jpg",
             "image_ratio": "2 / 3",
-            "label": "Makeup",
+            "label": "The Card Holder",
             "link": ""
           }
         },
         "promo-2": {
           "type": "promo",
           "settings": {
-            "menu": "",
+            "menu": "ACCESSORIES",
+            "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6798_1.jpg",
             "image_ratio": "2 / 3",
-            "label": "Skincare",
+            "label": "The  Padded Laptop Case",
             "link": ""
           }
         },
