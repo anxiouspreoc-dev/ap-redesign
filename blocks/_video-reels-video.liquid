@@ -25,10 +25,16 @@
   endif
 -%}
 
+{%- comment -%}
+  a11y: `alt` was used in the capture below before it was assigned, so the play button had an empty aria-label.
+{%- endcomment -%}
+{%- assign video_description = media.alt | default: shop.name -%}
+{%- assign alt = 'sections.video.load_video' | t: description: video_description | escape -%}
+
 {%- capture pause_button -%}
   {% # theme-check-disable UnusedAssign %}
-  {%- assign pause_text = 'sections.video.pause_video' | t: description: media.alt | escape -%}
-  {%- assign play_text = 'sections.video.play_video' | t: description: media.alt | escape -%}
+  {%- assign pause_text = 'sections.video.pause_video' | t: description: video_description | escape -%}
+  {%- assign play_text = 'sections.video.play_video' | t: description: video_description | escape -%}
   {%- assign mute_text = 'accessibility.mute' | t -%}
   {%- assign unmute_text = 'accessibility.unmute' | t -%}
   {%- assign class = 'deferred-media__button deferred-media__play-pause button button--' | append: button_style -%}
@@ -72,7 +78,7 @@
           </div>
         {%- endif -%}
 
-        {%- assign alt = 'sections.video.load_video' | t: description: media.alt | escape -%}
+        {%- assign alt = 'sections.video.load_video' | t: description: video_description | escape -%}
         {%- assign description_class = 'button button--' | append: button_style -%}
 
         <deferred-media

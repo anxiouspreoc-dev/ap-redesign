@@ -32,7 +32,12 @@
 {% if media.media_type == 'external_video' %}
   {% assign element = 'external-media' %}
 {% endif %}
-{%- assign alt = 'sections.video.load_video' | t: description: media.alt | escape -%}
+{%- comment -%}
+  a11y: videos without alt text used to give buttons like "Load video: " with nothing after the colon.
+  Fall back to the product title, then the shop name.
+{%- endcomment -%}
+{%- assign video_description = media.alt | default: product.title | default: shop.name -%}
+{%- assign alt = 'sections.video.load_video' | t: description: video_description | escape -%}
 {%- assign alignment = alignment | default: 'middle-center' -%}
 {%- assign controls = controls | default: false -%}
 {%- assign sizes = sizes | default: '100vw' -%}
@@ -80,8 +85,8 @@
 
   <div class="deferred-media__controls deferred-media__button-wrapper alignment--{{ alignment }}">
     {% # theme-check-disable UnusedAssign %}
-    {%- assign pause_text = 'sections.video.pause_video' | t: description: media.alt | escape -%}
-    {%- assign play_text = 'sections.video.play_video' | t: description: media.alt | escape -%}
+    {%- assign pause_text = 'sections.video.pause_video' | t: description: video_description | escape -%}
+    {%- assign play_text = 'sections.video.play_video' | t: description: video_description | escape -%}
     {%- assign class = 'deferred-media__button deferred-media__play-pause button button--' | append: button_style -%}
     {% # theme-check-enable UnusedAssign %}
     {%- render 'play-pause-button', pause_text: pause_text, play_text: play_text, class: class -%}
