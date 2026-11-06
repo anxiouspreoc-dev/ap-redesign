@@ -24,6 +24,17 @@
 
 
 {%- if media.media_type == 'image' -%}
+  {%- comment -%}
+    AEO/a11y: Shopify gives every image the product title as alt text. When that is all
+    we have, add the position so images in a gallery can be told apart. Hand-written
+    alt text is left as it is.
+  {%- endcomment -%}
+  {%- liquid
+    assign gallery_alt = media.alt | default: product.title | default: shop.name
+    if gallery_alt == product.title and product.media.size > 1 and index != blank
+      assign gallery_alt = gallery_alt | append: ' (image ' | append: index | append: ' of ' | append: product.media.size | append: ')'
+    endif
+  -%}
   {%- if settings.enable_zoom -%}
     <zoom-image class="media-gallery__image zoom expand-link">
   {%- endif -%}
