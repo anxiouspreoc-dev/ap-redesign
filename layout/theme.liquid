@@ -42,9 +42,13 @@
             assign meta_description = product.description | strip_html | truncate: 160
           when 'article'
             assign meta_description = article.excerpt_or_content | strip_html | truncate: 160
+          when 'policy'
+            assign meta_description = policy.body | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155
         endcase
       endif
-      assign meta_description = meta_description | default: shop.description | default: shop.name
+      if request.page_type != '404'
+        assign meta_description = meta_description | default: shop.description | default: shop.name
+      endif
     -%}
     {% if meta_description != blank %}
       <meta name="description" content="{{ meta_description | escape }}">
