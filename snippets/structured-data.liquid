@@ -7,18 +7,25 @@
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
+    {%- assign same_as_links = settings.social_twitter_link | append: '|' | append: settings.social_facebook_link | append: '|' | append: settings.social_pinterest_link | append: '|' | append: settings.social_instagram_link | append: '|' | append: settings.social_tiktok_link | append: '|' | append: settings.social_tumblr_link | append: '|' | append: settings.social_snapchat_link | append: '|' | append: settings.social_youtube_link | append: '|' | append: settings.social_vimeo_link | split: '|' -%}
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      {%- assign same_as_first = true -%}
+      {%- for link in same_as_links -%}
+        {%- if link != blank -%}
+          {%- unless same_as_first %},{% endunless -%}
+          {{ link | json }}
+          {%- assign same_as_first = false -%}
+        {%- endif -%}
+      {%- endfor -%}
     ],
-    "url": {{ request.origin | append: page.url | json }}
+    "founder": { "@type": "Person", "name": "Joanne McNally" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hi@anxiouspreoccupied.com",
+      "url": {{ request.origin | append: '/pages/contact' | json }}
+    },
+    "url": {{ request.origin | json }}
   }
 </script>
 
