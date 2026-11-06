@@ -38,6 +38,9 @@
         case request.page_type
           when 'collection'
             assign meta_description = collection.description | strip_html | truncate: 160
+            if meta_description == blank and collection.title != blank
+              assign meta_description = 'Shop ' | append: collection.title | append: ' at Anxious Preoccupied: bold, practical vegan leather bags designed in Ireland.'
+            endif
           when 'product'
             assign meta_description = product.description | strip_html | truncate: 160
           when 'article'
