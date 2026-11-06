@@ -43,7 +43,11 @@
           when 'article'
             assign meta_description = article.excerpt_or_content | strip_html | truncate: 160
           when 'policy'
-            assign meta_description = policy.body | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155
+            for shop_policy in shop.policies
+              if shop_policy.url == request.path
+                assign meta_description = shop_policy.body | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155
+              endif
+            endfor
         endcase
       endif
       if request.page_type != '404'
