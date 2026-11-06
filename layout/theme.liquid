@@ -47,7 +47,7 @@
       if request.page_type == 'policy'
         for shop_policy in shop.policies
           if shop_policy.url == request.path
-            assign meta_description = shop_policy.body | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155
+            assign meta_description = shop_policy.body | replace: '<', ' <' | strip_html | strip_newlines | split: ' ' | join: ' ' | truncate: 155
           endif
         endfor
       endif
