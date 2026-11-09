@@ -321,6 +321,27 @@
             "text_FCcDKL"
           ]
         },
+        "c2-q10": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "I need to update something in my order. What should I do?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Please check your order confirmation carefully. If you notice any incorrect details, please contact us immediately at hi@anxiouspreoccupied.com. While we'll do our best to help, order changes cannot be guaranteed as orders are processed by our warehouse on a first in, first out basis. Once an order has entered processing or has been dispatched, we are no longer able to make changes.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "txt"
+          ]
+        },
         "cat-5-pre-orders": {
           "type": "heading-group",
           "settings": {
@@ -834,27 +855,6 @@
               "type": "text",
               "settings": {
                 "text": "<p>Please double-check the delivery details in your order confirmation email. We cannot be responsible for delays or lost parcels caused by incorrect or incomplete addresses. If a parcel cannot be retrieved due to an incorrect address, the delivery is considered fulfilled and no refund will be issued. To avoid delays, please provide a daytime delivery address and a valid local contact number.</p>",
-                "font_style": "body"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "txt"
-          ]
-        },
-        "c2-q10": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "I need to update something in my order. What should I do?",
-            "font_style": "heading h6",
-            "open_by_default": false
-          },
-          "blocks": {
-            "txt": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Please review your order confirmation. If you spot any incorrect details, contact us immediately at <a href=\"mailto:hi@anxiouspreoccupied.com\" title=\"Email Anxious Preoccupied\">hi@anxiouspreoccupied.com</a> so we can make the necessary changes.</p>",
                 "font_style": "body"
               },
               "blocks": {}
@@ -1399,6 +1399,7 @@
         "c0-q6",
         "c0-q7",
         "collapsible_gpBUYt",
+        "c2-q10",
         "cat-5-pre-orders",
         "collapsible_3yEy9V",
         "collapsible_xkLzUz",
@@ -1424,7 +1425,6 @@
         "c2-q7",
         "c2-q8",
         "c2-q9",
-        "c2-q10",
         "cat-3-gift-cards",
         "c3-q0",
         "c3-q1",
