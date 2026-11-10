@@ -1,3 +1,4 @@
+{%- comment -%} a11y: the Preorder label is a paragraph styled like an h5, not a heading, so product pages do not skip heading levels. {%- endcomment -%}
 <div class="pdp__content flex alignment--{{ block.settings.vertical_alignment }}-{{ block.settings.horizontal_alignment }}" {{ block.shopify_attributes }} id="ProductInfo-{{ section.id }}">
   <div class="pdp__content-wrapper flex alignment--{{ block.settings.vertical_alignment }}-{{ block.settings.horizontal_alignment }} justify-{{ block.settings.horizontal_alignment }}">
     <section class="product-info padding--section-block" style="{% render 'padding-override', settings: block.settings, scope: 'block' %}">
