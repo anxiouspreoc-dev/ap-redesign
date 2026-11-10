@@ -380,7 +380,7 @@
         "heading-group"
       ],
       "custom_css": [
-        ".heading.h3 {color: #ff0064;}"
+        ".heading.h3 {color: #E8005B;}"
       ],
       "settings": {
         "horizontal_alignment": "center",
@@ -826,7 +826,7 @@
         }
       },
       "custom_css": [
-        ".heading.h2 {color: #ff0064;}",
+        ".heading.h2 {color: #E8005B;}",
         ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:featured-collection",
@@ -1091,7 +1091,7 @@
         "video_reels_video_UtdXXL"
       ],
       "custom_css": [
-        ".heading.h2 {color: #ff0064;}",
+        ".heading.h2 {color: #E8005B;}",
         ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:video-reels",
@@ -1161,7 +1161,7 @@
         "newsletter_wdc8At"
       ],
       "custom_css": [
-        "span.rich-text__heading.heading.h2 {color: #ff0064;}",
+        "span.rich-text__heading.heading.h2 {color: #E8005B;}",
         "button.newsletter__button.button.button--primary {text-transform: uppercase; background-color: #ff0164 !important; border-color: #ff0164 !important;}"
       ],
       "name": "t:newsletter",
