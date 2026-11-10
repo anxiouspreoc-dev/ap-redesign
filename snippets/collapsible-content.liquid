@@ -5,7 +5,7 @@
       {%- render 'icon', icon: 'plus', class: 'collapsible__icon collapsible__icon--plus icon--s' -%}
       {%- render 'icon', icon: 'minus', class: 'collapsible__icon collapsible__icon--minus icon--s' -%}
     </summary>
-    <div class="collapsible__content" data-content>
+    <div class="collapsible__content" data-content{% if faq_markup %} itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"{% endif %}>
       {{ text }}
     </div>
   </details>
