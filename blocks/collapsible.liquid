@@ -1,6 +1,19 @@
-{% capture text %}<div class="rte">{% content_for 'blocks' %}</div>{% endcapture %}
-<div class="rich-text__collapsible collapsible-items justify-left left" {{ block.shopify_attributes }}>
-  {%- render 'collapsible-content', heading: block.settings.heading, text: text, heading_size: block.settings.font_style, open: block.settings.open_by_default -%}
+{%- comment -%}
+  AEO: on the FAQ page, mark each question and answer up as schema.org FAQPage microdata so search and AI
+  can read them. The answer text comes from this block's own content, so it always matches what is shown.
+  Answers known to be out of date are left out until they are corrected (add their question text below).
+{%- endcomment -%}
+{%- assign faq_markup = false -%}
+{%- if request.page_type == 'page' and template.suffix == 'faq' -%}
+  {%- assign faq_skip = 'How much is shipping?|Where do you ship to?' | split: '|' -%}
+  {%- assign faq_question = block.settings.heading | strip_html | strip -%}
+  {%- unless faq_skip contains faq_question -%}
+    {%- assign faq_markup = true -%}
+  {%- endunless -%}
+{%- endif -%}
+{% capture text %}<div class="rte"{% if faq_markup %} itemprop="text"{% endif %}>{% content_for 'blocks' %}</div>{% endcapture %}
+<div class="rich-text__collapsible collapsible-items justify-left left" {{ block.shopify_attributes }}{% if faq_markup %} itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"{% endif %}>
+  {%- render 'collapsible-content', heading: block.settings.heading, text: text, heading_size: block.settings.font_style, open: block.settings.open_by_default, faq_markup: faq_markup -%}
 </div>
 
 {% schema %}
