@@ -98,7 +98,7 @@
           aria-label="{{ 'localization.popular_countries_regions' | t }}"
         >
           {%- for country in popular_countries -%}
-            {% render 'country-localization-country', country: country, localization: localization %}
+            {% render 'country-localization-country', country: country, localization: localization, localPosition: localPosition, list: 'popular' %}
           {%- endfor -%}
         </ul>
       {% endif %}
