@@ -16,6 +16,14 @@
       <meta name="theme-color" content="{{ shop.brand.colors.primary[0].background }}">
     {% endif %}
     <link rel="canonical" href="{{ canonical_url }}">
+    {%- comment -%}
+      AEO: keep utility and private pages out of Google and AI answers. Shopify's own sitemap can't be edited,
+      so these pages stay listed there but are marked noindex. Add a page handle to this list to hide it.
+    {%- endcomment -%}
+    {%- assign noindex_pages = 'wishlist,shared-wishlists,sitemap,careers,private-access' | split: ',' -%}
+    {%- if request.page_type == 'page' and noindex_pages contains page.handle -%}
+      <meta name="robots" content="noindex, follow">
+    {%- endif -%}
 
     {%- if settings.favicon != blank -%}
       {%- assign file_type = settings.favicon.src | split: '.' | last -%}
