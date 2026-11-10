@@ -143,7 +143,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We currently ship across Ireland, the UK, Europe, the US, Canada, Australia and selected international destinations. Shipping availability and rates are calculated at checkout based on your location.</p>",
+                "text": "<p>We ship to more than 200 countries, including Ireland, the UK, Europe, the US, Canada and Australia. Availability and rates for your location are shown at checkout.</p>",
                 "font_style": "body"
               },
               "blocks": {}
