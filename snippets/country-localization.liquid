@@ -104,7 +104,7 @@
       {% endif %}
       <ul role="list" class="list-unstyled countries">
         {%- for country in localization.available_countries -%}
-          {% render 'country-localization-country', country: country, localization: localization %}
+          {% render 'country-localization-country', country: country, localization: localization, localPosition: localPosition, list: 'all' %}
         {%- endfor -%}
       </ul>
     </div>
