@@ -79,7 +79,7 @@
     AEO: the Size Guide text (product metafield custom.size_guide) is shown on every product page. Add it to the
     schema as a named property so search and AI can read the dimensions without parsing the page.
   {%- endcomment -%}
-  {%- assign size_guide_text = product.metafields.custom.size_guide | metafield_text | strip | strip_newlines -%}
+  {%- assign size_guide_text = product.metafields.custom.size_guide | metafield_tag | replace: '<', ' <' | strip_html | strip_newlines | split: ' ' | join: ' ' -%}
   {%- if size_guide_text != blank -%}
     {%- capture dimensions_json -%}"additionalProperty":[{"@type":"PropertyValue","name":"Dimensions","value":{{ size_guide_text | json }}}],"brand":{%- endcapture -%}
     {%- assign product_sd = product_sd | replace_first: '"brand":', dimensions_json -%}
