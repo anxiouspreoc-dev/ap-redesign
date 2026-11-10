@@ -6,7 +6,7 @@
     <div
       class="rich-text padding--section {{ section.settings.horizontal_alignment }}" style="{% render 'padding-override', settings: section.settings %}">
       <div class="container container--{{ section.settings.container_width }}">
-        <div class="rich-text__blocks rte rte--loose justify-{{ section.settings.horizontal_alignment }} {{ section.settings.horizontal_alignment }}">
+        <div class="rich-text__blocks rte rte--loose justify-{{ section.settings.horizontal_alignment }} {{ section.settings.horizontal_alignment }}"{% if request.page_type == 'page' and template.suffix == 'faq' %} itemscope itemtype="https://schema.org/FAQPage"{% endif %}>
           {%- content_for 'blocks' -%}
         </div>
       </div>
