@@ -5,7 +5,7 @@
         <div class="product-info__blocks">
           {%- assign pdp_product = section.settings.product | default: product -%}
           {%- if pdp_product.tags contains 'preorder' -%}
-            <h5 class="product-info__preorder-pill">{{ 'products.product.preorder' | t }}</h5>
+            <p class="product-info__preorder-pill h5">{{ 'products.product.preorder' | t }}</p>
           {%- endif -%}
           {% content_for 'blocks' %}
         </div>
