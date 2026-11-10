@@ -47,8 +47,36 @@
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
+  {%- comment -%}
+    AEO: Shopify's own Product schema is kept as the base (variants, prices, SKUs). We add to each offer:
+    - availability PreOrder for products tagged 'preorder' (Shopify always says InStock),
+    - the 30-day return policy from the live refund policy,
+    - Ireland delivery cost (EUR 8, free from EUR 170) when the price is shown in euros. Other countries are
+      priced by weight in 30 zones, so they are not stated.
+  {%- endcomment -%}
+  {%- assign product_sd = product | structured_data -%}
+  {%- if product.tags contains 'preorder' -%}
+    {%- assign product_sd = product_sd | replace: 'InStock', 'PreOrder' -%}
+  {%- endif -%}
+  {%- capture offer_extras -%}
+    "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":[{%- for c in localization.available_countries -%}{{ c.iso_code | json }}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}],"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":30,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/ReturnShippingFees"{%- if shop.refund_policy != blank -%},"merchantReturnLink":{{ request.origin | append: shop.refund_policy.url | json }}{%- endif -%}},
+    {%- if cart.currency.iso_code == 'EUR' -%}
+      {%- assign ie_rate = nil -%}
+      {%- if product.price_min >= 17000 -%}
+        {%- assign ie_rate = '0.00' -%}
+      {%- elsif product.price_max < 17000 -%}
+        {%- assign ie_rate = '8.00' -%}
+      {%- endif -%}
+      {%- if ie_rate != nil -%}
+        "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"{{ ie_rate }}","currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"IE"},"deliveryTime":{"@type":"ShippingDeliveryTime","transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},
+      {%- endif -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign offer_extras = offer_extras | strip_newlines | strip -%}
+  {%- assign offer_extras_priced = offer_extras | append: '"priceCurrency"' -%}
+  {%- assign product_sd = product_sd | replace: '"priceCurrency"', offer_extras_priced -%}
   <script type="application/ld+json">
-    {{ product | structured_data }}    
+    {{ product_sd }}
   </script>
 {%- endif -%}
 
