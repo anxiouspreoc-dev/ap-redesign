@@ -6,7 +6,7 @@
       aria-current="true"
     {% endif %}
     data-value="{{ country.iso_code }}"
-    id="{{ country.name }}"
+    id="{{ localPosition | default: 'country' }}-{{ list | default: 'all' }}-{{ country.iso_code }}"
     data-search="{{ country.name }} {{ country.iso_code }}"
     data-display="{{ country.name }} / {{ country.currency.iso_code }}"
   >
