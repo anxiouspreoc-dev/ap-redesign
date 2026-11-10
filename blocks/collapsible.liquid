@@ -4,7 +4,6 @@
   Answers known to be out of date are left out until they are corrected (add their question text below).
 {%- endcomment -%}
 {%- assign faq_markup = false -%}
-<!-- faqdbg {{ request.page_type }}|{{ template.suffix }}|{{ faq_markup }}|{{ faq_question }}|{{ faq_skip | join: ';' }} -->
 
 {%- if request.page_type == 'page' and template.suffix == 'faq' -%}
   {%- assign faq_skip = 'How much is shipping?|Where do you ship to?' | split: '|' -%}
@@ -13,6 +12,7 @@
     {%- assign faq_markup = true -%}
   {%- endunless -%}
 {%- endif -%}
+<!-- faqdbg {{ request.page_type }}|{{ template.suffix }}|{{ faq_markup }}|{{ faq_question }}|{{ faq_skip | join: ';' }} -->
 {% capture text %}<div class="rte"{% if faq_markup %} itemprop="text"{% endif %}>{% content_for 'blocks' %}</div>{% endcapture %}
 <div class="rich-text__collapsible collapsible-items justify-left left" {{ block.shopify_attributes }}{% if faq_markup %} itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"{% endif %}>
   {%- render 'collapsible-content', heading: block.settings.heading, text: text, heading_size: block.settings.font_style, open: block.settings.open_by_default, faq_markup: faq_markup -%}
