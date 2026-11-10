@@ -185,7 +185,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>Shipping costs are calculated at checkout based on destination and order value. We occasionally offer complimentary shipping during selected promotional periods.</p>",
+                "text": "<p>Shipping costs are calculated at checkout based on your destination. Shipping is free on orders over €170 in Ireland and over £150 in the UK. We occasionally offer free shipping in other regions during promotional periods.</p>",
                 "font_style": "body"
               },
               "blocks": {}
