@@ -4,6 +4,8 @@
   Answers known to be out of date are left out until they are corrected (add their question text below).
 {%- endcomment -%}
 {%- assign faq_markup = false -%}
+<!-- faqdbg {{ request.page_type }}|{{ template.suffix }}|{{ template.name }} -->
+
 {%- if request.page_type == 'page' and template.suffix == 'faq' -%}
   {%- assign faq_skip = 'How much is shipping?|Where do you ship to?' | split: '|' -%}
   {%- assign faq_question = block.settings.heading | strip_html | strip -%}
