@@ -6,7 +6,7 @@
 {%- assign faq_markup = false -%}
 
 {%- if request.page_type == 'page' and template.suffix == 'faq' -%}
-  {%- assign faq_skip = 'How much is shipping?|Where do you ship to?' | split: '|' -%}
+  {%- assign faq_skip = 'Where do you ship to?' | split: '|' -%}
   {%- assign faq_question = block.settings.heading | strip_html | strip -%}
   {%- unless faq_skip contains faq_question -%}
     {%- assign faq_markup = true -%}
