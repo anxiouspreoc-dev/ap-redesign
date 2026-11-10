@@ -21,10 +21,15 @@
       so these pages stay listed there but are marked noindex. Add a page handle to this list to hide it.
     {%- endcomment -%}
     {%- assign noindex_pages = 'wishlist,shared-wishlists,sitemap,careers,private-access' | split: ',' -%}
-    {%- assign noindex_collections = 'private-access' | split: ',' -%}
+    {%- assign noindex_collections = 'private-access,early-access' | split: ',' -%}
+    {%- assign noindex_blogs = 'news' | split: ',' -%}
     {%- if request.page_type == 'page' and noindex_pages contains page.handle -%}
       <meta name="robots" content="noindex, follow">
     {%- elsif request.page_type == 'collection' and noindex_collections contains collection.handle -%}
+      <meta name="robots" content="noindex, follow">
+    {%- elsif request.page_type == 'blog' and noindex_blogs contains blog.handle -%}
+      <meta name="robots" content="noindex, follow">
+    {%- elsif request.page_type == 'article' and noindex_blogs contains blog.handle -%}
       <meta name="robots" content="noindex, follow">
     {%- endif -%}
 
