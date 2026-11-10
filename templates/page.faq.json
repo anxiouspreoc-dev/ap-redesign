@@ -999,7 +999,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>We accept major debit and credit cards along with selected accelerated payment methods including Apple Pay, Google Pay, PayPal, Klarna and Shopify Payments where available.</p>",
+                "text": "<p>We accept major debit and credit cards along with selected accelerated payment methods including Apple Pay, Google Pay, PayPal, Klarna and Shopify Payments where available and, depending on your country, Revolut Pay, iDEAL, Bancontact, BLIK, MB WAY, MobilePay, Bizum and Satispay.</p>",
                 "font_style": "body"
               },
               "blocks": {}
