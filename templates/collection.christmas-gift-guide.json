@@ -117,8 +117,8 @@
       ],
       "name": "t:image-banner",
       "settings": {
-        "image": "shopify://shop_images/AP-campaign-shelf-fairy-lights.png",
-        "mobile_image": "shopify://shop_images/AP-campaign-shelf-fairy-lights-7356.png",
+        "image": "shopify://shop_images/Festive_Anxiety_Luxury_Campaign_desktop.jpg",
+        "mobile_image": "shopify://shop_images/Festive_Anxiety_Luxury_Campaign.mobile_png.png",
         "height": "large",
         "mobile_height": "adapt",
         "stack": "none",
