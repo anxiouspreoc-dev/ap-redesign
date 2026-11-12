@@ -561,7 +561,7 @@
             "txt": {
               "type": "text",
               "settings": {
-                "text": "<p>Many of our larger styles are designed to fit everyday essentials including laptops. Product dimensions are listed on each product page to help guide sizing.</p>",
+                "text": "<p>Many of our larger styles are designed to fit everyday essentials including laptops. Product dimensions are listed on each product page to help guide sizing.</p><p>Not sure which tote suits you? Our guide to <a href=\"/pages/mid-tote-or-oversized-tote\">choosing between the Mid and Oversized Tote</a> can help.</p>",
                 "font_style": "body"
               },
               "blocks": {}
