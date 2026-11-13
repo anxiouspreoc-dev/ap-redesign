@@ -403,7 +403,7 @@
             "heading_47Fnhq": {
               "type": "_heading",
               "settings": {
-                "heading": "<strong>For the one who brings the laptop to brunch.</strong>&nbsp;",
+                "heading": "<strong>For the one with a wallet for every mood.</strong>&nbsp;",
                 "heading_size": "h2"
               },
               "blocks": {}
@@ -418,14 +418,28 @@
           "static": true,
           "settings": {},
           "blocks": {
+            "hotspot_content_LgPzqU": {
+              "type": "_hotspot-content",
+              "name": "t:content-hotspot",
+              "settings": {
+                "label": "Shop Wallets",
+                "link": "",
+                "horizontal_position": 50,
+                "vertical_position": 50,
+                "mobile_horizontal_position": 50,
+                "mobile_vertical_position": 50
+              },
+              "blocks": {}
+            },
             "hotspot_product_CD3Jcn": {
               "type": "_hotspot-product",
               "name": "t:product-hotspot",
+              "disabled": true,
               "settings": {
-                "product": "the-padded-laptop-case-black",
-                "horizontal_position": 50,
+                "product": "the-long-wallet-gold",
+                "horizontal_position": 41,
                 "vertical_position": 50,
-                "mobile_horizontal_position": 54,
+                "mobile_horizontal_position": 35,
                 "mobile_vertical_position": 50
               },
               "blocks": {}
@@ -433,17 +447,19 @@
             "hotspot_product_CNLdEy": {
               "type": "_hotspot-product",
               "name": "t:product-hotspot",
+              "disabled": true,
               "settings": {
-                "product": "the-mid-neon-pink",
+                "product": "the-long-wallet-black",
                 "horizontal_position": 40,
                 "vertical_position": 79,
-                "mobile_horizontal_position": 44,
-                "mobile_vertical_position": 80
+                "mobile_horizontal_position": 66,
+                "mobile_vertical_position": 41
               },
               "blocks": {}
             }
           },
           "block_order": [
+            "hotspot_content_LgPzqU",
             "hotspot_product_CD3Jcn",
             "hotspot_product_CNLdEy"
           ]
@@ -458,8 +474,8 @@
       ],
       "name": "t:image-hotspot",
       "settings": {
-        "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6805.jpg",
-        "mobile_image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6798_1.jpg",
+        "image": "shopify://shop_images/Luxe_Holiday_Wallet_Gift_Guide.png",
+        "mobile_image": "shopify://shop_images/Glamorous_Wallets_by_the_Christmas_Tree.png",
         "stack": "mobile",
         "spacing": "0px",
         "media_content_padding": "default",
