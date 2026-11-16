@@ -46,19 +46,21 @@
         "promo": {
           "type": "promo",
           "settings": {
-            "menu": "",
+            "menu": "Bags",
+            "image": "shopify://shop_images/OSBumBagSilverJoanne.jpg",
             "image_ratio": "2 / 3",
-            "label": "Makeup",
-            "link": ""
+            "label": "THE OVERSIZED BUM BAG",
+            "link": "shopify://collections/the-oversized-bum-bag"
           }
         },
         "promo-2": {
           "type": "promo",
           "settings": {
-            "menu": "",
+            "menu": "Bags",
+            "image": "shopify://shop_images/Copy_of_Anxious_Preoccupied_Preoccupied7328.jpg",
             "image_ratio": "2 / 3",
-            "label": "Skincare",
-            "link": ""
+            "label": "THE HALF MOON BAG",
+            "link": "shopify://collections/the-halfmoon-bags"
           }
         },
         "promo-3": {
@@ -97,23 +99,24 @@
             "link": ""
           }
         },
-        "promo-7": {
-          "type": "promo",
-          "settings": {
-            "menu": "",
-            "image_ratio": "default",
-            "label": "Glow from Within",
-            "link": ""
-          }
-        },
         "promo_TBk9ip": {
           "type": "promo",
           "settings": {
             "menu": "ACCESSORIES",
             "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied7140.jpg",
-            "image_ratio": "default",
-            "label": "The Card Holder",
-            "link": "shopify://collections/accessories"
+            "image_ratio": "2 / 3",
+            "label": "THE CARD HOLDER",
+            "link": "shopify://collections/the-card-holder"
+          }
+        },
+        "promo_8NEGBU": {
+          "type": "promo",
+          "settings": {
+            "menu": "ACCESSORIES",
+            "image": "shopify://shop_images/Anxious_Preoccupied_Preoccupied6798_1.jpg",
+            "image_ratio": "2 / 3",
+            "label": "THE PADDED LAPTOP CASE",
+            "link": "shopify://collections/the-padded-laptop-case"
           }
         }
       },
@@ -124,8 +127,8 @@
         "promo-4",
         "promo-5",
         "promo-6",
-        "promo-7",
-        "promo_TBk9ip"
+        "promo_TBk9ip",
+        "promo_8NEGBU"
       ],
       "settings": {
         "menu": "main-menu-mobile",
