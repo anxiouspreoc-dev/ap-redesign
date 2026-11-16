@@ -58,11 +58,11 @@
             "color_scheme_style": "fade",
             "use_alt_logo": false,
             "image_1": "shopify://shop_images/Anxious_Preoccupied_Preoccupied7140.jpg",
-            "image_ratio_1": "default",
+            "image_ratio_1": "2 / 3",
             "label_1": "The Neon Collection",
             "link_1": "shopify://collections/the-neon-collection",
             "image_2": "shopify://shop_images/OSBumBagSilverJoanne.jpg",
-            "image_ratio_2": "default",
+            "image_ratio_2": "2 / 3",
             "label_2": "New In",
             "link_2": "shopify://collections/new-arrivals",
             "image_ratio_3": "default",
@@ -73,7 +73,7 @@
         "megamenu": {
           "type": "megamenu",
           "settings": {
-            "menu": "Shop",
+            "menu": "SHOP",
             "color_scheme": "scheme-e4d7dbce-2ebf-4b5d-9bed-1e36a2f22e31",
             "color_scheme_style": "split",
             "use_alt_logo": false,
