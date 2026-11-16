@@ -232,7 +232,7 @@
       "name": "t:rich-text",
       "settings": {
         "horizontal_alignment": "center",
-        "container_width": "md",
+        "container_width": "lg",
         "color_scheme": "",
         "enable_color_scheme_transition": false,
         "color_scheme_transition": "",
