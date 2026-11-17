@@ -4056,6 +4056,19 @@ menu-drawer .localization-form__select[aria-expanded=true] {
 .menu-drawer__promo:last-child {
   margin-block-end: var(--space-s);
 }
+.menu-drawer__promo .image-card__text .button {
+  font-family: var(--font-navigation-family);
+  font-style: var(--font-navigation-style);
+  font-weight: var(--font-navigation-weight);
+  font-size: var(--font-navigation-size);
+  line-height: var(--leading-tight);
+  text-transform: var(--font-navigation-letter-casing);
+  letter-spacing: var(--font-navigation-letter-spacing);
+}
+.menu-drawer__promo .image-card__text .button-text__label {
+  background-image: none;
+  line-height: inherit;
+}
 menu-drawer [data-state] {
   visibility: visible;
   transition:
