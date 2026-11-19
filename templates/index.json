@@ -380,7 +380,7 @@
         "heading-group"
       ],
       "custom_css": [
-        ".heading.h3 {color: #E8005B;}"
+        ".heading.h3 {color: #ff0064;}"
       ],
       "settings": {
         "horizontal_alignment": "center",
@@ -826,7 +826,7 @@
         }
       },
       "custom_css": [
-        ".heading.h2 {color: #E8005B;}",
+        ".heading.h2 {color: #ff0064;}",
         ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:featured-collection",
@@ -1091,7 +1091,7 @@
         "video_reels_video_UtdXXL"
       ],
       "custom_css": [
-        ".heading.h2 {color: #E8005B;}",
+        ".heading.h2 {color: #ff0064;}",
         ".content-header__heading {display: flex; flex-direction: column-reverse;}"
       ],
       "name": "t:video-reels",
@@ -1161,7 +1161,7 @@
         "newsletter_wdc8At"
       ],
       "custom_css": [
-        "span.rich-text__heading.heading.h2 {color: #E8005B;}",
+        "span.rich-text__heading.heading.h2 {color: #ff0064;}",
         "button.newsletter__button.button.button--primary {text-transform: uppercase; background-color: #ff0164 !important; border-color: #ff0164 !important;}"
       ],
       "name": "t:newsletter",
@@ -1497,6 +1497,120 @@
         "show_top_border": false,
         "show_bottom_border": false
       }
+    },
+    "image_with_text_AhXp7i": {
+      "type": "image-with-text",
+      "blocks": {
+        "rich_text_column_FwybwN": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "left"
+          },
+          "blocks": {
+            "image_zxtgLR": {
+              "type": "image",
+              "settings": {
+                "image": "shopify://shop_images/Festive_Anxiety_Luxury_Campaign_desktop.jpg",
+                "image_ratio": "default",
+                "max_width": 1400,
+                "horizontal_alignment": "inherit",
+                "link": "",
+                "link_label": "",
+                "product": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_zxtgLR"
+          ]
+        },
+        "rich_text_column_H7cCYa": {
+          "type": "_rich-text-column",
+          "settings": {
+            "horizontal_alignment": "left"
+          },
+          "blocks": {
+            "heading_group_rCXwam": {
+              "type": "heading-group",
+              "settings": {
+                "anchor_id": "",
+                "page_title": false
+              },
+              "blocks": {
+                "subheading_bt7AEd": {
+                  "type": "_subheading",
+                  "settings": {
+                    "subheading": "<strong>THE GIFT GUIDE</strong>"
+                  },
+                  "blocks": {}
+                },
+                "heading_7TMhkf": {
+                  "type": "_heading",
+                  "settings": {
+                    "heading": "GIFTS FOR PEOPLE WHO OVERTHINK GIFTS.",
+                    "heading_size": "h2"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "subheading_bt7AEd",
+                "heading_7TMhkf"
+              ]
+            },
+            "text_cHWzME": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Bestsellers, gold, and something for every budget. We did the overthinking so you don't have to.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            },
+            "button_group_pttDNG": {
+              "type": "button-group",
+              "settings": {
+                "horizontal_alignment": "inherit"
+              },
+              "blocks": {
+                "button_3q6GCB": {
+                  "type": "_button",
+                  "settings": {
+                    "button_style": "primary",
+                    "button_label": "Shop The Gift Guide",
+                    "button_link": "shopify://collections/christmas-bestsellers"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_3q6GCB"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_group_rCXwam",
+            "text_cHWzME",
+            "button_group_pttDNG"
+          ]
+        }
+      },
+      "block_order": [
+        "rich_text_column_FwybwN",
+        "rich_text_column_H7cCYa"
+      ],
+      "disabled": true,
+      "name": "t:image-with-text",
+      "settings": {
+        "vertical_alignment": "middle",
+        "color_scheme": "scheme-b24726de-3ead-4723-beaa-1fb283066b3f",
+        "enable_color_scheme_transition": false,
+        "color_scheme_transition": "",
+        "padding_top": "default",
+        "padding_bottom": "default",
+        "show_top_border": false,
+        "show_bottom_border": false
+      }
     }
   },
   "order": [
@@ -1513,6 +1627,7 @@
     "video_reels_CJ3hjn",
     "newsletter_PjebYH",
     "multicolumn_trWDVF",
-    "media_grid_g3JxYn"
+    "media_grid_g3JxYn",
+    "image_with_text_AhXp7i"
   ]
 }

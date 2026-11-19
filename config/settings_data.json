@@ -413,7 +413,23 @@
       },
       "scheme-39bfafdd-ad38-49db-9ccf-63e2a6da571d": {
         "settings": {
-          "text": "#D2F84E",
+          "text": "#d2f84e",
+          "text_secondary": "#6f7473",
+          "background": "#ffffff",
+          "background_gradient": "",
+          "color_exception": "#b00000",
+          "color_border": "#6f7473",
+          "primary_button": "#000000",
+          "primary_button_border": "#000000",
+          "on_primary_button": "#ffffff",
+          "secondary_button": "rgba(0,0,0,0)",
+          "secondary_button_border": "#000000",
+          "on_secondary_button": "#000000"
+        }
+      },
+      "scheme-d2159cd6-c30e-41c8-aeb4-d1d0491d9c5d": {
+        "settings": {
+          "text": "#000000",
           "text_secondary": "#6f7473",
           "background": "#ffffff",
           "background_gradient": "",
