@@ -467,6 +467,89 @@
             "txt"
           ]
         },
+        "heading_group_bRYaca": {
+          "type": "heading-group",
+          "settings": {
+            "anchor_id": "",
+            "page_title": false
+          },
+          "blocks": {
+            "heading_GL4m7Y": {
+              "type": "_heading",
+              "settings": {
+                "heading": "Sales and Promotions",
+                "heading_size": "h4"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_GL4m7Y"
+          ]
+        },
+        "collapsible_RfDfcM": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "When are sales announced?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_eBGUEP": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Our sales and promotions may be introduced at different times throughout the year. We recommend subscribing to our newsletter and following our official social media channels to stay up to date with the latest offers and announcements.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_eBGUEP"
+          ]
+        },
+        "collapsible_mzhDwU": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I receive a refund for the price difference if I ordered before a sale?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_YbMXmN": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Unfortunately, we cannot refund the difference. If you wish to purchase at the sale price, you would need to cancel your existing order (subject to its fulfilment status) and place a new order through the website.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_YbMXmN"
+          ]
+        },
+        "collapsible_LTW6QD": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Can I use a discount code on sale items?",
+            "font_style": "heading h6",
+            "open_by_default": false
+          },
+          "blocks": {
+            "text_eApTey": {
+              "type": "text",
+              "settings": {
+                "text": "<p>No, discount codes cannot be applied to sale items as our system does not allow them to be combined with existing sale prices.</p>",
+                "font_style": "body"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_eApTey"
+          ]
+        },
         "cat-1-products-materials": {
           "type": "heading-group",
           "settings": {
@@ -1406,6 +1489,10 @@
         "c5-q1",
         "c5-q2",
         "c5-q3",
+        "heading_group_bRYaca",
+        "collapsible_RfDfcM",
+        "collapsible_mzhDwU",
+        "collapsible_LTW6QD",
         "cat-1-products-materials",
         "c1-q0",
         "c1-q1",
