@@ -423,7 +423,7 @@
               "name": "t:content-hotspot",
               "settings": {
                 "label": "Shop Wallets",
-                "link": "",
+                "link": "shopify://collections/the-long-wallet",
                 "horizontal_position": 50,
                 "vertical_position": 50,
                 "mobile_horizontal_position": 50,
