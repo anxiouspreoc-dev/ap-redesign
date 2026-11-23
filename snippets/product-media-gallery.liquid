@@ -219,10 +219,13 @@
               {% render 'product-media', media: media, settings: settings, index: forloop.index %}
             </div>
           {%- endfor -%}
+          {%- endif -%}
         </div>
+        {%- if settings.image_override == blank -%}
         <div class="slideshow__pagination slideshow__pagination--overlay">
           {%- render 'pagination-slideshow', button_style: settings.button_style, arrow_style: 'overlay', counter_style: section.settings.counter_style -%}
         </div>
+        {%- endif -%}
       </slideshow-component>
     {% endif %}
   {%- endif -%}
