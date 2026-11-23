@@ -779,6 +779,7 @@
         "rich_text_column_FwybwN",
         "rich_text_column_H7cCYa"
       ],
+      "disabled": true,
       "custom_css": [
         "[data-color-scheme] {--color-background: #e8dbf6;}",
         ".rich-text__heading {color: #eb1c8d;}",
