@@ -663,6 +663,7 @@
         "text_iYf8VY",
         "button_group_Abij7V"
       ],
+      "disabled": true,
       "custom_css": [
         "h2.rich-text__heading-group.heading-group.media-banner__pointer,.heading {max-width: 400px; word-break: normal;}",
         "a.button.button--primary {background-color: #ff0164 !important; border-color: #ff0164 !important;}",
@@ -779,7 +780,6 @@
         "rich_text_column_FwybwN",
         "rich_text_column_H7cCYa"
       ],
-      "disabled": true,
       "custom_css": [
         "[data-color-scheme] {--color-background: #e8dbf6;}",
         ".rich-text__heading {color: #eb1c8d;}",
