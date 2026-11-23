@@ -118,7 +118,7 @@
       "name": "t:image-banner",
       "settings": {
         "image": "shopify://shop_images/Festive_Anxiety_Luxury_Campaign_desktop.jpg",
-        "mobile_image": "shopify://shop_images/Festive_Anxiety_Luxury_Campaign_desktop.jpg",
+        "mobile_image": "shopify://shop_images/Festive_Metallic_Bags_and_Silver_Fashion.png",
         "height": "large",
         "mobile_height": "adapt",
         "stack": "none",
@@ -129,7 +129,7 @@
         "horizontal_alignment": "center",
         "vertical_alignment": "middle",
         "enable_banner_click": false,
-        "enhance_text_readability": false,
+        "enhance_text_readability": true,
         "enable_overlay": false,
         "overlay": "",
         "color_scheme": "scheme-39bfafdd-ad38-49db-9ccf-63e2a6da571d",
