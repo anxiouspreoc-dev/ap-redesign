@@ -158,6 +158,42 @@
           data-label="{{ 'products.product.media.gallery_viewer' | t }}"
           data-looping="{{ settings.enable_looping }}"
         >
+          {%- comment -%}
+            Optional image override (Featured product section): when set, it replaces the product gallery with this single image.
+            When empty, the normal product media is shown.
+          {%- endcomment -%}
+          {%- if settings.image_override != blank -%}
+            {%- assign override_image = settings.image_override -%}
+            {%- assign override_ratio = override_image.aspect_ratio -%}
+            <div
+              id="Slide-{{ section.id }}-1"
+              class="slideshow__slide"
+              role="group"
+              aria-label="1 of 1 slides"
+              tabindex="-1"
+              data-media-id="image-override"
+              data-index="0"
+              style="--aspect-ratio: {{ override_ratio }}"
+              data-aspect-ratio="{% if override_ratio == 1 %}square{% elsif override_ratio < 1 %}portrait{% else %}landscape{% endif %}"
+            >
+              <img
+                class="media-gallery__image zoom__image"
+                srcset="
+                  {%- if override_image.width >= 550 -%}{{ override_image | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if override_image.width >= 1100 -%}{{ override_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if override_image.width >= 1445 -%}{{ override_image | image_url: width: 1445 }} 1445w,{%- endif -%}
+                  {{ override_image | image_url }} {{ override_image.width }}w
+                "
+                sizes="(min-width: 48em) 50vw, 1100px"
+                src="{{ override_image | image_url: width: 1445 }}"
+                alt="{{ override_image.alt | default: product.title | escape }}"
+                loading="eager"
+                width="{{ override_image.width }}"
+                height="{{ override_image.height }}"
+                style="--object-position: {{ override_image.presentation.focal_point }};"
+              >
+            </div>
+          {%- else -%}
           {%- for media in product.media -%}
             {%- assign ratio = media.preview_image.aspect_ratio -%}
             {%- assign hidden = false -%}
